@@ -1,7 +1,7 @@
 {
-  "name": "localgov_subtheme",
+  "name": "pcc",
   "version": "1.0.0",
-  "description": "NPM scripts for the localgov_base theme.",
+  "description": "LGD Theme for the PCC website.",
   "main": "index.js",
   "scripts": {
     "start": "npm run lint:css && npm run lint:js",
@@ -12,7 +12,7 @@
     "lint:js:fix": "eslint \"**/*.js\" --fix",
     "build:docs": "./scripts/document-variables.sh --to-markdown"
   },
-  "author": "Mark Conroy",
+  "author": "Oliver Read",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.53.0",
