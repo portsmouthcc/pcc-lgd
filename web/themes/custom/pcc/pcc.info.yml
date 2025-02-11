@@ -7,17 +7,6 @@ base theme: "localgov_base"
 libraries:
   - pcc/global
 
-libraries-extend:
-  # Add libraries that you want to load on every page of your site to the list
-  # of those extending localgov_base/global
-  localgov_base/global:
-    - pcc/variables
-    # - pcc/other-library-to-load-on-every-page
-    # - pcc/other-library-to-load-on-every-page
-  # Add libraries here that extend specific libraries.
-  # localgov_base/sample-library:
-  # - pcc/sample-library
-
 regions:
   tabs: "Tabs"
   header: "Header"
