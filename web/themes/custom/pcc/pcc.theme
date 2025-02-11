@@ -1,6 +1,135 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\block\Entity\Block;
+
 /**
  * @file
  * Theme function for the Portsmouth City Council theme.
  */
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * Alter data used to render exposed forms on views.
+ */
+function pcc_form_views_exposed_form_alter(array &$form, FormStateInterface $form_state, string $form_id)
+{
+  // Target the sitewide search form.
+  if ($form['#id'] == 'views-exposed-form-localgov-sitewide-search-sitewide-search-page') {
+    // Use a custom template. This corresponds to the output of the pcc_theme function below.
+    $form['#theme'] = 'search_form';
+
+    // Disable wrapping templates. This makes the input and submit button appear together in the HTML.
+    $form['s']['#theme_wrappers'] = [];
+    $form['actions']['#theme_wrappers'] = [];
+
+    // // Add classes to inputs.
+    // $form['s']['#attributes']['class'][] = 'is-large';
+    // $form['actions']['submit']['#attributes']['class'][] = 'is-large';
+
+    // Button value is the Font Awesome search glyph.
+    $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
+    $form['actions']['submit']['#attributes']['title'] = 'Search';
+    $form['actions']['submit']['#attributes']['class'][] = 'font-awesome';
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function pcc_theme($existing, $type, $theme, $path)
+{
+  // Define custom templates for elements like forms.
+  return [
+    'search_form' => [
+      'template' => 'form/search-form',
+      'render element' => 'form'
+    ]
+  ];
+}
+
+
+/**
+ * Implements template_preprocess_block().
+ */
+function pcc_preprocess_block(array &$variables)
+{
+  // This is how I found the block ids used below.
+  // print_r($variables['plugin_id']);
+  // echo " ";
+
+  $variables['title_attributes']['class'][] = 'title is-4';
+
+  // Set secondary menu classes.
+  if (in_array($variables['plugin_id'], ['system_menu_block:localgov_services_menu', 'system_menu_block:top-tasks'])) {
+    $variables['attributes']['class'][] = 'cell';
+    $variables['title_attributes']['class'][] = 'title is-4';
+  }
+
+  // Set classes for services menu block.
+  if ($variables['plugin_id'] == 'system_menu_block:localgov_services_menu') {
+    $variables['attributes']['class'][] = 'is-col-span-2';
+  }
+
+  // Pass block region value to content so this can be used in pcc_theme_suggestions_menu_alter.
+  if (isset($variables['elements']['#id'])) {
+    $region = Block::load($variables['elements']['#id'])->getRegion();
+    $variables['content']['#attributes']['region'] = $region;
+  }
+
+  // Add title class to service list block title.
+  if ($variables['plugin_id'] == 'views_block:services-block_service_list') {
+    $variables['title_attributes']['class'][] = 'title is-4';
+  }
+
+  // Add title class to channel shift block title.
+  if ($variables['plugin_id'] == 'system_menu_block:channel-shift') {
+    $variables['title_attributes']['class'][] = 'title is-4';
+  }
+}
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function pcc_theme_suggestions_menu_alter(&$suggestions, array $variables)
+{
+  // Provide region-based menu suggestions.
+  if (isset($variables['attributes']['region'])) {
+    $suggestion = 'menu__' . $variables['menu_name'] . '__' . $variables['attributes']['region'];
+    $suggestions[] = str_replace('-', '_', $suggestion);
+  }
+}
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function pcc_theme_suggestions_block_alter(&$suggestions, array $variables)
+{
+  // Provide region-based block suggestions.
+  if (isset($variables['elements']['#id']) && $variables['elements']['#plugin_id']) {
+    $region = Block::load($variables['elements']['#id'])->getRegion();
+    $plugin_id = $variables['elements']['#plugin_id'];
+    $plugin_id_parts = explode(':', $plugin_id);
+    $block_id = $plugin_id_parts[array_key_last($plugin_id_parts)];
+    $suggestion = 'block__' . $block_id . '__' . $region;
+    $suggestions[] = str_replace('-', '_', $suggestion);
+
+    // This is such a long-winded way to get block id.
+  }
+}
+
+
+/**
+ * Add Node ids to body class.
+ */
+function pcc_preprocess_html(&$variables)
+{
+  // Add node id to the body class.
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if (is_object($node)) {
+    $variables['attributes']['class'][] = 'node-' . $node->id();
+  }
+}
