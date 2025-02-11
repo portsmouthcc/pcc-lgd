@@ -1,0 +1,21 @@
+{% if title or lede['#value'] %}
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-two-thirds">
+          {% if title %}
+            <h1 class="title">{{ title }}</h1>
+          {% endif %}
+
+          {% if lede %}
+            {% if lede['#value'] %}
+              <p class="subtitle">{{ lede['#value'] }}</p>
+            {% else %}
+              {{ lede }}
+            {% endif %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}

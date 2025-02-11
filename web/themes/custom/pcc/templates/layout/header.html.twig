@@ -1,0 +1,36 @@
+<header class="header-main">
+
+	{% if has_primary_menu %}
+		{{ page.primary_menu }}
+	{% endif %}
+
+	<section class="p-5 has-background-primary">
+		<div class="container">
+			<div class="level is-mobile">
+				<div class="level-left">{{ page.header }}</div>
+
+				<div class="level-right">
+					<div class="level-item">
+						<button class="button is-info toggle-button" data-target="secondary-menu" aria-controls="secondary-menu" aria-active="false" aria-label="{{ 'Services: expand and jump to services menu'|t }}">Our services</button>
+					</div>
+					<div class="level-item">
+						<button class="button is-info toggle-button font-awesome" data-target="search-bar" aria-controls="search-bar" aria-active="false" aria-label="{{ 'Search: expand and jump to search form'|t }}">&#xf002;</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{% if has_secondary_menu %}
+		<section id="secondary-menu" class="section has-background-primary-light">
+			<div class="container">{{ page.secondary_menu }}</div>
+		</section>
+	{% endif %}
+
+	{% if has_search %}
+		<section id="search-bar" class="section has-background-primary-light">
+			<div class="container">{{ page.search }}</div>
+		</section>
+	{% endif %}
+
+</header>

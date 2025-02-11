@@ -1,0 +1,23 @@
+{# Use this in service navigations for all the various content types. #}
+
+{% set content_type = node.bundle %}
+
+{% set classes = ['service-teaser', 'teaser', 'teaser--' ~ (content_type|clean_class), 'node', 'node--type-' ~ (node.bundle|clean_class), node.isPromoted() ? 'node--promoted', node.isSticky() ? 'node--sticky', not node.isPublished() ? 'node--unpublished', view_mode ? 'node--view-mode-' ~ (view_mode|clean_class)] %}
+
+<article {{ attributes.addClass(classes).removeAttribute('role') }}>
+  <a href="{{ url }}" class="px-4 py-5" rel="bookmark">
+    <div class="media">
+      {# <figure class="media-left">
+				<span class="icon">
+					<i class="fas fa-chevron-right"></i>
+				</span>
+			</figure> #}
+      <div class="media-content">
+        <div {{ content_attributes.addClass('lgd-teaser__content', 'lgd-teaser__content--' ~ (content_type|clean_class), 'content') }}>
+          <h3>{{ label }}</h3>
+          <p class="suffix">{{ node.body.summary }}</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</article>

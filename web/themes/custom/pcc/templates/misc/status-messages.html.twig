@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Theme override for status messages.
+ *
+ * Displays status, error, and warning messages, grouped by type.
+ *
+ * An invisible heading identifies the messages for assistive technology.
+ * Sighted users see a coloured box. See http://www.w3.org/TR/WCAG-TECHS/H69.html
+ * for info.
+ *
+ * Add an ARIA label to the contentinfo area so that assistive technology
+ * user agents will better describe this landmark.
+ *
+ * Available variables:
+ * - message_list: List of messages to be displayed, grouped by type.
+ * - status_headings: List of all status types.
+ * - attributes: HTML attributes for the element, including:
+ *   - class: HTML classes.
+ */
+#}
+
+<div data-drupal-messages>
+  <div class="container">
+    {% for type, messages in message_list %}
+      {% set classes = ['message', type == 'status' ? 'is-info', type == 'warning' ? 'is-warning', type == 'error' ? 'is-danger'] %}
+      <article role="contentinfo" aria-label="{{ status_headings[type] }}" {{ attributes.addClass(classes)|without('role', 'aria-label') }}>
+        {% if status_headings[type] %}
+          <h2 class="visually-hidden">{{ status_headings[type] }}</h2>
+        {% endif %}
+        <div class="message-body content">
+          {% if (messages|length) > 1 %}
+            <ul>
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p>{{ messages|first }}</p>
+          {% endif %}
+        </div>
+      </article>
+      {# Remove type specific classes. #}
+      {% set attributes = attributes.removeClass(classes) %}
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,57 @@
+{#
+/**
+ * @file localgov_alert_banner.html.twig
+ * Default theme implementation to present Alert banner data.
+ *
+ * This template is used when viewing Alert banner pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ * - display_title: Boolean indicating if alert banner title should be displayed
+ * - remove_hide_link: Boolean indicating if the link to close the banner should be hidden
+ * - type_of_alert: Type of alert banner
+ *
+ * @see template_preprocess_localgov_alert_banner()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{# Load the alert module's JS #}
+{{ attach_library('localgov_alert_banner/alert_banner') }}
+
+{% set has_link = content.link[0] is not empty %}
+{% set type_of_alert = type_of_alert|split('--')[1]|clean_class %}
+
+{% set classes = ['section', 'py-5', 'js-localgov-alert-banner', 'localgov-alert-banner', is_front ? 'localgov-alert-banner--homepage', has_link ? 'localgov-alert-banner--has-link' : 'localgov-alert-banner--no-link'] %}
+
+{% set message_class_map = { announcement: 'is-info', minor: 'is-warning', major: 'is-danger', 'notable-person': 'is-dark' } %}
+
+<section {{ attributes.addClass(classes) }}>
+  <div class="container">
+    <article class="message {{ message_class_map[type_of_alert] }}">
+      <div class="message-header">
+        {% if display_title %}
+          <p>{{ content.title['#items'].value }}</p>
+        {% endif %}
+        {% if not remove_hide_link %}
+          <button class="delete js-localgov-alert-banner__close" aria-label="{{ 'Hide alert'|t }}"></button>
+        {% endif %}
+      </div>
+      <div class="message-body">
+        {% if content.short_description[0]['#text'] %}
+          {{ content.short_description }}
+        {% endif %}
+        {% if has_link %}
+          <div class="buttons">
+            {% for item in content.link['#items'] %}
+              <a href="{{ item.url }}" class="button {{ message_class_map[type_of_alert] }}">{{ item.title }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </article>
+  </div>
+</section>

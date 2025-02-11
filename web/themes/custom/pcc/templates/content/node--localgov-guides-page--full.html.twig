@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Default node template for localgov_guides_overview pages.
+ */
+#}
+{% set classes = ['lgd-guides', 'lgd-guides--page', 'node', 'node--type-' ~ (node.bundle|clean_class), node.isPromoted() ? 'node--promoted', node.isSticky() ? 'node--sticky', not node.isPublished() ? 'node--unpublished', view_mode ? 'node--view-mode-' ~ (view_mode|clean_class)] %}
+
+<article {{ attributes.addClass(classes).removeAttribute('role') }}>
+  <div class="container">
+    <div class="content">
+      {{ title_prefix }}
+      <h2>{{ node.label }}</h2>
+      {{ title_suffix }}
+
+      {% if content %}
+        {{ content }}
+      {% endif %}
+    </div>
+  </div>
+</article>

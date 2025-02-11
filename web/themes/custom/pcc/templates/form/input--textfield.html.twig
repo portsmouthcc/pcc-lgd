@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+
+{% set wrapperAttributes = create_attribute() %}
+{% set classes = ['control', attributes.hasClass('is-large') ? 'is-expanded'] %}
+
+<div {{ wrapperAttributes.addClass(classes) }}>
+  <input {{ attributes.addClass('input') }} />{{ children }}
+</div>

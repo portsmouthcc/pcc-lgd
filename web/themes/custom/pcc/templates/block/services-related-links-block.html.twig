@@ -1,0 +1,12 @@
+<nav class="panel is-info">
+  <h2 class="panel-heading">Related Link</h2>
+  <div class="panel-block">
+    <ul class="list-unstyled">
+      {% for link in links %}
+        <li>
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

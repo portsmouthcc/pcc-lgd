@@ -1,0 +1,48 @@
+{% if footer_regions %}
+	<footer>
+
+		<section class="p-4 has-background-info has-text-white">
+			<div class="container">{{ page.footer }}</div>
+		</section>
+
+		{% if has_footer_first or has_footer_second or has_footer_third %}
+			<section class="section has-background-primary has-text-white">
+				<div class="container">
+					<div class="columns">
+						{% if has_footer_first %}
+							<div class="column">{{ page.footer_first }}</div>
+						{% endif %}
+
+						{% if has_footer_second %}
+							<div class="column">{{ page.footer_second }}</div>
+						{% endif %}
+
+						{% if has_footer_third %}
+							<div class="column">{{ page.footer_third }}</div>
+						{% endif %}
+					</div>
+				</div>
+			</section>
+		{% endif %}
+
+		{% if has_lower_footer_first or has_lower_footer_second or has_lower_footer_third %}
+			<section class="section has-background-primary-dark has-text-white">
+				<div class="container">
+					<div class="columns">
+						{% if has_lower_footer_first %}
+							<div class="column">{{ page.lower_footer_first }}</div>
+						{% endif %}
+
+						{% if has_lower_footer_second %}
+							<div class="column">{{ page.lower_footer_second }}</div>
+						{% endif %}
+
+						{% if has_lower_footer_third %}
+							<div class="column">{{ page.lower_footer_third }}</div>
+						{% endif %}
+					</div>
+				</div>
+			</section>
+		{% endif %}
+	</footer>
+{% endif %}

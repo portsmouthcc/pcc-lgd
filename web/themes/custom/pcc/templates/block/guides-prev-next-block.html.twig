@@ -1,0 +1,31 @@
+{#
+/**
+* @file
+* Default theme implementation for the guides_prev_next_block block.
+*/
+#}
+
+<section class="section">
+  <div class="container">
+    <div class="buttons">
+      {% if previous_url %}
+        <a href="{{ previous_url }}#lgd-guides__title" class="button is-link lgd-prev-next__link lgd-prev-next__link--prev" aria-label="{{ 'Previous'|t }}: {{ previous_title }}">
+          <span class="icon is-small"><i class="fas fa-chevron-left"></i></span>
+          <div class="lgd-prev-next__label">{{ 'Previous'|t }}</div>
+          {% if show_title == 1 %}
+            <div class="lgd-prev-next__title">{{ previous_title }}</div>
+          {% endif %}
+        </a>
+      {% endif %}
+      {% if next_url %}
+        <a href="{{ next_url }}#lgd-guides__title" class="button is-link lgd-prev-next__link lgd-prev-next__link--next" aria-label="{{ 'Next'|t }}: {{ next_title }}">
+          <div class="lgd-prev-next__label">{{ 'Next'|t }}</div>
+          {% if show_title == 1 %}
+            <div class="lgd-prev-next__title">{{ next_title }}</div>
+          {% endif %}
+          <span class="icon is-small"><i class="fas fa-chevron-right"></i></span>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
