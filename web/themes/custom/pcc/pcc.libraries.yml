@@ -1,3 +1,7 @@
+global:
+  dependencies:
+    - pcc/bulma
+
 variables:
   css:
     base:
@@ -26,16 +30,17 @@ variables:
 
 bulma:
   remote: https://github.com/jgthms/bulma
-  version: 1.0.2
+  version: 1.0.3
   license:
     name: MIT
     url: https://github.com/jgthms/bulma/blob/master/LICENSE
     gpl-compatible: true
   css:
     base:
-      https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css:
+      https://cdn.jsdelivr.net/npm/bulma@1.0.3/css/bulma.min.css:
         type: external
         minified: true
   libraries_provider:
     enabled: true
     source: cdn.jsdelivr.net
+    npm_name: bulma
