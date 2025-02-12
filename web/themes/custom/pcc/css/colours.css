@@ -1,0 +1,24 @@
+/* Customise Bulma's colour palette.  */
+
+:root {
+  /* Dark blue */
+  --bulma-primary-h: 213;
+  --bulma-primary-s: 92%;
+  --bulma-primary-l: 24%;
+
+  /* Light blue */
+  --bulma-link-h: 204;
+  --bulma-link-s: 100%;
+  --bulma-link-l: 40%;
+
+  /* Tinted blue */
+  /* I might be able to make this with a variant of the light blue. */
+  --bulma-info-h: 204;
+  --bulma-info-s: 100%;
+  --bulma-info-l: 94%;
+
+  /* Black */
+  --bulma-text-h: 0;
+  --bulma-text-s: 0%;
+  --bulma-text-l: 0%;
+}
