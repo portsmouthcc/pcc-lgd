@@ -1,7 +1,9 @@
 <?php
 
-use Drupal\Core\Form\FormStateInterface;
 use Drupal\block\Entity\Block;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Markup;
+
 
 /**
  * @file
@@ -23,14 +25,19 @@ function pcc_form_views_exposed_form_alter(array &$form, FormStateInterface $for
     $form['s']['#theme_wrappers'] = [];
     $form['actions']['#theme_wrappers'] = [];
 
-    // // Add classes to inputs.
-    // $form['s']['#attributes']['class'][] = 'is-large';
-    // $form['actions']['submit']['#attributes']['class'][] = 'is-large';
+    // Add classes to inputs.
+    $form['s']['#attributes']['class'][] = 'is-large';
 
-    // Button value is the Font Awesome search glyph.
-    $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
-    $form['actions']['submit']['#attributes']['title'] = 'Search';
-    $form['actions']['submit']['#attributes']['class'][] = 'font-awesome';
+    // Tell the submit button to use a custom theme template.
+    $form['actions']['submit'] = [
+      '#theme' => 'icon-button',
+      '#label' => '',
+      '#icon_class_name' => 'fa-solid fa-magnifying-glass',
+      '#attributes' => [
+        'class' => ['button is-link is-large is-radiusless'],
+        'type' => 'submit',
+      ],
+    ];
   }
 }
 
@@ -45,7 +52,11 @@ function pcc_theme($existing, $type, $theme, $path)
     'search_form' => [
       'template' => 'form/search-form',
       'render element' => 'form'
-    ]
+    ],
+    'icon-button' => [
+      'variables' => ['label' => NULL, 'icon_class_name' => NULL, 'attributes' => NULL],
+      'template' => 'form/button--icon',
+    ],
   ];
 }
 
