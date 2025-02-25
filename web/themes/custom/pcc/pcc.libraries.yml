@@ -3,6 +3,8 @@ global:
     theme:
       css/colours.css: {}
       css/variables.css: {}
+  js:
+    js/main.js: {}
   dependencies:
     - pcc/bulma
 

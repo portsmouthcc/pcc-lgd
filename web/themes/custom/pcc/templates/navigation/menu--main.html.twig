@@ -27,6 +27,14 @@
 					{{ link(item.title, item.url, attributes.addClass('navbar-item')) }}
 				{% endfor %}
 			</div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <label id="dark-mode-toggle" class="checkbox">
+            <input type="checkbox" />
+            Dark mode
+          </label>
+        </div>
+      </div>
 		</div>
 	</nav>
 {% endif %}

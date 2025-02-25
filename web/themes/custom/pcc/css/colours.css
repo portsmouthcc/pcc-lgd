@@ -1,15 +1,21 @@
 /* Customise Bulma's colour palette.  */
 
+/* Light theme is default. */
 :root {
-  /* Dark blue */
-  --bulma-primary-h: 213;
-  --bulma-primary-s: 92%;
-  --bulma-primary-l: 24%;
+  /* Black */
+  --bulma-text-h: 0;
+  --bulma-text-s: 0%;
+  --bulma-text-l: 0%;
 
   /* Light blue */
   --bulma-link-h: 204;
   --bulma-link-s: 100%;
   --bulma-link-l: 40%;
+
+  /* Dark blue */
+  --bulma-primary-h: 213;
+  --bulma-primary-s: 92%;
+  --bulma-primary-l: 24%;
 
   /* Tinted blue */
   /* I might be able to make this with a variant of the light blue. */
@@ -17,8 +23,37 @@
   --bulma-info-s: 100%;
   --bulma-info-l: 94%;
 
-  /* Black */
+  /* Green */
+  --bulma-success-h: 147;
+  --bulma-success-s: 64%;
+  --bulma-success-l: 43%;
+
+  /* Orange */
+  --bulma-warning-h: 24;
+  --bulma-warning-s: 90%;
+  --bulma-warning-l: 54%;
+
+  /* Red */
+  --bulma-danger-h: 0;
+  --bulma-danger-s: 100%;
+  --bulma-danger-l: 46%;
+}
+
+/* Dark theme if the user's preference is detected. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* White */
+    --bulma-text-h: 0;
+    --bulma-text-s: 100%;
+    --bulma-text-l: 100%;
+  }
+}
+
+/* Dark theme if explicitly set. */
+[data-theme="dark"],
+.theme-dark {
+  /* White */
   --bulma-text-h: 0;
-  --bulma-text-s: 0%;
-  --bulma-text-l: 0%;
+  --bulma-text-s: 100%;
+  --bulma-text-l: 100%;
 }
