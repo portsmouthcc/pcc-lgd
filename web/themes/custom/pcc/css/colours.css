@@ -3,8 +3,8 @@
 /* Light theme is default. */
 :root {
   /* Black */
-  --bulma-text-h: 0;
-  --bulma-text-s: 0%;
+  /* --bulma-text-h: 0; */
+  /* --bulma-text-s: 0%; */
   --bulma-text-l: 0%;
 
   /* Light blue */
@@ -43,9 +43,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* White */
-    --bulma-text-h: 0;
-    --bulma-text-s: 100%;
-    --bulma-text-l: 100%;
+    /* --bulma-text-h: 0; */
+    /* --bulma-text-s: 100%; */
+    /* --bulma-text-l: 100%; */
   }
 }
 
@@ -53,7 +53,7 @@
 [data-theme="dark"],
 .theme-dark {
   /* White */
-  --bulma-text-h: 0;
-  --bulma-text-s: 100%;
+  /* --bulma-text-h: 0; */
+  /* --bulma-text-s: 100%; */
   --bulma-text-l: 100%;
 }
