@@ -1,8 +1,10 @@
 {% if footer_regions %}
 	<footer>
 
-		<section class="p-4 has-background-info has-text-white">
-			<div class="container">{{ page.footer }}</div>
+		<section class="p-4 has-background-link has-text-white">
+			<div class="container">
+        {{ page.footer }}
+      </div>
 		</section>
 
 		{% if has_footer_first or has_footer_second or has_footer_third %}

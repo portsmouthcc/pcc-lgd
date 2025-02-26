@@ -1,0 +1,8 @@
+/* Hide toggle targets until active. */
+.toggle-target {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
