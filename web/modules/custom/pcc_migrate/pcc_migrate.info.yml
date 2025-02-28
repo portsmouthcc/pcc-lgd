@@ -1,0 +1,9 @@
+name: "PCC Migrate"
+type: module
+description: "Migrate content from a WordPress website"
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - migrate
+  - migrate_plus
+  - migrate_tools

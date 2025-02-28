@@ -1,0 +1,88 @@
+id: pcc_topic
+label: PCC topics
+status: true
+description: Child page links for service sub-landing pages.
+migration_group: pcc
+
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls: https://pcc.ddev.site/sites/default/files/migrate/wp-pages.json
+  fields:
+    - name: title
+      label: Content title
+      selector: title
+    - name: link
+      label: Link
+      selector: link
+    - name: creator
+      label: Username of the content creator
+      selector: creator
+    - name: description
+      label: Description
+      selector: description
+    - name: content
+      label: Body content
+      selector: content
+    - name: excerpt
+      label: Content excerpt
+      selector: excerpt
+    - name: id
+      label: Unique content ID
+      selector: id
+    - name: date
+      label: Date created
+      selector: date
+    - name: modified
+      label: Date last modified
+      selector: modified
+    - name: name
+      label: Name of the content
+      selector: name
+    - name: status
+      label: Published status
+      selector: status
+    - name: parent
+      label: Parent ID
+      selector: parent
+    - name: wp_type
+      label: WP post type
+      selector: type
+    - name: child_ids
+      label: Child page ids
+      selector: child_ids
+    - name: children
+      label: Child pages
+      selector: children
+  ids:
+    id:
+      type: integer
+
+process:
+  _content_type:
+    # Custom plugin to determine the LGD content type.
+    plugin: lgd_type
+
+  # Skip any type except localgov_services_sublanding
+  only_sublanding_pages:
+    plugin: skip_on_condition
+    source: "@_content_type"
+    condition:
+      plugin: not:equals
+      value: localgov_services_sublanding
+    method: row
+
+  topic_list_header:
+    plugin: default_value
+    default_value: ""
+  topic_list_links:
+    plugin: sub_process
+    source: children
+    process:
+      uri: url
+      title: title
+
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: topic_list_builder
