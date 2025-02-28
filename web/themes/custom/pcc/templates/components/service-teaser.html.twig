@@ -6,18 +6,18 @@
 
 <article {{ attributes.addClass(classes).removeAttribute('role') }}>
   <a href="{{ url }}" class="px-4 py-5" rel="bookmark">
-    <div class="media">
+    {# <div class="media"> #}
       {# <figure class="media-left">
 				<span class="icon">
 					<i class="fas fa-chevron-right"></i>
 				</span>
 			</figure> #}
-      <div class="media-content">
-        <div {{ content_attributes.addClass('lgd-teaser__content', 'lgd-teaser__content--' ~ (content_type|clean_class), 'content') }}>
-          <h3>{{ label }}</h3>
-          <p class="suffix">{{ node.body.summary }}</p>
-        </div>
-      </div>
-    </div>
+      {# <div class="media-content"> #}
+        {# <div {{ content_attributes.addClass('lgd-teaser__content', 'lgd-teaser__content--' ~ (content_type|clean_class), 'content') }}> #}
+          <h3 class="has-text-weight-bold has-text-link is-underlined">{{ label }}</h3>
+          <p class="has-text-text">{{ node.body.summary }}</p>
+        {# </div> #}
+      {# </div> #}
+    {# </div> #}
   </a>
 </article>
