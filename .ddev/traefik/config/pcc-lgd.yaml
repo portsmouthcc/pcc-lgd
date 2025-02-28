@@ -1,0 +1,104 @@
+#ddev-generated
+# If you remove the ddev-generated line above you
+# are responsible for maintaining this file. DDEV will not then
+# update it, for example if you add `additional_hostnames`, etc.
+
+http:
+  routers:
+    pcc-lgd-selenium-chrome-7900-http:
+      entrypoints:
+        - http-7910
+      rule: HostRegexp(`^pcc-lgd\.ddev\.site$`)
+      
+      service: "pcc-lgd-selenium-chrome-7900"
+      ruleSyntax: v3
+      tls: false
+      # middlewares:
+      #   - "pcc-lgd-redirectHttps"
+    pcc-lgd-web-80-http:
+      entrypoints:
+        - http-80
+      rule: HostRegexp(`^pcc-lgd\.ddev\.site$`)
+      
+      service: "pcc-lgd-web-80"
+      ruleSyntax: v3
+      tls: false
+      # middlewares:
+      #   - "pcc-lgd-redirectHttps"
+    pcc-lgd-web-8025-http:
+      entrypoints:
+        - http-8025
+      rule: HostRegexp(`^pcc-lgd\.ddev\.site$`)
+      
+      service: "pcc-lgd-web-8025"
+      ruleSyntax: v3
+      tls: false
+      # middlewares:
+      #   - "pcc-lgd-redirectHttps"
+    
+    
+    pcc-lgd-selenium-chrome-7900-https:
+      entrypoints:
+        - http-7900
+      rule: HostRegexp(`^pcc-lgd\.ddev\.site$`)
+      
+      service: "pcc-lgd-selenium-chrome-7900"
+      ruleSyntax: v3
+      
+      tls: true
+      
+    
+    
+    pcc-lgd-web-80-https:
+      entrypoints:
+        - http-443
+      rule: HostRegexp(`^pcc-lgd\.ddev\.site$`)
+      
+      service: "pcc-lgd-web-80"
+      ruleSyntax: v3
+      
+      tls: true
+      
+    pcc-lgd-web-8025-https:
+      entrypoints:
+        - http-8026
+      rule: HostRegexp(`^pcc-lgd\.ddev\.site$`)
+      
+      service: "pcc-lgd-web-8025"
+      ruleSyntax: v3
+      
+      tls: true
+      
+    
+
+  middlewares:
+    pcc-lgd-redirectHttps:
+      redirectScheme:
+        scheme: https
+        permanent: true
+
+  services:
+    pcc-lgd-selenium-chrome-7900:
+      loadbalancer:
+        servers:
+          - url: http://ddev-pcc-lgd-selenium-chrome:7900
+        
+    
+    pcc-lgd-web-80:
+      loadbalancer:
+        servers:
+          - url: http://ddev-pcc-lgd-web:80
+        
+    pcc-lgd-web-8025:
+      loadbalancer:
+        servers:
+          - url: http://ddev-pcc-lgd-web:8025
+        
+    
+    
+    
+
+tls:
+  certificates:
+    - certFile: /mnt/ddev-global-cache/traefik/certs/pcc-lgd.crt
+      keyFile: /mnt/ddev-global-cache/traefik/certs/pcc-lgd.key
