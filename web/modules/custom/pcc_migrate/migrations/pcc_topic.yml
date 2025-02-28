@@ -65,13 +65,12 @@ process:
     plugin: lgd_type
 
   # Skip any type except localgov_services_sublanding
-  only_sublanding_pages:
-    plugin: skip_on_condition
-    source: "@_content_type"
-    condition:
-      plugin: not:equals
-      value: localgov_services_sublanding
+  _skip_types:
+    plugin: skip_on_value
+    not_equals: true
+    source: "@type"
     method: row
+    value: localgov_services_sublanding
 
   topic_list_header:
     plugin: default_value

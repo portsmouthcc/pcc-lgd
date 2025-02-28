@@ -70,12 +70,11 @@ process:
 
   # Skip any other content types.
   _skip_types:
-    plugin: skip_on_condition
+    plugin: skip_on_value
+    not_equals: true
     source: "@type"
-    condition:
-      plugin: not:equals
-      value: localgov_services_sublanding
     method: row
+    value: localgov_services_sublanding
 
   nid: id
   uid:
