@@ -6,9 +6,9 @@ migration_group: pcc
 
 source:
   plugin: url
-  data_fetcher_plugin: http
+  data_fetcher_plugin: file
   data_parser_plugin: json
-  urls: /sites/default/files/migrate/wp-pages.json
+  urls: sites/default/files/migrate/wp-pages.json
   fields:
     - name: title
       label: Content title

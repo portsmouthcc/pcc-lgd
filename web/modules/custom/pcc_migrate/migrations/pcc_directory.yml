@@ -10,9 +10,9 @@ migration_dependencies:
 
 source:
   plugin: url
-  data_fetcher_plugin: http
+  data_fetcher_plugin: file
   data_parser_plugin: json
-  urls: /sites/default/files/migrate/maps.json
+  urls: sites/default/files/migrate/maps.json
   item_selector: /maps
   fields:
     - name: id
