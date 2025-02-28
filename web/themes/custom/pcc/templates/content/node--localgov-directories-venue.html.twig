@@ -71,4 +71,70 @@
  */
 #}
 
-{% include '@pcc/components/service-teaser.html.twig' %}
+{#
+  Restrict width of the content area to two-thirds of the screen for
+  some content types. This is helpful to reduce the line-length for
+  better readability.
+#}
+{% set restricted_width_content_types = [
+    'localgov_services_page',
+    'localgov_event',
+    'localgov_step_by_step_overview',
+    'localgov_services_status',
+    'localgov_publication_cover_page'
+  ]
+%}
+
+{% set content_type = node.bundle %}
+
+{%
+  set classes = [
+    content_type|clean_class,
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    content_type in restricted_width_content_types ? 'node--with-restricted-width',
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addClass(classes).removeAttribute('role') }}>
+  <div class="container">
+    {{ title_prefix }}
+    {% if label and not page %}
+      <h2{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+
+    {% if content_type in restricted_width_content_types %}
+      <div class="node__restricted-width-section">
+    {% endif %}
+
+      <div{{ content_attributes.addClass(content_type|clean_class ~ '__content', 'node__content') }}>
+        {{ content|without('group_enquiries', "#title") }}
+      </div>
+  </div>
+
+  <article class="message is-primary directory-message mt-5">
+    <div class="message-header has-text-white">
+      <h2>{{content.group_enquiries['#title']}}</h2>
+    </div>
+    <div class="message-body">
+      <div class="content">
+        {{content.group_enquiries | without(['#title'])}}
+      </div>
+    </div>
+  </article>
+
+
+  {% if content_type in restricted_width_content_types %}
+    </div>
+  {% endif %}
+
+  </div>
+
+</article>

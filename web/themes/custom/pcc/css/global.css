@@ -6,3 +6,8 @@
     display: block;
   }
 }
+
+/* Hide the location label on directory venue pages. Couldn't find a way through the UI. */
+.localgov-directories-venue .field--name-localgov-location .field--name-label {
+  display: none;
+}
