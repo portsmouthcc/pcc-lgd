@@ -1,59 +1,129 @@
 /* Customise Bulma's colour palette.  */
 
-/* Light theme is default. */
 :root {
-  /* Black */
-  /* --bulma-text-h: 0; */
-  /* --bulma-text-s: 0%; */
-  --bulma-text-l: 0%;
+  /* PCC colour palette */
+  --pcc-blue-h: 204;
+  --pcc-blue-s: 100%;
+  --pcc-blue-l: 40%;
 
-  /* Light blue */
-  --bulma-link-h: 204;
-  --bulma-link-s: 100%;
-  --bulma-link-l: 40%;
+  --pcc-light-blue-h: 204;
+  --pcc-light-blue-s: 100%;
+  --pcc-light-blue-l: 94%;
 
-  /* Dark blue */
-  --bulma-primary-h: 213;
-  --bulma-primary-s: 92%;
-  --bulma-primary-l: 24%;
+  --pcc-dark-blue-h: 213;
+  --pcc-dark-blue-s: 92%;
+  --pcc-dark-blue-l: 24%;
 
-  /* Tinted blue */
-  /* I might be able to make this with a variant of the light blue. */
-  --bulma-info-h: 204;
-  --bulma-info-s: 100%;
-  --bulma-info-l: 94%;
+  --pcc-green-h: 147;
+  --pcc-green-s: 64%;
+  --pcc-green-l: 43%;
 
-  /* Green */
-  --bulma-success-h: 147;
-  --bulma-success-s: 64%;
-  --bulma-success-l: 43%;
+  --pcc-orange-h: 24;
+  --pcc-orange-s: 90%;
+  --pcc-orange-l: 54%;
 
-  /* Orange */
-  --bulma-warning-h: 24;
-  --bulma-warning-s: 90%;
-  --bulma-warning-l: 54%;
+  --pcc-red-h: 0;
+  --pcc-red-s: 100%;
+  --pcc-red-l: 46%;
 
-  /* Red */
-  --bulma-danger-h: 0;
-  --bulma-danger-s: 100%;
-  --bulma-danger-l: 46%;
+  /* Light theme is the default. */
+  --bulma-text-h: var(--bulma-black-h);
+  --bulma-text-s: var(--bulma-black-s);
+  --bulma-text-l: var(--bulma-black-l);
+
+  --bulma-link-h: var(--pcc-blue-h);
+  --bulma-link-s: var(--pcc-blue-s);
+  --bulma-link-l: var(--pcc-blue-l);
+
+  --bulma-primary-h: var(--pcc-dark-blue-h);
+  --bulma-primary-s: var(--pcc-dark-blue-s);
+  --bulma-primary-l: var(--pcc-dark-blue-l);
+
+  --bulma-info-h: var(--pcc-light-blue-h);
+  --bulma-info-s: var(--pcc-light-blue-s);
+  --bulma-info-l: var(--pcc-light-blue-l);
+
+  --bulma-success-h: var(--pcc-green-h);
+  --bulma-success-s: var(--pcc-green-s);
+  --bulma-success-l: var(--pcc-green-l);
+
+  --bulma-warning-h: var(--pcc-orange-h);
+  --bulma-warning-s: var(--pcc-orange-s);
+  --bulma-warning-l: var(--pcc-orange-l);
+
+  --bulma-danger-h: var(--pcc-red-h);
+  --bulma-danger-s: var(--pcc-red-h);
+  --bulma-danger-l: var(--pcc-red-h);
 }
 
 /* Dark theme if the user's preference is detected. */
 @media (prefers-color-scheme: dark) {
-  :root {
-    /* White */
-    /* --bulma-text-h: 0; */
-    /* --bulma-text-s: 100%; */
-    /* --bulma-text-l: 100%; */
-  }
+  /* :root {
+  } */
 }
 
-/* Dark theme if explicitly set. */
+/* Light theme */
+/* [data-theme="light"],
+.theme-light {
+  --bulma-text-h: var(--bulma-black-h);
+  --bulma-text-s: var(--bulma-black-s);
+  --bulma-text-l: var(--bulma-black-l);
+
+  --bulma-link-h: var(--pcc-blue-h);
+  --bulma-link-s: var(--pcc-blue-s);
+  --bulma-link-l: var(--pcc-blue-l);
+
+  --bulma-primary-h: var(--pcc-dark-blue-h);
+  --bulma-primary-s: var(--pcc-dark-blue-s);
+  --bulma-primary-l: var(--pcc-dark-blue-l);
+
+  --bulma-info-h: var(--pcc-light-blue-h);
+  --bulma-info-s: var(--pcc-light-blue-s);
+  --bulma-info-l: var(--pcc-light-blue-l);
+
+  --bulma-success-h: var(--pcc-green-h);
+  --bulma-success-s: var(--pcc-green-s);
+  --bulma-success-l: var(--pcc-green-l);
+
+  --bulma-warning-h: var(--pcc-orange-h);
+  --bulma-warning-s: var(--pcc-orange-s);
+  --bulma-warning-l: var(--pcc-orange-l);
+
+  --bulma-danger-h: var(--pcc-red-h);
+  --bulma-danger-s: var(--pcc-red-h);
+  --bulma-danger-l: var(--pcc-red-h);
+} */
+
+/* Dark theme. */
 [data-theme="dark"],
 .theme-dark {
-  /* White */
-  /* --bulma-text-h: 0; */
-  /* --bulma-text-s: 100%; */
-  --bulma-text-l: 100%;
+  --bulma-text-h: var(--bulma-white-h);
+  --bulma-text-s: var(--bulma-white-s);
+  --bulma-text-l: var(--bulma-white-l);
+
+  /* --bulma-link-h: var(--pcc-blue-h);
+  --bulma-link-s: var(--pcc-blue-s);
+  --bulma-link-l: var(--pcc-blue-l);
+
+  --bulma-primary-h: var(--pcc-dark-blue-h);
+  --bulma-primary-s: var(--pcc-dark-blue-s);
+  --bulma-primary-l: var(--pcc-dark-blue-l);
+
+  --bulma-info-h: var(--pcc-light-blue-h);
+  --bulma-info-s: var(--pcc-light-blue-s);
+  --bulma-info-l: var(--pcc-light-blue-l);
+
+  --bulma-success-h: var(--pcc-green-h);
+  --bulma-success-s: var(--pcc-green-s);
+  --bulma-success-l: var(--pcc-green-l); */
+
+  /* Orange */
+  /* --bulma-warning-h: var(--pcc-orange-h);
+  --bulma-warning-s: var(--pcc-orange-s);
+  --bulma-warning-l: var(--pcc-orange-l); */
+
+  /* Red */
+  /* --bulma-danger-h: var(--pcc-red-h);
+  --bulma-danger-s: var(--pcc-red-h);
+  --bulma-danger-l: var(--pcc-red-h); */
 }

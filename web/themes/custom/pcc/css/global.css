@@ -11,3 +11,8 @@
 .localgov-directories-venue .field--name-localgov-location .field--name-label {
   display: none;
 }
+
+/* These have a green background for some reason. */
+.localgov-alert-banner {
+  background-color: white;
+}
