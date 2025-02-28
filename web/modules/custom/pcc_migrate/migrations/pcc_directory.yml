@@ -12,7 +12,7 @@ source:
   plugin: url
   data_fetcher_plugin: http
   data_parser_plugin: json
-  urls: https://pcc.ddev.site/sites/default/files/migrate/maps.json
+  urls: /sites/default/files/migrate/maps.json
   item_selector: /maps
   fields:
     - name: id

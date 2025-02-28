@@ -12,7 +12,7 @@ source:
   plugin: url
   data_fetcher_plugin: http
   data_parser_plugin: json
-  urls: https://pcc.ddev.site/sites/default/files/migrate/wp-pages.json
+  urls: /sites/default/files/migrate/wp-pages.json
   fields:
     - name: title
       label: Content title
