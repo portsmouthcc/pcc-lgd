@@ -59,6 +59,9 @@ source:
     - name: child_ids
       label: Child page ids
       selector: child_ids
+    - name: children
+      label: Child pages
+      selector: children
   ids:
     id:
       type: integer
@@ -117,6 +120,7 @@ process:
     plugin: migration_lookup
     migration: pcc_topic
     source: id
+
   localgov_topics:
     plugin: sub_process
     source:
@@ -124,6 +128,47 @@ process:
     process:
       target_id: "0"
       target_revision_id: "1"
+
+  # localgov_topics:
+  #   plugin: entity_generate
+  #   source: title
+  #   entity_type: entity_reference_revisions
+  #   bundle: paragraph
+  #   value_key: topic_list_header
+  #   values:
+  #     topic_list_header: title
+  #     topic_list_links:
+  #       plugin: sub_process
+  #       source: children
+  #       process:
+  #         uri: url
+  #         title: title
+
+  # Try to generate the topic paragraph directly without another migration.
+  # localgov_topics:
+  #   - plugin: skip_on_empty
+  #     method: process
+  #     source: children
+  #   - plugin: sub_process
+  #     process:
+  #       _uri: url
+  #       _title: title
+  #       target_id:
+  #         plugin: entity_generate
+  #         source: id
+  #         entity_type: paragraph
+  #         bundle: topic_list_builder
+  #         value_key: id
+  #         values:
+  #           id/0/value: id
+  #           topic_list_links/0/uri: "@_uri"
+  #           topic_list_links/0/title: "@_title"
+  #       _revision_id_value:
+  #         plugin: entity_value
+  #         source: "@target_id"
+  #         entity_type: paragraph
+  #         field_name: revision_id
+  #       target_revision_id: "@_revision_id_value/0/value"
 
   # Top task links
   localgov_common_tasks:

@@ -64,17 +64,20 @@ process:
     # Custom plugin to determine the LGD content type.
     plugin: lgd_type
 
-  # Skip any type except localgov_services_sublanding
+  # Skip any type except localgov_services_sublanding.
   _skip_types:
     plugin: skip_on_value
     not_equals: true
-    source: "@type"
+    source: "@_content_type"
     method: row
     value: localgov_services_sublanding
 
+  # No heading, these are simply child pages.
   topic_list_header:
     plugin: default_value
     default_value: ""
+
+  # List of child page links.
   topic_list_links:
     plugin: sub_process
     source: children

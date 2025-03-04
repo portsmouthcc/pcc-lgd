@@ -47,7 +47,6 @@ class LgdType extends ProcessPluginBase
 
       // Check for children of guide overviews.
       foreach ($guide_paths as $guide_path) {
-        print_r($guide_path, $link);
         if (str_starts_with($link, $guide_path)) {
           return 'localgov_guides_page';
         }
