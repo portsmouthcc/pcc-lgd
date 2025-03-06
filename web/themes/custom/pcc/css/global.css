@@ -1,9 +1,21 @@
-/* Hide toggle targets until active. */
+/* Hide toggle targets and animate when active. */
 .toggle-target {
-  display: none;
+  transition: 0.4s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+
+  > .toggle-innards {
+    transition: 0.4s ease-in-out;
+    transform: translateY(-100%);
+    /* transform: translateY(0); */
+  }
 
   &.active {
-    display: block;
+    max-height: 500px;
+
+    > .toggle-innards {
+      transform: translateY(0);
+    }
   }
 }
 
@@ -16,7 +28,3 @@
 .localgov-alert-banner {
   background-color: white;
 }
-
-/* .page-header {
-  border-bottom: 1px solid var(--bulma-link);
-} */

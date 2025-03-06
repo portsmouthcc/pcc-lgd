@@ -26,15 +26,19 @@
 	</section>
 
 	{% if has_secondary_menu %}
-		<section id="secondary-menu" class="section has-background-info toggle-target">
-			<div class="container">{{ page.secondary_menu }}</div>
-		</section>
+    <div id="secondary-menu" class="toggle-target">
+      <section class="section has-background-info toggle-innards">
+        <div class="container">{{ page.secondary_menu }}</div>
+      </section>
+    </div>
 	{% endif %}
 
 	{% if has_search %}
-		<section id="search-bar" class="section has-background-info toggle-target">
-			<div class="container">{{ page.search }}</div>
-		</section>
+    <div id="search-bar" class="toggle-target">
+      <section class="section has-background-info toggle-innards">
+        <div class="container">{{ page.search }}</div>
+      </section>
+    </div>
 	{% endif %}
 
 </header>
