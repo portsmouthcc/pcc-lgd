@@ -1,5 +1,5 @@
 /* Hide toggle targets and animate when active. */
-.toggle-target {
+/* .toggle-target {
   transition: 0.4s ease-in-out;
   overflow: hidden;
   max-height: 0;
@@ -7,7 +7,6 @@
   > .toggle-innards {
     transition: 0.4s ease-in-out;
     transform: translateY(-100%);
-    /* transform: translateY(0); */
   }
 
   &.active {
@@ -16,6 +15,25 @@
     > .toggle-innards {
       transform: translateY(0);
     }
+  }
+} */
+
+.toggle-target-wrapper {
+  transition: 0.4s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+
+  .toggle-target {
+    transition: 0.4s ease-in-out;
+    transform: translateY(-100%);
+
+    &.active {
+      transform: translateY(0);
+    }
+  }
+
+  &:has(.toggle-target.active) {
+    max-height: 500px;
   }
 }
 
