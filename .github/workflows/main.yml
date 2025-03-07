@@ -15,7 +15,10 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             cd www/lgd.portcreative.co.uk/public_html/pcc-lgd
-            git fetch
-            git checkout ${{ github.sha }}
+            git pull
             composer install
             bin/drush cr
+
+# I was getting the specific commit but is that necessary?
+# git fetch
+# git checkout ${{ github.sha }}
