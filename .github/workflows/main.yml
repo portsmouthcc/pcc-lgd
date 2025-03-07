@@ -14,6 +14,7 @@ jobs:
           key: ${{ secrets.KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
+            echo ${{ github.sha }}
             cd www/lgd.portcreative.co.uk/public_html/pcc-lgd
             git pull
             composer install
