@@ -1,0 +1,21 @@
+name: Main
+on: [push]
+jobs:
+  build:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull update onto server
+        uses: appleboy/ssh-action@v1.2.1
+        with:
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+          script: |
+            cd www/lgd.portcreative.co.uk/public_html/pcc-lgd
+            git pull origin main
+            git checkout main
+            composer install
+            bin/drush cr
