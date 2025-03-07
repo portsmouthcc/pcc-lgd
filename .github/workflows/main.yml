@@ -15,7 +15,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             cd www/lgd.portcreative.co.uk/public_html/pcc-lgd
-            git pull
+            git pull origin main
             composer install
             bin/drush cr
 
