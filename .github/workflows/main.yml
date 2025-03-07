@@ -14,5 +14,7 @@ jobs:
           key: ${{ secrets.KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            pwd
-            ls
+            cd www/lgd.portcreative.co.uk/public_html/pcc-lgd
+            git pull
+            composer update
+            bin/drush cr
