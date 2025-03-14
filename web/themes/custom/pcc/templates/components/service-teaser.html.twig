@@ -5,7 +5,7 @@
 {% set classes = ['service-teaser', 'teaser', 'teaser--' ~ (content_type|clean_class), 'node', 'node--type-' ~ (node.bundle|clean_class), node.isPromoted() ? 'node--promoted', node.isSticky() ? 'node--sticky', not node.isPublished() ? 'node--unpublished', view_mode ? 'node--view-mode-' ~ (view_mode|clean_class)] %}
 
 <article {{ attributes.addClass(classes).removeAttribute('role') }}>
-  <a href="{{ url }}" class="px-4 py-5" rel="bookmark">
+  <a href="{{ url }}" rel="bookmark">
     <h3 class="has-text-weight-bold has-text-link is-underlined">{{ label }}</h3>
     <p class="has-text-text">{{ node.body.summary }}</p>
   </a>
