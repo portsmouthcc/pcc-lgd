@@ -46,3 +46,7 @@
 .localgov-alert-banner {
   background-color: white;
 }
+
+a:focus {
+  /* background-color: var(--bulma-warning); */
+}
