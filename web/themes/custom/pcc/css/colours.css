@@ -72,7 +72,7 @@
     --bulma-content-heading-color: var(--pcc-dark-blue);
   }
 
-  .top-task svg {
+  .top-task i {
     color: var(--pcc-dark-blue);
   }
 }
@@ -138,7 +138,7 @@
     --bulma-content-heading-color: var(--pcc-light-blue);
   }
 
-  .top-task svg {
+  .top-task i {
     color: var(--pcc-light-blue);
   }
 }
