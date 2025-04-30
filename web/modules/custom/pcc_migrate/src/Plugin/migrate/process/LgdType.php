@@ -30,7 +30,17 @@ class LgdType extends ProcessPluginBase
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property)
   {
 
-    $guide_paths = ["/services/environmental-health/safety/flooding/"];
+    $guide_paths = [
+      "/services/parking-roads-and-travel/parking/blue-badges/applying-for-a-blue-badge/",
+      "/services/parking-roads-and-travel/parking/where-to-park-in-the-city/resident-parking-zones/resident-parking-permits/",
+      "/services/parking-roads-and-travel/parking/parking-fines-and-penalty-charge-notices/",
+      "/services/parking-roads-and-travel/parking/disabled-parking-bays/",
+      "/services/parking-roads-and-travel/parking/parking-suspensions/",
+      "/services/parking-roads-and-travel/travel/road-safety/",
+      "/services/parking-roads-and-travel/travel/bus-passes/older-persons-bus-pass/",
+      "/services/parking-roads-and-travel/travel/bus-passes/disabled-persons-bus-pass/",
+      "/services/parking-roads-and-travel/travel/bus-passes/companion-bus-passes/",
+    ];
 
     if (isset($value)) {
       return $value;
