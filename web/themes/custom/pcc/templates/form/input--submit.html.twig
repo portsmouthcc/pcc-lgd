@@ -10,6 +10,21 @@
  * @see template_preprocess_input()
  */
 #}
-<div class="control">
-  <input {{ attributes.addClass('is-link') }} />{{ children }}
-</div>
+
+{% if attributes.id == 'edit-submit-localgov-sitewide-search' %}
+
+  <div class="control">
+    <button{{ attributes }}>
+      <span class="icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </span>
+    </button>
+  </div>
+
+{% else %}
+
+  <div class="control">
+    <input {{ attributes.addClass('is-link') }} />{{ children }}
+  </div>
+
+{% endif %}

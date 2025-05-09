@@ -28,15 +28,13 @@ function pcc_form_views_exposed_form_alter(array &$form, FormStateInterface $for
     // Add classes to inputs.
     $form['s']['#attributes']['class'][] = 'is-large';
 
-    // Tell the submit button to use a custom theme template.
-    $form['actions']['submit'] = [
-      '#theme' => 'icon-button',
-      '#label' => '',
-      '#icon_class_name' => 'fa-solid fa-magnifying-glass',
-      '#attributes' => [
-        'class' => ['button is-link is-large is-radiusless'],
-        'type' => 'submit',
-      ],
+    $form['actions']['submit']['#value'] = '';
+    // $form['actions']['submit']['#theme'] = 'icon-button';
+    $form['actions']['submit']['#label'] = '';
+    $form['actions']['submit']['#icon_class_name'] = 'fa-solid fa-magnifying-glass';
+    $form['actions']['submit']['#attributes'] = [
+      'class' => ['button is-link is-large is-radiusless'],
+      'type' => 'submit',
     ];
   }
 }
