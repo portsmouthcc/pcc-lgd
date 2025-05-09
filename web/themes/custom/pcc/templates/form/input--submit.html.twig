@@ -11,7 +11,9 @@
  */
 #}
 
-{% if attributes.id == 'edit-submit-localgov-sitewide-search' %}
+{{ dump(attributes.id) }}
+
+{% if str_contains(attributes.id, 'search') %}
 
   <div class="control">
     <button{{ attributes }}>
