@@ -11,9 +11,7 @@
  */
 #}
 
-{{ dump(attributes.id) }}
-
-{% if str_contains(attributes.id, 'search') %}
+{% if 'search' in attributes.id|render %}
 
   <div class="control">
     <button{{ attributes }}>
