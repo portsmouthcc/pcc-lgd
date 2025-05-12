@@ -19,6 +19,7 @@
         "cweagans/composer-patches": "^1.6",
         "drupal/core-composer-scaffold": "^10.3",
         "drupal/core-recommended": "^10.3",
+        "drupal/devel": "^5.3",
         "drupal/fontawesome": "^3.0",
         "drupal/libraries_provider": "^2.0",
         "drupal/migrate_plus": "^6.0",
