@@ -1,22 +1,20 @@
 {% if title or lede['#value'] %}
-  <section class="section page-header">
-    <div class="container">
+  <section class="xsection is-medium page-header py-6">
+    {# <div class="container"> #}
       <div class="columns">
         <div class="column is-two-thirds">
+
           {% if title %}
             <h1 class="title">{{ title }}</h1>
           {% endif %}
 
-          {% if lede %}
-            {% if lede['#value'] %}
-              <p class="subtitle mt-5">{{ lede['#value'] }}</p>
-            {% else %}
-              {{ lede }}
-            {% endif %}
+          {% if lede['#value'] %}
+            <p class="subtitle mt-5">{{ lede['#value'] }}</p>
           {% endif %}
+
         </div>
       </div>
       <hr class="has-background-link mb-0">
-    </div>
+    {# </div> #}
   </section>
 {% endif %}
