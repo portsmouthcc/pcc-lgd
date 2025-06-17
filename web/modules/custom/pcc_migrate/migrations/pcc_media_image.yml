@@ -30,7 +30,7 @@ source:
     id:
       type: integer
   constants:
-    DRUPAL_FILE_DIRECTORY: public://migrated-media/
+    DRUPAL_FILE_DIRECTORY: public://media/
 
 process:
   psuedo_destination_filename:
