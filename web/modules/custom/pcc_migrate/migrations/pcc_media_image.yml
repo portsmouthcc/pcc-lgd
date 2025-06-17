@@ -17,12 +17,15 @@ source:
     - name: id
       label: ID
       selector: wp:post_id
-    # - name: title
-    #   label: Title
-    #   selector: title
+    - name: title
+      label: Title
+      selector: title
     - name: url
       label: URL
       selector: wp:attachment_url
+    - name: alt
+      label: Alt text
+      selector: 'wp:postmeta[wp:meta_key="_wp_attachment_image_alt"]/wp:meta_value'
   ids:
     id:
       type: integer
@@ -41,25 +44,30 @@ process:
       not_equals: true
       method: row
       value:
-        - jpg
-        - jpeg
-        - png
-        - webp
-        - gif
-  psuedo_destination_path:
-    - plugin: concat
-      source:
-        - constants/DRUPAL_FILE_DIRECTORY
-        - "@psuedo_destination_filename"
-  name: "@psuedo_destination_filename"
+        - .jpg
+        - .jpeg
+        - .png
+        - .webp
+        - .gif
+  # psuedo_destination_path:
+  #   - plugin: concat
+  #     source:
+  #       - constants/DRUPAL_FILE_DIRECTORY
+  #       - "@psuedo_destination_filename"
+  # name: "@psuedo_destination_filename"
+  name: title
   field_media_image/target_id:
     plugin: migration_lookup
     migration: pcc_media_file
     source: id
+  field_media_image/title: title
+  field_media_image/alt: alt
   thumbnail/target_id:
     plugin: migration_lookup
     migration: pcc_media_file
     source: id
+  thumbnail/title: title
+  thumbnail/alt: alt
 
 destination:
   plugin: entity:media
