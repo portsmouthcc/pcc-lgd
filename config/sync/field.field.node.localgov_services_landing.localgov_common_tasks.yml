@@ -1,0 +1,25 @@
+uuid: e5aa46b4-9f63-4ce6-ac2c-012db5a37ab8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.localgov_common_tasks
+    - node.type.localgov_services_landing
+  module:
+    - link
+_core:
+  default_config_hash: 81BmNDkrPmzid7V_iAvDrUFcLufrFRApUHeN_D5mDQc
+id: node.localgov_services_landing.localgov_common_tasks
+field_name: localgov_common_tasks
+entity_type: node
+bundle: localgov_services_landing
+label: 'Top tasks'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

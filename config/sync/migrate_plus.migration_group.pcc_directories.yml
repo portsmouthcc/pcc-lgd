@@ -1,0 +1,10 @@
+uuid: 3640a67e-70ce-43a5-b135-887ec7876c30
+langcode: en
+status: true
+dependencies: {  }
+id: pcc_directories
+label: pcc_directories
+description: ''
+source_type: null
+module: null
+shared_configuration: null

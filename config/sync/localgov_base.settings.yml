@@ -1,0 +1,7 @@
+_core:
+  default_config_hash: ygTfbZX_7huVo8jhVU6nTUArDT5vDZQ-_sh3IDoUYm8
+localgov_base_remove_css: false
+localgov_base_remove_js: false
+localgov_base_add_unpublished_background_colour: true
+localgov_base_add_draft_note_to_unpublished_content: false
+localgov_base_header_behaviour: default

@@ -1,0 +1,29 @@
+uuid: caaa1d52-190a-402c-9672-5fddb1079110
+langcode: en
+status: true
+dependencies:
+  config:
+    - geo_entity.geo_entity_type.address
+  module:
+    - geo_entity
+_core:
+  default_config_hash: z_KdUIdqqCpffX4VZfAvbJsuKhZiQgo3cOIuaM7NwFY
+id: geo_entity.address
+entity_type: geo_entity
+bundle: address
+public_type: location
+public_datatype: null
+property_mappings:
+  default:
+    -
+      field_name: label
+      public_name: name
+    -
+      field_name: uuid
+      public_name: id
+    -
+      field_name: location
+      public_name: _flatten
+    -
+      field_name: postal_address
+      public_name: physical_addresses

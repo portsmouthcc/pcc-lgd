@@ -1,0 +1,21 @@
+uuid: 02b6276b-ea34-4e0e-b645-e3637a3b765a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.localgov_directory_name
+    - node.type.localgov_directory_promo_page
+_core:
+  default_config_hash: VLQ3x3iQEe5sCePGc3J4U391tCd3YB8ucdoL_MuUGIA
+id: node.localgov_directory_promo_page.localgov_directory_name
+field_name: localgov_directory_name
+entity_type: node
+bundle: localgov_directory_promo_page
+label: 'Contact name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

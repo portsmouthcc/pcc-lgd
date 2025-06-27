@@ -1,0 +1,12 @@
+uuid: 8712b38d-0607-42c6-90ce-331f1b1cfb91
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rkrW10GCPdqsIkwgGHh4MSl5AaHjKZed5XcIn2ki4FM
+id: localgov_embed_views
+label: 'Embed content lists'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

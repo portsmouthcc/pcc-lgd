@@ -1,0 +1,16 @@
+features:
+  node_user_picture: true
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: 1
+logo:
+  use_default: 1
+favicon:
+  use_default: 1
+  path: ''
+localgov_base_remove_css: 1
+localgov_base_remove_js: 1
+localgov_base_add_unpublished_background_colour: 0
+localgov_base_add_draft_note_to_unpublished_content: 1
+localgov_base_show_back_to_top_link: 0
+localgov_base_header_behaviour: null

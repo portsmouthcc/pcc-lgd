@@ -1,0 +1,59 @@
+uuid: 5c2e9394-94cd-41f3-a74b-188800df82d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.localgov_sitewide_search
+    - views.view.localgov_sitewide_search
+  module:
+    - views
+id: localgov_sitewide_search
+label: 'Sitewide search'
+index_id: localgov_sitewide_search
+suggester_settings:
+  live_results:
+    fields: {  }
+    highlight:
+      enabled: false
+      field: ''
+    suggest_keys: false
+    view_modes:
+      'entity:node':
+        localgov_directories_org: ''
+        localgov_directories_page: ''
+        localgov_directories_venue: ''
+        localgov_directory: ''
+        localgov_directory_promo_page: ''
+        localgov_event: ''
+        localgov_guides_overview: ''
+        localgov_guides_page: ''
+        localgov_newsroom: ''
+        localgov_news_article: ''
+        localgov_publication_cover_page: ''
+        localgov_publication_page: ''
+        localgov_services_landing: ''
+        localgov_services_page: ''
+        localgov_services_status: ''
+        localgov_services_sublanding: ''
+        localgov_step_by_step_overview: ''
+        localgov_step_by_step_page: ''
+        localgov_subsites_overview: ''
+        localgov_subsites_page: ''
+  server:
+    fields: {  }
+suggester_weights:
+  live_results: 0
+  server: 0
+suggester_limits: {  }
+search_settings:
+  'views:localgov_sitewide_search':
+    displays:
+      default: true
+      selected: {  }
+options:
+  limit: 10
+  min_length: 1
+  show_count: false
+  delay: null
+  submit_button_selector: ':submit'
+  autosubmit: true

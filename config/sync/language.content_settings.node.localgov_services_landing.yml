@@ -1,0 +1,11 @@
+uuid: 5a5bae5c-b810-4e5d-8ab6-4cb8496edee1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.localgov_services_landing
+id: node.localgov_services_landing
+target_entity_type_id: node
+target_bundle: localgov_services_landing
+default_langcode: site_default
+language_alterable: false

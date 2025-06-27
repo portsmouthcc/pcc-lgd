@@ -1,0 +1,26 @@
+uuid: 520a30b8-0a17-45b0-bae1-a10e8248843d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.localgov_directories_venue
+  module:
+    - text
+_core:
+  default_config_hash: _SWXR-ErCnEEv52WMUUbSkxSaLsr4PD8RFXhY3RT5Ak
+id: node.localgov_directories_venue.body
+field_name: body
+entity_type: node
+bundle: localgov_directories_venue
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

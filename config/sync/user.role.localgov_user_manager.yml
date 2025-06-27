@@ -1,0 +1,26 @@
+uuid: d01231ec-a876-4e9d-a25d-f549493ad995
+langcode: en
+status: true
+dependencies:
+  module:
+    - eu_cookie_compliance
+    - role_delegation
+    - system
+    - toolbar
+  enforced:
+    module:
+      - localgov_roles
+_core:
+  default_config_hash: hQSlQm58sfNt6InM-RrmoR4NWkli3tR9gWr3N37DIoM
+id: localgov_user_manager
+label: 'User manager'
+weight: 5
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'administer users'
+  - 'assign localgov_author role'
+  - 'assign localgov_contributor role'
+  - 'assign localgov_editor role'
+  - 'display eu cookie compliance popup'
+  - 'view the administration theme'

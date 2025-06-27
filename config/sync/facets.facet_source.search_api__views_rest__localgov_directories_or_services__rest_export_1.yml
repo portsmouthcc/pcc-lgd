@@ -1,0 +1,17 @@
+uuid: a0b5eee8-23be-4403-9a58-9ab4554d4894
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - localgov_openreferral
+_core:
+  default_config_hash: n2mdBzRnVkA1VlZKa_TUfg5kzErnpzZMyKXSlYFQsl4
+id: search_api__views_rest__localgov_directories_or_services__rest_export_1
+name: 'search_api:views_rest__localgov_directories_or_services__rest_export_1'
+filter_key: ''
+url_processor: query_string
+breadcrumb:
+  active: false
+  before: true
+  group: false

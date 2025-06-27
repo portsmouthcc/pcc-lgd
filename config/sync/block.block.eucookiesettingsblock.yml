@@ -1,0 +1,28 @@
+uuid: fa186f53-f206-452b-a40f-b9fab2895274
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_eu_cookie_compliance
+    - system
+  theme:
+    - localgov_scarfolk
+_core:
+  default_config_hash: jbXexLitxSKmYHd94c_MxmymM6bi5L1LTMoUjcdtNgI
+id: eucookiesettingsblock
+theme: localgov_scarfolk
+region: content
+weight: 5
+provider: null
+plugin: cookie_settings_block
+settings:
+  id: cookie_settings_block
+  label: 'EU Cookie settings block'
+  label_display: '0'
+  provider: localgov_eu_cookie_compliance
+visibility:
+  request_path:
+    id: request_path
+    pages: /cookies
+    negate: false
+    context_mapping: {  }

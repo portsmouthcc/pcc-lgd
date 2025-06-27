@@ -1,0 +1,22 @@
+uuid: 2ebd6465-a19a-4a43-be16-cc6d896d2b1d
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+_core:
+  default_config_hash: YQRTJWNqYP9wSPe0_duLAqkvA2H4ugKMCORbtdgDSik
+id: node.localgov_directory_files
+field_name: localgov_directory_files
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

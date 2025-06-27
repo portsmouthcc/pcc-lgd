@@ -1,0 +1,94 @@
+uuid: b338ef5e-b14d-4fe3-824d-a472836e7aaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.localgov_alert_banner.localgov_full_page.link
+    - field.field.localgov_alert_banner.localgov_full_page.localgov_alert_banner_body
+    - field.field.localgov_alert_banner.localgov_full_page.localgov_alert_banner_image
+    - field.field.localgov_alert_banner.localgov_full_page.type_of_alert
+    - field.field.localgov_alert_banner.localgov_full_page.visibility
+    - localgov_alert_banner.localgov_alert_banner_type.localgov_full_page
+    - workflows.workflow.localgov_alert_banners
+  module:
+    - content_moderation
+    - link
+    - media_library
+    - text
+_core:
+  default_config_hash: PjWmca1Md_0SPRIG0_eifb_wet7g6M6fqiqRV7dNSQQ
+id: localgov_alert_banner.localgov_full_page.default
+targetEntityType: localgov_alert_banner
+bundle: localgov_full_page
+mode: default
+content:
+  display_title:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  link:
+    type: link_default
+    weight: 7
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  localgov_alert_banner_body:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  localgov_alert_banner_image:
+    type: media_library_widget
+    weight: 6
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  type_of_alert:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  remove_hide_link: true
+  visibility: true

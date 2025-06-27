@@ -1,0 +1,30 @@
+uuid: 740f6a5a-383d-41db-87af-aa29eca14883
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.localgov_alert_banner.localgov_alert_banner_image
+    - localgov_alert_banner.localgov_alert_banner_type.localgov_full_page
+    - media.type.image
+_core:
+  default_config_hash: aXkAi7ySehWTBYbV7iaSxWTvpfznOn5KeVKi1jytlUc
+id: localgov_alert_banner.localgov_full_page.localgov_alert_banner_image
+field_name: localgov_alert_banner_image
+entity_type: localgov_alert_banner
+bundle: localgov_full_page
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

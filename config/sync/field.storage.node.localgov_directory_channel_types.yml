@@ -1,0 +1,21 @@
+uuid: 614f3b32-c13c-422a-b568-53932edf1a04
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: L_JDKjSEb7D3Hpxutg4MJCDN36qIChvG0O8zQhS2Rb8
+id: node.localgov_directory_channel_types
+field_name: localgov_directory_channel_types
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node_type
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

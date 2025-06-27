@@ -1,0 +1,15 @@
+uuid: 30c34aa1-571a-4858-9e81-f10a7e0e37f4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pcc
+id: pcc__bulma
+label: bulma
+source: local
+version: 1.0.3
+enabled: true
+minified: when_aggregating
+variant: ''
+replaces: {  }
+custom_options: {  }

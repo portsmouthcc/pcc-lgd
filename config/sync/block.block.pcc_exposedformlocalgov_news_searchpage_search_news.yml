@@ -1,0 +1,28 @@
+uuid: 4bcef144-760e-438d-885d-a47171b963d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.localgov_news_search
+  module:
+    - system
+    - views
+  theme:
+    - pcc
+id: pcc_exposedformlocalgov_news_searchpage_search_news
+theme: pcc
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:localgov_news_search-page_search_news'
+settings:
+  id: 'views_exposed_filter_block:localgov_news_search-page_search_news'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: 'Search news'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/news\r\n/news/*"

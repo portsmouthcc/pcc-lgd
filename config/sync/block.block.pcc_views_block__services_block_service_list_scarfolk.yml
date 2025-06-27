@@ -1,0 +1,32 @@
+uuid: 9e6bdada-05c6-4d00-8184-70cb86286fe2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.services
+  module:
+    - system
+    - views
+  theme:
+    - pcc
+_core:
+  default_config_hash: dIZQveClXGuKNNnnZIszG9I_DBPhQp4eMCPkbYqVkOg
+id: pcc_views_block__services_block_service_list_scarfolk
+theme: pcc
+region: content_top
+weight: -9
+provider: null
+plugin: 'views_block:services-block_service_list'
+settings:
+  id: 'views_block:services-block_service_list'
+  label: Services
+  label_display: visible
+  provider: views
+  views_label: Services
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

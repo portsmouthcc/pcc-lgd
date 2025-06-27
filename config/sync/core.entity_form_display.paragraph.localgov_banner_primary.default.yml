@@ -1,0 +1,66 @@
+uuid: 432585e4-a528-4b30-aa38-2bc4abfcd9e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.localgov_banner_primary.localgov_image
+    - field.field.paragraph.localgov_banner_primary.localgov_subsites_banner_logo
+    - field.field.paragraph.localgov_banner_primary.localgov_subsites_banner_text
+    - field.field.paragraph.localgov_banner_primary.localgov_title
+    - field.field.paragraph.localgov_banner_primary.localgov_url
+    - paragraphs.paragraphs_type.localgov_banner_primary
+  module:
+    - media_library
+    - media_library_edit
+_core:
+  default_config_hash: n3hog8isNYuXO5HuF6td5z5fNHPZtjMEl5SNE0eohIA
+id: paragraph.localgov_banner_primary.default
+targetEntityType: paragraph
+bundle: localgov_banner_primary
+mode: default
+content:
+  localgov_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+  localgov_subsites_banner_logo:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+  localgov_subsites_banner_text:
+    type: string_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  localgov_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  localgov_url:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,23 @@
+uuid: ec553332-4a1a-46d8-aefa-0792259f0a3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_alert_banner
+  theme:
+    - pcc
+id: pcc_alertbanner
+theme: pcc
+region: content_top
+weight: -14
+provider: null
+plugin: localgov_alert_banner_block
+settings:
+  id: localgov_alert_banner_block
+  label: 'Alert banner'
+  label_display: '0'
+  provider: localgov_alert_banner
+  include_types:
+    localgov_alert_banner: '0'
+    localgov_full_page: '0'
+visibility: {  }

@@ -1,0 +1,10 @@
+uuid: 6da8c29d-7ded-4127-b27f-29d6571a0080
+langcode: en
+status: true
+dependencies: {  }
+id: pcc_media
+label: pcc_media
+description: ''
+source_type: null
+module: null
+shared_configuration: null

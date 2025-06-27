@@ -1,0 +1,81 @@
+uuid: 76e5c481-53a7-447f-a01e-f74999ae9a3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.localgov_call_out_box.localgov_background_image
+    - field.field.paragraph.localgov_call_out_box.localgov_body_text
+    - field.field.paragraph.localgov_call_out_box.localgov_button
+    - field.field.paragraph.localgov_call_out_box.localgov_colour_theme
+    - field.field.paragraph.localgov_call_out_box.localgov_header_text
+    - field.field.paragraph.localgov_call_out_box.localgov_heading_level
+    - field.field.paragraph.localgov_call_out_box.localgov_opens_in_a_new_window
+    - paragraphs.paragraphs_type.localgov_call_out_box
+  module:
+    - link
+    - media_library
+    - media_library_edit
+    - text
+_core:
+  default_config_hash: beVJK85HPZmrnxoLmrpoO34ImmZatAgT_e7NRb3J6-I
+id: paragraph.localgov_call_out_box.default
+targetEntityType: paragraph
+bundle: localgov_call_out_box
+mode: default
+content:
+  localgov_background_image:
+    type: media_library_widget
+    weight: 6
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+  localgov_body_text:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  localgov_button:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  localgov_colour_theme:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  localgov_header_text:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  localgov_heading_level:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  localgov_opens_in_a_new_window:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true
