@@ -14,18 +14,17 @@
 #}
 {%
   set classes = [
-    'fixed-grid',
-    'has-1-cols-mobile',
-    'has-3-cols',
+    'section',
+    'py-4',
     'region',
     'region-' ~ region|clean_class,
   ]
 %}
 
 {% if content %}
-  <div{{ attributes.addClass(classes) }}>
-    <div class="grid">
+  <section{{ attributes.addClass(classes) }}>
+    <div class="container">
       {{ content }}
     </div>
-  </div>
+  </section>
 {% endif %}

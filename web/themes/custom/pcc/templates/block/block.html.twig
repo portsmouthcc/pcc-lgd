@@ -25,21 +25,19 @@
  * @see template_preprocess_block()
  */
 #}
-
-<section class="service-cta-block xsection py-6" aria-label="Section Navigation">
-  {# <div class="container"> #}
-    {# <div class="fixed-grid has-1-cols-mobile has-3-cols-tablet">
-      <div class="grid is-gap-0"> #}
-    <div class="fixed-grid has-1-cols-mobile has-2-cols-tablet has-3-cols-desktop">
-      <div class="grid is-column-gap-4 is-row-gap-2">
-        {% for link in buttons %}
-          <div class="cell">
-
-            {% include '@pcc/components/top-task.html.twig' with { link: link } %}
-
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  {# </div> #}
-</section>
+{%
+  set classes = [
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>

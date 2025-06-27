@@ -38,9 +38,15 @@
   --line-height: 1.3;
 } */
 
+:root {
+  /* Remove all radii. */
+  --bulma-radius: 0;
+  --bulma-radius-small: 0;
+}
+
 .section {
   --bulma-section-padding: 2rem 2rem;
   --bulma-section-padding-desktop: 2rem 2rem;
-  --bulma-section-padding-medium: 2rem 2rem;
-  --bulma-section-padding-large: 2rem 2rem;
+  --bulma-section-padding-medium: 4rem 2rem;
+  --bulma-section-padding-large: 6rem 2rem;
 }

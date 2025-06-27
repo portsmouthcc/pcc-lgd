@@ -40,6 +40,9 @@ class LgdType extends ProcessPluginBase
       "/services/parking-roads-and-travel/travel/bus-passes/older-persons-bus-pass/",
       "/services/parking-roads-and-travel/travel/bus-passes/disabled-persons-bus-pass/",
       "/services/parking-roads-and-travel/travel/bus-passes/companion-bus-passes/",
+      "/services/children-and-families/early-help-and-prevention-service/lgbtq-young-people-and-their-families/",
+      "/services/children-and-families/portsmouth-family-hubs/support-for-you-and-your-child-at-our-hubs/",
+      "/services/children-and-families/support-for-families/being-a-parent/",
     ];
 
     if (isset($value)) {
