@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+langcode: en
+uuid: e75c2041-d450-404c-beec-8eb65e51a2c7
+name: 'Portsmouth City Council'
+mail: oliver.read@portsmouthcc.gov.uk
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/52028
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

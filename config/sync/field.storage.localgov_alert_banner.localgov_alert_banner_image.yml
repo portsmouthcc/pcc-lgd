@@ -1,0 +1,22 @@
+uuid: dda41237-4764-4b50-99a8-71d8fe73d2b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_alert_banner
+    - media
+_core:
+  default_config_hash: wSjoDLkN43h-LDwIO8nFAhDsgrGqX5iGJBgAUMnnI6o
+id: localgov_alert_banner.localgov_alert_banner_image
+field_name: localgov_alert_banner_image
+entity_type: localgov_alert_banner
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

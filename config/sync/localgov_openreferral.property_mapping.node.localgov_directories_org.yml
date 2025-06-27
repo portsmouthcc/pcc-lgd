@@ -1,0 +1,32 @@
+uuid: 06402b54-411e-460a-9ad8-6f97f23973cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.localgov_directories_org
+  module:
+    - node
+_core:
+  default_config_hash: BAkZEOk1IRqU7_JSx0yDBHXwXuck54hDcVZylE3b-k4
+id: node.localgov_directories_org
+entity_type: node
+bundle: localgov_directories_org
+public_type: organization
+public_datatype: null
+property_mappings:
+  default:
+    -
+      field_name: title
+      public_name: name
+    -
+      field_name: uuid
+      public_name: id
+    -
+      field_name: 'body:value'
+      public_name: description
+    -
+      field_name: localgov_directory_email
+      public_name: email
+    -
+      field_name: 'localgov_directory_website:uri'
+      public_name: url

@@ -1,0 +1,24 @@
+uuid: bf764a62-cd43-4f18-8e31-ff98dd51b4a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.localgov_body_text
+    - paragraphs.paragraphs_type.localgov_call_out_box
+  module:
+    - text
+_core:
+  default_config_hash: HwZMtIoKne-rUz_gMfMFUem5YB8BhTErOWdzEA-4Ejc
+id: paragraph.localgov_call_out_box.localgov_body_text
+field_name: localgov_body_text
+entity_type: paragraph
+bundle: localgov_call_out_box
+label: 'Body text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

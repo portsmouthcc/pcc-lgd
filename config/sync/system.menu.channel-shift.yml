@@ -1,0 +1,8 @@
+uuid: ac35f124-f55c-4c29-a6ed-ff20fada2af5
+langcode: en
+status: true
+dependencies: {  }
+id: channel-shift
+label: 'Channel shift'
+description: 'Home page channel shift links'
+locked: false

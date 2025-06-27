@@ -1,0 +1,34 @@
+uuid: 5a2f5732-f3a0-4001-a415-5677a26ec005
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.localgov_event_thumbnail
+    - field.field.media.image.field_media_image
+    - image.style.square_small
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: lCfFrqbeP-s9VRXJNadPdwsBSxYB-nUQXx59HPiFL9Y
+id: media.image.localgov_event_thumbnail
+targetEntityType: media
+bundle: image
+mode: localgov_event_thumbnail
+content:
+  field_media_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: square_small
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

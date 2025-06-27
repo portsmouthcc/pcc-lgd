@@ -1,0 +1,31 @@
+uuid: 1ec7b51a-a614-4640-9e00-9967403fa3f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.localgov_events_listing
+  module:
+    - system
+    - views
+  theme:
+    - localgov_scarfolk
+_core:
+  default_config_hash: sJ8NHY7pEfaGAmIysw708Hp-xiWV2QmuY7F1FGoSxmc
+id: localgov_events_listing_filters_scarfolk
+theme: localgov_scarfolk
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'views_exposed_filter_block:localgov_events_listing-page_all_events'
+settings:
+  id: 'views_exposed_filter_block:localgov_events_listing-page_all_events'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /events
+    negate: false
+    context_mapping: {  }

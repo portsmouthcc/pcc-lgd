@@ -1,0 +1,27 @@
+uuid: 9097b04a-134d-48d4-8c4b-0e47b03f4383
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  enforced:
+    module:
+      - localgov_news
+_core:
+  default_config_hash: Mooo19cxvwonMXtDzxl1OTNCun0kWcF-waMRVXwtkQ0
+id: localgov_newsroom
+label: Newsroom
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  58bd74f7-9aeb-469f-ae66-ee1acf0ac229:
+    id: 'entity_bundle:node'
+    bundles:
+      localgov_newsroom: localgov_newsroom
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 58bd74f7-9aeb-469f-ae66-ee1acf0ac229
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,23 @@
+uuid: f85a66d1-9800-48de-8ed1-936b652dc9ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: iaLX_ApGlJ8KxCb8SBwRTkOnssaifgI1_EpF16VC11U
+id: node.localgov_hearing_difficulties_ph
+field_name: localgov_hearing_difficulties_ph
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

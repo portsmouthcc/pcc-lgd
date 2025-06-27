@@ -1,0 +1,32 @@
+uuid: a454eeff-2138-4f2a-ad38-191e9475c0b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.wysiwyg
+    - localgov_alert_banner.localgov_alert_banner_type.localgov_alert_banner
+    - localgov_alert_banner.localgov_alert_banner_type.localgov_full_page
+  module:
+    - eu_cookie_compliance
+    - filter
+    - fontawesome
+    - geo_entity
+    - localgov_alert_banner
+    - media
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access fontawesome additional settings'
+  - 'display eu cookie compliance popup'
+  - 'use text format wysiwyg'
+  - 'view all localgov alert banner entities'
+  - 'view geo'
+  - 'view localgov alert banner localgov_alert_banner entities'
+  - 'view localgov alert banner localgov_full_page entities'
+  - 'view media'

@@ -1,0 +1,20 @@
+uuid: 4b1a1024-978e-4821-b63e-4ace96b4303d
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_core
+  theme:
+    - pcc
+id: pcc_poweredbylocalgovdrupal_2
+theme: pcc
+region: footer_first
+weight: 0
+provider: null
+plugin: localgov_powered_by_block
+settings:
+  id: localgov_powered_by_block
+  label: 'Powered by LocalGov Drupal'
+  label_display: '0'
+  provider: localgov_core
+visibility: {  }

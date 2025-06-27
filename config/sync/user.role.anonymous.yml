@@ -1,0 +1,30 @@
+uuid: 0d4260f1-fce6-4753-85d3-f2e416f91c97
+langcode: en
+status: true
+dependencies:
+  config:
+    - localgov_alert_banner.localgov_alert_banner_type.localgov_alert_banner
+    - localgov_alert_banner.localgov_alert_banner_type.localgov_full_page
+    - search_api_autocomplete.search.localgov_news_search
+  module:
+    - eu_cookie_compliance
+    - geo_entity
+    - localgov_alert_banner
+    - media
+    - search_api_autocomplete
+    - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'display eu cookie compliance popup'
+  - 'use search_api_autocomplete for localgov_news_search'
+  - 'view all localgov alert banner entities'
+  - 'view geo'
+  - 'view localgov alert banner localgov_alert_banner entities'
+  - 'view localgov alert banner localgov_full_page entities'
+  - 'view media'

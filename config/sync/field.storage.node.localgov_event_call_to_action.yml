@@ -1,0 +1,21 @@
+uuid: 553e3485-f06e-4fad-ac0a-a74bd3a4a115
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+_core:
+  default_config_hash: nWNViYeDfr62m34rb5zYS6Y2haqRUKFeZLP-atpVvW0
+id: node.localgov_event_call_to_action
+field_name: localgov_event_call_to_action
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

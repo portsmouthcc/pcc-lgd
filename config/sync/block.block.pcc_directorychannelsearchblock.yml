@@ -1,0 +1,30 @@
+uuid: 840c7746-8d96-4abd-bb31-c7bb62de1dd7
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_directories
+    - node
+  theme:
+    - pcc
+id: pcc_directorychannelsearchblock
+theme: pcc
+region: sidebar_first
+weight: -13
+provider: null
+plugin: localgov_directories_channel_search_block
+settings:
+  id: localgov_directories_channel_search_block
+  label: 'Directory search'
+  label_display: visible
+  provider: localgov_directories
+  context_mapping:
+    node: '@node.node_route_context:node'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      localgov_directory: localgov_directory

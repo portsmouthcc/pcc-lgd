@@ -1,0 +1,21 @@
+uuid: 8dc2d50e-855c-4459-a772-8b7d79e022d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_guides
+  theme:
+    - pcc
+id: pcc_guidesprevnextblock
+theme: pcc
+region: content_bottom
+weight: 0
+provider: null
+plugin: localgov_guides_prev_next_block
+settings:
+  id: localgov_guides_prev_next_block
+  label: ''
+  label_display: visible
+  provider: localgov_guides
+  show_title: false
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: 1d9ca272-7685-4bdb-a9ca-e20667ca5c6f
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - tablefield
+_core:
+  default_config_hash: LKI4-7nKCP5B9EfJkafxSdwziiVAgq6-Kg3pS4w1G28
+id: paragraph.localgov_table
+field_name: localgov_table
+entity_type: paragraph
+type: tablefield
+settings: {  }
+module: tablefield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

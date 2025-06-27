@@ -1,0 +1,22 @@
+uuid: ed2bda64-22df-44a3-8bc4-7ab96ffd248b
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_subsites
+  theme:
+    - pcc
+id: pcc_subsitenavigation
+theme: pcc
+region: sidebar_second
+weight: 0
+provider: null
+plugin: localgov_subsite_navigation
+settings:
+  id: localgov_subsite_navigation
+  label: 'Subsite navigation'
+  label_display: visible
+  provider: localgov_subsites
+  context_mapping:
+    node: '@node.node_route_context:node'
+visibility: {  }
