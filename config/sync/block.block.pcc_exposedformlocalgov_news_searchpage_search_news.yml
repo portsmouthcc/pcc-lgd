@@ -12,7 +12,7 @@ dependencies:
 id: pcc_exposedformlocalgov_news_searchpage_search_news
 theme: pcc
 region: sidebar_second
-weight: 0
+weight: -14
 provider: null
 plugin: 'views_exposed_filter_block:localgov_news_search-page_search_news'
 settings:

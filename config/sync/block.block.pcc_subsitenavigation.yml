@@ -9,7 +9,7 @@ dependencies:
 id: pcc_subsitenavigation
 theme: pcc
 region: sidebar_second
-weight: 0
+weight: -11
 provider: null
 plugin: localgov_subsite_navigation
 settings:

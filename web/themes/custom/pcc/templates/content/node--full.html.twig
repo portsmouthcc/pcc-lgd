@@ -122,7 +122,7 @@
 
   {% if content_type in restricted_width_content_types %}
     <div class="columns">
-      <div class="column is-two-thirds">
+      <div class="column">
   {% endif %}
 
         <div{{ content_attributes.addClass(content_type|clean_class ~ '__content', 'node__content') }}>
