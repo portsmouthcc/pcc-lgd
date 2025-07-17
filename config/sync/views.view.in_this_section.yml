@@ -68,7 +68,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -76,7 +76,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_revisions_entity_view
           settings:
-            view_mode: default
+            view_mode: menu
           group_column: ''
           group_columns: {  }
           group_rows: true

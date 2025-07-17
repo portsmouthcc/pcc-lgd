@@ -1,0 +1,44 @@
+uuid: 74de6772-3adc-4b00-a4ea-1213a0b02fb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.list
+    - field.field.paragraph.topic_list_builder.topic_list_header
+    - field.field.paragraph.topic_list_builder.topic_list_links
+    - field.field.paragraph.topic_list_builder.topic_list_term
+    - paragraphs.paragraphs_type.topic_list_builder
+  module:
+    - localgov_services_sublanding
+_core:
+  default_config_hash: ZBwOSntBisVJjb1jvfx1nCsFYIly-McPttTuXA2XfZw
+id: paragraph.topic_list_builder.list
+targetEntityType: paragraph
+bundle: topic_list_builder
+mode: list
+content:
+  topic_list_header:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  topic_list_links:
+    type: link_node_reference
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  topic_list_term:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

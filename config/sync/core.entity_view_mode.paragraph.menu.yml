@@ -1,0 +1,11 @@
+uuid: 80920154-eec5-43d1-98cf-25648f1940b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.menu
+label: Menu
+description: 'List child pages without summaries'
+targetEntityType: paragraph
+cache: true

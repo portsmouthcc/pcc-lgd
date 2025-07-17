@@ -1,0 +1,11 @@
+uuid: 65615793-0ef3-4ae3-8245-ad4b5ff5a995
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.list
+label: List
+description: 'Simple list of links'
+targetEntityType: paragraph
+cache: true
