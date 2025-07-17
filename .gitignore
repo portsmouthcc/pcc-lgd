@@ -7,9 +7,6 @@
 /web/profiles/contrib/
 /web/libraries/
 
-# Ignore composer.lock as this is template project
-/composer.lock
-
 # Ignore sensitive information
 /web/sites/*/settings*.php
 /web/sites/*/services*.yml
@@ -80,3 +77,6 @@
 # Ignore macOS DS_Store files
 .DS_Store
 **/.DS_Store
+
+# Ignore server error log
+web/php_errorlog
