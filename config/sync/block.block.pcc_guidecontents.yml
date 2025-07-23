@@ -9,7 +9,7 @@ dependencies:
 id: pcc_guidecontents
 theme: pcc
 region: sidebar_second
-weight: -13
+weight: -14
 provider: null
 plugin: localgov_guides_contents
 settings:
