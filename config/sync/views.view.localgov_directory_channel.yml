@@ -601,7 +601,6 @@ display:
           data_source:
             localgov_location_wkt: localgov_location_wkt
           entity_source: __base_table
-          entity_source_submit: 'Update Entity Source'
           name_field: title
           leaflet_tooltip:
             value: ''
@@ -610,7 +609,7 @@ display:
             value: '#rendered_view_fields'
             options: '{"maxWidth":"300","minWidth":"50","autoPan":true}'
             view_mode: full
-          leaflet_map: 'OSM Mapnik'
+          leaflet_map: multilayers
           height: '400'
           height_unit: px
           hide_empty_map: true
@@ -675,6 +674,18 @@ display:
               position: topright
               input_size: 25
               providers:
+                file:
+                  weight: '0'
+                  checked: 0
+                gpx_file:
+                  weight: '0'
+                  checked: 0
+                geojson_file:
+                  weight: '0'
+                  checked: 0
+                kml_file:
+                  weight: '0'
+                  checked: 0
                 geo_entity_osm:
                   weight: '0'
                   checked: 0
@@ -687,6 +698,8 @@ display:
               options: ''
           map_lazy_load:
             lazy_load: false
+          feature_properties:
+            values: ''
       row:
         type: fields
         options:
@@ -706,7 +719,10 @@ display:
         filter_groups: false
       relationships: {  }
       display_description: ''
-      display_extenders: {  }
+      display_extenders:
+        localgov_page_header_display_extender:
+          lede: ''
+          tokenize: false
     cache_metadata:
       max-age: -1
       contexts:
