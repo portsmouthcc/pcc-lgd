@@ -1,0 +1,8 @@
+name: "PCC OSM Tile Proxy"
+type: module
+description: "Adds the PCC tile proxy as a Leaflet layer"
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - leaflet
+  - geofield
