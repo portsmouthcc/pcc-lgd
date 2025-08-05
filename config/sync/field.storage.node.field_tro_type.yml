@@ -1,0 +1,30 @@
+uuid: 9facf0ad-5aed-45fb-a166-48eb2ecd3bd8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tro_type
+field_name: field_tro_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: experimental
+      label: Experimental
+    -
+      value: permanent
+      label: Permanent
+    -
+      value: temporary
+      label: Temporary
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

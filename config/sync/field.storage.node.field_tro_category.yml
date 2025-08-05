@@ -1,0 +1,36 @@
+uuid: 15929149-4361-492a-8916-f56cc08e8bfd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tro_category
+field_name: field_tro_category
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: city_centre
+      label: 'City centre'
+    -
+      value: hilsea
+      label: Hilsea
+    -
+      value: events
+      label: Events
+    -
+      value: disabled_bays
+      label: 'Disabled bays'
+    -
+      value: old_portsmouth
+      label: 'Old Portsmouth'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
