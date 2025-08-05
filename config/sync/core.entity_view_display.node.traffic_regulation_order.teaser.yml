@@ -1,0 +1,54 @@
+uuid: 7129f6d0-4c76-494b-8c9e-90c6ac09403c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.traffic_regulation_order.body
+    - field.field.node.traffic_regulation_order.field_tro_category
+    - field.field.node.traffic_regulation_order.field_tro_date
+    - field.field.node.traffic_regulation_order.field_tro_documents
+    - field.field.node.traffic_regulation_order.field_tro_reference
+    - field.field.node.traffic_regulation_order.field_tro_type
+    - node.type.traffic_regulation_order
+  module:
+    - options
+    - user
+id: node.traffic_regulation_order.teaser
+targetEntityType: node
+bundle: traffic_regulation_order
+mode: teaser
+content:
+  field_tro_category:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tro_reference:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tro_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_tro_date: true
+  field_tro_documents: true
+  langcode: true
+  search_api_excerpt: true

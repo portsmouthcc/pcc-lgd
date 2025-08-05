@@ -1,0 +1,11 @@
+uuid: 2604a48d-16d9-46ea-bcd9-37ad07a11b54
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.traffic_regulation_order
+id: node.traffic_regulation_order
+target_entity_type_id: node
+target_bundle: traffic_regulation_order
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,19 @@
+uuid: bf4198ba-ca90-4c30-adf5-e12385b88926
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tro_reference
+    - node.type.traffic_regulation_order
+id: node.traffic_regulation_order.field_tro_reference
+field_name: field_tro_reference
+entity_type: node
+bundle: traffic_regulation_order
+label: Reference
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

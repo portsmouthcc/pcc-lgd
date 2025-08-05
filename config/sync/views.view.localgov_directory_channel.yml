@@ -261,6 +261,7 @@ display:
           skip_access: false
           preserve_facet_query_args: false
       relationships: {  }
+      use_ajax: false
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -744,7 +745,10 @@ display:
         type: search_api_none
       defaults:
         cache: false
-      display_extenders: {  }
+      display_extenders:
+        localgov_page_header_display_extender:
+          lede: ''
+          tokenize: false
     cache_metadata:
       max-age: -1
       contexts:

@@ -1,0 +1,24 @@
+uuid: e7cae729-7f76-467c-bab6-1cfd20a3d46b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.traffic_regulation_order
+  module:
+    - text
+id: node.traffic_regulation_order.body
+field_name: body
+entity_type: node
+bundle: traffic_regulation_order
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary
