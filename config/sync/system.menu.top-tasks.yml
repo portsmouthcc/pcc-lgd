@@ -1,8 +1,0 @@
-uuid: b5550c87-9306-43e1-aeeb-8d3190aac21a
-langcode: en
-status: true
-dependencies: {  }
-id: top-tasks
-label: 'Top tasks'
-description: 'Home page top tasks'
-locked: false

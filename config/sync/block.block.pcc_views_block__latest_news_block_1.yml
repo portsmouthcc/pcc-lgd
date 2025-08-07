@@ -1,0 +1,29 @@
+uuid: 9e06aa96-a479-4c7e-b4f5-2230448c8e29
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_news
+  module:
+    - system
+    - views
+  theme:
+    - pcc
+id: pcc_views_block__latest_news_block_1
+theme: pcc
+region: content_bottom
+weight: 0
+provider: null
+plugin: 'views_block:latest_news-block_1'
+settings:
+  id: 'views_block:latest_news-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
