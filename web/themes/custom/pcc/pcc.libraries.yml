@@ -5,6 +5,7 @@ global:
       css/fonts.css: {}
       css/global.css: {}
       css/variables.css: {}
+      css/layouts/events.css: {}
   js:
     js/main.js: {}
   dependencies:
