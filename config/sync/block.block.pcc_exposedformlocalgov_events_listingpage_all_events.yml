@@ -1,0 +1,28 @@
+uuid: f6afdecc-d54b-463a-8c92-2d782d8c1e8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.localgov_events_listing
+  module:
+    - system
+    - views
+  theme:
+    - pcc
+id: pcc_exposedformlocalgov_events_listingpage_all_events
+theme: pcc
+region: sidebar_first
+weight: -12
+provider: null
+plugin: 'views_exposed_filter_block:localgov_events_listing-page_all_events'
+settings:
+  id: 'views_exposed_filter_block:localgov_events_listing-page_all_events'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /events
