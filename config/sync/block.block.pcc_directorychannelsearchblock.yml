@@ -10,7 +10,7 @@ dependencies:
 id: pcc_directorychannelsearchblock
 theme: pcc
 region: sidebar_first
-weight: -13
+weight: -15
 provider: null
 plugin: localgov_directories_channel_search_block
 settings:

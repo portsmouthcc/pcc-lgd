@@ -12,7 +12,7 @@ dependencies:
 id: pcc_facets
 theme: pcc
 region: sidebar_first
-weight: -11
+weight: -14
 provider: null
 plugin: 'facet_block:localgov_directories_facets'
 settings:
