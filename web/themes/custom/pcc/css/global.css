@@ -47,10 +47,6 @@
   background-color: white;
 }
 
-a:focus {
-  /* background-color: var(--bulma-warning); */
-}
-
 /* Service teasers are the main navigation for services. */
 .service-teaser {
   height: 100%;
