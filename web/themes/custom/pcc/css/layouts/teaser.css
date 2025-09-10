@@ -12,9 +12,9 @@
   background:  var(--pcc-light-blue);
   box-shadow: none;
   border-radius: 0;
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
 
   figure.image img {
     border-radius: 0;
@@ -31,6 +31,7 @@
 
     .read-more {
       margin-top: auto;
+      color: var(--pcc-dark-blue);
     }
   }
 }

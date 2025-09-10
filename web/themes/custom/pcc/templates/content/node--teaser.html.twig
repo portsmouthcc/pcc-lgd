@@ -82,18 +82,16 @@
     will use the same `field_media_image` field.
   #}
   {% if node.field_media_image.value or node.localgov_event_image.value %}
-    <div class="lgd-teaser__card-image">
-      <figure class="image">
-        {{ content.field_media_image }}
-        {{ content.localgov_event_image }}
-      </figure>
+    <div class="card-image">
+      <figure class="image">{{ content.field_media_image }}
+        {{ content.localgov_event_image }}</figure>
     </div>
   {% endif %}
 
-  <div {{ content_attributes.addClass('content', 'card-content', 'lgd-teaser__content', 'lgd-teaser__content--' ~ (content_type|clean_class)) }}>
+  <div {{ content_attributes.addClass('card-content', 'lgd-teaser__content', 'lgd-teaser__content--' ~ (content_type|clean_class)) }}>
     {{ title_prefix }}
     {% if label and not page %}
-      <h4 {{ title_attributes }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h4>
+      <h3 {{ title_attributes }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h3>
     {% endif %}
     {{ title_suffix }}
 
@@ -101,14 +99,6 @@
       We render the full content variable here, so any new fields added
       are visible.
     #}
-    {# {{ content|without('field_media_image', 'localgov_event_image') }} #}
-
-    {% set text = content|without('field_media_image', 'localgov_event_image') %}
-    <div class="lgd-teaser__text">
-      {{ text|length > 100 ? text|slice(0, 100) ~ '...' : text }}
-    </div>
-
-    <a class="read-more" href="{{ url }}">Read the full story</a>
-
+    {{ content|without('field_media_image', 'localgov_event_image') }}
   </div>
 </article>

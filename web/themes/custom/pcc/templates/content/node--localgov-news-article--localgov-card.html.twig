@@ -110,9 +110,7 @@
 
     {{ title_prefix }}
     {% if label and not page %}
-      <h2{{ title_attributes }} class="lgd-card__title title">
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
+      <h2{{ title_attributes }} class="lgd-card__title title">{{ label }}</h2>
     {% endif %}
     {{ title_suffix }}
 
@@ -124,7 +122,7 @@
     #}
     {# {{ content|without('field_media_image', 'localgov_event_image') }} #}
     
-    {% set text = content|without('field_media_image', 'localgov_event_image')|render|striptags %}
+    {% set text = content.body|render|striptags %}
     <div class="lgd-card__text">
       {{ text|length > 100 ? text|slice(0, 100) ~ '...' : text }}
     </div>
