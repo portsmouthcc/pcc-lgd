@@ -1,11 +1,14 @@
 global:
   css:
     theme:
+      css/buttons.css: {}
       css/colours.css: {}
       css/fonts.css: {}
       css/global.css: {}
       css/variables.css: {}
       css/layouts/events.css: {}
+      css/layouts/newsroom.css: {}
+      css/layouts/teaser.css: {}
   js:
     js/main.js: {}
   dependencies:
