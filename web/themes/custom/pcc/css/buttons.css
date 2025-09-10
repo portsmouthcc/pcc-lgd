@@ -1,0 +1,16 @@
+.button {
+  background-color: var(--pcc-blue);
+  border: none;
+  border-bottom: 2px solid var(--pcc-dark-blue);
+  box-shadow: none;
+  color: white;
+  transition: all 0.3s ease;
+  text-decoration: none;
+
+  &:hover {
+    /* background-color: #F3F2F1;
+    border-bottom: 2px solid #929191;
+    color: #000; */
+    opacity: 0.5;
+  }
+} 

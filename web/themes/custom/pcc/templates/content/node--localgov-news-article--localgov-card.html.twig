@@ -1,11 +1,3 @@
-{# 
-  The only reason we need this file is because it's defined in the
-  news module, so we need this to override the one that comes with
-  that module.
-#}
-
-{# {% include "node--teaser.html.twig" %} #}
-
 {#
 /**
  * @file
@@ -81,16 +73,32 @@
 
 {% set content_type = node.bundle %}
 
-{% set classes = ['card', 'lgd-teaser', 'lgd-teaser--' ~ (content_type|clean_class), 'node', 'node--type-' ~ (node.bundle|clean_class), node.isPromoted() ? 'node--promoted', node.isSticky() ? 'node--sticky', not node.isPublished() ? 'node--unpublished', view_mode ? 'node--view-mode-' ~ (view_mode|clean_class)] %}
+{%
+  set classes = [
+    'lgd-card',
+    'lgd-card--' ~ content_type|clean_class,
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
 
-<article {{ attributes.addClass(classes).removeAttribute('role') }}>
+{% if not localgov_base_remove_css %}
+  {{ attach_library('localgov_base/card') }}
+{% endif %}
+
+<article{{ attributes.addClass(classes).removeAttribute('role') }}>
+
   {#
     The event content type has a specific field set for its teaser so we
     are adding that here specifically. Hopefully all other content types
     will use the same `field_media_image` field.
   #}
   {% if node.field_media_image.value or node.localgov_event_image.value %}
-    <div class="lgd-teaser__card-image">
+    <div class="lgd-card__image">
       <figure class="image">
         {{ content.field_media_image }}
         {{ content.localgov_event_image }}
@@ -98,25 +106,29 @@
     </div>
   {% endif %}
 
-  <div {{ content_attributes.addClass('content', 'card-content', 'lgd-teaser__content', 'lgd-teaser__content--' ~ (content_type|clean_class)) }}>
+  <div{{ content_attributes.addClass('content', 'lgd-card__content', 'lgd-card__content--' ~ content_type|clean_class) }}>
+
     {{ title_prefix }}
     {% if label and not page %}
-      <h4 {{ title_attributes }}>{{ label }}</h4>
+      <h2{{ title_attributes }} class="lgd-card__title title">{{ label }}</h2>
     {% endif %}
     {{ title_suffix }}
+
+    {{content.localgov_news_date}}
 
     {#
       We render the full content variable here, so any new fields added
       are visible.
     #}
     {# {{ content|without('field_media_image', 'localgov_event_image') }} #}
-
+    
     {% set text = content.body|render|striptags %}
-    <div class="lgd-teaser__text">
+    <div class="lgd-card__text">
       {{ text|length > 100 ? text|slice(0, 100) ~ '...' : text }}
     </div>
 
-    <a class="read-more" href="{{ url }}">Read the full story</a>
+    <a class="button" href="{{ url }}" rel="bookmark">Read the full story</a>
 
   </div>
+
 </article>
