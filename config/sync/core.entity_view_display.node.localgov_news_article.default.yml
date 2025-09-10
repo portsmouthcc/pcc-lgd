@@ -14,6 +14,7 @@ dependencies:
   module:
     - datetime
     - entity_reference_facet_link
+    - field_formatter_class
     - text
     - user
   enforced:
@@ -30,7 +31,9 @@ content:
     type: text_default
     label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: ''
     weight: 3
     region: content
   content_moderation_control:
