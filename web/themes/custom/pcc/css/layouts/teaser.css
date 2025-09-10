@@ -1,0 +1,55 @@
+.view--teasers {
+  .view-content {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.views-view-responsive-grid__item-inner {
+  height: 100%;
+}
+
+.lgd-teaser--localgov-news-article {
+  background:  var(--pcc-light-blue);
+  box-shadow: none;
+  border-radius: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  figure.image img {
+    border-radius: 0;
+  }
+
+  .lgd-teaser__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .lgd-teaser__text {
+      margin-bottom: 1.5rem;
+    }
+
+    .read-more {
+      margin-top: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 1216px) {
+  .lgd-teaser--localgov-news-article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    figure.image {
+      width: 250px;
+      height: 250px;
+
+      img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+      }
+    }
+  }
+}
