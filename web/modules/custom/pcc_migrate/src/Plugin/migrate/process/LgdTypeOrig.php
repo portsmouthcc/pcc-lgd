@@ -22,7 +22,7 @@ use Drupal\migrate\MigrateSkipRowException;
  * @endcode
  *
  */
-class LgdType extends ProcessPluginBase
+class LgdTypeOrig extends ProcessPluginBase
 {
   /**
    * {@inheritdoc}
@@ -73,8 +73,6 @@ class LgdType extends ProcessPluginBase
         } else {
           if (strlen($child_ids) > 0) {
             // Pages with children are sublanding pages.
-            // More nuance here I think...
-            // The trouble is, we kind of want to do several passes here.
             return 'localgov_services_sublanding';
           } else {
             // Anything else is a service page.

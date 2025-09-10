@@ -1,7 +1,7 @@
-id: pcc_service_page
-label: LGD service pages
+id: pcc_topic_section
+label: PCC topic sections
 status: true
-description: Migrate LGD service pages.
+description: Child page links for service sub-landing pages.
 migration_group: pcc
 
 source:
@@ -22,9 +22,9 @@ source:
     - name: description
       label: Description
       selector: description
-    - name: body
+    - name: content
       label: Body content
-      selector: body
+      selector: content
     - name: excerpt
       label: Content excerpt
       selector: excerpt
@@ -49,12 +49,12 @@ source:
     - name: wp_type
       label: WP post type
       selector: type
-    - name: top_tasks
-      label: Top task links
-      selector: top_tasks
     - name: child_ids
       label: Child page ids
       selector: child_ids
+    - name: children
+      label: Child pages
+      selector: children
     - name: path
       selector: path
       label: Path
@@ -66,66 +66,27 @@ source:
       type: integer
 
 process:
-  type: lgd_type
+  _content_type: lgd_type
 
-  # Skip any other content types.
+  # Skip any type except topic_list_builder.
   _skip_types:
     plugin: skip_on_value
     not_equals: true
-    source: "@type"
+    source: "@_content_type"
     method: row
-    value: localgov_services_page
+    value: topic_list_builder
 
-  nid: id
-  uid:
-    plugin: default_value
-    default_value: 1
-  title:
-    plugin: skip_on_empty
-    method: row
-    source: title
-    message: "Cannot import empty titles. This may include trashed posts from the WordPress import file."
-  "body/value": body
-  "body/format":
-    plugin: default_value
-    default_value: wysiwyg
-  "body/summary": description
-  "path/alias": path
-  "path/pathauto":
-    plugin: default_value
-    default_value: false
-  created:
-    plugin: callback
-    source: date
-    callable: strtotime
-  changed:
-    plugin: callback
-    source: modified
-    callable: strtotime
-  status:
-    plugin: static_map
-    source: status
-    default_value: 0
-    map:
-      publish: 1
+  # Title of the page being used.
+  topic_list_header: title
 
-  # Services parent
-  localgov_services_parent: parent
-
-  # Service landing page child pages
-  localgov_destinations:
-    plugin: explode
-    source: child_ids
-    delimiter: ";"
-
-  # Top task links
-  localgov_common_tasks:
+  # List of child page links.
+  topic_list_links:
     plugin: sub_process
-    source: top_tasks
+    source: children
     process:
       uri: url
       title: title
-      type: type
 
 destination:
-  plugin: entity:node
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: topic_list_builder
