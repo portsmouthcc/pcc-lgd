@@ -1,5 +1,5 @@
-id: pcc_topic
-label: PCC topics
+id: pcc_service_sublanding_child
+label: PCC service sub-landing child
 status: true
 description: Child page links for service sub-landing pages.
 migration_group: pcc
@@ -55,9 +55,6 @@ source:
     - name: children
       label: Child pages
       selector: children
-    - name: path
-      selector: path
-      label: Path
     - name: lgd_type
       selector: lgd_type
       label: LGD content type

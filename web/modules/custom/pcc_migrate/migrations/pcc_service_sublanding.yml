@@ -6,8 +6,7 @@ migration_group: pcc
 
 migration_dependencies:
   required:
-    - pcc_topic
-    - pcc_topic_section
+    - pcc_service_sublanding_child
 
 source:
   plugin: url
@@ -60,18 +59,58 @@ source:
     - name: child_ids
       label: Child page ids
       selector: child_ids
-    - name: children
-      label: Child pages
-      selector: children
-    - name: path
-      selector: path
-      label: Path
     - name: lgd_type
       selector: lgd_type
       label: LGD content type
-    - name: topic_list_ids
-      label: Topic list IDs
-      selector: topic_list_ids
+
+    # - name: title
+    #   label: Content title
+    #   selector: title
+    # - name: link
+    #   label: Link
+    #   selector: link
+    # - name: creator
+    #   label: Username of the content creator
+    #   selector: creator
+    # - name: description
+    #   label: Description
+    #   selector: description
+    # - name: body
+    #   label: Body content
+    #   selector: body
+    # - name: excerpt
+    #   label: Content excerpt
+    #   selector: excerpt
+    # - name: id
+    #   label: Unique content ID
+    #   selector: id
+    # - name: date
+    #   label: Date created
+    #   selector: date
+    # - name: modified
+    #   label: Date last modified
+    #   selector: modified
+    # - name: name
+    #   label: Name of the content
+    #   selector: name
+    # - name: status
+    #   label: Published status
+    #   selector: status
+    # - name: parent
+    #   label: Parent ID
+    #   selector: parent
+    # - name: wp_type
+    #   label: WP post type
+    #   selector: type
+    # - name: top_tasks
+    #   label: Top task links
+    #   selector: top_tasks
+    # - name: child_ids
+    #   label: Child page ids
+    #   selector: child_ids
+    # - name: children
+    #   label: Child pages
+    #   selector: children
   ids:
     id:
       type: integer
@@ -101,7 +140,7 @@ process:
     plugin: default_value
     default_value: wysiwyg
   "body/summary": description
-  "path/alias": path
+  "path/alias": link
   "path/pathauto":
     plugin: default_value
     default_value: false
@@ -124,111 +163,15 @@ process:
   localgov_services_parent: parent
 
   # Service sub-landing page child pages
-  _topics:
+  _localgov_topics:
     plugin: migration_lookup
-    migration: pcc_topic
+    migration: pcc_service_sublanding_child
     source: id
-
-  _topic_sections:
-    - plugin: explode
-      source: topic_list_ids
-      delimiter: ";"
-    - plugin: deepen
-    - plugin: sub_process
-    - plugin: migration_lookup
-      migration: pcc_topic_section
-      source: value
-
-  #   topic_list_ids
-
-  # _topic_section_id:
-  #   plugin: default_value
-  #   default_value: 12401
-
-  # _topic_sections_test:
-  #   plugin: migration_lookup
-  #   migration: pcc_topic_section
-  #   source: "@_topic_section_id"
-
-  # _topic_sections_test:
-  #   - plugin: explode
-  #     source: child_ids
-  #     delimiter: ";"
-  #   - plugin: deepen
-  #   - plugin: sub_process
-  #     process:
-  #       test:
-  #         - plugin: migration_lookup
-  #           migration: pcc_topic_section
-  #           source: value
-
-  # localgov_topics:
-  #   - plugin: explode
-  #     source: child_ids
-  #     delimiter: ";"
-  #   - plugin: deepen
-  #   - plugin: sub_process
-  #     process:
-  #       target_id:
-  #         - plugin: migration_lookup
-  #           migration: pcc_topic_section
-  #           source: value
-  #         - plugin: extract
-  #           index:
-  #             - 0
-  #       target_revision_id:
-  #         - plugin: migration_lookup
-  #           migration: pcc_topic_section
-  #           source: value
-  #         - plugin: extract
-  #           index:
-  #             - 1
-
-  # _topic_sections:
-  #   - plugin: explode
-  #     source: child_ids
-  #     delimiter: ";"
-  #   - plugin: deepen
-  #   - plugin: sub_process
-  #     process:
-  #       target_id:
-  #         - plugin: migration_lookup
-  #           migration: pcc_topic_section
-  #           source: value
-  # - plugin: extract
-  #   index:
-  #     - 0
-  # target_revision_id: "@target_id"
-
-  # _topic_section_ids:
-  #   - plugin: explode
-  #     source: child_ids
-  #     delimiter: ";"
-  #   - plugin: deepen
-
-  # _topic_sections:
-  #   plugin: sub_process
-  #   source: "@_topic_section_ids"
-  #   process:
-  #     target_id:
-  #       plugin: migration_lookup
-  #       migration: pcc_topic_section
-
-  # _topic_sections:
-  #   - plugin: explode
-  #     source: child_ids
-  #     delimiter: ";"
-  #   - plugin: migration_lookup
-  #     migration: pcc_topic_section
-  #     # source: id
-
-  # This works mostly...
 
   localgov_topics:
     plugin: sub_process
     source:
-      - "@_topics"
-      - "@_topic_sections"
+      - "@_localgov_topics"
     process:
       target_id: "0"
       target_revision_id: "1"

@@ -55,9 +55,6 @@ source:
     - name: child_ids
       label: Child page ids
       selector: child_ids
-    - name: path
-      selector: path
-      label: Path
     - name: lgd_type
       selector: lgd_type
       label: LGD content type
@@ -90,7 +87,7 @@ process:
     plugin: default_value
     default_value: wysiwyg
   "body/summary": description
-  "path/alias": path
+  "path/alias": link
   "path/pathauto":
     plugin: default_value
     default_value: false
