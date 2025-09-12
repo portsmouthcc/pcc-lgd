@@ -9,7 +9,7 @@ dependencies:
 id: pcc_guidesprevnextblock
 theme: pcc
 region: content_bottom
-weight: 0
+weight: -15
 provider: null
 plugin: localgov_guides_prev_next_block
 settings:
