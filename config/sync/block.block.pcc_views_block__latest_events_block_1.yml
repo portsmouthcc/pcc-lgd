@@ -17,10 +17,10 @@ provider: null
 plugin: 'views_block:latest_events-block_1'
 settings:
   id: 'views_block:latest_events-block_1'
-  label: ''
+  label: Events
   label_display: visible
   provider: views
-  views_label: ''
+  views_label: Events
   items_per_page: none
 visibility:
   request_path:
