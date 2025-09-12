@@ -31,6 +31,22 @@
     'block-' ~ plugin_id|clean_class,
   ]
 %}
+
+{# These blocks will have section and container wrappers. #}
+{%
+  set sectioned_blocks = [
+    'views_block:services-block_service_list',
+    'views_block:latest_news-block_1',
+    'views_block:latest_events-block_1',
+  ]
+%}
+
+{# Add section tag and class if the block is in the list. #}
+{% if plugin_id in sectioned_blocks %}
+  <section class="section">
+    <div class="container">
+{% endif %}
+
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
@@ -41,3 +57,8 @@
     {{ content }}
   {% endblock %}
 </div>
+
+{% if plugin_id in sectioned_blocks %}
+    </div>
+  </section>
+{% endif %}
