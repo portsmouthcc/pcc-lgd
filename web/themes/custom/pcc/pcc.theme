@@ -67,7 +67,6 @@ function pcc_preprocess_block(array &$variables)
 {
   // This is how I found the block ids used below.
   // print_r($variables['plugin_id']);
-  // echo " ";
 
   $variables['title_attributes']['class'][] = 'title is-4';
 
@@ -141,5 +140,21 @@ function pcc_preprocess_html(&$variables)
   $node = \Drupal::routeMatch()->getParameter('node');
   if (is_object($node)) {
     $variables['attributes']['class'][] = 'node-' . $node->id();
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_region().
+ */
+/**
+ * Add is_front variable to region templates.
+ */
+function pcc_preprocess_region(&$variables) {
+  try {
+    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+  }
+  catch (Exception $e) {
+    $variables['is_front'] = FALSE;
   }
 }
