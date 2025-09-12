@@ -46,6 +46,7 @@
     'lgd-region--' ~ region|clean_class,
     'region',
     'region-' ~ region|clean_class,
+    region == 'content_bottom' and is_front ? 'has-background-info' : '',
   ]
 %}
 
