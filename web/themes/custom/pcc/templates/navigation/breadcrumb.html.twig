@@ -9,18 +9,22 @@
 #}
 
 {% if breadcrumb %}
-  <nav class="breadcrumb" aria-label="breadcrumbs">
-    <h2 class="is-sr-only">{{ 'Breadcrumbs'|t }}</h2>
-    <ul>
-      {% for item in breadcrumb %}
-        <li>
-          {% if item.url %}
-            <a href="{{ item.url }}">{{ item.text }}</a>
-          {% else %}
-            {{ item.text }}
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
+<section class="section">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+      <h2 class="is-sr-only">{{ 'Breadcrumbs'|t }}</h2>
+      <ul>
+        {% for item in breadcrumb %}
+          <li>
+            {% if item.url %}
+              <a href="{{ item.url }}">{{ item.text }}</a>
+            {% else %}
+              {{ item.text }}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</section>
 {% endif %}
