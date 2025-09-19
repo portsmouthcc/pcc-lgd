@@ -1,9 +1,9 @@
-uuid: e597bc67-5033-4f1d-ba21-143c39768bda
+uuid: 75ca32df-0a4b-4f77-8b47-595d665ddf34
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:text_block:3cb50af0-1db7-4f4f-a8a4-7472a42cb575'
+    - 'block_content:text_block:ec0029fa-af5b-4e04-931b-02fc7f940749'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: pcc
 region: footer_first
 weight: 0
 provider: null
-plugin: 'block_content:3cb50af0-1db7-4f4f-a8a4-7472a42cb575'
+plugin: 'block_content:ec0029fa-af5b-4e04-931b-02fc7f940749'
 settings:
-  id: 'block_content:3cb50af0-1db7-4f4f-a8a4-7472a42cb575'
+  id: 'block_content:ec0029fa-af5b-4e04-931b-02fc7f940749'
   label: 'Contact us'
   label_display: visible
   provider: block_content

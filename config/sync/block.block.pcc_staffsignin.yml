@@ -1,9 +1,9 @@
-uuid: b8db70f5-9227-455a-8790-f428de4c3278
+uuid: cf26e3b0-3e47-42ac-b78c-252ee1436688
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:text_block:7ea433d9-2a1f-46da-b3aa-0d8d1a1812a3'
+    - 'block_content:text_block:b6494ee3-f2f5-46f9-88f4-909350314417'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: pcc
 region: lower_footer_first
 weight: 0
 provider: null
-plugin: 'block_content:7ea433d9-2a1f-46da-b3aa-0d8d1a1812a3'
+plugin: 'block_content:b6494ee3-f2f5-46f9-88f4-909350314417'
 settings:
-  id: 'block_content:7ea433d9-2a1f-46da-b3aa-0d8d1a1812a3'
+  id: 'block_content:b6494ee3-f2f5-46f9-88f4-909350314417'
   label: 'Staff sign in'
   label_display: '0'
   provider: block_content

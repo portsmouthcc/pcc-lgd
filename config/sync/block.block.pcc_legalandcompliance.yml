@@ -1,9 +1,9 @@
-uuid: 67064606-6ac2-4f9d-9429-4c378165e8f6
+uuid: cb977370-5e66-49c3-a126-cb0573726a11
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:text_block:9e43c967-c786-410f-a761-0b3af9dbc913'
+    - 'block_content:text_block:0d469f8f-d059-4026-97b1-2b387c5397aa'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: pcc
 region: footer_second
 weight: 0
 provider: null
-plugin: 'block_content:9e43c967-c786-410f-a761-0b3af9dbc913'
+plugin: 'block_content:0d469f8f-d059-4026-97b1-2b387c5397aa'
 settings:
-  id: 'block_content:9e43c967-c786-410f-a761-0b3af9dbc913'
+  id: 'block_content:0d469f8f-d059-4026-97b1-2b387c5397aa'
   label: 'Legal and compliance'
   label_display: visible
   provider: block_content
