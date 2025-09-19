@@ -70,6 +70,21 @@ a {
 
 @media screen and (min-width: 769px) {
   .views-view-responsive-grid--horizontal {
-    grid-template-columns: repeat(auto-fill,minmax(max(var(--views-responsive-grid-item--calculated-min-width),var(--views-responsive-grid-item--max-width)),1fr));
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(
+        max(
+          var(--views-responsive-grid-item--calculated-min-width),
+          var(--views-responsive-grid-item--max-width)
+        ),
+        1fr
+      )
+    );
   }
+}
+
+/* All footer text should be white. */
+.has-text-white .title,
+.has-text-white a {
+  color: var(--bulma-white);
 }

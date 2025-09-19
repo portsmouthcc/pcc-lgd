@@ -1,0 +1,25 @@
+uuid: 491f0b5c-fe1d-4e58-910b-e989d8bca2b4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:text_block:d8772e74-a5ec-4142-a8cd-d204d5543e9c'
+  module:
+    - block_content
+  theme:
+    - pcc
+id: pcc_copyrightnotice
+theme: pcc
+region: lower_footer_third
+weight: 0
+provider: null
+plugin: 'block_content:d8772e74-a5ec-4142-a8cd-d204d5543e9c'
+settings:
+  id: 'block_content:d8772e74-a5ec-4142-a8cd-d204d5543e9c'
+  label: 'Copyright notice'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
