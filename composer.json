@@ -28,6 +28,7 @@
         "drupal/migrate_source_directory": "^2.2",
         "drupal/migrate_tools": "^6.0",
         "drupal/migration_tools": "^2.9",
+        "drupal/token_filter": "^2.2",
         "drupal/trash": "^3.0",
         "drupal/twig_tweak": "^3.4",
         "localgovdrupal/localgov": "^3.0",

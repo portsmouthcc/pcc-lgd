@@ -1,9 +1,9 @@
-uuid: 491f0b5c-fe1d-4e58-910b-e989d8bca2b4
+uuid: ddb9590b-9e39-4174-9166-5d2f52e26847
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:text_block:d8772e74-a5ec-4142-a8cd-d204d5543e9c'
+    - 'block_content:text_block:c0e64994-e3cc-4483-8a4e-f172d0adaaea'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: pcc
 region: lower_footer_third
 weight: 0
 provider: null
-plugin: 'block_content:d8772e74-a5ec-4142-a8cd-d204d5543e9c'
+plugin: 'block_content:c0e64994-e3cc-4483-8a4e-f172d0adaaea'
 settings:
-  id: 'block_content:d8772e74-a5ec-4142-a8cd-d204d5543e9c'
+  id: 'block_content:c0e64994-e3cc-4483-8a4e-f172d0adaaea'
   label: 'Copyright notice'
   label_display: '0'
   provider: block_content
