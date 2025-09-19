@@ -1,0 +1,8 @@
+uuid: 0924b2ae-2969-4260-b04f-bfa61c19f0b6
+langcode: en
+status: true
+dependencies: {  }
+id: text_block
+label: 'Text block'
+revision: false
+description: 'General-purpose text block'

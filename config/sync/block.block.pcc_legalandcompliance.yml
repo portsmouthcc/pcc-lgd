@@ -1,0 +1,25 @@
+uuid: 67064606-6ac2-4f9d-9429-4c378165e8f6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:text_block:9e43c967-c786-410f-a761-0b3af9dbc913'
+  module:
+    - block_content
+  theme:
+    - pcc
+id: pcc_legalandcompliance
+theme: pcc
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:9e43c967-c786-410f-a761-0b3af9dbc913'
+settings:
+  id: 'block_content:9e43c967-c786-410f-a761-0b3af9dbc913'
+  label: 'Legal and compliance'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
