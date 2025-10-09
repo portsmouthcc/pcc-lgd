@@ -33,7 +33,15 @@
     hotpink, just set `--color-accent: hotpink;`
 */
 body {
-  --color-accent: green;
-  --font-secondary: georgia, var(--font-primary);
-  --line-height: 1.3;
+  /* Set Variables */
+  --color-accent: #053876;
+  --color-accent-2: #dff2ff;
+  --color-green: #28b468;
+  --color-red: #e4251b;
+  --color-orange: #f37320;
+  --color-yellow: #ffd600;
+  --color-blue: #007acc;
+  --font-primary:
+    "Open Sans", roboto, oxygen, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  --font-secondary: "Mulish", var(--font-primary);
 }

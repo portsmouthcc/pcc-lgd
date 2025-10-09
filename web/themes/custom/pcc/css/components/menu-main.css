@@ -1,0 +1,31 @@
+/*
+  @file Theming main menu.
+*/
+/*
+  Replace the base theme main menu styles.
+*/
+.menu--main {
+  display: flex;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+.menu--main > .menu-item a {
+  display: block;
+  padding: var(--spacing);
+  color: var(--color-white);
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.menu--main > .menu-item--active-trail a,
+.menu--main > .menu-item a:focus,
+.menu--main > .menu-item a:hover {
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+.menu--main > .menu-item a:hover {
+  border-color: var(--color-white);
+}

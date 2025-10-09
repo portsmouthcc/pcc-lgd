@@ -1,7 +1,7 @@
 {
-  "name": "localgov_subtheme",
+  "name": "pcc",
   "version": "1.0.0",
-  "description": "NPM scripts for the localgov_base theme.",
+  "description": "NPM scripts for the PCC theme.",
   "main": "index.js",
   "scripts": {
     "start": "npm run lint:css && npm run lint:js",
