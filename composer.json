@@ -1,0 +1,104 @@
+{
+    "name": "localgovdrupal/localgov-project",
+    "description": "Project template for the LocalGov Drupal distribution.",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://github.com/localgovdrupal/localgov_project",
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    },
+    "require": {
+        "composer/installers": "^2.3",
+        "cweagans/composer-patches": "^1.6",
+        "drupal/core-composer-scaffold": "^10.3",
+        "drupal/core-recommended": "^10.3",
+        "localgovdrupal/localgov": "^3.0",
+        "localgovdrupal/localgov_search_solr": "^1.1",
+        "wikimedia/composer-merge-plugin": "^2.1"
+    },
+    "require-dev": {
+        "brianium/paratest": "^6.0",
+        "drupal/coder": "^8.3",
+        "drupal/core-dev": "^10.3",
+        "mglaman/phpstan-drupal": "^1.0",
+        "phpspec/prophecy-phpunit": "^2",
+        "phpstan/phpstan": "^1.0",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-strict-rules": "^1.5",
+        "spaze/phpstan-disallowed-calls": "^4.5.0",
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true,
+            "tbachert/spi": false,
+            "wikimedia/composer-merge-plugin": true
+        }
+    },
+    "extra": {
+        "enable-patching": true,
+        "patchLevel": {
+          "drupal/core": "-p2"
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/sites/default/settings.php": {
+                    "mode": "replace",
+                    "path": "assets/composer/settings.php",
+                    "overwrite": false
+                },
+                "[web-root]/sites/default/settings.lando.php": {
+                    "mode": "replace",
+                    "path": "assets/composer/settings.lando.php",
+                    "overwrite": false
+                },
+                "[web-root]/sites/development.services.yml": "assets/composer/development.services.yml"
+            }
+        },
+        "patches-ignore": {
+            "localgovdrupal/localgov": {
+                "drupal/core": {
+                    "Content moderation and Workspaces https://www.drupal.org/project/drupal/issues/3179199#comment-15711680" : "https://www.drupal.org/files/issues/2024-08-11/3179199-3132022-content-moderation-workspaces-query.patch"
+                }
+            },
+            "localgovdrupal/localgov_services": {
+                "drupal/core": {
+                    "node_access filters out accessible nodes when node is left joined (1349080)" : "https://git.drupalcode.org/project/drupal/-/commit/c271adb.diff"
+                }
+            }
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "merge-plugin": {
+            "include": [
+                "web/modules/contrib/dropzonejs/composer.libraries.json"
+            ]
+        }
+    }
+}
