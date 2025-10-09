@@ -41,7 +41,4 @@ body {
   --color-orange: #f37320;
   --color-yellow: #ffd600;
   --color-blue: #007acc;
-  --font-primary:
-    "Open Sans", roboto, oxygen, ubuntu, cantarell, "Helvetica Neue", sans-serif;
-  --font-secondary: "Mulish", var(--font-primary);
 }

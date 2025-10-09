@@ -3,11 +3,13 @@ description: "PCC theme using localgov_base as its base theme."
 type: theme
 core_version_requirement: ^10 || ^11
 base theme: "localgov_base"
+logo: "assets/images/pcc-logo.svg"
+favicon: "assets/images/favicons/favicon-32x32.png"
 
 # Extend these base theme libraries with our own.
 libraries-extend:
   localgov_base/global:
-    - pcc/variables
+    - pcc/global
   localgov_base/header:
     - pcc/header
 
