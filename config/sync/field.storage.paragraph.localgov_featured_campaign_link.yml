@@ -1,0 +1,21 @@
+uuid: c1e0c652-4b94-4cbe-b0e3-a69341821413
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+_core:
+  default_config_hash: MwNxMeN93SP4yqdSVaM3tc4OxmHRrI3X1l1mkBrXMZE
+id: paragraph.localgov_featured_campaign_link
+field_name: localgov_featured_campaign_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

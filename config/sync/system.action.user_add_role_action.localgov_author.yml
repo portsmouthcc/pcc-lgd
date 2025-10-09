@@ -1,0 +1,14 @@
+uuid: ccc5f3b1-0bd9-4cd8-94d4-b92a84bbdab5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.localgov_author
+  module:
+    - user
+id: user_add_role_action.localgov_author
+label: 'Add the Author role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: localgov_author

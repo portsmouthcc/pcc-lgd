@@ -1,0 +1,12 @@
+uuid: 5662766c-fa76-4d2c-95b9-b90cf8dd5b8d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: OhGFgbEq2S7SqeYtg2B2ZrOP6h-peTkJBx_xjKQqtz0
+id: localgov_featured_campaign
+label: 'Featured campaign'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

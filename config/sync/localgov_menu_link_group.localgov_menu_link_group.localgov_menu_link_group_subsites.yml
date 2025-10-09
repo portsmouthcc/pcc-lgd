@@ -1,0 +1,18 @@
+uuid: bb0bcaac-ed8c-4838-9987-21c9d7a33bb4
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - localgov_subsites
+      - localgov_menu_link_group
+_core:
+  default_config_hash: IXw3oYhab-xr8SAGh0ybGrExa-ivhrV9gsWREkaOF00
+id: localgov_menu_link_group_subsites
+group_label: Subsites
+weight: 0
+parent_menu: admin
+parent_menu_link: 'admin_toolbar_tools.extra_links:node.add'
+child_menu_links:
+  - 'admin_toolbar_tools.extra_links:node.add.localgov_subsites_overview'
+  - 'admin_toolbar_tools.extra_links:node.add.localgov_subsites_page'

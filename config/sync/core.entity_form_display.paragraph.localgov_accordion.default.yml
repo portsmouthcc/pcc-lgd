@@ -1,0 +1,70 @@
+uuid: 697fa1a5-efd6-417b-99b6-0b1e21b1c0d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.localgov_accordion.localgov_allow_multiple_open
+    - field.field.paragraph.localgov_accordion.localgov_display_show_hide_all
+    - field.field.paragraph.localgov_accordion.localgov_heading_level
+    - field.field.paragraph.localgov_accordion.localgov_paragraphs
+    - field.field.paragraph.localgov_accordion.localgov_title
+    - paragraphs.paragraphs_type.localgov_accordion
+  module:
+    - paragraphs
+_core:
+  default_config_hash: 1SJPpxf6PdhZZ_3oWeNMhAp-o-MulBk8QTJq4Sockl8
+id: paragraph.localgov_accordion.default
+targetEntityType: paragraph
+bundle: localgov_accordion
+mode: default
+content:
+  localgov_allow_multiple_open:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  localgov_display_show_hide_all:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  localgov_heading_level:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  localgov_paragraphs:
+    type: paragraphs
+    weight: 4
+    region: content
+    settings:
+      title: 'Accordion pane'
+      title_plural: 'Accordion panes'
+      edit_mode: closed_expand_nested
+      closed_mode: preview
+      autocollapse: none
+      closed_mode_threshold: 1
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: localgov_accordion_pane
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  localgov_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

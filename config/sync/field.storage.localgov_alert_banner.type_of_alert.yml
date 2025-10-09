@@ -1,0 +1,38 @@
+uuid: 2c10f4a7-fa58-4bb1-81e2-d15348dbda53
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_alert_banner
+    - options
+  enforced:
+    module:
+      - localgov_alert_banner
+_core:
+  default_config_hash: qPNCF2xVgl8-PzFSV9C87sSLkQSADCsULze3u3GM_3E
+id: localgov_alert_banner.type_of_alert
+field_name: type_of_alert
+entity_type: localgov_alert_banner
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 00--announcement
+      label: Announcement
+    -
+      value: 20--minor
+      label: 'Minor alert'
+    -
+      value: 50--major
+      label: Emergency
+    -
+      value: 90--notable-person
+      label: 'Death of a notable person'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

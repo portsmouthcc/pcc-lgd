@@ -1,0 +1,22 @@
+uuid: 91b9256b-d774-477d-a7b0-4f33315edb90
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pcc
+_core:
+  default_config_hash: xjT-PMJ_X0d1hz-hW2RTS2HI58Nv1lAvwxx7MPSs9-4
+id: pcc_localgov_mainpagecontent_scarfolk
+theme: pcc
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

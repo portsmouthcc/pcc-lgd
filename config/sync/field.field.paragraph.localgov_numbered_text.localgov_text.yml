@@ -1,0 +1,24 @@
+uuid: 0e17fb80-b288-49be-8958-9d7db7772ce3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.localgov_text
+    - paragraphs.paragraphs_type.localgov_numbered_text
+  module:
+    - text
+_core:
+  default_config_hash: Cpsc7hbE6GwvG1MmokKMfVUysNkHgKwmhUcxcVhwCIY
+id: paragraph.localgov_numbered_text.localgov_text
+field_name: localgov_text
+entity_type: paragraph
+bundle: localgov_numbered_text
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

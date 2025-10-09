@@ -1,0 +1,20 @@
+uuid: d71c8976-b63e-4e18-a2ae-3f625dbb0b3a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2Kk4rNgPjZAetK-o9mtCzyv7165JmHpMqfFFVM7F52c
+id: lando
+label: Lando
+plugin: smtp
+configuration:
+  user: ''
+  pass: ''
+  host: mailhog
+  port: 1025
+  query:
+    verify_peer: false
+    local_domain: ''
+    restart_threshold: null
+    restart_threshold_sleep: null
+    ping_threshold: null

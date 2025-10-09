@@ -1,0 +1,18 @@
+uuid: 233afa7a-e384-4575-9388-f9b681c1746b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - localgov_step_by_step
+      - localgov_menu_link_group
+_core:
+  default_config_hash: Me52lHQ5987Nt8WeSj1J8pVZUe8JoRbX2GKeoIeuYVU
+id: localgov_menu_link_group_step_by_step
+group_label: 'Step by step'
+weight: 0
+parent_menu: admin
+parent_menu_link: 'admin_toolbar_tools.extra_links:node.add'
+child_menu_links:
+  - 'admin_toolbar_tools.extra_links:node.add.localgov_step_by_step_overview'
+  - 'admin_toolbar_tools.extra_links:node.add.localgov_step_by_step_page'

@@ -1,0 +1,35 @@
+uuid: 2dbaa786-9554-4a1b-bde1-8b6f68132fa9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.scale_crop_7_3_large
+    - field.field.media.image.field_media_image
+    - image.style.scale_crop_7_3_large
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: pAgM_wVibvWsLMe04cxb1erllsapd3xnF5ucC8drz64
+id: media.image.scale_crop_7_3_large
+targetEntityType: media
+bundle: image
+mode: scale_crop_7_3_large
+content:
+  field_media_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: scale_crop_7_3_large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

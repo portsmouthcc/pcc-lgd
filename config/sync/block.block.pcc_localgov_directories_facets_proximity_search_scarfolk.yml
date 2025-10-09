@@ -1,0 +1,34 @@
+uuid: 6067790b-7e5d-4431-ab06-fcd9cbc8070e
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.localgov_directories_facets_proximity_search
+  module:
+    - facets
+    - node
+  theme:
+    - pcc
+_core:
+  default_config_hash: j1qb7rBjWkUhIkVj6R9Q6l5iGA6Otc4RpPtor22hZHU
+id: pcc_localgov_directories_facets_proximity_search_scarfolk
+theme: pcc
+region: sidebar_first
+weight: 5
+provider: null
+plugin: 'facet_block:localgov_directories_facets_proximity_search'
+settings:
+  id: 'facet_block:localgov_directories_facets_proximity_search'
+  label: 'Directory facets for proximity search'
+  label_display: '0'
+  provider: facets
+  context_mapping: {  }
+  block_id: localgov_directories_facets_proximity_search
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      localgov_directory: localgov_directory

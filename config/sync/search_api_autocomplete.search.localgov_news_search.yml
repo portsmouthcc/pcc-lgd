@@ -1,0 +1,33 @@
+uuid: 7f2ead48-36e9-4db6-8653-05de271fe2ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.localgov_news
+    - views.view.localgov_news_search
+  module:
+    - views
+  enforced:
+    module:
+      - localgov_news
+_core:
+  default_config_hash: tIGyhT8iiRyS3Wi0UR5bYB1O5wGXUGrObBfypbxRb7I
+id: localgov_news_search
+label: 'News search'
+index_id: localgov_news
+suggester_settings:
+  live_results:
+    fields: {  }
+    view_modes: {  }
+    highlight:
+      enabled: false
+      field: ''
+    suggest_keys: false
+suggester_weights: {  }
+suggester_limits: {  }
+search_settings:
+  'views:localgov_news_search':
+    displays:
+      default: true
+      selected: {  }
+options: {  }

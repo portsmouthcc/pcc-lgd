@@ -1,0 +1,35 @@
+uuid: 693c30c5-c1de-4133-9ee4-005c66e25a2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflows.workflow.localgov_alert_banners
+  module:
+    - content_moderation
+    - localgov_alert_banner
+    - node
+    - scheduled_transitions
+    - system
+    - toolbar
+  enforced:
+    module:
+      - localgov_alert_banner
+_core:
+  default_config_hash: yucluhkyHVmmihySkcgxzfrgQAuFcclmj6YcD3MBKDA
+id: emergency_publisher
+label: 'Emergency publisher'
+weight: -2
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access localgov alert banner listing page'
+  - 'access toolbar'
+  - 'add scheduled transitions localgov_alert_banner localgov_alert_banner'
+  - 'manage all localgov alert banner entities'
+  - 'reschedule scheduled transitions localgov_alert_banner localgov_alert_banner'
+  - 'use localgov_alert_banners transition publish'
+  - 'use localgov_alert_banners transition unpublish'
+  - 'view all localgov alert banner entities'
+  - 'view all localgov alert banner entity pages'
+  - 'view scheduled transitions localgov_alert_banner localgov_alert_banner'
+  - 'view the administration theme'

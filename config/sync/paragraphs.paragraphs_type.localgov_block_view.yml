@@ -1,0 +1,12 @@
+uuid: 30329388-a595-40a2-9deb-2979331600c0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: P1K5K84iHY5OnCctlkiwtN9Zldefnsb9HB3AJm8Wjnw
+id: localgov_block_view
+label: 'Block view'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

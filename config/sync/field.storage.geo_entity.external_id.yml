@@ -1,0 +1,23 @@
+uuid: 300538e9-8fb4-4808-a409-de416b56f4a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - geo_entity
+_core:
+  default_config_hash: 7kigzllXKM2zBTEDTpNtLqcqWACZDS-i0mFEJPGk2pY
+id: geo_entity.external_id
+field_name: external_id
+entity_type: geo_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

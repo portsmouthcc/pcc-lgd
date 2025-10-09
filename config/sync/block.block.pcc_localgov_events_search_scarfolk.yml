@@ -1,0 +1,31 @@
+uuid: 2382d2fb-8a34-4f85-8928-9919fcbd819a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.localgov_events_search
+  module:
+    - system
+    - views
+  theme:
+    - pcc
+_core:
+  default_config_hash: 78psqHAXGxvIIIw__Gk4_KiB_GBORbWSaTZhjVmngtw
+id: pcc_localgov_events_search_scarfolk
+theme: pcc
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'views_exposed_filter_block:localgov_events_search-events_page'
+settings:
+  id: 'views_exposed_filter_block:localgov_events_search-events_page'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/events\r\n/events/search"

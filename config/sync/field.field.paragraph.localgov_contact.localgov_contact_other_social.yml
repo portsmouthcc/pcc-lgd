@@ -1,0 +1,25 @@
+uuid: 76ff6320-6fc1-472f-be4f-100dd8bc4aa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.localgov_contact_other_social
+    - paragraphs.paragraphs_type.localgov_contact
+  module:
+    - link
+_core:
+  default_config_hash: xuqdF59jgbIo0bzHbQD4ObA-z2674_yDXXbq0IQFltw
+id: paragraph.localgov_contact.localgov_contact_other_social
+field_name: localgov_contact_other_social
+entity_type: paragraph
+bundle: localgov_contact
+label: 'Other social media URLs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

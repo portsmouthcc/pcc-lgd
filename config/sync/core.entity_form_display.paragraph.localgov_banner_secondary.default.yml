@@ -1,0 +1,29 @@
+uuid: c9172c23-efe8-4050-9fdf-00b5d6b3f4a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.localgov_banner_secondary.localgov_image
+    - paragraphs.paragraphs_type.localgov_banner_secondary
+  module:
+    - media_library
+    - media_library_edit
+_core:
+  default_config_hash: JRnc2R0N2LZrglixxV94Ew67PXXMzJP9OrRsP4ozRTU
+id: paragraph.localgov_banner_secondary.default
+targetEntityType: paragraph
+bundle: localgov_banner_secondary
+mode: default
+content:
+  localgov_image:
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
+    region: content
+hidden:
+  created: true
+  status: true

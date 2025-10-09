@@ -1,0 +1,22 @@
+uuid: 507ff7a0-b98b-4a9a-81ed-59b8052ec721
+langcode: en
+status: true
+dependencies:
+  module:
+    - geo_entity
+    - node
+_core:
+  default_config_hash: 2QfU3Q9xPm5Ii-srgZJighNjSNLJkMYrr_eB3vQneoQ
+id: node.localgov_location
+field_name: localgov_location
+entity_type: node
+type: entity_reference
+settings:
+  target_type: geo_entity
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

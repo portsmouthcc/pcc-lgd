@@ -1,0 +1,21 @@
+uuid: c3732e80-a851-4fe3-aa8f-890a59f490a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: CsvosQAFs6eYXocNGqxLdxLF3J9NscpSpa8hi74Q9V8
+id: node.localgov_directory_opening_times
+field_name: localgov_directory_opening_times
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

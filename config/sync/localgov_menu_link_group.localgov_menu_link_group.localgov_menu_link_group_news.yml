@@ -1,0 +1,18 @@
+uuid: 8fa0046d-6e5f-47b7-91f4-7c38ca7d7f16
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - localgov_news
+      - localgov_menu_link_group
+_core:
+  default_config_hash: 63PymnDbOVfiMjWWRmVkZfCzaPFff0MvdMTcEWsecqQ
+id: localgov_menu_link_group_news
+group_label: News
+weight: 0
+parent_menu: admin
+parent_menu_link: 'admin_toolbar_tools.extra_links:node.add'
+child_menu_links:
+  - 'admin_toolbar_tools.extra_links:node.add.localgov_news_article'
+  - 'admin_toolbar_tools.extra_links:node.add.localgov_newsroom'

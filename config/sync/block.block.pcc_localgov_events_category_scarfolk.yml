@@ -1,0 +1,31 @@
+uuid: 17b73d1b-d6b6-4dd8-a52f-6d0f7df0f91a
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.localgov_events_category
+  module:
+    - facets
+    - system
+  theme:
+    - pcc
+_core:
+  default_config_hash: nqhXN_V9FxqznaFKXftvtqK6hcLl72Vwyo9W-1Rk0FU
+id: pcc_localgov_events_category_scarfolk
+theme: pcc
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'facet_block:localgov_events_category'
+settings:
+  id: 'facet_block:localgov_events_category'
+  label: 'Events category'
+  label_display: '0'
+  provider: facets
+  block_id: localgov_events_category
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /events/search

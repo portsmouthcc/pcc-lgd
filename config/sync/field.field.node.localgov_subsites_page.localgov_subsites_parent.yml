@@ -1,0 +1,37 @@
+uuid: cc23935b-b8e4-4bd9-82ca-2c9640591c57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.localgov_subsites_parent
+    - node.type.localgov_subsites_overview
+    - node.type.localgov_subsites_page
+  module:
+    - entity_hierarchy
+_core:
+  default_config_hash: hBA4evBWZqMJdD6E8uGgfcGLRZ_975Pz2FblMsYM78w
+id: node.localgov_subsites_page.localgov_subsites_parent
+field_name: localgov_subsites_parent
+entity_type: node
+bundle: localgov_subsites_page
+label: 'Subsite parent page'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      localgov_subsites_overview: localgov_subsites_overview
+      localgov_subsites_page: localgov_subsites_page
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: localgov_subsites_overview
+  weight_min: -50
+  weight_max: 50
+  weight_label: Weight
+field_type: entity_reference_hierarchy

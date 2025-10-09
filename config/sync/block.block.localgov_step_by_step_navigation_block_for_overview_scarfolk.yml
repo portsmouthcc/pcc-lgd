@@ -1,0 +1,35 @@
+uuid: 8529685f-9e10-4057-8c2f-f54666ffa5e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.localgov_step_by_step_navigation
+  module:
+    - node
+    - views
+  theme:
+    - localgov_scarfolk
+_core:
+  default_config_hash: 0tPDM8sz4Zpy0_BaQG57TjERnp871_YdjsKzaAKOS-I
+id: localgov_step_by_step_navigation_block_for_overview_scarfolk
+theme: localgov_scarfolk
+region: content_bottom
+weight: 200
+provider: null
+plugin: 'views_block:localgov_step_by_step_navigation-steps_for_overview'
+settings:
+  id: 'views_block:localgov_step_by_step_navigation-steps_for_overview'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: 'entity_bundle:node'
+    bundles:
+      localgov_step_by_step_overview: localgov_step_by_step_overview
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,24 @@
+uuid: 4c110048-1036-4bf2-bb0d-977aafbd7367
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.localgov_directory_notes
+    - node.type.localgov_directories_venue
+  module:
+    - text
+_core:
+  default_config_hash: f8HGdmc0v4BlUtWqj4z3HKlD0Qyk3YAuqANd5hRWLKw
+id: node.localgov_directories_venue.localgov_directory_notes
+field_name: localgov_directory_notes
+entity_type: node
+bundle: localgov_directories_venue
+label: 'Venue notes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

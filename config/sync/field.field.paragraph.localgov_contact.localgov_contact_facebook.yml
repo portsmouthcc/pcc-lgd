@@ -1,0 +1,25 @@
+uuid: 82f8dd1e-936d-45c9-9a58-9a9958c8d771
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.localgov_contact_facebook
+    - paragraphs.paragraphs_type.localgov_contact
+  module:
+    - link
+_core:
+  default_config_hash: SEHPpmi60BrQZ5Kpb76awje8B2V3qyfkC4pLGaAYU7I
+id: paragraph.localgov_contact.localgov_contact_facebook
+field_name: localgov_contact_facebook
+entity_type: paragraph
+bundle: localgov_contact
+label: Facebook
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

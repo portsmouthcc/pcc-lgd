@@ -1,0 +1,23 @@
+uuid: 38dd811c-5745-4b63-b164-3274da51a998
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_alert_banner
+  theme:
+    - pcc
+_core:
+  default_config_hash: 4yunDTSAVrhKT9QpLfEJQhkTmQ-E7uPYESr91mtxREE
+id: pcc_localgov_alert_banner_scarfolk
+theme: pcc
+region: banner
+weight: -100
+provider: null
+plugin: localgov_alert_banner_block
+settings:
+  id: localgov_alert_banner
+  label: 'Alert banner'
+  label_display: '0'
+  provider: localgov_alert_banner
+  include_types: {  }
+visibility: {  }

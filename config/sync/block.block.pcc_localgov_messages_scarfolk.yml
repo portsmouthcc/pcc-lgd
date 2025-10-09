@@ -1,0 +1,22 @@
+uuid: d2d76df0-c1fc-41e9-8ff2-15d5826fd1e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pcc
+_core:
+  default_config_hash: XqdhRTIfjgkSTBL-WtfsStngpA1B7I9_ajAh3cVOk5s
+id: pcc_localgov_messages_scarfolk
+theme: pcc
+region: messages
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

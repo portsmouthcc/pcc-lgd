@@ -1,0 +1,41 @@
+uuid: 09977670-9b19-42b2-9546-3d32e323d267
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.localgov_step_by_step_overview.body
+    - field.field.node.localgov_step_by_step_overview.localgov_services_parent
+    - field.field.node.localgov_step_by_step_overview.localgov_step_by_step_pages
+    - field.field.node.localgov_step_by_step_overview.localgov_topic_classified
+    - node.type.localgov_step_by_step_overview
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: oY2ygE0HybeCXuK01bILJK80RPWOv4gmiVrpWW9myuE
+id: node.localgov_step_by_step_overview.search_index
+targetEntityType: node
+bundle: localgov_step_by_step_overview
+mode: search_index
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  localgov_step_by_step_pages:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  links: true
+  localgov_services_parent: true
+  localgov_topic_classified: true
+  search_api_excerpt: true

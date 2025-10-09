@@ -1,0 +1,20 @@
+uuid: a7e59d2f-77a6-434f-a3a7-34e128d0d08b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - localgov_services
+      - localgov_menu_link_group
+_core:
+  default_config_hash: _moS-DAdaKkfl7D6aMLE8vDTEblg0hbM0uj9XeB3-o8
+id: localgov_menu_link_group_services
+group_label: Services
+weight: 0
+parent_menu: admin
+parent_menu_link: 'admin_toolbar_tools.extra_links:node.add'
+child_menu_links:
+  - 'admin_toolbar_tools.extra_links:node.add.localgov_services_landing'
+  - 'admin_toolbar_tools.extra_links:node.add.localgov_services_page'
+  - 'admin_toolbar_tools.extra_links:node.add.localgov_services_status'
+  - 'admin_toolbar_tools.extra_links:node.add.localgov_services_sublanding'

@@ -1,0 +1,23 @@
+uuid: 76b82cdd-895e-4d79-ba7c-4ae63bd488fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.localgov_display_show_hide_all
+    - paragraphs.paragraphs_type.localgov_accordion
+_core:
+  default_config_hash: Koj7DULKqz4HyV4ArV0aBa-lo8CNy_gZcoSrQQlT6xk
+id: paragraph.localgov_accordion.localgov_display_show_hide_all
+field_name: localgov_display_show_hide_all
+entity_type: paragraph
+bundle: localgov_accordion
+label: 'Display show/hide all toggle'
+description: 'When checked, the resulting accordion will include a button allowing all panes to be open or closed at once. Note that this automatically enables the option to open multiple panes at once.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

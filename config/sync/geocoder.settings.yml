@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: l3Ehg2ShZtFCAPBy_uYS-msL0x-o_vtEzIGlYIzBzlg
+geocoder_presave_disabled: false
+cache: true
+queue: false

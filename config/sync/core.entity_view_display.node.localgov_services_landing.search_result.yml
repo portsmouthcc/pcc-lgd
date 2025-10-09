@@ -1,0 +1,53 @@
+uuid: 792a631c-1d74-4f72-afa3-3cc1596b562f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.localgov_services_landing.body
+    - field.field.node.localgov_services_landing.localgov_address
+    - field.field.node.localgov_services_landing.localgov_address_first_line
+    - field.field.node.localgov_services_landing.localgov_common_tasks
+    - field.field.node.localgov_services_landing.localgov_contact_us_online
+    - field.field.node.localgov_services_landing.localgov_destinations
+    - field.field.node.localgov_services_landing.localgov_email_address
+    - field.field.node.localgov_services_landing.localgov_facebook
+    - field.field.node.localgov_services_landing.localgov_hearing_difficulties_ph
+    - field.field.node.localgov_services_landing.localgov_link_to_map
+    - field.field.node.localgov_services_landing.localgov_opening_hours
+    - field.field.node.localgov_services_landing.localgov_other_team_contacts
+    - field.field.node.localgov_services_landing.localgov_phone
+    - field.field.node.localgov_services_landing.localgov_popular_topics
+    - field.field.node.localgov_services_landing.localgov_twitter
+    - node.type.localgov_services_landing
+  module:
+    - user
+_core:
+  default_config_hash: b_AubcP1D8l2lPg5KNNSqHcyxzb11Dh3Qi4yi8vydJU
+id: node.localgov_services_landing.search_result
+targetEntityType: node
+bundle: localgov_services_landing
+mode: search_result
+content:
+  search_api_excerpt:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  links: true
+  localgov_address: true
+  localgov_address_first_line: true
+  localgov_common_tasks: true
+  localgov_contact_us_online: true
+  localgov_destinations: true
+  localgov_email_address: true
+  localgov_facebook: true
+  localgov_hearing_difficulties_ph: true
+  localgov_link_to_map: true
+  localgov_opening_hours: true
+  localgov_other_team_contacts: true
+  localgov_phone: true
+  localgov_popular_topics: true
+  localgov_twitter: true

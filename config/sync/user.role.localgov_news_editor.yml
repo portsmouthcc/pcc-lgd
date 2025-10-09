@@ -1,0 +1,37 @@
+uuid: 3d39415a-d0ff-499c-87f2-07ed3c03ab3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+    - node.type.localgov_news_article
+  module:
+    - media
+    - node
+    - system
+    - toolbar
+  enforced:
+    module:
+      - localgov_news
+_core:
+  default_config_hash: 7GxM2FMdfmS-8sa5gT7ycX1Nn5quFRi0oIYW502wMMA
+id: localgov_news_editor
+label: 'News editor'
+weight: 4
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'create image media'
+  - 'create localgov_news_article content'
+  - 'delete any localgov_news_article content'
+  - 'delete own image media'
+  - 'delete own localgov_news_article content'
+  - 'edit any image media'
+  - 'edit any localgov_news_article content'
+  - 'edit own image media'
+  - 'edit own localgov_news_article content'
+  - 'revert localgov_news_article revisions'
+  - 'view localgov_news_article revisions'
+  - 'view the administration theme'

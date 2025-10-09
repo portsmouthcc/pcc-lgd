@@ -1,0 +1,35 @@
+uuid: 54155d2e-5135-423f-83e1-2d520f6b2a17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.geo_entity.postal_address
+    - geo_entity.geo_entity_type.address
+  module:
+    - address
+_core:
+  default_config_hash: r658yn-7yAA2L0ldhfZ1QQYy0RKZVKuS6wGuvv8Xsvc
+id: geo_entity.address.postal_address
+field_name: postal_address
+entity_type: geo_entity
+bundle: address
+label: Address
+description: 'Enter the address here. It should offer autocomplete options. When you select an address it will be found on the map.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+  fields: {  }
+field_type: address

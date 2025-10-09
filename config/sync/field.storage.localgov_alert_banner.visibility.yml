@@ -1,0 +1,21 @@
+uuid: 30c6bdf9-f826-4a1d-81d0-03a8a05b1e3e
+langcode: en
+status: true
+dependencies:
+  module:
+    - condition_field
+    - localgov_alert_banner
+_core:
+  default_config_hash: tMdaJH9XIky4trjDkHZUxgoQn87nxsN87DoCdU6y9t8
+id: localgov_alert_banner.visibility
+field_name: visibility
+entity_type: localgov_alert_banner
+type: condition_field
+settings: {  }
+module: condition_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

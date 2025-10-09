@@ -1,0 +1,32 @@
+uuid: 941c4c1b-5869-4eff-a2e3-3f0344dd5218
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_directories
+    - node
+  theme:
+    - pcc
+_core:
+  default_config_hash: QisDruQnwqe-UBD_VwkrU0EtNYkJ4BGnalhIzv7tIBI
+id: pcc_localgov_directories_channel_search_block_scarfolk
+theme: pcc
+region: sidebar_first
+weight: 0
+provider: null
+plugin: localgov_directories_channel_search_block
+settings:
+  id: localgov_directories_channel_search_block
+  label: 'Directory channel search'
+  label_display: '0'
+  provider: localgov_directories
+  context_mapping:
+    node: '@node.node_route_context:node'
+visibility:
+  node_type:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      localgov_directory: localgov_directory

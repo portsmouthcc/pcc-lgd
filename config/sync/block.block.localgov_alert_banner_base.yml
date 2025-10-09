@@ -1,0 +1,23 @@
+uuid: 60191f8d-2892-45c6-9be8-58647b1fb6d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_alert_banner
+  theme:
+    - localgov_base
+_core:
+  default_config_hash: OIIxbedkJ0CwXoXxQU4Jgcb0PEu4_SbQII-vhswW1mg
+id: localgov_alert_banner_base
+theme: localgov_base
+region: banner
+weight: -100
+provider: null
+plugin: localgov_alert_banner_block
+settings:
+  id: localgov_alert_banner
+  label: 'Alert banner'
+  label_display: '0'
+  provider: localgov_alert_banner
+  include_types: {  }
+visibility: {  }

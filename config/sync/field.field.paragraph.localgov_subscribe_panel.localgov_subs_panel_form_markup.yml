@@ -1,0 +1,27 @@
+uuid: d2cc9dd1-b62a-45b4-88f6-6e43b25a826b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.localgov_subs_panel_form_markup
+    - paragraphs.paragraphs_type.localgov_subscribe_panel
+  module:
+    - text
+_core:
+  default_config_hash: 1a4SGkhjAgZ6n7-_H6D5lGHpgOcRTr7miwf1MwO5tVM
+id: paragraph.localgov_subscribe_panel.localgov_subs_panel_form_markup
+field_name: localgov_subs_panel_form_markup
+entity_type: paragraph
+bundle: localgov_subscribe_panel
+label: 'Newsletter subscription form markup'
+description: 'HTML markup for subscribing to the newsletter.  POSTs to an external site.'
+required: false
+translatable: false
+default_value:
+  -
+    value: '<span class="visually-hidden">Placeholder text</span>'
+    format: restricted_html
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

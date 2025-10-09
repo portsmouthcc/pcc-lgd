@@ -1,0 +1,25 @@
+uuid: 720e565b-fd5d-4613-bf8e-38004b1ee78a
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - geo_entity
+_core:
+  default_config_hash: jWnvG50_ovLe92oe8sgD8M8LldfAQvp6RVmcJlw91tk
+id: geo_entity.geo_file
+field_name: geo_file
+entity_type: geo_entity
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

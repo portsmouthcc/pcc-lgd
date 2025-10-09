@@ -1,0 +1,25 @@
+uuid: 0e290187-a028-406a-ac4e-f5174c98d61d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pcc
+_core:
+  default_config_hash: WOE_zR7p0ezLQ1hycQH7E2EYgfUDEQuzmCF9fxR6-ZI
+id: pcc_localgov_sitebranding_scarfolk
+theme: pcc
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }
