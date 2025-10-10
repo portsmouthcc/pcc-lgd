@@ -41,4 +41,17 @@ body {
   --color-orange: #f37320;
   --color-yellow: #ffd600;
   --color-blue: #007acc;
+
+  --color-accent-dark: #002750;
+
+  /* Footer Items */
+  --color-section-pre-footer-bg: var(--color-accent);
+  --color-section-footer-bg: var(--color-accent);
+  --color-section-post-footer-bg: var(--color-accent-dark);
+  --color-footer-heading: var(--color-white);
+  --color-footer-link: var(--color-white);
+  --color-footer-text: var(--color-white);
+  --color-post-footer-heading: var(--color-white);
+  --color-post-footer-link: var(--color-white);
+  --color-post-footer-text: var(--color-white);
 }

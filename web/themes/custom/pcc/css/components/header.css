@@ -1,20 +1,3 @@
-/* .header-top {
-  background-color: var(--color-blue);
-  color: var(--color-white);
-}
-
-.header-top a {
-  color: var(--color-white);
-}
-
-.header-top .lgd-header__inner {
-  justify-content: start;
-}
-
-.header-top .menu--main {
-  display: flex;
-} */
-
 /* New header-top section */
 
 .header-top {
@@ -24,34 +7,3 @@
 .header-top .lgd-header__inner {
   justify-content: start;
 }
-
-/* Primary menu has been moved to header-top section */
-
-/* .lgd-region--primary-menu {
-  background-color: transparent;
-}
-
-.lgd-region--primary-menu .menu--main {
-  display: flex;
-}
-
-.menu--main > .menu-item {
-  margin-inline: none;
-}
-
-.menu--main > .menu-item a {
-  color: var(--color-white);
-  border: 1px solid transparent;
-  background-color: transparent;
-}
-
-.menu--main > .menu-item--active-trail a,
-.menu--main > .menu-item a:focus,
-.menu--main > .menu-item a:hover {
-  color: var(--color-black);
-  background-color: var(--color-white);
-}
-
-.menu--main > .menu-item a:hover {
-  border-color: var(--color-white);
-} */

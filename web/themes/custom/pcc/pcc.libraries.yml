@@ -32,3 +32,8 @@ menu-main:
   css:
     theme:
       css/components/menu-main.css: {}
+
+footer:
+  css:
+    theme:
+      css/components/footer.css: {}

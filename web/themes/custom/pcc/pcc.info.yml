@@ -12,6 +12,8 @@ libraries-extend:
     - pcc/global
   localgov_base/header:
     - pcc/header
+  localgov_base/footer:
+    - pcc/footer
 
 # Replace these base theme libraries with our own.
 libraries-override:
