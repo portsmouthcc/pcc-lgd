@@ -32,8 +32,13 @@
   - The accent colour in our base theme is purple. If you would like it to be
     hotpink, just set `--color-accent: hotpink;`
 */
+
+/*
+  Override theme variables.
+  Follow the structure of the base theme's variables.css file.
+*/
 body {
-  /* Set Variables */
+  /* Colours */
   --color-accent: #053876;
   --color-accent-2: #dff2ff;
   --color-green: #28b468;
@@ -41,8 +46,17 @@ body {
   --color-orange: #f37320;
   --color-yellow: #ffd600;
   --color-blue: #007acc;
-
   --color-accent-dark: #002750;
+
+  /* Fonts */
+  --font-primary: "TransportNew", sans-serif;
+  --font-secondary: var(--font-primary);
+
+  /* Header Items */
+  --header-services-button-border: none;
+  --header-services-button-bg-color: var(--color-blue);
+  --header-services-button-bg-color-hover: var(--color-yellow);
+  --header-services-button-color-hover: var(--color-black);
 
   /* Footer Items */
   --color-section-pre-footer-bg: var(--color-accent);

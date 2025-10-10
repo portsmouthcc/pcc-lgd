@@ -1,3 +1,7 @@
+/*
+Apparently fonts will load quicker if defined in html.html.twig
+*/
+
 @font-face {
   font-family: TransportNew;
   src: url("../assets/fonts/TransportNew-Light.woff2") format("woff2");
@@ -38,9 +42,4 @@
   src: url("../../assets/fonts/TransportNew-HeavyItalic.woff2") format("woff2");
   font-weight: 900;
   font-style: italic;
-}
-
-body {
-  --font-primary: "TransportNew", sans-serif;
-  --font-secondary: var(--font-primary);
 }
