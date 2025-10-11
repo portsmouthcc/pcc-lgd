@@ -1,4 +1,4 @@
 /* Light blue bar above footer */
 .lgd-footer {
-  border-top: var(--spacing-larger) var(--color-blue) solid;
+  border-top: var(--spacing-larger) var(--color-accent) solid;
 }

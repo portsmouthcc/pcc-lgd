@@ -1,9 +1,18 @@
 /* New header-top section */
 
 .header-top {
-  background-color: var(--color-blue);
+  background-color: var(--color-accent);
 }
 
 .header-top .lgd-header__inner {
   justify-content: start;
+}
+
+/* Search submit button */
+.lgd-region--search .form-submit {
+  /* height: 50.5px; */
+  box-sizing: border-box;
+  border: 3px var(--border-style) var(--color-white);
+  padding: calc(var(--button-padding-vertical) - 3px)
+    calc(var(--button-padding-horizontal) - 3px);
 }

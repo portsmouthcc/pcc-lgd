@@ -23,6 +23,11 @@ global:
 #   css:
 #     theme:
 #       css/sample.css: {}
+banner:
+  css:
+    theme:
+      css/components/banner.css: {}
+
 header:
   css:
     theme:

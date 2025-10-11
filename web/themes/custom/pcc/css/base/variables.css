@@ -39,28 +39,36 @@
 */
 body {
   /* Colours */
-  --color-accent: #053876;
+  /* --color-accent: #053876; */
+  --color-accent: #007acc;
   --color-accent-2: #dff2ff;
   --color-green: #28b468;
   --color-red: #e4251b;
   --color-orange: #f37320;
   --color-yellow: #ffd600;
-  --color-blue: #007acc;
+  /* --color-blue: #007acc; */
+  --color-blue: #053876;
   --color-accent-dark: #002750;
+
+  /* Colours applied */
+  --color-info: var(--color-accent);
 
   /* Fonts */
   --font-primary: "TransportNew", sans-serif;
   --font-secondary: var(--font-primary);
 
   /* Header Items */
+  --color-section-header-bg: var(--color-blue);
   --header-services-button-border: none;
-  --header-services-button-bg-color: var(--color-blue);
+  --header-services-button-bg-color: var(--color-accent);
   --header-services-button-bg-color-hover: var(--color-yellow);
   --header-services-button-color-hover: var(--color-black);
+  --header-search-button-color-hover: var(--color-black);
+  --header-search-button-bg-color-hover: var(--color-yellow);
 
   /* Footer Items */
-  --color-section-pre-footer-bg: var(--color-accent);
-  --color-section-footer-bg: var(--color-accent);
+  --color-section-pre-footer-bg: var(--color-blue);
+  --color-section-footer-bg: var(--color-blue);
   --color-section-post-footer-bg: var(--color-accent-dark);
   --color-footer-heading: var(--color-white);
   --color-footer-link: var(--color-white);
