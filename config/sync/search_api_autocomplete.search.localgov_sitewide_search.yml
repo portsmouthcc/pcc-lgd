@@ -1,0 +1,23 @@
+uuid: 94701fe6-1f3f-41e1-839c-6f92cf7da532
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.localgov_sitewide_search
+    - views.view.localgov_sitewide_search
+  module:
+    - views
+id: localgov_sitewide_search
+label: 'Sitewide search'
+index_id: localgov_sitewide_search
+suggester_settings:
+  server:
+    fields: {  }
+suggester_weights: {  }
+suggester_limits: {  }
+search_settings:
+  'views:localgov_sitewide_search':
+    displays:
+      default: true
+      selected: {  }
+options: {  }

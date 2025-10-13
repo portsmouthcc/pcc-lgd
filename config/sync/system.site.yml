@@ -2,13 +2,13 @@ _core:
   default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
 langcode: en
 uuid: 0bfcdd45-0893-4e9a-8360-46209f3eb4f1
-name: 'Drush Site-Install'
+name: 'Portsmouth City Council'
 mail: admin@example.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /localgov-drupal-demo
+  front: /node/125
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en

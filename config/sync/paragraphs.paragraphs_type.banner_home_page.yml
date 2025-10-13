@@ -1,0 +1,10 @@
+uuid: 9ff2aee4-68b8-43f6-b3af-6c6535c07eb5
+langcode: en
+status: true
+dependencies: {  }
+id: banner_home_page
+label: 'Banner home page'
+icon_uuid: null
+icon_default: null
+description: 'Banner with welcome message and search form.'
+behavior_plugins: {  }

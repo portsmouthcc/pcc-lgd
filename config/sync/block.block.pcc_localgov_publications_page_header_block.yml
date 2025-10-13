@@ -10,7 +10,7 @@ dependencies:
 id: pcc_localgov_publications_page_header_block
 theme: pcc
 region: content_top
-weight: -6
+weight: -20
 provider: null
 plugin: localgov_publications_page_header_block
 settings:

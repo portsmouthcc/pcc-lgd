@@ -1,0 +1,32 @@
+uuid: a61fc3b6-4e7c-4463-aedf-a1059e089e33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner_home_page.localgov_subsites_banner_text
+    - field.field.paragraph.banner_home_page.localgov_title
+    - paragraphs.paragraphs_type.banner_home_page
+id: paragraph.banner_home_page.default
+targetEntityType: paragraph
+bundle: banner_home_page
+mode: default
+content:
+  localgov_subsites_banner_text:
+    type: string_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  localgov_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

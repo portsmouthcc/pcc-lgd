@@ -105,7 +105,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Search
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -162,7 +162,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: Search
+            label: 'Search portsmouth.gov.uk'
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -178,9 +178,14 @@ display:
               authenticated: '0'
               localgov_editor: '0'
               localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_news_editor: '0'
+              localgov_user_manager: '0'
+              localgov_admin: '0'
             expose_fields: false
             placeholder: ''
             searched_fields_id: search_api_fulltext_searched_fields
+            value_maxlength: 128
           is_grouped: false
           group_info:
             label: ''
@@ -281,7 +286,10 @@ display:
     position: 1
     display_options:
       exposed_block: false
-      display_extenders: {  }
+      display_extenders:
+        localgov_page_header_display_extender:
+          lede: ''
+          tokenize: false
       path: search
     cache_metadata:
       max-age: -1

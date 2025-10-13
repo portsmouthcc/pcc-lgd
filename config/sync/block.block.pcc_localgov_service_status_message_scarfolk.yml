@@ -11,7 +11,7 @@ _core:
 id: pcc_localgov_service_status_message_scarfolk
 theme: pcc
 region: content_top
-weight: 1
+weight: -18
 provider: null
 plugin: localgov_service_status_message
 settings:
