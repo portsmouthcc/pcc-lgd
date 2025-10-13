@@ -18,6 +18,8 @@ libraries-extend:
     - pcc/global
   localgov_base/header:
     - pcc/header
+  localgov_base/page-title-block:
+    - pcc/page-title-block
   localgov_base/service-cta-block:
     - pcc/service-cta-block
 

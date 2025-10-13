@@ -1,3 +1,9 @@
+/* This will apply to the current item which isn't a link. */
+.breadcrumbs__item {
+  color: var(--color-blue);
+}
+
+/* > separators are grey. */
 .breadcrumbs__item + .breadcrumbs__item::before {
   color: var(--color-grey-dark);
 }

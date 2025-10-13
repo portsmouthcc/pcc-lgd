@@ -13,7 +13,7 @@
 
 .menu--main > .menu-item a {
   display: block;
-  padding: var(--spacing);
+  padding: var(--spacing-smaller) var(--spacing);
   color: var(--color-white);
   background-color: transparent;
   border: 1px solid transparent;

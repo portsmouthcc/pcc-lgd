@@ -65,7 +65,11 @@ body {
   --heading-5-color: var(--color-blue);
   --heading-6-color: var(--color-blue);
 
+  /* Border properties */
+  --border-width: 2px;
+
   /* Breadcrumbs */
+  --breadcrumbs-border: none;
   --breadcrumbs-divider: ">";
 
   /* Header Items */
@@ -87,4 +91,7 @@ body {
   --color-post-footer-heading: var(--color-white);
   --color-post-footer-link: var(--color-white);
   --color-post-footer-text: var(--color-white);
+
+  /* Page Title */
+  --page-title-border: var(--border-accent);
 }
