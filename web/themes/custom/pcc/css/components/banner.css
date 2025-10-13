@@ -14,3 +14,16 @@
 .banner--home-page .field--name-localgov-subsites-banner-text {
   font-size: var(--font-size-h2);
 }
+
+/* Banner search form */
+.banner--home-page .lgd-region--search label {
+  display: inline;
+  margin-right: var(--spacing);
+  font-size: var(--font-size-h2);
+}
+
+/* @media screen and (min-width: 48rem) {
+  .banner--home-page .lgd-region--search .form-text {
+    width: auto;
+  }
+} */

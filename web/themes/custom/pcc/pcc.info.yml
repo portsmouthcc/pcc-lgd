@@ -10,12 +10,14 @@ favicon: "assets/images/favicons/favicon-32x32.png"
 libraries-extend:
   localgov_base/banner:
     - pcc/banner
-  localgov_base/header:
-    - pcc/header
-  localgov_base/global:
-    - pcc/global
   localgov_base/footer:
     - pcc/footer
+  localgov_base/global:
+    - pcc/global
+  localgov_base/header:
+    - pcc/header
+  localgov_base/service-cta-block:
+    - pcc/service-cta-block
 
 # Replace these base theme libraries with our own.
 libraries-override:

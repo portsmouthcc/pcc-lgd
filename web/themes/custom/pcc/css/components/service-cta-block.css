@@ -1,0 +1,16 @@
+/* Top task cta links */
+
+.service-cta-block__list {
+  padding-block-end: var(--vertical-rhythm-spacing);
+}
+
+.pcc-service-cta-block__list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-smaller);
+}
+
+.pcc-service-cta-block__link-icon {
+  flex-shrink: 0;
+  color: var(--color-blue);
+}
