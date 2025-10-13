@@ -19,14 +19,12 @@ function pcc_theme($existing, $type, $theme, $path) {
 }
 
 /**
- * Implements hook_form_FORM_ID_alter() for views_exposed_form.
- *
- * Alter data used to render exposed forms on views. This alters the search form
- * to match the design without making a whole template.
+ * Add current page title to breadcrumb.
  */
-// Function pcc_form_views_exposed_form_alter(array &$form, FormStateInterface $form_state, string $form_id) {
-//   // Target the sitewide search form.
-//   if ($form['#id'] == 'views-exposed-form-localgov-sitewide-search-sitewide-search-page') {
-//     $form['#info']['filter-search_api_fulltext']['label'] = 'Search portsmouth.gov.uk';
-//   }
-// }.
+function pcc_preprocess_breadcrumb(&$variables) {
+  if (($node = \Drupal::routeMatch()->getParameter('node')) && $variables['breadcrumb']) {
+    $variables['breadcrumb'][] = [
+      'text' => $node->getTitle(),
+    ];
+  }
+}

@@ -4,6 +4,7 @@
 global:
   css:
     base:
+      css/base/base.css: {}
       css/base/fonts.css: {}
       css/base/variables.css: {}
 # To override CSS from the base theme, add your library here, and then use
@@ -27,6 +28,11 @@ banner:
   css:
     theme:
       css/components/banner.css: {}
+
+breadcrumbs:
+  css:
+    theme:
+      css/components/breadcrumbs.css: {}
 
 footer:
   css:

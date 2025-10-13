@@ -1,0 +1,3 @@
+.breadcrumbs__item + .breadcrumbs__item::before {
+  color: var(--color-grey-dark);
+}

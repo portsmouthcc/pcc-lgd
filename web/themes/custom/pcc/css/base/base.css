@@ -1,0 +1,12 @@
+/* Default CSS for elements */
+
+h5,
+.h5 {
+  font-variant: initial;
+}
+
+h6,
+.h6 {
+  text-decoration: initial;
+  font-variant: initial;
+}

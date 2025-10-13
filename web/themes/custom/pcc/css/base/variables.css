@@ -57,6 +57,17 @@ body {
   --font-primary: "TransportNew", sans-serif;
   --font-secondary: var(--font-primary);
 
+  /* Headings */
+  --heading-1-color: var(--color-blue);
+  --heading-2-color: var(--color-blue);
+  --heading-3-color: var(--color-blue);
+  --heading-4-color: var(--color-blue);
+  --heading-5-color: var(--color-blue);
+  --heading-6-color: var(--color-blue);
+
+  /* Breadcrumbs */
+  --breadcrumbs-divider: ">";
+
   /* Header Items */
   --color-section-header-bg: var(--color-blue);
   --header-services-button-border: none;
