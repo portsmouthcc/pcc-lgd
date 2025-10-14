@@ -10,7 +10,7 @@ _core:
   default_config_hash: oO8_m_WuAI9i93mB-0KvufB1MzRb4LdQaR5_dRZv4kg
 id: pcc_localgov_guides_contents_scarfolk
 theme: pcc
-region: content_top
+region: sidebar_second
 weight: -19
 provider: null
 plugin: localgov_guides_contents

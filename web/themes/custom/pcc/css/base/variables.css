@@ -107,4 +107,8 @@ body {
 
   /* Step-by-Step */
   --step-by-step-part-of-color: var(--color-blue);
+
+  /* Page Sections */
+  --color-page-section-background-color-2-text-color: var(--color-blue);
+  --color-page-section-background-color-2-link-color: var(--color-accent);
 }

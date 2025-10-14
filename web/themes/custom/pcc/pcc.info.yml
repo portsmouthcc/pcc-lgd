@@ -26,6 +26,8 @@ libraries-extend:
     - pcc/service-cta-block
   localgov_base/step-by-step:
     - pcc/step-by-step
+  localgov_base/teaser:
+    - pcc/teaser
 
 # Replace these base theme libraries with our own.
 libraries-override:
