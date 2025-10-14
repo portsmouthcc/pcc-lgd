@@ -1,0 +1,13 @@
+.lgd-guide-nav {
+  margin-block-end: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.lgd-guide-nav__list {
+  list-style-type: none;
+}
+
+.lgd-guide-nav__list-item {
+  font-size: var(--font-size);
+}

@@ -16,12 +16,16 @@ libraries-extend:
     - pcc/footer
   localgov_base/global:
     - pcc/global
+  localgov_base/guide-nav:
+    - pcc/guide-nav
   localgov_base/header:
     - pcc/header
   localgov_base/page-title-block:
     - pcc/page-title-block
   localgov_base/service-cta-block:
     - pcc/service-cta-block
+  localgov_base/step-by-step:
+    - pcc/step-by-step
 
 # Replace these base theme libraries with our own.
 libraries-override:

@@ -7,6 +7,7 @@ global:
       css/base/base.css: {}
       css/base/fonts.css: {}
       css/base/variables.css: {}
+      css/components/form-items.css: {}
 # To override CSS from the base theme, add your library here, and then use
 # `libraries-extend` to add that code to the library from the base theme. See the
 # pcc.info.yml file for an example, using this `sample-library`.
@@ -39,6 +40,11 @@ footer:
     theme:
       css/components/footer.css: {}
 
+guide-nav:
+  css:
+    theme:
+      css/components/guide-nav.css: {}
+
 header:
   css:
     theme:
@@ -58,3 +64,8 @@ service-cta-block:
   css:
     theme:
       css/components/service-cta-block.css: {}
+
+step-by-step:
+  css:
+    theme:
+      css/components/step-by-step.css: {}
