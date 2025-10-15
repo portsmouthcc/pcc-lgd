@@ -3,6 +3,7 @@
 .banner--home-page {
   padding-top: var(--spacing-mega);
   padding-bottom: var(--spacing-mega);
+  margin-bottom: var(--spacing-mega);
   background-color: var(--color-blue);
   color: var(--banner-content-text-color);
 }

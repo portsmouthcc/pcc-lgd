@@ -1,0 +1,7 @@
+{% extends "@localgov_base/layout/status-pages/page-status.html.twig" %}
+
+{# Replace the header block to use our own header template. #}
+
+{% block header %}
+	{% include '@pcc/layout/header.html.twig' with {'page': page} %}
+{% endblock %}

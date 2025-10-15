@@ -8,6 +8,11 @@
   justify-content: start;
 }
 
+/* Menu toggle buttons */
+.lgd-header__toggle .icon {
+  margin-inline-end: var(--spacing-smaller);
+}
+
 /* Search submit button */
 .lgd-region--search .form-submit {
   /*
