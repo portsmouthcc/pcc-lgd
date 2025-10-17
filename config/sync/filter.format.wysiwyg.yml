@@ -12,6 +12,7 @@ dependencies:
     - linkit
     - localgov_publications
     - media
+    - token_filter
 _core:
   default_config_hash: THZepEcvv0NM9DINIxMuXabZWfdf_extR-Vb6w1grB0
 name: WYSIWYG
@@ -114,3 +115,10 @@ filters:
         document: document
         image: image
         remote_video: remote_video
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: true
+    weight: 0
+    settings:
+      replace_empty: false

@@ -1,0 +1,5 @@
+/* Grid items should fill their space. */
+
+.views-view-responsive-grid__item-inner {
+  height: 100%;
+}

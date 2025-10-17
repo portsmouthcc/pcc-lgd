@@ -39,14 +39,12 @@
 */
 body {
   /* Colours */
-  /* --color-accent: #053876; */
   --color-accent: #007acc;
   --color-accent-2: #dff2ff;
   --color-green: #28b468;
   --color-red: #e4251b;
   --color-orange: #f37320;
   --color-yellow: #ffd600;
-  /* --color-blue: #007acc; */
   --color-blue: #053876;
   --color-accent-dark: #002750;
 
@@ -67,6 +65,9 @@ body {
 
   /* Border properties */
   --border-width: 2px;
+
+  /* Grid */
+  --grid-column-spacing: var(--spacing-larger);
 
   /* Breadcrumbs */
   --breadcrumbs-border: none;
@@ -96,7 +97,13 @@ body {
   --page-title-border: var(--border-accent);
 
   /* Sidebar Items */
-  --sidebar-exposed-form-bg-color: transparent;
+  /* Choose one or use all three? */
+  /* --sidebar-exposed-form-bg-color: transparent; */
+  --sidebar-exposed-form-bg-color: var(--color-grey-lighter);
+  /* --sidebar-exposed-form-bg-color: var(--color-accent-2); */
+
+  --sidebar-exposed-form-padding-vertical: var(--spacing-large);
+  --sidebar-exposed-form-padding-horizontal: var(--spacing-large);
 
   /* Guide Navigation */
   --section-spacing-vertical-guide-nav: calc(
@@ -109,6 +116,6 @@ body {
   --step-by-step-part-of-color: var(--color-blue);
 
   /* Page Sections */
-  --color-page-section-background-color-2-text-color: var(--color-blue);
+  /* --color-page-section-background-color-2-text-color: var(--color-blue); */
   --color-page-section-background-color-2-link-color: var(--color-accent);
 }

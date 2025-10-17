@@ -1,0 +1,25 @@
+uuid: 0d7bb84c-5cb1-4f81-a26c-87bab8ee80b8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:text_block:5247dbfc-d68e-4928-9ff9-e357374b0d00'
+  module:
+    - block_content
+  theme:
+    - pcc
+id: pcc_staffsignin
+theme: pcc
+region: lower_footer_first
+weight: 0
+provider: null
+plugin: 'block_content:5247dbfc-d68e-4928-9ff9-e357374b0d00'
+settings:
+  id: 'block_content:5247dbfc-d68e-4928-9ff9-e357374b0d00'
+  label: 'Staff sign in'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

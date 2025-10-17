@@ -12,6 +12,8 @@ libraries-extend:
     - pcc/banner
   localgov_base/breadcrumbs:
     - pcc/breadcrumbs
+  localgov_base/card:
+    - pcc/card
   localgov_base/footer:
     - pcc/footer
   localgov_base/global:
@@ -28,6 +30,8 @@ libraries-extend:
     - pcc/step-by-step
   localgov_base/teaser:
     - pcc/teaser
+  views/views.responsive-grid:
+    - pcc/views.responsive-grid
 
 # Replace these base theme libraries with our own.
 libraries-override:

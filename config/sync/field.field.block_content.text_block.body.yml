@@ -1,0 +1,24 @@
+uuid: 4255e7af-a103-4b4c-97cd-acdc5896b3b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text_block
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.text_block.body
+field_name: body
+entity_type: block_content
+bundle: text_block
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

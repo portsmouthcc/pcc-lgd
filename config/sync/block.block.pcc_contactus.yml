@@ -1,0 +1,25 @@
+uuid: f53a18f2-488c-409a-8bbf-4a57cd0a4721
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:text_block:8afc170e-2d58-414d-8f8c-5d88bb5a338f'
+  module:
+    - block_content
+  theme:
+    - pcc
+id: pcc_contactus
+theme: pcc
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:8afc170e-2d58-414d-8f8c-5d88bb5a338f'
+settings:
+  id: 'block_content:8afc170e-2d58-414d-8f8c-5d88bb5a338f'
+  label: 'Contact us'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

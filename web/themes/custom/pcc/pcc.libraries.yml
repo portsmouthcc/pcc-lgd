@@ -35,6 +35,11 @@ breadcrumbs:
     theme:
       css/components/breadcrumbs.css: {}
 
+card:
+  css:
+    theme:
+      css/components/card.css: {}
+
 footer:
   css:
     theme:
@@ -74,3 +79,8 @@ teaser:
   css:
     theme:
       css/components/teaser.css: {}
+
+views.responsive-grid:
+  css:
+    layout:
+      css/components/views-responsive-grid.css: {}

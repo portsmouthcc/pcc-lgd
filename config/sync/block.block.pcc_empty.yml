@@ -1,0 +1,25 @@
+uuid: 37318b87-9ac3-440a-a5d4-e214b14e79a8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:text_block:5c29606f-9260-43bd-82e1-3f669ca0614b'
+  module:
+    - block_content
+  theme:
+    - pcc
+id: pcc_empty
+theme: pcc
+region: lower_footer_second
+weight: 0
+provider: null
+plugin: 'block_content:5c29606f-9260-43bd-82e1-3f669ca0614b'
+settings:
+  id: 'block_content:5c29606f-9260-43bd-82e1-3f669ca0614b'
+  label: Empty
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

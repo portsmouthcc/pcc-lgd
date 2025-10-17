@@ -1,6 +1,6 @@
-/* Latest news block teasers. */
+/* Latest news block teaser */
 
-.view-latest-news .lgd-teaser__content {
+/* .view-latest-news .lgd-teaser__content {
   padding: var(--spacing-large);
   background-color: var(--color-white);
 }
@@ -18,4 +18,28 @@
   .view-latest-news .lgd-teaser__image + .lgd-teaser__content {
     margin-inline-start: initial;
   }
+} */
+
+/* Directory teaser */
+.lgd-teaser__content--localgov-directories-venue {
+  margin-block-end: var(--spacing);
+  /* border-left: 12px solid var(--color-accent); */
+  /* padding: var(--spacing); */
+  /* background-color: var(--color-accent-2); */
+
+  border-bottom: var(--border);
+}
+
+/* Landing page service teaser */
+.lgd-teaser-list .service-landing-page__service,
+.lgd-teaser-list .lgd-topic-list-builder__service {
+  /* Home page does have borders, others don't? */
+  margin-block-end: 0;
+  padding-block-end: 0;
+  /* border-block-end: none; */
+}
+
+/* Home page service landing page teaser */
+.view-services .views-view-responsive-grid__item {
+  border-block-end: var(--border);
 }
