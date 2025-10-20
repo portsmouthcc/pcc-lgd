@@ -82,6 +82,12 @@ body {
   --header-search-button-color-hover: var(--color-black);
   --header-search-button-bg-color-hover: var(--color-yellow);
 
+  /* Secondary Menu */
+  --secondary-menu-bg-color-first: transparent;
+  --secondary-menu-bg-color-second: transparent;
+  --secondary-menu-link-color: var(--color-blue);
+  --secondary-menu-column-count: 3;
+
   /* Footer Items */
   --color-section-pre-footer-bg: var(--color-blue);
   --color-section-footer-bg: var(--color-blue);
@@ -106,16 +112,12 @@ body {
   --sidebar-exposed-form-padding-horizontal: var(--spacing-large);
 
   /* Guide Navigation */
-  --section-spacing-vertical-guide-nav: calc(
-    var(--spacing-large) + 1rem
-  ); /* 1rem to account for padding on left of bullets */
-  --section-spacing-horizontal-guide-nav: var(--spacing-large);
   --guide-nav-column-count: 1;
 
   /* Step-by-Step */
   --step-by-step-part-of-color: var(--color-blue);
 
   /* Page Sections */
-  /* --color-page-section-background-color-2-text-color: var(--color-blue); */
+  --color-page-section-background-color-2-text-color: var(--color-blue);
   --color-page-section-background-color-2-link-color: var(--color-accent);
 }

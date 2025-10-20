@@ -1,3 +1,5 @@
 .lgd-card {
   background-color: var(--color-white);
+  color: var(--color-black);
+  border: none;
 }

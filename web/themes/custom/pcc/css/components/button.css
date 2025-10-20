@@ -1,0 +1,26 @@
+/* Use LGD styles for a general link button class. */
+
+.button {
+  display: inline-block;
+  /* margin: var(--spacing-smaller) 0; */
+  padding: var(--button-padding-vertical) var(--button-padding-horizontal)
+    var(--button-padding-vertical) var(--button-padding-horizontal);
+  cursor: pointer;
+  color: var(--button-text-color);
+  border: var(--border);
+  border-color: var(--button-border-color);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-bg-color);
+  font-family: var(--button-font-family);
+  font-size: var(--font-size-medium);
+  text-decoration: none;
+}
+
+.button:hover {
+  color: var(--button-text-color-hover);
+  background-color: var(--button-bg-color-hover);
+}
+
+.lgd-page-section--bg-colour-2 a.button {
+  color: var(--color-white);
+}

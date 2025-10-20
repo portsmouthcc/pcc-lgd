@@ -24,6 +24,8 @@ libraries-extend:
     - pcc/header
   localgov_base/page-title-block:
     - pcc/page-title-block
+  localgov_base/secondary-menu:
+    - pcc/secondary-menu
   localgov_base/service-cta-block:
     - pcc/service-cta-block
   localgov_base/step-by-step:

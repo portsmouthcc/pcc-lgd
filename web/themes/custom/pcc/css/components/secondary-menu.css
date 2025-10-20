@@ -1,0 +1,21 @@
+/* Dropdown services menu */
+
+.lgd-header__nav--secondary {
+  margin-inline: 0;
+  background-color: var(--color-accent-2);
+}
+
+.lgd-region__inner--secondary-menu {
+  padding: var(--spacing-large) 0;
+}
+
+.lgd-region__inner--secondary-menu .block-menu > h2 {
+  padding-inline-start: 0;
+  color: var(--color-accent);
+}
+
+.region-secondary-menu .menu {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}

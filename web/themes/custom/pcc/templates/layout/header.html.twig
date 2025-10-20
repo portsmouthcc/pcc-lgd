@@ -27,12 +27,6 @@
 					{{ page.header }}
 
 					{% if has_search or has_secondary_menu %}
-						{#
-																																										              The "Header Toggles" section sets a number of buttons to activate
-																																										              - the primary menu/search regions on small screens, and
-																																										              - the secondary region on all screen sizes (region where we expect
-																																										                the services menu will be positioned).
-																																										            #}
 						<div class="lgd-header__toggles">
 							{% if has_secondary_menu %}
 								<button class="lgd-header__toggle lgd-header__toggle--secondary" data-target="lgd-header__nav--secondary" aria-controls="lgd-header__nav--secondary" aria-expanded="false" aria-label="{{ 'Services: jump to services'|t }}">
@@ -58,13 +52,6 @@
 						{% endif %}
 
 					{% endif %}
-
-					{% if has_secondary_menu %}
-						<div id="lgd-header__nav--secondary" class="lgd-header__nav lgd-header__nav--secondary">
-							{{ page.secondary_menu }}
-						</div>
-					{% endif %}
-
 				</div>
 			</div>
 		</div>
@@ -75,3 +62,11 @@
 		</div>
 	{% endif %}
 </header>
+
+{% if has_secondary_menu %}
+	<div id="lgd-header__nav--secondary" class="lgd-header__nav lgd-header__nav--secondary">
+		<div class="lgd-container padding-horizontal">
+			{{ page.secondary_menu }}
+		</div>
+	</div>
+{% endif %}

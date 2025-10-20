@@ -16,7 +16,7 @@ Apparently fonts will load quicker if defined in html.html.twig
   font-style: italic;
 }
 
-@font-face {
+/* @font-face {
   font-family: TransportNew;
   src: url("../../assets/fonts/TransportNew-Medium.woff2") format("woff2");
   font-weight: 500;
@@ -28,7 +28,7 @@ Apparently fonts will load quicker if defined in html.html.twig
   src: url("../../assets/fonts/TransportNew-MediumItalic.woff2") format("woff2");
   font-weight: 500;
   font-style: italic;
-}
+} */
 
 @font-face {
   font-family: TransportNew;
