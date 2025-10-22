@@ -22,6 +22,8 @@ libraries-extend:
     - pcc/guide-nav
   localgov_base/header:
     - pcc/header
+  localgov_base/page-sections:
+    - pcc/page-sections
   localgov_base/page-title-block:
     - pcc/page-title-block
   localgov_base/secondary-menu:

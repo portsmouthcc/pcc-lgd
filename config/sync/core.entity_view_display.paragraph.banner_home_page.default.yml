@@ -6,6 +6,8 @@ dependencies:
     - field.field.paragraph.banner_home_page.localgov_subsites_banner_text
     - field.field.paragraph.banner_home_page.localgov_title
     - paragraphs.paragraphs_type.banner_home_page
+  module:
+    - field_formatter_class
 id: paragraph.banner_home_page.default
 targetEntityType: paragraph
 bundle: banner_home_page
@@ -16,14 +18,16 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   localgov_title:
     type: string
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: h1
     weight: 0
     region: content
 hidden:

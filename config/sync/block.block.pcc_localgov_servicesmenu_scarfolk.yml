@@ -18,7 +18,7 @@ provider: null
 plugin: 'system_menu_block:localgov_services_menu'
 settings:
   id: 'system_menu_block:localgov_services_menu'
-  label: 'Services menu'
+  label: 'Services and information'
   label_display: '0'
   provider: system
   level: 1

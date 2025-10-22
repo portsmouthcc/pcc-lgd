@@ -4,14 +4,14 @@ Apparently fonts will load quicker if defined in html.html.twig
 
 @font-face {
   font-family: TransportNew;
-  src: url("../assets/fonts/TransportNew-Light.woff2") format("woff2");
+  src: url("../../assets/fonts/TransportNew-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: TransportNew;
-  src: url("../assets/fonts/TransportNew-LightItalic.woff2") format("woff2");
+  src: url("../../assets/fonts/TransportNew-LightItalic.woff2") format("woff2");
   font-weight: 300;
   font-style: italic;
 }

@@ -9,6 +9,7 @@ global:
       css/base/variables.css: {}
       css/components/button.css: {}
       css/components/form-items.css: {}
+
 # To override CSS from the base theme, add your library here, and then use
 # `libraries-extend` to add that code to the library from the base theme. See the
 # pcc.info.yml file for an example, using this `sample-library`.
@@ -60,6 +61,11 @@ menu-main:
   css:
     theme:
       css/components/menu-main.css: {}
+
+page-sections:
+  css:
+    theme:
+      css/components/page-sections.css: {}
 
 page-title-block:
   css:

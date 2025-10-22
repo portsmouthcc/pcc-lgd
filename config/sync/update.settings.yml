@@ -10,4 +10,4 @@ fetch:
 notification:
   emails:
     - admin@example.com
-  threshold: all
+  threshold: security

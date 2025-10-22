@@ -3,3 +3,7 @@
   color: var(--color-black);
   border: none;
 }
+
+.lgd-card .date {
+  font-weight: bold;
+}
