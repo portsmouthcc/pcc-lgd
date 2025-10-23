@@ -10,3 +10,11 @@ h6,
   text-decoration: initial;
   font-variant: initial;
 }
+
+/* Fix localgov_paragraphs_layout column gap */
+.layout--onecol,
+.layout--twocol,
+.layout--threecol-33-34-33,
+.layout--fourcol-25-25-25-25 {
+  --lgd-page-section-gap: var(--grid-column-spacing);
+}

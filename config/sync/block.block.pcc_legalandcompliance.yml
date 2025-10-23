@@ -1,0 +1,25 @@
+uuid: 8babc632-e7c1-4cdb-b190-a03f1bd951d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.legal-and-compliance
+  module:
+    - system
+  theme:
+    - pcc
+id: pcc_legalandcompliance
+theme: pcc
+region: footer_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:legal-and-compliance'
+settings:
+  id: 'system_menu_block:legal-and-compliance'
+  label: 'Legal and compliance'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

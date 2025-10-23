@@ -1,0 +1,6 @@
+/* Link paragraph, used for buttons on home page. */
+
+.link-content > a {
+  align-items: center;
+  justify-content: space-between;
+}

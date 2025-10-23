@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.localgov_subsites_overview.localgov_common_tasks
     - field.field.node.localgov_subsites_overview.localgov_services_parent
     - field.field.node.localgov_subsites_overview.localgov_subsites_banner
     - field.field.node.localgov_subsites_overview.localgov_subsites_content
@@ -20,6 +21,11 @@ targetEntityType: node
 bundle: localgov_subsites_overview
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   localgov_subsites_content:
     type: layout_paragraphs
     label: hidden
@@ -31,6 +37,7 @@ content:
     region: content
 hidden:
   links: true
+  localgov_common_tasks: true
   localgov_services_parent: true
   localgov_subsites_banner: true
   localgov_subsites_hide_menu: true

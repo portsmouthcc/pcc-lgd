@@ -16,7 +16,7 @@ provider: null
 plugin: localgov_service_cta_block
 settings:
   id: localgov_service_cta_block
-  label: 'Services call to action'
-  label_display: '0'
+  label: 'Top tasks'
+  label_display: visible
   provider: localgov_services
 visibility: {  }

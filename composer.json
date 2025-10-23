@@ -17,6 +17,7 @@
         "drupal/core-recommended": "^10.3",
         "drupal/formdazzle": "^4.0",
         "drupal/token_filter": "^2.2",
+        "drupal/trash": "^3.0",
         "drupal/twig_tweak": "^3.4",
         "localgovdrupal/localgov": "^3.0",
         "localgovdrupal/localgov_search_solr": "^1.1",

@@ -21,6 +21,7 @@
 } */
 
 /* Directory teaser */
+.lgd-teaser__content--localgov-directories-page,
 .lgd-teaser__content--localgov-directories-venue {
   margin-block-end: var(--spacing);
   /* border-left: 12px solid var(--color-accent); */
@@ -34,7 +35,7 @@
 .lgd-teaser-list .service-landing-page__service,
 .lgd-teaser-list .lgd-topic-list-builder__service {
   /* Home page does have borders, others don't? */
-  margin-block-end: 0;
+  /* margin-block-end: 0; */
   padding-block-end: 0;
   /* border-block-end: none; */
 }

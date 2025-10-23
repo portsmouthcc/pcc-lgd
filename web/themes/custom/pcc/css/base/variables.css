@@ -120,4 +120,7 @@ body {
   /* Page Sections */
   --color-page-section-background-color-2-text-color: var(--color-blue);
   --color-page-section-background-color-2-link-color: var(--color-accent);
+
+  /* Paragraph layouts */
+  --lgd-page-section-gap: var(--grid-column-spacing);
 }

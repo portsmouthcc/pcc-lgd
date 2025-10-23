@@ -57,6 +57,11 @@ header:
     theme:
       css/components/header.css: {}
 
+link:
+  css:
+    theme:
+      css/components/link.css: {}
+
 menu-main:
   css:
     theme:

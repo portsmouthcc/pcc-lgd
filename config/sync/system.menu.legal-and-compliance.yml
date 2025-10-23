@@ -1,0 +1,8 @@
+uuid: beaea5dc-4bc5-46f6-949c-e21eefa7cba0
+langcode: en
+status: true
+dependencies: {  }
+id: legal-and-compliance
+label: 'Legal and compliance'
+description: 'Footer links'
+locked: false

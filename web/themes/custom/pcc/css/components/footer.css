@@ -2,4 +2,17 @@
 .lgd-footer {
   margin-block-start: 0;
   border-top: var(--spacing-larger) var(--color-accent) solid;
+  line-height: var(--spacing-larger);
+}
+
+/* Footer legal menu */
+.menu--legal-and-compliance {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+@media screen and (min-width: 48rem) {
+  .menu--legal-and-compliance {
+    column-count: 2;
+  }
 }

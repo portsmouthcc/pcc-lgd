@@ -1,3 +1,13 @@
+/* Light blue section background */
+
 .lgd-page-section--bg-colour-2 .view-header a {
   font-weight: bold;
+}
+
+.lgd-page-section--bg-colour-2 .link--button-style a {
+  color: var(--color-white);
+}
+
+.lgd-page-section--bg-colour-2 .link--button-style a:hover {
+  color: var(--color-accent);
 }

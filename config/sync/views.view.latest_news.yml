@@ -338,8 +338,8 @@ display:
         options:
           uses_fields: false
           columns: 3
-          cell_min_width: 300
-          grid_gutter: 36
+          cell_min_width: 350
+          grid_gutter: 32
           alignment: horizontal
       row:
         type: 'entity:node'
