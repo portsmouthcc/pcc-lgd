@@ -1,24 +1,6 @@
-/* Latest news block teaser */
-
-/* .view-latest-news .lgd-teaser__content {
-  padding: var(--spacing-large);
-  background-color: var(--color-white);
+.lgd-teaser__content {
+  width: 100%;
 }
-
-@media screen and (min-width: 48rem) {
-  .view-latest-news .lgd-teaser {
-    display: initial;
-  }
-
-  .view-latest-news .lgd-teaser__image {
-    flex-shrink: initial;
-    width: initial;
-  }
-
-  .view-latest-news .lgd-teaser__image + .lgd-teaser__content {
-    margin-inline-start: initial;
-  }
-} */
 
 /* Directory teaser */
 .lgd-teaser__content--localgov-directories-page,
