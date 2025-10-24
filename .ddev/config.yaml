@@ -1,4 +1,4 @@
-name: demo
+name: pcc
 type: drupal10
 docroot: web
 php_version: "8.3"
