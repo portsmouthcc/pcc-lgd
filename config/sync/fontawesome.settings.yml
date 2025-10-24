@@ -1,7 +1,7 @@
 _core:
   default_config_hash: 78upfto9VChrBHEP3ac2fEzl9Ujcjgud6kb3JLpSDPA
 tag: span
-method: svg
+method: webfonts
 load_assets: true
 use_cdn: false
 external_svg_location: 'https://use.fontawesome.com/releases/v5.13.0/css/all.css'
