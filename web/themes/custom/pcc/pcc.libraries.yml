@@ -87,6 +87,11 @@ service-cta-block:
     theme:
       css/components/service-cta-block.css: {}
 
+service-landing-page:
+  css:
+    theme:
+      css/components/service-landing-page.css: {}
+
 step-by-step:
   css:
     theme:
