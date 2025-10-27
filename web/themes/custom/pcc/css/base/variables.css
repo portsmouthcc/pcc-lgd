@@ -123,4 +123,8 @@ body {
 
   /* Paragraph layouts */
   --lgd-page-section-gap: var(--grid-column-spacing);
+
+  /* Alert Banner */
+  --alert-banner-inner-padding-vertical: 50px;
+
 }
