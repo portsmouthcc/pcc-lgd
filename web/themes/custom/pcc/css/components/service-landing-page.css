@@ -1,0 +1,9 @@
+/* The grey contact box needs more contrast. */
+
+.service-landing-page__contact a {
+  color: var(--color-blue);
+}
+
+.service-landing-page__contact a.external-link:after {
+  background-color: var(--color-blue);
+}

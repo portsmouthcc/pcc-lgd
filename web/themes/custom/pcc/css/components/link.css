@@ -1,6 +1,10 @@
 /* Link paragraph, used for buttons on home page. */
 
-.link-content > a {
+.link--button-style .link-wrapper:not(:hover) {
+  border-bottom: var(--border-width) var(--border-style) var(--color-blue);
+}
+
+.link--button-style .link-content > a {
   align-items: center;
   justify-content: space-between;
 }

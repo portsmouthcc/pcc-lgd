@@ -10,6 +10,7 @@
   border: var(--border);
   border-color: var(--button-border-color);
   border-radius: var(--button-border-radius);
+  border-bottom: var(--border-width) var(--border-style) var(--color-blue);
   background-color: var(--button-bg-color);
   font-family: var(--button-font-family);
   font-size: var(--font-size-medium);
