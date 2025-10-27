@@ -1,0 +1,21 @@
+.localgov-alert-banner {
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.localgov-alert-banner__actions {
+  align-items: center;
+}
+
+.localgov-alert-banner__inner {
+  gap: 30px;
+}
+
+/* Media query above tablet */
+
+@media(max-width: 48rem) {
+  .localgov-alert-banner__inner {
+     flex-wrap: wrap;
+  }
+}

@@ -29,9 +29,16 @@
   */
   /* height: 50.5px; */
   /* box-sizing: border-box; */
-  border: 3px var(--border-style) var(--color-white);
-  padding: calc(var(--button-padding-vertical) - 1.5px)
-    calc(var(--button-padding-horizontal) - 1.5px);
+  display: flex;
+  border: none;
+
+  i {
+    line-height: unset;
+  }
+}
+
+.lgd-region--search .form-text {
+  border: none;
 }
 
 @media screen and (min-width: 48rem) {

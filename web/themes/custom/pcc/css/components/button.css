@@ -1,6 +1,7 @@
 /* Use LGD styles for a general link button class. */
 
-.button {
+.button,
+button {
   display: inline-block;
   /* margin: var(--spacing-smaller) 0; */
   padding: var(--button-padding-vertical) var(--button-padding-horizontal)
@@ -18,9 +19,11 @@
   font-weight: initial;
 }
 
-.button:hover {
+.button:hover,
+button:hover {
   color: var(--button-text-color-hover);
   background-color: var(--button-bg-color-hover);
+  text-decoration: none !important;
 }
 
 /* Override colours when in the light blue section. */

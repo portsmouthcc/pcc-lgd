@@ -27,6 +27,11 @@ global:
 #   css:
 #     theme:
 #       css/sample.css: {}
+alert-banner:
+  css:
+    theme:
+      css/components/alert-banner.css: {}
+
 banner:
   css:
     theme:
