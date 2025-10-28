@@ -42,6 +42,11 @@ breadcrumbs:
     theme:
       css/components/breadcrumbs.css: {}
 
+callout-box:
+  css:
+    theme:
+      css/components/callout-box.css: {}
+
 card:
   css:
     theme:
