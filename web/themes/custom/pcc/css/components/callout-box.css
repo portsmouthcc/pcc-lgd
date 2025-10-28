@@ -1,0 +1,12 @@
+.call-out-box__link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.call-out-box__link:hover {
+  background: rgb(197, 197, 197);
+}
+
+.call-out-box__link:focus {
+  background: var(--color-focus);
+}

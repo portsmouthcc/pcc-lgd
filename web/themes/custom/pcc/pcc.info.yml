@@ -14,6 +14,8 @@ libraries-extend:
     - pcc/banner
   localgov_base/breadcrumbs:
     - pcc/breadcrumbs
+  localgov_base/callout-box:
+    - pcc/callout-box
   localgov_base/card:
     - pcc/card
   localgov_base/footer:
