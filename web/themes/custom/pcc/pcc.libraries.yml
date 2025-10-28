@@ -52,6 +52,11 @@ card:
     theme:
       css/components/card.css: {}
 
+featured-teasers:
+  css:
+    theme:
+      css/components/featured-teasers.css: {}
+
 footer:
   css:
     theme:
