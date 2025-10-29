@@ -40,18 +40,30 @@ jobs:
           path: ./html
           key: localgov-build-${{ matrix.localgov-version }}-${{ matrix.drupal-version }}-${{ matrix.php-version }}-${{ github.run_id }}-${{ secrets.CACHE_VERSION }}
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ matrix.php-version }}
-
       - name: Check out project
         uses: actions/checkout@v4
         with:
           path: html
 
-      # - name: Install composer dependencies
-      #   uses: php-actions/composer@v6
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate --strict
+      
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v2
+        with:
+          path: vendor
+          key: $-php-$
+          restore-keys: |
+            $-php-
+            
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
 
   phpcs:
     name: Coding standards checks
