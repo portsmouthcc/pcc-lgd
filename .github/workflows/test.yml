@@ -27,7 +27,7 @@ jobs:
       - run: ddev
 
       - name: Install composer dependencies
-        run: ddev composer install --no-progress
+        run: ddev composer install --dev --no-progress
 
       - run: ddev
 
