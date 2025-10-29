@@ -11,3 +11,7 @@
 .lgd-page-section--bg-colour-2 .link--button-style a:hover {
   color: var(--color-accent);
 }
+
+.lgd-page-section--bg-colour-2 .link--button-style a:focus {
+  color: #000;
+}

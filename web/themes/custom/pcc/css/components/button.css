@@ -34,3 +34,7 @@ button:hover {
 .lgd-page-section--bg-colour-2 a.button:hover {
   color: var(--color-accent);
 }
+
+.lgd-page-section--bg-colour-2 a.button:focus {
+  color: #000 !important;
+}

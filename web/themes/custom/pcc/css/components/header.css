@@ -46,3 +46,17 @@
     margin-inline-end: var(--spacing);
   }
 }
+
+
+.block-localgov-sitewide-search-block input {
+  height: 48px;
+}
+
+.block-localgov-sitewide-search-block .form-submit {
+  height: 48px;
+}
+
+.block-localgov-sitewide-search-block label {
+   margin-bottom: 0.5rem;
+   display: inline-block !important;
+}
