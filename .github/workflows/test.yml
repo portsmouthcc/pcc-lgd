@@ -20,12 +20,13 @@ jobs:
     steps:
       - name: Check out project
         uses: actions/checkout@v5
+
+      - name: Install composer dependencies
+        run: ddev composer install --no-progress
       
       - name: Set up DDEV
         uses: ddev/github-action-setup-ddev@v1
 
-      - name: Install composer dependencies
-        run: ddev composer install --dev --no-progress
 
       - run: ddev
 
