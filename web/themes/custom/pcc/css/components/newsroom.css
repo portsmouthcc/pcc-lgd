@@ -8,6 +8,7 @@
 
   .form-item {
     flex-grow: 1;
+    margin-bottom: 0;
 
     label {
       margin-bottom: 0.5rem;
@@ -17,6 +18,7 @@
 
   .button {
     margin-top: 1rem;
+    border-bottom: var(--border-width) var(--border-style) var(--color-blue);
   }
 }
 
@@ -45,5 +47,36 @@
       margin-inline-start: 0;
       padding: 1.5rem;
     }
+  }
+
+  .pager {
+    margin-top: var(--vertical-rhythm-spacing);
+
+    .pager__item {
+      background: #e0f2ff !important;
+      border-radius: 3px;
+      padding: 5px;
+
+      &:hover {
+        background: var(--color-blue) !important;
+
+        a {
+          color: var(--color-accent-2);
+          text-decoration-thickness: unset;
+        }
+      }
+
+        &.is-active {
+          background: var(--color-blue) !important;
+        
+        a {
+          color: var(--color-accent-2);
+        }
+      }
+    }
+  }
+
+  .feed-icons {
+    display: none;
   }
 }
