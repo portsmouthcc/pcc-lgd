@@ -51,8 +51,8 @@ jobs:
         with:
           path: html
 
-      - name: Install composer dependencies
-        uses: php-actions/composer@v6
+      # - name: Install composer dependencies
+      #   uses: php-actions/composer@v6
 
   phpcs:
     name: Coding standards checks
