@@ -18,9 +18,14 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - name: Setup DDEV
+      - name: Check out project
+        uses: actions/checkout@v5
+      
+      - name: Set up DDEV
         uses: ddev/github-action-setup-ddev@v1
 
-      # example: composer install
-      - run: ddev composer install
+      - name: Install composer dependencies
+        run: ddev composer install
+
+      - name: Check PHP coding standards
+        run: ddev phpcs web/themes/custom/pcc --ignore=web/themes/custom/pcc/node_modules
