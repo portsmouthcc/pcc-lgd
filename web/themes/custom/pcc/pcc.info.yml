@@ -44,6 +44,7 @@ libraries-extend:
     - pcc/teaser
   localgov_news/localgov-newsroom:
     - pcc/featured-teasers
+    - pcc/newsroom
   views/views.responsive-grid:
     - pcc/views.responsive-grid
 
