@@ -6,9 +6,12 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.storage.node.localgov_news_date
     - node.type.localgov_news_article
+    - taxonomy.vocabulary.localgov_topic
   module:
+    - created_date_views_filters
     - datetime
     - node
+    - taxonomy
     - user
 _core:
   default_config_hash: G-tIOKSB6zJaq3EJgt_yvf0xn8_go8M1ca8A4Ht0zzo
@@ -79,6 +82,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 10
           total_pages: null
           id: 0
@@ -96,7 +100,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -126,9 +129,10 @@ display:
           plugin_id: datetime
           order: DESC
           expose:
-            label: ''
+            label: 'Date (localgov_news_date)'
+            field_identifier: localgov_news_date_value
           exposed: false
-          granularity: second
+          granularity: month
         created:
           id: created
           table: node_field_data
@@ -141,10 +145,10 @@ display:
           plugin_id: date
           order: DESC
           expose:
-            label: ''
-            field_identifier: ''
+            label: 'Authored on'
+            field_identifier: created
           exposed: false
-          granularity: second
+          granularity: month
       arguments:
         localgov_newsroom_target_id:
           id: localgov_newsroom_target_id
@@ -251,12 +255,117 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        localgov_news_categories_target_id:
+          id: localgov_news_categories_target_id
+          table: node__localgov_news_categories
+          field: localgov_news_categories_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_news_categories_target_id_op
+            label: Categories
+            description: ''
+            use_operator: false
+            operator: localgov_news_categories_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: localgov_news_categories_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              emergency_publisher: '0'
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_news_editor: '0'
+              localgov_user_manager: '0'
+              localgov_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: localgov_topic
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        month_filter:
+          id: month_filter
+          table: views
+          field: month_filter
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: month_filter
+          operator: '='
+          value: january
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Date published'
+            description: ''
+            use_operator: false
+            operator: month_filter_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: month_filter
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              emergency_publisher: '0'
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_news_editor: '0'
+              localgov_user_manager: '0'
+              localgov_admin: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       filter_groups:
         operator: AND
         groups:
           1: AND
       style:
-        type: default
+        type: grid_responsive
+        options:
+          uses_fields: false
+          columns: 1
+          cell_min_width: 100
+          grid_gutter: 24
+          alignment: horizontal
       row:
         type: 'entity:node'
         options:
@@ -281,7 +390,7 @@ display:
           plugin_id: entity_reverse
           required: false
       css_class: 'view--teasers lgd-teaser-list'
-      use_ajax: false
+      use_ajax: true
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -306,7 +415,10 @@ display:
         link_url: true
       display_description: 'All news (excluding featured)'
       display_comment: 'Query is altered in localgov_news.module.'
-      display_extenders: {  }
+      display_extenders:
+        localgov_page_header_display_extender:
+          lede: ''
+          tokenize: false
     cache_metadata:
       max-age: -1
       contexts:

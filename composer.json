@@ -15,6 +15,7 @@
         "cweagans/composer-patches": "^1.6",
         "drupal/core-composer-scaffold": "^10.3",
         "drupal/core-recommended": "^10.3",
+        "drupal/created_date_views_filters": "^1.0",
         "drupal/formdazzle": "^4.0",
         "drupal/token_filter": "^2.2",
         "drupal/trash": "^3.0",
