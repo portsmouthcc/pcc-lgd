@@ -12,8 +12,7 @@ on:
   workflow_dispatch:
 
 env:
-  LOCALGOV_DRUPAL_PROJECT: localgovdrupal/localgov-project
-  LOCALGOV_DRUPAL_PROJECT_PATH:
+  LOCALGOV_DRUPAL_PROJECT_PATH: web/themes/custom/pcc
 
 jobs:
   build:
