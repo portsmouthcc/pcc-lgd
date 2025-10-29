@@ -127,4 +127,7 @@ body {
   /* Alert Banner */
   --alert-banner-inner-padding-vertical: 50px;
 
+  /* Callout Box */
+  --call-out-box-link-padding: 0.5rem 0.75rem;
+
 }

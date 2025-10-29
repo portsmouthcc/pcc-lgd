@@ -18,3 +18,13 @@ h6,
 .layout--fourcol-25-25-25-25 {
   --lgd-page-section-gap: var(--grid-column-spacing);
 }
+
+.paragraph--type--localgov-link:focus-within .link-wrapper {
+  background: var(--color-focus);
+}
+
+.paragraph--type--localgov-link:focus-within a {
+  text-decoration: none;
+  box-shadow: none;
+}
+
