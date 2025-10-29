@@ -50,6 +50,4 @@ jobs:
           composer --no-interaction --no-progress --prefer-dist --optimize-autoloader install
     
       - name: Check coding standards
-        run: |
-          ./vendor/bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,module,install,js web/themes/custom/pcc
-          # ./vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
+        run: ./bin/phpcbf --standard=Drupal,DrupalPractice --extensions=php,theme,install,css,js --ignore=node_modules -v web/themes/custom/pcc
