@@ -32,7 +32,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .
-          key: build-{{ runner.os }}-${{ github.run_id }}-${{ secrets.CACHE_VERSION }}
+          key: build-${{ matrix.drupal-core }}-${{ matrix.php-versions }}-${{ github.run_id }}
     
       - name: Setup PHP, with composer and extensions
         uses: shivammathur/setup-php@v2
@@ -52,8 +52,7 @@ jobs:
       #     restore-keys: ${{ runner.os }}-composer-
     
       - name: Install composer dependencies
-        run: |
-          composer --no-interaction --no-progress --prefer-dist --optimize-autoloader install
+        run: composer --no-interaction --no-progress --prefer-dist --optimize-autoloader install
     
       - name: Check coding standards
         run: ./bin/phpcbf --standard=Drupal,DrupalPractice --extensions=php,theme,install,css,js --ignore=node_modules -v web/themes/custom/pcc
