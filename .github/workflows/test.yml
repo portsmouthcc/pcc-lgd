@@ -52,4 +52,4 @@ jobs:
       - name: Check coding standards
         run: |
           ./vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
-          ./vendor/bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,module,install,js themes/custom/pcc
+          ./vendor/bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,module,install,js web/themes/custom/pcc
