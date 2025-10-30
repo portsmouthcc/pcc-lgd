@@ -3,12 +3,12 @@ name: Test project
 on:
   push:
     branches:
-      - '6-test-action'
+      - "6-test-action"
   pull_request:
     branches:
-      - '6-test-action'
+      - "6-test-action"
   # schedule:
-    # - cron: '0 7 * * *'
+  # - cron: '0 7 * * *'
   workflow_dispatch:
 
 env:
@@ -21,20 +21,20 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        drupal-core: ['10.3.x']
-        php-versions: ['8.3']
+        drupal-core: ["10.3.x"]
+        php-versions: ["8.3"]
 
     steps:
-      - name: Checkout project
-        uses: actions/checkout@v5
-    
-      - name: Setup PHP, with composer and extensions
-        uses: shivammathur/setup-php@v2
+      # - name: Checkout project
+      - uses: actions/checkout@v5
+
+      # - name: Setup PHP, with composer and extensions
+      - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-versions }}
-          
-      - name: Install composer dependencies
-        uses: ramsey/composer-install@v3
+
+      # - name: Install composer dependencies
+      - uses: ramsey/composer-install@v3
 
   phpcs:
     name: Coding standards checks
@@ -43,7 +43,7 @@ jobs:
     steps:
       - name: Checkout project
         uses: actions/checkout@v5
-        
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -51,6 +51,6 @@ jobs:
 
       - name: Install composer dependencies
         uses: ramsey/composer-install@v3
-          
+
       - name: Check coding standards
         run: ./bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,theme,install,css,js --ignore=node_modules -v ${{ env.PROJECT_PATH }}
