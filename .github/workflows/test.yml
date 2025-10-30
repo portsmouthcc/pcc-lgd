@@ -40,7 +40,10 @@ jobs:
     name: Coding standards checks
     needs: build
     runs-on: ubuntu-latest
-    steps:  
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v5
+        
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
