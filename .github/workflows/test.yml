@@ -21,17 +21,22 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        drupal-core: ["10.3.x"]
-        php-versions: ["8.3"]
+        php-version: ["8.3"]
 
     steps:
-      # - name: Checkout project
-      - uses: actions/checkout@v5
+      - name: Cached workspace
+        uses: actions/cache@v4
+        with:
+          path: .
+          key: build-${{ matrix.php-version }}-${{ github.run_id }}
+          
+      - name: Check out project
+        uses: actions/checkout@v5
 
       # - name: Setup PHP, with composer and extensions
       - uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{ matrix.php-versions }}
+          php-version: ${{ matrix.php-version }}
 
       # - name: Install composer dependencies
       - uses: ramsey/composer-install@v3
@@ -40,17 +45,29 @@ jobs:
     name: Coding standards checks
     needs: build
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version: ["8.3"]
     steps:
-      - name: Checkout project
-        uses: actions/checkout@v5
-
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+      - name: Cached workspace
+        uses: actions/cache@v4
         with:
-          php-version: ${{ matrix.php-version }}
+          path: .
+          key: build-${{ matrix.php-version }}-${{ github.run_id }}
+          restore-keys: |
+            build-${{ matrix.php-version }}-
+    
+      # - name: Checkout project
+      #   uses: actions/checkout@v5
 
-      - name: Install composer dependencies
-        uses: ramsey/composer-install@v3
+      # - name: Setup PHP
+      #   uses: shivammathur/setup-php@v2
+      #   with:
+      #     php-version: ${{ matrix.php-version }}
+
+      # - name: Install composer dependencies
+      #   uses: ramsey/composer-install@v3
 
       - name: Check coding standards
         run: ./bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,theme,install,css,js --ignore=node_modules -v ${{ env.PROJECT_PATH }}
