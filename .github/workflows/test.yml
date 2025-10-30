@@ -83,4 +83,4 @@ jobs:
       - name: Lint CSS
         run: |
           cd web/core
-          node ./node_modules/.bin/stylelint --ignore-path .stylelintignore --config .stylelintrc.json "../${{ env.PROJECT_PATH }}/**/*.css"
+          node ./node_modules/.bin/stylelint --ignore-path .stylelintignore --config .stylelintrc.json "../../${{ env.PROJECT_PATH }}/**/*.css"
