@@ -53,4 +53,4 @@ jobs:
         uses: ramsey/composer-install@v3
           
       - name: Check coding standards
-        run: ./bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,theme,install,css,js --ignore=node_modules -v %{{ env.PROJECT_PATH }}
+        run: ./bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,theme,install,css,js --ignore=node_modules -v ${{ env.PROJECT_PATH }}
