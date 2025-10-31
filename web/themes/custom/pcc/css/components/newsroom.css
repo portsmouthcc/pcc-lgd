@@ -1,6 +1,7 @@
 #views-exposed-form-localgov-news-list-all-news {
   background: var(--color-accent-2);
   display: flex;
+  flex-wrap: wrap;
   align-items: end;
   gap: 1.5rem;
   padding: 1rem 1.5rem;
@@ -14,11 +15,41 @@
       margin-bottom: 0.5rem;
       font-weight: bold;
     }
+
+    select {
+      padding: 0.5rem;
+    }
   }
 
   .button {
     margin-top: 1rem;
+    padding: 0.5rem 1rem;
     border-bottom: var(--border-width) var(--border-style) var(--color-blue);
+  }
+  
+  /* had to target a widlcard for this as it adds a random string to the end of the id when you apply results */
+
+  fieldset[id^="edit-localgov-news-date-value-wrapper"] {
+    border: none;
+    padding: 0;
+
+    legend {
+        padding: 0;
+        margin-bottom: 0.5rem;
+      }
+
+    .fieldset-wrapper {
+      display: flex;
+      gap: 1.5rem;
+
+      label {
+        display: none;
+      }
+
+      input {
+        padding: 0.5rem;
+      }
+    }
   }
 }
 
@@ -53,7 +84,6 @@
     margin-top: var(--vertical-rhythm-spacing);
 
     .pager__item {
-      background: #e0f2ff !important;
       border-radius: 3px;
       padding: 5px;
 
@@ -79,4 +109,9 @@
   .feed-icons {
     display: none;
   }
+}
+
+.filters-title {
+  margin-block-end: 0;
+  margin-bottom: 0.5rem;
 }

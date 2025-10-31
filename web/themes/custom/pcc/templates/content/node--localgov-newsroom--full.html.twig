@@ -112,17 +112,18 @@
 			{{ content|without('localgov_news_search', 'localgov_news_facets', 'localgov_newsroom_all_view') }}
 
 			{# 
-			        Render the search, facets, etc here, followed by the news items
-			      #}
+																					        Render the search, facets, etc here, followed by the news items
+																					      #}
 			<div
 				class="lgd-row">
 				{# <aside class="lgd-row__one-third">
-				          <div class="newsroom__sidebar">
-				            {{ content.localgov_news_search }}
-				            {{ content.localgov_news_facets }}
-				          </div>
-				        </aside> #}
+																												          <div class="newsroom__sidebar">
+																												            {{ content.localgov_news_search }}
+																												            {{ content.localgov_news_facets }}
+																												          </div>
+																												        </aside> #}
 				<div class="lgd-row__full">
+					<h3 class="filters-title">Filter news</h3>
 					{{ content.localgov_newsroom_all_view }}
 				</div>
 			</div>
