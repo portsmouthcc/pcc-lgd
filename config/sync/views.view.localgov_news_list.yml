@@ -8,7 +8,6 @@ dependencies:
     - node.type.localgov_news_article
     - taxonomy.vocabulary.localgov_topic
   module:
-    - created_date_views_filters
     - datetime
     - node
     - taxonomy
@@ -83,7 +82,7 @@ display:
         options:
           offset: 0
           pagination_heading_level: h4
-          items_per_page: 10
+          items_per_page: 5
           total_pages: null
           id: 0
           tags:
@@ -308,27 +307,31 @@ display:
           hierarchy: false
           limit: true
           error_message: true
-        month_filter:
-          id: month_filter
-          table: views
-          field: month_filter
+        localgov_news_date_value:
+          id: localgov_news_date_value
+          table: node__localgov_news_date
+          field: localgov_news_date_value
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: month_filter
-          operator: '='
-          value: january
+          plugin_id: datetime
+          operator: between
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
           group: 1
           exposed: true
           expose:
-            operator_id: ''
+            operator_id: localgov_news_date_value_op
             label: 'Date published'
             description: ''
             use_operator: false
-            operator: month_filter_op
+            operator: localgov_news_date_value_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: month_filter
+            identifier: localgov_news_date_value
             required: false
             remember: false
             multiple: false
@@ -342,6 +345,9 @@ display:
               localgov_news_editor: '0'
               localgov_user_manager: '0'
               localgov_admin: '0'
+            min_placeholder: dd/mm/yyyy
+            max_placeholder: dd/mm/yyyy
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
