@@ -19,21 +19,21 @@
     height: unset;
 
     .lgd-card__content {
-      background-color: var(--color-page-section-background-color-2);
       flex-basis: 60%;
+      background-color: var(--color-page-section-background-color-2);
 
       h3 {
         display: block;
-        font-size: calc(var(--font-size-h2));
         color: var(--heading-1-color);
+        font-size: calc(var(--font-size-h2));
 
         &::before {
-          content: 'Featured';
           display: block;
+          margin-bottom: 0.5rem;
+          content: "Featured";
+          color: #505a5f;
           font-size: calc(var(--font-size-h4));
           font-weight: 200;
-          color: #505A5F;
-          margin-bottom: 0.5rem;
         }
       }
     }
@@ -46,8 +46,8 @@
       }
 
       img {
-        height: 100%;
         position: relative;
+        height: 100%;
         object-fit: cover;
       }
     }

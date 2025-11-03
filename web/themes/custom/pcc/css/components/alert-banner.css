@@ -14,8 +14,8 @@
 
 /* Media query above tablet */
 
-@media(max-width: 48rem) {
+@media (max-width: 48rem) {
   .localgov-alert-banner__inner {
-     flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
