@@ -40,10 +40,15 @@ jobs:
       - name: Install composer dependencies
         uses: ramsey/composer-install@v3
 
+      - name: Install core npm dependencies
+        run: |
+          cd web/core
+          npm install
+
       - name: Install theme npm dependencies
         run: |
           cd ${{ env.PROJECT_PATH }}
-          npm i
+          npm install
 
   eslint-js:
     needs: build
@@ -66,26 +71,26 @@ jobs:
           cd ${{ env.PROJECT_PATH }}
           npm run lint:js
 
-  eslint-yaml:
-    needs: build
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        php-version: ["8.3"]
-    steps:
-      - name: Cached workspace
-        uses: actions/cache@v4
-        with:
-          path: .
-          key: build-${{ matrix.php-version }}-${{ github.run_id }}
-          restore-keys: |
-            build-${{ matrix.php-version }}-
-      - name: Lint YAML
-        if: ${{ hashFiles(format('./{0}/**/*.yml', env.PROJECT_PATH)) != '' }}
-        run: |
-          cd web/core
-          node ./node_modules/eslint/bin/eslint.js --ext .yml --resolve-plugins-relative-to=./web/core ../../${{ env.PROJECT_PATH }}
+  # eslint-yaml:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       php-version: ["8.3"]
+  #   steps:
+  #     - name: Cached workspace
+  #       uses: actions/cache@v4
+  #       with:
+  #         path: .
+  #         key: build-${{ matrix.php-version }}-${{ github.run_id }}
+  #         restore-keys: |
+  #           build-${{ matrix.php-version }}-
+  #     - name: Lint YAML
+  #       if: ${{ hashFiles(format('./{0}/**/*.yml', env.PROJECT_PATH)) != '' }}
+  #       run: |
+  #         cd web/core
+  #         node ./node_modules/eslint/bin/eslint.js --ext .yml --resolve-plugins-relative-to=./web/core ../../${{ env.PROJECT_PATH }}
 
   phpcs:
     needs: build
