@@ -1,7 +1,7 @@
 .lgd-card {
-  background-color: var(--color-white);
   color: var(--color-black);
   border: none;
+  background-color: var(--color-white);
 }
 
 .lgd-card .date {

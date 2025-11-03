@@ -8,7 +8,7 @@
 /**
  * Implements hook_theme().
  */
-function pcc_theme($existing, $type, $theme, $path) {
+function pcc_theme($existing, $type, $theme, $path): array {
   // Register custom templates.
   return [
     'paragraph__banner_home_page' => [
@@ -21,7 +21,7 @@ function pcc_theme($existing, $type, $theme, $path) {
 /**
  * Add current page title to breadcrumb.
  */
-function pcc_preprocess_breadcrumb(&$variables) {
+function pcc_preprocess_breadcrumb(&$variables): void {
   if (($node = \Drupal::routeMatch()->getParameter('node')) && $variables['breadcrumb']) {
     $type = $node->getType();
     // For some reason localgov_subsites_pages already have this title!

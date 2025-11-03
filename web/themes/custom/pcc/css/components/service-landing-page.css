@@ -4,6 +4,6 @@
   color: var(--color-blue);
 }
 
-.service-landing-page__contact a.external-link:after {
+.service-landing-page__contact a.external-link::after {
   background-color: var(--color-blue);
 }
