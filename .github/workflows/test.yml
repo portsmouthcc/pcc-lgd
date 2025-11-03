@@ -1,14 +1,14 @@
 name: Test project
 
 on:
-  push:
-    branches:
-      - "6-test-action"
-  pull_request:
-    branches:
-      - "6-test-action"
-  # schedule:
-  # - cron: '0 7 * * *'
+  # push:
+  #   branches:
+  #     - "6-test-action"
+  # pull_request:
+  #   branches:
+  #     - "6-test-action"
+  schedule:
+    - cron: "0 7 * * *"
   workflow_dispatch:
 
 env:
