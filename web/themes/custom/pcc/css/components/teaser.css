@@ -36,7 +36,7 @@
     margin-right: 0.5rem;
 
     &::after {
-      content: ':';
+      content: ":";
     }
   }
 
@@ -46,12 +46,12 @@
     gap: 0 0.5rem;
 
     .field__item::after {
-      content: ',';
+      content: ",";
     }
 
     .field__item:last-of-type {
       &::after {
-        content: '';
+        content: "";
       }
     }
   }

@@ -1,11 +1,11 @@
 #views-exposed-form-localgov-news-list-all-news {
-  background: var(--color-accent-2);
   display: flex;
   flex-wrap: wrap;
   align-items: end;
-  gap: 1.5rem;
-  padding: 1rem 1.5rem;
   margin-bottom: var(--vertical-rhythm-spacing);
+  padding: 1rem 1.5rem;
+  background: var(--color-accent-2);
+  gap: 1.5rem;
 
   .form-item {
     flex-grow: 1;
@@ -26,17 +26,17 @@
     padding: 0.5rem 1rem;
     border-bottom: var(--border-width) var(--border-style) var(--color-blue);
   }
-  
+
   /* had to target a widlcard for this as it adds a random string to the end of the id when you apply results */
 
   fieldset[id^="edit-localgov-news-date-value-wrapper"] {
-    border: none;
     padding: 0;
+    border: none;
 
     legend {
-        padding: 0;
-        margin-bottom: 0.5rem;
-      }
+      margin-bottom: 0.5rem;
+      padding: 0;
+    }
 
     .fieldset-wrapper {
       display: flex;
@@ -57,15 +57,15 @@
   margin-bottom: var(--spacing-mega);
 
   .lgd-teaser {
-    background: var(--color-accent-2);
     height: 100%;
+    background: var(--color-accent-2);
 
     .lgd-teaser__image div {
       height: 100%;
 
       img {
-        height: 100%;
         position: relative;
+        height: 100%;
         object-fit: cover;
       }
     }
@@ -84,8 +84,8 @@
     margin-top: var(--vertical-rhythm-spacing);
 
     .pager__item {
-      border-radius: 3px;
       padding: 5px;
+      border-radius: 3px;
 
       &:hover {
         background: var(--color-blue) !important;
@@ -96,9 +96,9 @@
         }
       }
 
-        &.is-active {
-          background: var(--color-blue) !important;
-        
+      &.is-active {
+        background: var(--color-blue) !important;
+
         a {
           color: var(--color-accent-2);
         }
@@ -112,6 +112,6 @@
 }
 
 .filters-title {
-  margin-block-end: 0;
   margin-bottom: 0.5rem;
+  margin-block-end: 0;
 }

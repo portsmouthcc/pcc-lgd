@@ -17,39 +17,43 @@ Apparently fonts will load quicker if defined in html.html.twig
 }
 
 @font-face {
-    font-family: 'Noto Sans';
-    src: url('../../assets/fonts/NotoSans-Regular.woff2') format('woff2'),
-        url('../../assets/fonts/NotoSans-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Noto Sans";
+  src:
+    url("../../assets/fonts/NotoSans-Regular.woff2") format("woff2"),
+    url("../../assets/fonts/NotoSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Noto Sans';
-    src: url('../../assets/fonts/NotoSans-Light.woff2') format('woff2'),
-        url('../../assets/fonts/NotoSans-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Noto Sans";
+  src:
+    url("../../assets/fonts/NotoSans-Light.woff2") format("woff2"),
+    url("../../assets/fonts/NotoSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Noto Sans';
-    src: url('../../assets/fonts/NotoSans-Bold.woff2') format('woff2'),
-        url('../../assets/fonts/NotoSans-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Noto Sans";
+  src:
+    url("../../assets/fonts/NotoSans-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/NotoSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Noto Sans';
-    src: url('../../assets/fonts/NotoSans-SemiBold.woff2') format('woff2'),
-        url('../../assets/fonts/NotoSans-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Noto Sans";
+  src:
+    url("../../assets/fonts/NotoSans-SemiBold.woff2") format("woff2"),
+    url("../../assets/fonts/NotoSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* @font-face {
