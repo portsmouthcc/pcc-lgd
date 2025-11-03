@@ -45,25 +45,6 @@ jobs:
           cd web/core
           npm i
 
-  phpcs:
-    needs: build
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        php-version: ["8.3"]
-    steps:
-      - name: Cached workspace
-        uses: actions/cache@v4
-        with:
-          path: .
-          key: build-${{ matrix.php-version }}-${{ github.run_id }}
-          restore-keys: |
-            build-${{ matrix.php-version }}-
-
-      - name: Check coding standards
-        run: ./bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,theme,install,css,js --ignore=node_modules -v ${{ env.PROJECT_PATH }}
-
   eslint-js:
     needs: build
     runs-on: ubuntu-latest
@@ -105,6 +86,47 @@ jobs:
         run: |
           cd web/core
           node ./node_modules/eslint/bin/eslint.js --ext .yml --resolve-plugins-relative-to=./web/core ../../${{ env.PROJECT_PATH }}
+
+  phpcs:
+    needs: build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version: ["8.3"]
+    steps:
+      - name: Cached workspace
+        uses: actions/cache@v4
+        with:
+          path: .
+          key: build-${{ matrix.php-version }}-${{ github.run_id }}
+          restore-keys: |
+            build-${{ matrix.php-version }}-
+
+      - name: Check coding standards
+        run: ./bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,theme,install,css,js --ignore=node_modules -v ${{ env.PROJECT_PATH }}
+
+  phpstan:
+    needs: build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version: ["8.3"]
+    steps:
+      - name: Cached workspace
+        uses: actions/cache@v4
+        with:
+          path: .
+          key: build-${{ matrix.php-version }}-${{ github.run_id }}
+          restore-keys: |
+            build-${{ matrix.php-version }}-
+
+      - name: Run static analysis checks
+        if: ${{ hashFiles(format('./{0}/**/*.inc', inputs.project_path), format('./{0}/**/*.install', inputs.project_path), format('./{0}/**/*.module', inputs.project_path), format('./{0}/**/*.php', inputs.project_path), format('./{0}/**/*.profile', inputs.project_path), format('./{0}/**/*.test', inputs.project_path), format('./{0}/**/*.theme', inputs.project_path)) != '' }}
+        run: |
+          cd html
+          ./bin/phpstan analyse -c ./phpstan.neon ${{ env.PROJECT_PATH }}
 
   stylelint:
     needs: build
