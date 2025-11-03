@@ -52,7 +52,7 @@ body {
   --color-info: var(--color-accent);
 
   /* Fonts */
-  --font-primary: "TransportNew", sans-serif;
+  --font-primary: "Noto Sans", sans-serif;
   --font-secondary: var(--font-primary);
 
   /* Headings */
@@ -123,4 +123,11 @@ body {
 
   /* Paragraph layouts */
   --lgd-page-section-gap: var(--grid-column-spacing);
+
+  /* Alert Banner */
+  --alert-banner-inner-padding-vertical: 50px;
+
+  /* Callout Box */
+  --call-out-box-link-padding: 0.5rem 0.75rem;
+
 }

@@ -8,10 +8,14 @@ favicon: "assets/images/favicons/favicon-32x32.png"
 
 # Extend these base theme libraries with our own.
 libraries-extend:
+  localgov_base/alert-banner:
+    - pcc/alert-banner
   localgov_base/banner:
     - pcc/banner
   localgov_base/breadcrumbs:
     - pcc/breadcrumbs
+  localgov_base/callout-box:
+    - pcc/callout-box
   localgov_base/card:
     - pcc/card
   localgov_base/footer:
@@ -38,6 +42,9 @@ libraries-extend:
     - pcc/step-by-step
   localgov_base/teaser:
     - pcc/teaser
+  localgov_news/localgov-newsroom:
+    - pcc/featured-teasers
+    - pcc/newsroom
   views/views.responsive-grid:
     - pcc/views.responsive-grid
 

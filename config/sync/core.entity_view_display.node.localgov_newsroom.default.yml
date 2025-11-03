@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.localgov_newsroom.localgov_newsroom_featured
     - node.type.localgov_newsroom
   module:
+    - field_formatter_class
     - user
   enforced:
     module:
@@ -17,6 +18,11 @@ targetEntityType: node
 bundle: localgov_newsroom
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -43,7 +49,9 @@ content:
     settings:
       view_mode: localgov_card
       link: false
-    third_party_settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: ''
     weight: 0
     region: content
 hidden:

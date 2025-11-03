@@ -27,6 +27,11 @@ global:
 #   css:
 #     theme:
 #       css/sample.css: {}
+alert-banner:
+  css:
+    theme:
+      css/components/alert-banner.css: {}
+
 banner:
   css:
     theme:
@@ -37,10 +42,20 @@ breadcrumbs:
     theme:
       css/components/breadcrumbs.css: {}
 
+callout-box:
+  css:
+    theme:
+      css/components/callout-box.css: {}
+
 card:
   css:
     theme:
       css/components/card.css: {}
+
+featured-teasers:
+  css:
+    theme:
+      css/components/featured-teasers.css: {}
 
 footer:
   css:
@@ -66,6 +81,11 @@ menu-main:
   css:
     theme:
       css/components/menu-main.css: {}
+
+newsroom:
+  css:
+    theme:
+      css/components/newsroom.css: {}
 
 page-sections:
   css:

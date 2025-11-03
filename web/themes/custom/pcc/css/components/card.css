@@ -7,3 +7,7 @@
 .lgd-card .date {
   font-weight: bold;
 }
+
+.node--view-mode-localgov-card .field--type-text-with-summary p {
+  margin-block-end: 0;
+}

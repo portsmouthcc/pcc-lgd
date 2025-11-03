@@ -31,12 +31,12 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
-    weight: 1
+    weight: 3
     region: content
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-    weight: -20
+    weight: 0
     region: content
   field_media_image:
     type: entity_reference_entity_view
@@ -45,7 +45,15 @@ content:
       view_mode: localgov_newsroom_teaser
       link: false
     third_party_settings: {  }
-    weight: 0
+    weight: 1
+    region: content
+  localgov_news_categories:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
     region: content
   localgov_news_date:
     type: datetime_custom
@@ -54,11 +62,10 @@ content:
       timezone_override: ''
       date_format: 'j F Y'
     third_party_settings: {  }
-    weight: 2
+    weight: 4
     region: content
 hidden:
   links: true
-  localgov_news_categories: true
   localgov_news_related: true
   localgov_newsroom: true
   search_api_excerpt: true

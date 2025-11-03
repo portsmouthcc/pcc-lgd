@@ -26,3 +26,33 @@
 .view-services .views-view-responsive-grid__item {
   border-block-end: var(--border);
 }
+
+/* Newsroom teaser category field */
+.field--name-localgov-news-categories {
+  display: flex;
+  align-items: center;
+
+  .field__label {
+    margin-right: 0.5rem;
+
+    &::after {
+      content: ':';
+    }
+  }
+
+  .field__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.5rem;
+
+    .field__item::after {
+      content: ',';
+    }
+
+    .field__item:last-of-type {
+      &::after {
+        content: '';
+      }
+    }
+  }
+}
