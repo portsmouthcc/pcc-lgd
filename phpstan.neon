@@ -22,7 +22,6 @@ parameters:
   # Exclude microsite project submodules from phpstan checks on the main project.
   excludePaths:
     - web/modules/contrib/localgov_alert_banner/modules/group_alert_banner/*
-    - node_modules
 
   # Ignore phpstan-drupal extension's rules.
   ignoreErrors:
