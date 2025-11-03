@@ -2,8 +2,8 @@
 
 .service-cta-block__list {
   /* padding-block-end: var(--vertical-rhythm-spacing); */
-  padding-block-end: var(--spacing-mega);
   margin-block-end: var(--spacing-mega);
+  padding-block-end: var(--spacing-mega);
   border-block-end: var(--border-accent);
 }
 

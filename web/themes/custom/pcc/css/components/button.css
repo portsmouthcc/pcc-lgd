@@ -6,15 +6,15 @@
   padding: var(--button-padding-vertical) var(--button-padding-horizontal)
     var(--button-padding-vertical) var(--button-padding-horizontal);
   cursor: pointer;
+  text-decoration: none;
   color: var(--button-text-color);
   border: var(--border);
   border-color: var(--button-border-color);
-  border-radius: var(--button-border-radius);
   border-bottom: var(--border-width) var(--border-style) var(--color-blue);
+  border-radius: var(--button-border-radius);
   background-color: var(--button-bg-color);
   font-family: var(--button-font-family);
   font-size: var(--font-size-medium);
-  text-decoration: none;
   font-weight: initial;
 }
 

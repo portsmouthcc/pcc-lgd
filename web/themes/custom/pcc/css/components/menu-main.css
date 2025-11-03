@@ -15,8 +15,8 @@
   display: block;
   padding: var(--spacing-smaller) var(--spacing);
   color: var(--color-white);
-  background-color: transparent;
   border: 1px solid transparent;
+  background-color: transparent;
 }
 
 .menu--main > .menu-item--active-trail a,

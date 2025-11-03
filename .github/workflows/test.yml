@@ -100,7 +100,7 @@ jobs:
           key: build-${{ matrix.php-version }}-${{ github.run_id }}
           restore-keys: |
             build-${{ matrix.php-version }}-
-      - name: Lint JS
+      - name: Lint YAML
         if: ${{ hashFiles(format('./{0}/**/*.yml', env.PROJECT_PATH)) != '' }}
         run: |
           cd web/core
