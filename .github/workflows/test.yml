@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php-version: ["8.2", "8.3"]
+        php-version: ["8.3"]
 
     steps:
       - name: Cached workspace
@@ -51,7 +51,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php-version: ["8.2", "8.3"]
+        php-version: ["8.3"]
     steps:
       - name: Cached workspace
         uses: actions/cache@v4
@@ -63,6 +63,48 @@ jobs:
 
       - name: Check coding standards
         run: ./bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,theme,install,css,js --ignore=node_modules -v ${{ env.PROJECT_PATH }}
+
+  eslint-js:
+    needs: build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version: ["8.3"]
+    steps:
+      - name: Cached workspace
+        uses: actions/cache@v4
+        with:
+          path: .
+          key: build-${{ matrix.php-version }}-${{ github.run_id }}
+          restore-keys: |
+            build-${{ matrix.php-version }}-
+      - name: Lint JS
+        if: ${{ hashFiles(format('./{0}/**/*.js', env.PROJECT_PATH)) != '' }}
+        run: |
+          cd web/core
+          node ./node_modules/eslint/bin/eslint.js --ext .js --resolve-plugins-relative-to=./web/core ../../${{ env.PROJECT_PATH }}
+
+  eslint-yaml:
+    needs: build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version: ["8.3"]
+    steps:
+      - name: Cached workspace
+        uses: actions/cache@v4
+        with:
+          path: .
+          key: build-${{ matrix.php-version }}-${{ github.run_id }}
+          restore-keys: |
+            build-${{ matrix.php-version }}-
+      - name: Lint JS
+        if: ${{ hashFiles(format('./{0}/**/*.yml', env.PROJECT_PATH)) != '' }}
+        run: |
+          cd web/core
+          node ./node_modules/eslint/bin/eslint.js --ext .yml --resolve-plugins-relative-to=./web/core ../../${{ env.PROJECT_PATH }}
 
   stylelint:
     needs: build
@@ -81,6 +123,7 @@ jobs:
             build-${{ matrix.php-version }}-
 
       - name: Lint CSS
+        if: ${{ hashFiles(format('./{0}/**/*.css', env.PROJECT_PATH)) != '' }}
         run: |
           cd web/core
           node ./node_modules/.bin/stylelint --ignore-path .stylelintignore --config .stylelintrc.json "../../${{ env.PROJECT_PATH }}/**/*.css"
