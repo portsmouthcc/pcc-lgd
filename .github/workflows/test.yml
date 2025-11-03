@@ -125,8 +125,7 @@ jobs:
       - name: Run static analysis checks
         if: ${{ hashFiles(format('./{0}/**/*.inc', inputs.project_path), format('./{0}/**/*.install', inputs.project_path), format('./{0}/**/*.module', inputs.project_path), format('./{0}/**/*.php', inputs.project_path), format('./{0}/**/*.profile', inputs.project_path), format('./{0}/**/*.test', inputs.project_path), format('./{0}/**/*.theme', inputs.project_path)) != '' }}
         run: |
-          cd html
-          ./bin/phpstan analyse -c ./phpstan.neon ${{ env.PROJECT_PATH }}
+          ./bin/phpstan analyse ${{ env.PROJECT_PATH }}
 
   stylelint:
     needs: build
