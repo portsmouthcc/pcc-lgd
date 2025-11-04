@@ -58,7 +58,7 @@ jobs:
           restore-keys: |
             build-
       - name: Lint JS
-        if: ${{ hashFiles(format('./{0}/**/*.js', env.PROJECT_PATH)) != '' }}
+        if: ${{ hashFiles(format('./{0}/js/**/*.js', env.PROJECT_PATH)) != '' }}
         run: |
           cd ${{ env.PROJECT_PATH }}
           npm run lint:js
