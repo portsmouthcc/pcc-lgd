@@ -13,21 +13,17 @@ on:
 
 env:
   PROJECT_PATH: web/themes/custom/pcc
+  PHP_VERSION: "8.3"
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        php-version: ["8.3"]
-
+    runs-on: ubuntu-latest:
     steps:
       - name: Cached workspace
         uses: actions/cache@v4
         with:
           path: .
-          key: build-${{ matrix.php-version }}-${{ github.run_id }}
+          key: build-${{ github.run_id }}
 
       - name: Check out project
         uses: actions/checkout@v5
@@ -35,15 +31,15 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{ matrix.php-version }}
+          php-version: ${{ env.PHP_VERSION }}
 
       - name: Install composer dependencies
         uses: ramsey/composer-install@v3
 
-      - name: Install core npm dependencies
-        run: |
-          cd web/core
-          npm install
+      # - name: Install core npm dependencies
+      #   run: |
+      #     cd web/core
+      #     npm install
 
       - name: Install theme npm dependencies
         run: |
@@ -53,18 +49,14 @@ jobs:
   eslint-js:
     needs: build
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        php-version: ["8.3"]
     steps:
       - name: Cached workspace
         uses: actions/cache@v4
         with:
           path: .
-          key: build-${{ matrix.php-version }}-${{ github.run_id }}
+          key: build-${{ github.run_id }}
           restore-keys: |
-            build-${{ matrix.php-version }}-
+            build-
       - name: Lint JS
         if: ${{ hashFiles(format('./{0}/**/*.js', env.PROJECT_PATH)) != '' }}
         run: |
@@ -83,9 +75,9 @@ jobs:
   #       uses: actions/cache@v4
   #       with:
   #         path: .
-  #         key: build-${{ matrix.php-version }}-${{ github.run_id }}
+  #         key: build-${{ github.run_id }}
   #         restore-keys: |
-  #           build-${{ matrix.php-version }}-
+  #           build-
   #     - name: Lint YAML
   #       if: ${{ hashFiles(format('./{0}/**/*.yml', env.PROJECT_PATH)) != '' }}
   #       run: |
@@ -95,18 +87,14 @@ jobs:
   phpcs:
     needs: build
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        php-version: ["8.3"]
     steps:
       - name: Cached workspace
         uses: actions/cache@v4
         with:
           path: .
-          key: build-${{ matrix.php-version }}-${{ github.run_id }}
+          key: build-${{ github.run_id }}
           restore-keys: |
-            build-${{ matrix.php-version }}-
+            build-
 
       - name: Check coding standards
         run: ./bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,theme,install,css,js --ignore=node_modules -v ${{ env.PROJECT_PATH }}
@@ -114,18 +102,14 @@ jobs:
   phpstan:
     needs: build
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        php-version: ["8.3"]
     steps:
       - name: Cached workspace
         uses: actions/cache@v4
         with:
           path: .
-          key: build-${{ matrix.php-version }}-${{ github.run_id }}
+          key: build-${{ github.run_id }}
           restore-keys: |
-            build-${{ matrix.php-version }}-
+            build-
 
       - name: Run static analysis checks
         if: ${{ hashFiles(format('./{0}/**/*.inc', inputs.project_path), format('./{0}/**/*.install', inputs.project_path), format('./{0}/**/*.module', inputs.project_path), format('./{0}/**/*.php', inputs.project_path), format('./{0}/**/*.profile', inputs.project_path), format('./{0}/**/*.test', inputs.project_path), format('./{0}/**/*.theme', inputs.project_path)) != '' }}
@@ -135,18 +119,14 @@ jobs:
   stylelint:
     needs: build
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        php-version: ["8.3"]
     steps:
       - name: Cached workspace
         uses: actions/cache@v4
         with:
           path: .
-          key: build-${{ matrix.php-version }}-${{ github.run_id }}
+          key: build-${{ github.run_id }}
           restore-keys: |
-            build-${{ matrix.php-version }}-
+            build-
 
       - name: Lint CSS
         if: ${{ hashFiles(format('./{0}/**/*.css', env.PROJECT_PATH)) != '' }}
