@@ -91,7 +91,6 @@ jobs:
           key: build-${{ github.run_id }}
           restore-keys: |
             build-
-
       - name: Check coding standards
         run: ./bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,theme,install,css,js --ignore=node_modules -v ${{ env.PROJECT_PATH }}
 
@@ -106,7 +105,6 @@ jobs:
           key: build-${{ github.run_id }}
           restore-keys: |
             build-
-
       - name: Run static analysis checks
         if: ${{ hashFiles(format('./{0}/**/*.inc', inputs.project_path), format('./{0}/**/*.install', inputs.project_path), format('./{0}/**/*.module', inputs.project_path), format('./{0}/**/*.php', inputs.project_path), format('./{0}/**/*.profile', inputs.project_path), format('./{0}/**/*.test', inputs.project_path), format('./{0}/**/*.theme', inputs.project_path)) != '' }}
         run: |
@@ -123,7 +121,6 @@ jobs:
           key: build-${{ github.run_id }}
           restore-keys: |
             build-
-
       - name: Lint CSS
         if: ${{ hashFiles(format('./{0}/**/*.css', env.PROJECT_PATH)) != '' }}
         run: |
