@@ -13,8 +13,8 @@ _core:
   default_config_hash: j1qb7rBjWkUhIkVj6R9Q6l5iGA6Otc4RpPtor22hZHU
 id: pcc_localgov_directories_facets_proximity_search_scarfolk
 theme: pcc
-region: sidebar_first
-weight: 5
+region: sidebar_second
+weight: -21
 provider: null
 plugin: 'facet_block:localgov_directories_facets_proximity_search'
 settings:

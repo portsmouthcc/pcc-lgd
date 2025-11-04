@@ -14,7 +14,7 @@ _core:
 id: pcc_localgov_events_search_scarfolk
 theme: pcc
 region: sidebar_first
-weight: -8
+weight: -6
 provider: null
 plugin: 'views_exposed_filter_block:localgov_events_search-events_page'
 settings:

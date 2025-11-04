@@ -13,8 +13,8 @@ _core:
   default_config_hash: 0tPDM8sz4Zpy0_BaQG57TjERnp871_YdjsKzaAKOS-I
 id: pcc_localgov_step_by_step_navigation_block_for_overview_scarfolk
 theme: pcc
-region: content_bottom
-weight: 200
+region: sidebar_second
+weight: -13
 provider: null
 plugin: 'views_block:localgov_step_by_step_navigation-steps_for_overview'
 settings:
