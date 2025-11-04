@@ -63,26 +63,22 @@ jobs:
           cd ${{ env.PROJECT_PATH }}
           npm run lint:js
 
-  # eslint-yaml:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   strategy:
-  #     fail-fast: false
-  #     matrix:
-  #       php-version: ["8.3"]
-  #   steps:
-  #     - name: Cached workspace
-  #       uses: actions/cache@v4
-  #       with:
-  #         path: .
-  #         key: build-${{ github.run_id }}
-  #         restore-keys: |
-  #           build-
-  #     - name: Lint YAML
-  #       if: ${{ hashFiles(format('./{0}/**/*.yml', env.PROJECT_PATH)) != '' }}
-  #       run: |
-  #         cd web/core
-  #         node ./node_modules/eslint/bin/eslint.js --ext .yml --resolve-plugins-relative-to=./web/core ../../${{ env.PROJECT_PATH }}
+  eslint-yaml:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cached workspace
+        uses: actions/cache@v4
+        with:
+          path: .
+          key: build-${{ github.run_id }}
+          restore-keys: |
+            build-
+      - name: Lint YAML
+        if: ${{ hashFiles(format('./{0}/**/*.yml', env.PROJECT_PATH)) != '' }}
+        run: |
+          cd ${{ env.PROJECT_PATH }}
+          npm run lint:yml
 
   phpcs:
     needs: build

@@ -10,6 +10,8 @@
     "lint:css:fix": "stylelint \"**/*.css\" --fix",
     "lint:js": "eslint \"**/*.js\"",
     "lint:js:fix": "eslint \"**/*.js\" --fix",
+    "lint:yml": "eslint \"**/*.yml\"",
+    "lint:yml:fix": "eslint \"**/*.yml\" --fix",
     "build:docs": "./scripts/document-variables.sh --to-markdown"
   },
   "author": "Mark Conroy",
