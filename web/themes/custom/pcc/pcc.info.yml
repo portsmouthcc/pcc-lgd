@@ -38,6 +38,8 @@ libraries-extend:
     - pcc/service-cta-block
   localgov_base/service-landing-page:
     - pcc/service-landing-page
+  localgov_base/sidebar:
+    - pcc/sidebar
   localgov_base/step-by-step:
     - pcc/step-by-step
   localgov_base/teaser:

@@ -13,7 +13,7 @@ _core:
 id: pcc_localgov_events_neighbourhood_scarfolk
 theme: pcc
 region: sidebar_first
-weight: -6
+weight: 0
 provider: null
 plugin: 'facet_block:localgov_events_locality'
 settings:

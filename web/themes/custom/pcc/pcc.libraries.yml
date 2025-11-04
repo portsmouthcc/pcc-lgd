@@ -112,6 +112,11 @@ service-landing-page:
     theme:
       css/components/service-landing-page.css: {}
 
+sidebar:
+  css:
+    theme:
+      css/components/sidebar.css: {}
+
 step-by-step:
   css:
     theme:
