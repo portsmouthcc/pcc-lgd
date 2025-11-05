@@ -27,3 +27,8 @@ h6,
   text-decoration: none;
   box-shadow: none;
 }
+
+/* Only apply horizontal padding once. */
+.padding-horizontal .padding-horizontal {
+  padding-inline: 0;
+}
