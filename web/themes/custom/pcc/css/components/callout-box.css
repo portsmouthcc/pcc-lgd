@@ -1,13 +1,84 @@
-.call-out-box__link {
-  display: inline-block;
-  text-decoration: none;
-  border-bottom: var(--border-width) var(--border-style) var(--color-blue);
+.call-out-box {
+  display: flex;
+  flex-direction: row;
+  background: var(--call-out-box-bg-color);
+
+  .call-out-box__image {
+    display: none;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .call-out-box__content-container {
+    width: 100%;
+  }
+
+  .call-out-box__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: none;
+
+    h2 {
+      flex-grow: 0;
+    }
+
+    .field--name-localgov-body-text {
+      flex-grow: 1;
+    }
+
+    .call-out-box__link {
+      flex-grow: 0;
+      align-self: flex-end;
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: var(--border-width) var(--border-style) var(--color-blue);
+      background-color: var(--button-bg-color);
+      color: var(--button-text-color);
+
+      &:hover {
+        background-color: var(--button-bg-color-hover);
+        color: var(--button-text-color-hover);
+      }
+
+      &:focus {
+        background: var(--color-focus);
+      }
+    }
+  }
 }
 
-.call-out-box__link:hover {
-  background: rgb(197, 197, 197);
+@media screen and (min-width: 48rem) {
+  .call-out-box--has-image .call-out-box__image {
+    display: flex;
+  }
+
+  .call-out-box--has-image .call-out-box__content {
+    width: 100%;
+    padding-inline-end: var(--call-out-box-padding);
+    background: none;
+  }
 }
 
-.call-out-box__link:focus {
-  background: var(--color-focus);
+/* Color schemes */
+.call-out-box--dark {
+  background-color: var(--color-accent-dark);
+}
+
+.call-out-box--light {
+  background-color: var(--color-accent);
+}
+
+.call-out-box--orange {
+  background-color: var(--color-orange);
+}
+
+.call-out-box--yellow {
+  background-color: var(--color-yellow);
+
+  h2,
+  p {
+    color: var(--color-blue);
+  }
 }
