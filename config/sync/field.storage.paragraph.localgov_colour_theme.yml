@@ -16,6 +16,18 @@ settings:
     -
       value: default
       label: Default
+    -
+      value: dark
+      label: Dark
+    -
+      value: light
+      label: Light
+    -
+      value: orange
+      label: Orange
+    -
+      value: yellow
+      label: Yellow
   allowed_values_function: ''
 module: options
 locked: false
