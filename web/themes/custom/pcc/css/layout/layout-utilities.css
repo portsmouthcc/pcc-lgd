@@ -1,0 +1,4 @@
+/* Don't add margins everywhere! */
+.layout__region > * {
+  margin-block-end: 0;
+}
