@@ -8,3 +8,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.link--button-style:hover .link-wrapper {
+  text-decoration: none;
+}

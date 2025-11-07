@@ -4,8 +4,8 @@
   "description": "NPM scripts for the PCC theme.",
   "main": "index.js",
   "scripts": {
-    "start": "npm run lint:css && npm run lint:js",
-    "start:fix": "npm run lint:css:fix && npm run lint:js:fix",
+    "start": "npm run lint:css && npm run lint:js && npm run lint:yml",
+    "start:fix": "npm run lint:css:fix && npm run lint:js:fix && npm run lint:yml:fix",
     "lint:css": "stylelint \"**/*.css\"",
     "lint:css:fix": "stylelint \"**/*.css\" --fix",
     "lint:js": "eslint \"**/*.js\"",

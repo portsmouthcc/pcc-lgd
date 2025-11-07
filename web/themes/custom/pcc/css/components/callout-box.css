@@ -15,9 +15,9 @@
   }
 
   .call-out-box__content {
-    height: 100%;
     display: flex;
     flex-direction: column;
+    height: 100%;
     background: none;
 
     h2 {
@@ -29,17 +29,17 @@
     }
 
     .call-out-box__link {
+      display: inline-block;
       flex-grow: 0;
       align-self: flex-end;
-      display: inline-block;
       text-decoration: none;
+      color: var(--button-text-color);
       border-bottom: var(--border-width) var(--border-style) var(--color-blue);
       background-color: var(--button-bg-color);
-      color: var(--button-text-color);
 
       &:hover {
-        background-color: var(--button-bg-color-hover);
         color: var(--button-text-color-hover);
+        background-color: var(--button-bg-color-hover);
       }
 
       &:focus {

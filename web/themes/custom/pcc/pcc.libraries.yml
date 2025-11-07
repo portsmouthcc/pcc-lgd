@@ -9,6 +9,7 @@ global:
       css/base/variables.css: {}
       css/components/button.css: {}
       css/components/form-items.css: {}
+      css/layout/layout-utilities.css: {}
 
 # To override CSS from the base theme, add your library here, and then use
 # `libraries-extend` to add that code to the library from the base theme. See the
