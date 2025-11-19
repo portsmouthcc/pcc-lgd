@@ -1,0 +1,128 @@
+id: pcc_service_page
+label: LGD service pages
+status: true
+description: Migrate LGD service pages.
+migration_group: pcc
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: sites/default/files/migrate/wp-pages.json
+  fields:
+    - name: title
+      label: Content title
+      selector: title
+    - name: link
+      label: Link
+      selector: link
+    - name: creator
+      label: Username of the content creator
+      selector: creator
+    - name: description
+      label: Description
+      selector: description
+    - name: body
+      label: Body content
+      selector: body
+    - name: excerpt
+      label: Content excerpt
+      selector: excerpt
+    - name: id
+      label: Unique content ID
+      selector: id
+    - name: date
+      label: Date created
+      selector: date
+    - name: modified
+      label: Date last modified
+      selector: modified
+    - name: name
+      label: Name of the content
+      selector: name
+    - name: status
+      label: Published status
+      selector: status
+    - name: parent
+      label: Parent ID
+      selector: parent
+    - name: wp_type
+      label: WP post type
+      selector: type
+    - name: top_tasks
+      label: Top task links
+      selector: top_tasks
+    - name: child_ids
+      label: Child page ids
+      selector: child_ids
+    - name: lgd_type
+      selector: lgd_type
+      label: LGD content type
+  ids:
+    id:
+      type: integer
+
+process:
+  type: lgd_type
+
+  # Skip any other content types.
+  _skip_types:
+    plugin: skip_on_value
+    not_equals: true
+    source: "@type"
+    method: row
+    value: localgov_services_page
+
+  nid: id
+  uid:
+    plugin: default_value
+    default_value: 1
+  title:
+    plugin: skip_on_empty
+    method: row
+    source: title
+    message: "Cannot import empty titles. This may include trashed posts from the WordPress import file."
+  "body/value": body
+  "body/format":
+    plugin: default_value
+    default_value: wysiwyg
+  "body/summary": description
+  "path/alias": link
+  "path/pathauto":
+    plugin: default_value
+    default_value: false
+  created:
+    plugin: callback
+    source: date
+    callable: strtotime
+  changed:
+    plugin: callback
+    source: modified
+    callable: strtotime
+  status:
+    plugin: static_map
+    source: status
+    default_value: 0
+    map:
+      publish: 1
+
+  # Services parent
+  localgov_services_parent: parent
+
+  # Service landing page child pages
+  localgov_destinations:
+    plugin: explode
+    source: child_ids
+    delimiter: ";"
+
+  # Top task links
+  localgov_common_tasks:
+    plugin: sub_process
+    source: top_tasks
+    process:
+      uri: url
+      title: title
+      type: type
+
+destination:
+  plugin: entity:node

@@ -1,0 +1,74 @@
+id: pcc_media_image
+label: Media images
+status: true
+description: Migrate images.
+migration_group: pcc_media
+dependencies:
+  required:
+    - pcc_media_file
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: xml
+  urls: public://migrate/portsmouthcitycouncil.WordPress.2025-05-23.xml
+  item_selector: /rss/channel/item
+  fields:
+    - name: id
+      label: ID
+      selector: wp:post_id
+    - name: title
+      label: Title
+      selector: title
+    - name: url
+      label: URL
+      selector: wp:attachment_url
+    - name: alt
+      label: Alt text
+      selector: 'wp:postmeta[wp:meta_key="_wp_attachment_image_alt"]/wp:meta_value'
+  ids:
+    id:
+      type: integer
+  constants:
+    DRUPAL_FILE_DIRECTORY: public://media/
+
+process:
+  psuedo_destination_filename:
+    - plugin: callback
+      callable: basename
+      source: url
+    - plugin: skip_on_empty
+      method: row
+      message: "Cannot import empty image filename."
+    - plugin: skip_on_substr
+      not_equals: true
+      method: row
+      value:
+        - .jpg
+        - .jpeg
+        - .png
+        - .webp
+        - .gif
+  # psuedo_destination_path:
+  #   - plugin: concat
+  #     source:
+  #       - constants/DRUPAL_FILE_DIRECTORY
+  #       - "@psuedo_destination_filename"
+  # name: "@psuedo_destination_filename"
+  name: title
+  field_media_image/target_id:
+    plugin: migration_lookup
+    migration: pcc_media_file
+    source: id
+  field_media_image/title: title
+  field_media_image/alt: alt
+  thumbnail/target_id:
+    plugin: migration_lookup
+    migration: pcc_media_file
+    source: id
+  thumbnail/title: title
+  thumbnail/alt: alt
+
+destination:
+  plugin: entity:media
+  default_bundle: image

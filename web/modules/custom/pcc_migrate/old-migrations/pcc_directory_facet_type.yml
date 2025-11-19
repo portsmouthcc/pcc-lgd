@@ -1,0 +1,23 @@
+id: pcc_directory_facet_type
+label: LGD directory facet types
+status: true
+description: Migrate LGD directories from maps.
+migration_group: pcc_directories
+
+source:
+  plugin: embedded_data
+  data_rows:
+    - id: materials
+      label: Materials
+      weight: 0
+  ids:
+    id:
+      type: string
+
+process:
+  id: id
+  label: label
+  weight: weight
+
+destination:
+  plugin: entity:localgov_directories_facets_type
