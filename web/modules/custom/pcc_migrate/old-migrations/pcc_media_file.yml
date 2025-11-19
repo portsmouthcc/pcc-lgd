@@ -1,0 +1,55 @@
+id: pcc_media_file
+label: Media files
+status: true
+description: Migrate media files.
+migration_group: pcc_media
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: xml
+  urls: public://migrate/portsmouthcitycouncil.WordPress.2025-05-23.xml
+  item_selector: /rss/channel/item
+  fields:
+    - name: id
+      label: ID
+      selector: wp:post_id
+    # - name: title
+    #   label: Title
+    #   selector: title
+    - name: url
+      label: URL
+      selector: wp:attachment_url
+  ids:
+    id:
+      type: integer
+  constants:
+    DRUPAL_FILE_DIRECTORY: public://migrated-media/
+
+process:
+  psuedo_destination_filename:
+    - plugin: callback
+      callable: basename
+      source: url
+    - plugin: skip_on_empty
+      method: row
+      message: "Cannot import empty image filename."
+  psuedo_destination_path:
+    - plugin: concat
+      source:
+        - constants/DRUPAL_FILE_DIRECTORY
+        - "@psuedo_destination_filename"
+  uri:
+    - plugin: skip_on_empty
+      method: process
+      source: url
+      message: "Cannot import empty image URL."
+    - plugin: file_copy
+      source:
+        - url
+        - "@psuedo_destination_path"
+      file_exists: rename
+      move: false
+
+destination:
+  plugin: entity:file

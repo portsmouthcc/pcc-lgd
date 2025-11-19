@@ -1,0 +1,53 @@
+id: pcc_directory_address
+label: LGD directory addresses
+status: true
+description: Migrate LGD directory addresses.
+migration_group: pcc_directories
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: sites/default/files/migrate/maps.json
+  item_selector: /markers
+  fields:
+    - name: id
+      label: ID
+      selector: id
+    - name: title
+      label: Title
+      selector: title
+    - name: address
+      label: Address
+      selector: address
+    - name: latitude
+      label: Latitude
+      selector: lat
+    - name: longitude
+      label: Longitude
+      selector: lng
+  ids:
+    id:
+      type: integer
+
+process:
+  postal_address/address_line1: title
+  postal_address/address_line2: address
+  postal_address/locality:
+    plugin: default_value
+    default_value: Portsmouth
+  postal_address/postal_code:
+    plugin: default_value
+    default_value: PO1 2AL
+  postal_address/country_code:
+    plugin: default_value
+    default_value: GB
+  location:
+    plugin: geofield_latlon
+    source:
+      - latitude
+      - longitude
+
+destination:
+  plugin: entity:geo_entity
+  default_bundle: address

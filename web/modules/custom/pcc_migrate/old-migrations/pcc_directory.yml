@@ -1,0 +1,52 @@
+id: pcc_directory
+label: LGD directories
+status: true
+description: Migrate LGD directories from maps.
+migration_group: pcc_directories
+
+migration_dependencies:
+  required:
+    - pcc_directory_facet_type
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: sites/default/files/migrate/maps.json
+  item_selector: /maps
+  fields:
+    - name: id
+      label: ID
+      selector: id
+    - name: title
+      label: Title
+      selector: map_title
+    - name: filterbycat
+      label: Filter by categories
+      selector: filterbycat
+  ids:
+    id:
+      type: integer
+
+process:
+  type:
+    plugin: default_value
+    default_value: localgov_directory
+  title: title
+  localgov_directory_channel_types:
+    plugin: default_value
+    default_value: localgov_directories_venue
+  localgov_directory_facets_enable:
+    plugin: static_map
+    source: filterbycat
+    map:
+      0: null
+      1: materials
+
+  # filterbycat
+
+  #   plugin: default_value
+  #   default_value: materials
+
+destination:
+  plugin: entity:node

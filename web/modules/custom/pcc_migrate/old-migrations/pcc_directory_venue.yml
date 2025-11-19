@@ -1,0 +1,82 @@
+id: pcc_directory_venue
+label: LGD directory venues
+status: true
+description: Migrate LGD directory venues.
+migration_group: pcc_directories
+
+migration_dependencies:
+  required:
+    - pcc_directory
+    - pcc_directory_address
+    - pcc_directory_facet
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: sites/default/files/migrate/maps.json
+  item_selector: /markers
+  fields:
+    - name: id
+      label: ID
+      selector: id
+    - name: map_id
+      label: Map ID
+      selector: map_id
+    - name: title
+      label: Title
+      selector: title
+    - name: description
+      label: Description
+      selector: description
+    - name: address
+      label: Address
+      selector: address
+    - name: lat
+      label: Latitude
+      selector: lat
+    - name: lng
+      label: Longitude
+      selector: lng
+    - name: category
+      label: Category
+      selector: category
+  ids:
+    id:
+      type: integer
+
+process:
+  type:
+    plugin: default_value
+    default_value: localgov_directories_venue
+  title:
+    plugin: default_value
+    source: title
+    default_value: Title
+  body/value: description
+  body/format:
+    plugin: default_value
+    default_value: wysiwyg
+  body/summary: ""
+
+  localgov_directory_channels:
+    plugin: migration_lookup
+    migration: pcc_directory
+    source: map_id
+
+  localgov_location:
+    plugin: migration_lookup
+    migration: pcc_directory_address
+    source: id
+
+  localgov_directory_facets_select:
+    - plugin: skip_on_empty
+      method: process
+      source: category
+    - plugin: explode
+      delimiter: ", "
+    - plugin: migration_lookup
+      migration: pcc_directory_facet
+
+destination:
+  plugin: entity:node

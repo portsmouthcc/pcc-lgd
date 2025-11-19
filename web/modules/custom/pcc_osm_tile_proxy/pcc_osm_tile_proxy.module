@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * Implements hook_leaflet_map_info().
+ */
+function pcc_osm_tile_proxy_leaflet_map_info() {
+
+  $map_info['multilayers'] = [
+    'label' => 'PCC OSM Tile Proxy',
+    'description' => t('Our OpenStreetMap tile proxy server.'),
+    'settings' => [
+      'dragging' => TRUE,
+      'touchZoom' => TRUE,
+      'scrollWheelZoom' => TRUE,
+      'doubleClickZoom' => TRUE,
+      'zoomControl' => TRUE,
+      'attributionControl' => TRUE,
+      'trackResize' => TRUE,
+      'fadeAnimation' => TRUE,
+      'zoomAnimation' => TRUE,
+      'closePopupOnClick' => TRUE,
+      'minZoom' => 2,
+      'maxZoom' => 20,
+      'zoom' => 15,
+      'layerControl' => TRUE,
+      'layerControlOptions' => [
+        'position' => 'topright',
+      ],
+    ],
+    'layers' => [
+      'OpenStreetMap' => [
+        'urlTemplate' => '//media.portsmouth.gov.uk/osm/{z}/{x}/{y}.png',
+        'options' => [
+          "minZoom" => 0,
+          "maxZoom" => 18,
+          "attribution" => '<a href="https://openstreetmap.org/copyright">OpenStreetMap</a>',
+        ],
+      ],
+    ],
+  ];
+
+  return $map_info;
+
+}
