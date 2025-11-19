@@ -120,6 +120,9 @@ module:
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
+  migrate: 0
+  migrate_plus: 0
+  migrate_tools: 0
   mysql: 0
   node: 0
   office_hours: 0
@@ -128,6 +131,7 @@ module:
   paragraphs_library: 0
   path: 0
   path_alias: 0
+  pcc_migrate: 0
   preview_link: 0
   redirect: 0
   redirect_404: 0
