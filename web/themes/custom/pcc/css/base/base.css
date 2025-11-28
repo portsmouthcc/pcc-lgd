@@ -32,3 +32,24 @@ h6,
 .padding-horizontal .padding-horizontal {
   padding-inline: 0;
 }
+
+/* Home page subscribe panel */
+.paragraph--type--localgov-subscribe-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .social-media-subscription-panel__links {
+    display: flex;
+
+    .services--feature-block {
+      margin-left: var(--spacing-small);
+
+      a:hover {
+        box-shadow:
+          0 -2px var(--color-focus),
+          0 4px var(--color-focus);
+      }
+    }
+  }
+}
