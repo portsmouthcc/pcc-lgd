@@ -45,7 +45,7 @@ h6,
     .services--feature-block {
       margin-left: var(--spacing-small);
 
-      a:hover {
+      a:focus {
         box-shadow:
           0 -2px var(--color-focus),
           0 4px var(--color-focus);
