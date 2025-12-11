@@ -1,0 +1,30 @@
+uuid: af8190a6-07c8-4e41-a1e7-7ec5e5b19671
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_category
+field_name: field_category
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: city_centre
+      label: 'City centre'
+    -
+      value: southsea
+      label: Southsea
+    -
+      value: events
+      label: Events
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

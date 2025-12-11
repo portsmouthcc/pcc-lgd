@@ -1,0 +1,21 @@
+uuid: d3b63de6-3900-4a37-b34c-020f70c8ea2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.traffic_regulation_order
+  module:
+    - options
+id: node.traffic_regulation_order.field_category
+field_name: field_category
+entity_type: node
+bundle: traffic_regulation_order
+label: Category
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

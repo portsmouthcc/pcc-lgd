@@ -42,6 +42,7 @@ field_settings:
           localgov_step_by_step_page: search_index
           localgov_subsites_overview: search_index
           localgov_subsites_page: search_index
+          traffic_regulation_order: search_index
 datasource_settings:
   'entity:node':
     bundles:
@@ -77,11 +78,11 @@ processor_settings:
     title: false
     alt: false
     tags:
-      b: 2
-      h1: 5
-      h2: 3
-      h3: 2
-      strong: 2
+      b: 2.0
+      h1: 5.0
+      h2: 3.0
+      h3: 2.0
+      strong: 2.0
   ignorecase:
     weights:
       preprocess_index: -50

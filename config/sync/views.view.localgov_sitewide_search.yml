@@ -235,6 +235,7 @@ display:
               localgov_step_by_step_page: search_result
               localgov_subsites_overview: search_result
               localgov_subsites_page: search_result
+              traffic_regulation_order: search_result
       query:
         type: search_api_query
         options:
