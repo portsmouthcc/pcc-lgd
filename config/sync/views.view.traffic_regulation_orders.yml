@@ -10,7 +10,6 @@ dependencies:
     - field.storage.node.field_type
     - node.type.traffic_regulation_order
   module:
-    - created_date_views_filters
     - datetime
     - node
     - options
@@ -131,70 +130,6 @@ display:
           type: string
           settings:
             link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_date:
-          id: field_date
-          table: node__field_date
-          field: field_date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: Date
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_custom
-          settings:
-            timezone_override: ''
-            date_format: 'j F Y'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -391,6 +326,70 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_date:
+          id: field_date
+          table: node__field_date
+          field: field_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Year
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: html_year
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       pager:
         type: mini
         options:
@@ -413,8 +412,8 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
-          reset_button: false
+          submit_button: Filter
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -467,6 +466,57 @@ display:
           plugin_id: bundle
           value:
             traffic_regulation_order: traffic_regulation_order
+          group: 1
+        combine:
+          id: combine
+          table: views
+          field: combine
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: combine
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: combine_op
+            label: Search
+            description: ''
+            use_operator: false
+            operator: combine_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: combine
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              emergency_publisher: '0'
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_news_editor: '0'
+              localgov_user_manager: '0'
+              localgov_admin: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          fields:
+            title: title
+            field_reference: field_reference
         field_category_value:
           id: field_category_value
           table: node__field_category
@@ -481,7 +531,7 @@ display:
           exposed: true
           expose:
             operator_id: field_category_value_op
-            label: 'Category (field_category)'
+            label: Category
             description: ''
             use_operator: false
             operator: field_category_value_op
@@ -515,62 +565,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-        field_date_value:
-          id: field_date_value
-          table: node__field_date
-          field: field_date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: datetime
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-            type: date
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_date_value_op
-            label: 'Date (field_date)'
-            description: ''
-            use_operator: false
-            operator: field_date_value_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_date_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              emergency_publisher: '0'
-              anonymous: '0'
-              localgov_editor: '0'
-              localgov_author: '0'
-              localgov_contributor: '0'
-              localgov_news_editor: '0'
-              localgov_user_manager: '0'
-              localgov_admin: '0'
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: 'Date (field_date)'
-            description: null
-            identifier: field_date_value
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1: {  }
-              2: {  }
-              3: {  }
         field_status_value:
           id: field_status_value
           table: node__field_status
@@ -585,7 +579,7 @@ display:
           exposed: true
           expose:
             operator_id: field_status_value_op
-            label: 'Status (field_status)'
+            label: Status
             description: ''
             use_operator: false
             operator: field_status_value_op
@@ -633,7 +627,7 @@ display:
           exposed: true
           expose:
             operator_id: field_type_value_op
-            label: 'Type (field_type)'
+            label: Type
             description: ''
             use_operator: false
             operator: field_type_value_op
@@ -667,41 +661,10 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-        year_filter:
-          id: year_filter
-          table: views
-          field: year_filter
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: year_filter
-          operator: '='
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            label: 'Year filter - Filter'
-            description: null
-            use_operator: false
-            operator: year_filter_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: year_filter
-            required: false
-            remember: false
-            multiple: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: table
         options:
@@ -715,7 +678,8 @@ display:
             field_category: field_category
             field_type: field_type
             field_status: field_status
-          default: title
+            field_date_1: field_date_1
+          default: '-1'
           info:
             title:
               sortable: true
@@ -753,6 +717,13 @@ display:
               empty_column: false
               responsive: ''
             field_status:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_date_1:
               sortable: true
               default_sort_order: asc
               align: ''
