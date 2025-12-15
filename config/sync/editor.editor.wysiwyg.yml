@@ -24,6 +24,7 @@ settings:
       - redo
       - '|'
       - link
+      - anchor
       - '|'
       - bulletedList
       - numberedList
