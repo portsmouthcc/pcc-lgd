@@ -1,0 +1,22 @@
+uuid: 0c134bbc-471f-4e0b-8805-1af7405ab61a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: traffic_regulation_orders
+label: 'Traffic regulation orders'
+type: 'canonical_entities:node'
+pattern: 'traffic-regulation-orders/[node:title]'
+selection_criteria:
+  d3ae966e-5f70-4fc8-a2ef-7781fc641de3:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: d3ae966e-5f70-4fc8-a2ef-7781fc641de3
+    context_mapping:
+      node: node
+    bundles:
+      traffic_regulation_order: traffic_regulation_order
+selection_logic: and
+weight: -5
+relationships: {  }

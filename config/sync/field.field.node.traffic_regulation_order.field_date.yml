@@ -1,0 +1,21 @@
+uuid: 4c8b7556-c44d-47e0-9d08-0e7dee50fa99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.traffic_regulation_order
+  module:
+    - datetime
+id: node.traffic_regulation_order.field_date
+field_name: field_date
+entity_type: node
+bundle: traffic_regulation_order
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

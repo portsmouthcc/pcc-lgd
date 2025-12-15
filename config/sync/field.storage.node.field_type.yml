@@ -1,0 +1,27 @@
+uuid: c12379e2-262b-41f2-bf7b-cb8d2d920358
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_type
+field_name: field_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: temporary
+      label: Temporary
+    -
+      value: permanent
+      label: Permanent
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

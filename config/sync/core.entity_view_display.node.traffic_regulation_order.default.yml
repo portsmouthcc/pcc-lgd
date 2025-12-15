@@ -1,0 +1,84 @@
+uuid: fa840c72-a68c-4f0b-bb74-3c1f7e03778f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.traffic_regulation_order.body
+    - field.field.node.traffic_regulation_order.field_category
+    - field.field.node.traffic_regulation_order.field_date
+    - field.field.node.traffic_regulation_order.field_documents
+    - field.field.node.traffic_regulation_order.field_reference
+    - field.field.node.traffic_regulation_order.field_status
+    - field.field.node.traffic_regulation_order.field_type
+    - node.type.traffic_regulation_order
+  module:
+    - datetime
+    - options
+    - text
+    - user
+id: node.traffic_regulation_order.default
+targetEntityType: node
+bundle: traffic_regulation_order
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_category:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_documents:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_reference:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_status:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  search_api_excerpt: true

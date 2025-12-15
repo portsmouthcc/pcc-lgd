@@ -1,0 +1,17 @@
+uuid: d147e8ef-0aab-49b5-a9e9-0e41a8b33d16
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Traffic regulation order'
+type: traffic_regulation_order
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

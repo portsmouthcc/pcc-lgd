@@ -1,0 +1,151 @@
+uuid: 3ab5b625-1e8e-4740-8852-c690035710a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.traffic_regulation_order.body
+    - field.field.node.traffic_regulation_order.field_category
+    - field.field.node.traffic_regulation_order.field_date
+    - field.field.node.traffic_regulation_order.field_documents
+    - field.field.node.traffic_regulation_order.field_reference
+    - field.field.node.traffic_regulation_order.field_status
+    - field.field.node.traffic_regulation_order.field_type
+    - node.type.traffic_regulation_order
+  module:
+    - content_moderation
+    - datetime
+    - media_library
+    - path
+    - text
+id: node.traffic_regulation_order.default
+targetEntityType: node
+bundle: traffic_regulation_order
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 16
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_category:
+    type: options_select
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_documents:
+    type: media_library_widget
+    weight: 17
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_reference:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_status:
+    type: options_select
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_type:
+    type: options_select
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  localgov_service_contacts:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
