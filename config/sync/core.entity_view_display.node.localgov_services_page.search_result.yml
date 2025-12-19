@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.localgov_services_page.localgov_page_components
     - field.field.node.localgov_services_page.localgov_related_links
     - field.field.node.localgov_services_page.localgov_services_parent
+    - field.field.node.localgov_services_page.localgov_subsites_content
     - field.field.node.localgov_services_page.localgov_topic_classified
     - node.type.localgov_services_page
   module:
@@ -22,6 +23,11 @@ targetEntityType: node
 bundle: localgov_services_page
 mode: search_result
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   search_api_excerpt:
     settings: {  }
     third_party_settings: {  }
@@ -36,4 +42,5 @@ hidden:
   localgov_page_components: true
   localgov_related_links: true
   localgov_services_parent: true
+  localgov_subsites_content: true
   localgov_topic_classified: true

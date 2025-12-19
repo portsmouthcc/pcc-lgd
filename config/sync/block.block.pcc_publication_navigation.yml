@@ -10,7 +10,7 @@ dependencies:
 id: pcc_publication_navigation
 theme: pcc
 region: sidebar_first
-weight: 5
+weight: -13
 provider: null
 plugin: publication_navigation
 settings:

@@ -11,7 +11,7 @@ _core:
 id: pcc_localgov_subsite_navigation_scarfolk
 theme: pcc
 region: sidebar_second
-weight: -20
+weight: -18
 provider: null
 plugin: localgov_subsite_navigation
 settings:
