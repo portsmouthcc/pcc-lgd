@@ -3,83 +3,13 @@ Apparently fonts will load quicker if defined in html.html.twig
 */
 
 @font-face {
-  font-family: TransportNew;
-  src: url("../../assets/fonts/TransportNew-Light.woff2") format("woff2");
-  font-weight: 300;
+  font-family: Inter;
+  src: url("../../assets/fonts/Inter-VariableFont_opsz\,wght.ttf");
   font-style: normal;
 }
 
 @font-face {
-  font-family: TransportNew;
-  src: url("../../assets/fonts/TransportNew-LightItalic.woff2") format("woff2");
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Noto Sans";
-  src:
-    url("../../assets/fonts/NotoSans-Regular.woff2") format("woff2"),
-    url("../../assets/fonts/NotoSans-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noto Sans";
-  src:
-    url("../../assets/fonts/NotoSans-Light.woff2") format("woff2"),
-    url("../../assets/fonts/NotoSans-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noto Sans";
-  src:
-    url("../../assets/fonts/NotoSans-Bold.woff2") format("woff2"),
-    url("../../assets/fonts/NotoSans-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noto Sans";
-  src:
-    url("../../assets/fonts/NotoSans-SemiBold.woff2") format("woff2"),
-    url("../../assets/fonts/NotoSans-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* @font-face {
-  font-family: TransportNew;
-  src: url("../../assets/fonts/TransportNew-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: TransportNew;
-  src: url("../../assets/fonts/TransportNew-MediumItalic.woff2") format("woff2");
-  font-weight: 500;
-  font-style: italic;
-} */
-
-@font-face {
-  font-family: TransportNew;
-  src: url("../../assets/fonts/TransportNew-Heavy.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: TransportNew;
-  src: url("../../assets/fonts/TransportNew-HeavyItalic.woff2") format("woff2");
-  font-weight: 900;
+  font-family: Inter;
+  src: url("../../assets/fonts/Inter-Italic-VariableFont_opsz\,wght.ttf");
   font-style: italic;
 }
