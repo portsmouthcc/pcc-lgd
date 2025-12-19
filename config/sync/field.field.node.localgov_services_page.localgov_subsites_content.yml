@@ -1,0 +1,196 @@
+uuid: c5aa6ba5-a0fb-4c89-8342-c7347eb3cd07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.localgov_subsites_content
+    - node.type.localgov_services_page
+    - paragraphs.paragraphs_type.localgov_accordion
+    - paragraphs.paragraphs_type.localgov_block_view
+    - paragraphs.paragraphs_type.localgov_box_link
+    - paragraphs.paragraphs_type.localgov_box_links_listing
+    - paragraphs.paragraphs_type.localgov_call_out_box
+    - paragraphs.paragraphs_type.localgov_documents
+    - paragraphs.paragraphs_type.localgov_featured_subsite
+    - paragraphs.paragraphs_type.localgov_featured_teasers
+    - paragraphs.paragraphs_type.localgov_ia_block
+    - paragraphs.paragraphs_type.localgov_image
+    - paragraphs.paragraphs_type.localgov_key_contacts
+    - paragraphs.paragraphs_type.localgov_key_facts
+    - paragraphs.paragraphs_type.localgov_labelled_icon
+    - paragraphs.paragraphs_type.localgov_link
+    - paragraphs.paragraphs_type.localgov_link_and_summary
+    - paragraphs.paragraphs_type.localgov_media_with_text
+    - paragraphs.paragraphs_type.localgov_newsroom_teaser
+    - paragraphs.paragraphs_type.localgov_page_section
+    - paragraphs.paragraphs_type.localgov_quote
+    - paragraphs.paragraphs_type.localgov_subscribe_panel
+    - paragraphs.paragraphs_type.localgov_table
+    - paragraphs.paragraphs_type.localgov_tabs
+    - paragraphs.paragraphs_type.localgov_text
+    - paragraphs.paragraphs_type.localgov_video
+    - paragraphs.paragraphs_type.page_section
+  module:
+    - entity_reference_revisions
+id: node.localgov_services_page.localgov_subsites_content
+field_name: localgov_subsites_content
+entity_type: node
+bundle: localgov_services_page
+label: 'Page content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      localgov_accordion: localgov_accordion
+      localgov_block_view: localgov_block_view
+      localgov_box_link: localgov_box_link
+      localgov_box_links_listing: localgov_box_links_listing
+      localgov_call_out_box: localgov_call_out_box
+      localgov_key_facts: localgov_key_facts
+      localgov_documents: localgov_documents
+      localgov_featured_teasers: localgov_featured_teasers
+      localgov_image: localgov_image
+      localgov_link: localgov_link
+      localgov_link_and_summary: localgov_link_and_summary
+      localgov_media_with_text: localgov_media_with_text
+      localgov_quote: localgov_quote
+      localgov_table: localgov_table
+      localgov_tabs: localgov_tabs
+      localgov_text: localgov_text
+      localgov_video: localgov_video
+      localgov_ia_block: localgov_ia_block
+      localgov_featured_subsite: localgov_featured_subsite
+      localgov_labelled_icon: localgov_labelled_icon
+      localgov_newsroom_teaser: localgov_newsroom_teaser
+      localgov_subscribe_panel: localgov_subscribe_panel
+      localgov_key_contacts: localgov_key_contacts
+      localgov_page_section: localgov_page_section
+      page_section: page_section
+    negate: 0
+    target_bundles_drag_drop:
+      banner_home_page:
+        weight: -51
+        enabled: false
+      from_library:
+        weight: -69
+        enabled: false
+      localgov_accordion:
+        weight: -80
+        enabled: true
+      localgov_accordion_pane:
+        weight: -71
+        enabled: false
+      localgov_banner_primary:
+        weight: -50
+        enabled: false
+      localgov_banner_secondary:
+        weight: -49
+        enabled: false
+      localgov_block_view:
+        weight: -79
+        enabled: true
+      localgov_box_link:
+        weight: -78
+        enabled: true
+      localgov_box_links_listing:
+        weight: -76
+        enabled: true
+      localgov_call_out_box:
+        weight: -75
+        enabled: true
+      localgov_contact:
+        weight: -68
+        enabled: false
+      localgov_documents:
+        weight: -73
+        enabled: true
+      localgov_fact_box:
+        weight: -48
+        enabled: false
+      localgov_featured_campaign:
+        weight: -47
+        enabled: false
+      localgov_featured_subsite:
+        weight: -57
+        enabled: true
+      localgov_featured_teaser:
+        weight: -77
+        enabled: false
+      localgov_featured_teasers:
+        weight: -72
+        enabled: true
+      localgov_ia_block:
+        weight: -58
+        enabled: true
+      localgov_image:
+        weight: -67
+        enabled: true
+      localgov_key_contact_item:
+        weight: -52
+        enabled: false
+      localgov_key_contacts:
+        weight: -53
+        enabled: true
+      localgov_key_fact:
+        weight: -81
+        enabled: false
+      localgov_key_facts:
+        weight: -74
+        enabled: true
+      localgov_labelled_icon:
+        weight: -56
+        enabled: true
+      localgov_link:
+        weight: -66
+        enabled: true
+      localgov_link_and_summary:
+        weight: -65
+        enabled: true
+      localgov_media_with_text:
+        weight: -64
+        enabled: true
+      localgov_newsroom_teaser:
+        weight: -55
+        enabled: true
+      localgov_numbered_text:
+        weight: -46
+        enabled: false
+      localgov_page_section:
+        weight: -45
+        enabled: true
+      localgov_publications_banner:
+        weight: -44
+        enabled: false
+      localgov_quote:
+        weight: -63
+        enabled: true
+      localgov_subscribe_panel:
+        weight: -54
+        enabled: true
+      localgov_tab_panel:
+        weight: -70
+        enabled: false
+      localgov_table:
+        weight: -62
+        enabled: true
+      localgov_tabs:
+        weight: -61
+        enabled: true
+      localgov_text:
+        weight: -60
+        enabled: true
+      localgov_video:
+        weight: -59
+        enabled: true
+      page_section:
+        weight: -42
+        enabled: true
+      topic_list_builder:
+        weight: -43
+        enabled: false
+field_type: entity_reference_revisions
