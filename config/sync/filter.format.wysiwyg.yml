@@ -41,7 +41,7 @@ filters:
     id: filter_caption
     provider: filter
     status: false
-    weight: -41
+    weight: -39
     settings: {  }
   filter_html:
     id: filter_html
@@ -56,13 +56,13 @@ filters:
     id: filter_html_escape
     provider: filter
     status: false
-    weight: -42
+    weight: -40
     settings: {  }
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
     status: false
-    weight: -39
+    weight: -37
     settings: {  }
   filter_htmlcorrector:
     id: filter_htmlcorrector
@@ -74,13 +74,13 @@ filters:
     id: filter_image_lazy_load
     provider: filter
     status: false
-    weight: -38
+    weight: -36
     settings: {  }
   filter_url:
     id: filter_url
     provider: filter
     status: false
-    weight: -40
+    weight: -38
     settings:
       filter_url_length: 72
   linkit:
@@ -95,7 +95,7 @@ filters:
     id: localgov_publications_heading_ids
     provider: localgov_publications
     status: true
-    weight: 10
+    weight: -42
     settings:
       keep_existing_ids: true
   media_embed:
@@ -119,6 +119,6 @@ filters:
     id: token_filter
     provider: token_filter
     status: true
-    weight: 0
+    weight: -43
     settings:
       replace_empty: false

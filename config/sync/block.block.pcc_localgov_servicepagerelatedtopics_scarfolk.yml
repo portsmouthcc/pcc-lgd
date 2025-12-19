@@ -11,7 +11,7 @@ _core:
 id: pcc_localgov_servicepagerelatedtopics_scarfolk
 theme: pcc
 region: sidebar_second
-weight: -15
+weight: -13
 provider: null
 plugin: localgov_services_related_topics_block
 settings:

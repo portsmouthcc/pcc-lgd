@@ -17,7 +17,7 @@ _core:
 id: pcc_localgov_news_search
 theme: pcc
 region: sidebar_second
-weight: -19
+weight: -17
 provider: null
 plugin: 'views_exposed_filter_block:localgov_news_search-page_search_news'
 settings:
