@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2df525e479e5f269b9fa82e3be7bc89e",
+    "content-hash": "208d442627b6c8accca091a57494db2c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1932,6 +1932,83 @@
             "homepage": "https://www.drupal.org/project/book",
             "support": {
                 "source": "https://git.drupalcode.org/project/book"
+            }
+        },
+        {
+            "name": "drupal/charts",
+            "version": "5.1.10",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/charts.git",
+                "reference": "5.1.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/charts-5.1.10.zip",
+                "reference": "5.1.10",
+                "shasum": "ad3c3225f3c747618d6330bb9775e78418c0cdb6"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "5.1.10",
+                    "datestamp": "1765584158",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Cothran (andileco)",
+                    "homepage": "https://www.drupal.org/u/andileco",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Nia Kathoni (nikathone)",
+                    "homepage": "https://www.drupal.org/u/nikathone",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Nate Lampton (quicksketch)",
+                    "homepage": "https://www.drupal.org/u/quicksketch",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "brmassa",
+                    "homepage": "https://www.drupal.org/u/brmassa",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Rafal W (kenorb)",
+                    "homepage": "https://www.drupal.org/u/kenorb",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Pierre Vriens (pierrevriens)",
+                    "homepage": "https://www.drupal.org/u/pierrevriens",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Majali (rashad612)",
+                    "homepage": "https://www.drupal.org/u/rashad612",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "A charting API for Drupal that provides chart elements and integration with Views",
+            "homepage": "https://drupal.org/project/charts",
+            "support": {
+                "source": "https://git.drupalcode.org/project/charts",
+                "issues": "https://www.drupal.org/project/issues/charts?version=all_5.1.*",
+                "docs": "https://www.drupal.org/docs/contributed-modules/charts"
             }
         },
         {
