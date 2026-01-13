@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.localgov_subsites_content
     - node.type.localgov_subsites_overview
+    - paragraphs.paragraphs_type.chart
     - paragraphs.paragraphs_type.localgov_accordion
     - paragraphs.paragraphs_type.localgov_block_view
     - paragraphs.paragraphs_type.localgov_box_link
@@ -73,11 +74,15 @@ settings:
       localgov_key_contacts: localgov_key_contacts
       localgov_page_section: localgov_page_section
       page_section: page_section
+      chart: chart
     negate: 0
     target_bundles_drag_drop:
       banner_home_page:
         weight: -51
         enabled: false
+      chart:
+        weight: 43
+        enabled: true
       from_library:
         weight: -69
         enabled: false
