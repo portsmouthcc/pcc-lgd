@@ -1,0 +1,23 @@
+uuid: bd8e05fc-e1b4-4138-9f83-e1bc0ace0e06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.chart.field_chart
+    - paragraphs.paragraphs_type.chart
+  module:
+    - charts
+id: paragraph.chart.default
+targetEntityType: paragraph
+bundle: chart
+mode: default
+content:
+  field_chart:
+    type: chart_config_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

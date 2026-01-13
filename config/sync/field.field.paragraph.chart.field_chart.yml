@@ -1,0 +1,21 @@
+uuid: 12969777-353d-40eb-91f9-286a1deabc26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_chart
+    - paragraphs.paragraphs_type.chart
+  module:
+    - charts
+id: paragraph.chart.field_chart
+field_name: field_chart
+entity_type: paragraph
+bundle: chart
+label: Chart
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: chart_config
