@@ -1,0 +1,62 @@
+.block-localgov-directories-channel-search-block {
+  background-color: transparent !important;
+  padding: 0 20px 0 0 !important;
+}
+
+.node--type-localgov-directories-venue  {
+  margin-bottom: var(--spacing-mega);
+
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+
+  .field--name-label {
+    display: none;
+  }
+
+  .field--type-geofield {
+    margin-bottom: var(--spacing-large);
+  }
+
+  .field__label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .field--type-string, .field--type-email, .field--type-telephone {
+    margin-bottom: var(--spacing-small);
+  }
+
+  .field--type-text-long .field__label {
+    margin-bottom: var(--spacing-small);
+  }
+
+  .venue__details {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: var(--spacing-large);
+    height: 100%;
+
+    .venue__title {
+      h4 {
+        margin: 0 0 var(--spacing-small) 0;
+      }
+      i {
+        margin-right: 10px;
+      }
+    }
+
+    p {
+      margin: 0 0 var(--spacing-small) 0;
+    }
+
+    hr {
+      margin: var(--spacing-large) 0;
+    }
+  }
+
+  .lgd-page-title-block__subheader {
+    font-size: var(--font-size) !important;
+  }
+}

@@ -18,6 +18,8 @@ libraries-extend:
     - pcc/callout-box
   localgov_base/card:
     - pcc/card
+  localgov_base/directories:
+    - pcc/directories
   localgov_base/footer:
     - pcc/footer
   localgov_base/global:

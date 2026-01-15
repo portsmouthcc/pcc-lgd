@@ -53,6 +53,11 @@ card:
     theme:
       css/components/card.css: {}
 
+directories:
+  css:
+    layout:
+      css/components/directories.css: {}
+
 featured-teasers:
   css:
     theme:
