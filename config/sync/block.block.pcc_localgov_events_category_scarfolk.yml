@@ -14,7 +14,7 @@ _core:
 id: pcc_localgov_events_category_scarfolk
 theme: pcc
 region: sidebar_first
-weight: -17
+weight: -18
 provider: null
 plugin: 'facet_block:localgov_events_category'
 settings:
