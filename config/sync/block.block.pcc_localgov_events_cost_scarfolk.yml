@@ -14,7 +14,7 @@ _core:
 id: pcc_localgov_events_cost_scarfolk
 theme: pcc
 region: sidebar_first
-weight: -18
+weight: -19
 provider: null
 plugin: 'facet_block:localgov_events_price'
 settings:

@@ -13,8 +13,8 @@ _core:
   default_config_hash: Sx5NuKd0QxDJWwvh1yfEfFAYflb-cKD97zoAdFf9ffM
 id: pcc_localgov_directories_facets_scarfolk
 theme: pcc
-region: sidebar_second
-weight: -21
+region: sidebar_first
+weight: -15
 provider: null
 plugin: 'facet_block:localgov_directories_facets'
 settings:
@@ -23,7 +23,7 @@ settings:
   label_display: '0'
   provider: facets
   context_mapping: {  }
-  block_id: localgov_directories_facets
+  block_id: pcc_localgov_directories_facets_scarfolk
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'

@@ -12,7 +12,7 @@ _core:
 id: pcc_localgov_directories_channel_search_block_scarfolk
 theme: pcc
 region: sidebar_first
-weight: -15
+weight: -16
 provider: null
 plugin: localgov_directories_channel_search_block
 settings:
