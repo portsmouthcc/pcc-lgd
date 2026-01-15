@@ -80,18 +80,46 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
+{{ attach_library('pcc/directories') }}
+
 
 <div class="lgd-container padding-horizontal">
 	<article{{attributes.addClass(classes)}}>
 		<div class="lgd-row">
-			<div class="lgd-row__two-thirds">
-				{{ content.group_venue }}
-			</div>
-			<div class="lgd-row__one-third">
+			<div class="lgd-row__full">
+				{{ content.group_venue.localgov_location }}
 				{{ content.body }}
-				{{ content.group_enquiries }}
-				{{ content.localgov_directory_files }}
 			</div>
+			{% if content.group_venue.localgov_directory_opening_times or content.group_venue.localgov_directory_notes or content.localgov_directory_files %}
+				<div class="lgd-row__one-half">
+					<div class="venue__details">
+						<div class="venue__title">
+							<h3>
+								<i class="fa-solid fa-location-dot"></i>
+								Venue Details</h3>
+							<hr>
+
+						</div>
+						{{ content.group_venue.localgov_directory_opening_times }}
+						{{ content.group_venue.localgov_directory_notes }}
+						{{ content.localgov_directory_files }}
+
+					</div>
+				</div>
+			{% endif %}
+			{% if content.group_enquiries %}
+				<div class="lgd-row__one-half">
+					<div class="venue__details">
+						<div class="venue__title">
+							<h3>
+								<i class="fa-solid fa-user"></i>
+								Contact details</h3>
+							<hr>
+						</div>
+						{{ content.group_enquiries }}
+					</div>
+				</div>
+			{% endif %}
 		</div>
 	</article>
 </div>
