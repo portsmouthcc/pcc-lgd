@@ -28,15 +28,17 @@
     margin-bottom: var(--spacing-small);
   }
 
-  .field--type-text-long .field__label {
+  /* .field--type-text-long .field__label {
     margin-bottom: var(--spacing-small);
-  }
+  } */
 
   .venue__details {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: var(--spacing-large);
+    /* border: 1px solid #ccc; */
+    /* padding: var(--spacing-large); */
     height: 100%;
+    /* background: #DFF2FF; */
+    /* border-left-color: #043876; */
+    /* border-left-width: 8px; */
 
     .venue__title {
       h4 {
@@ -47,12 +49,17 @@
       }
     }
 
+    .field--name-postal-address .field__label {
+      margin-bottom: var(--spacing-smallest);
+    }
+
     p {
       margin: 0 0 var(--spacing-small) 0;
     }
 
     hr {
       margin: var(--spacing-large) 0;
+      border-color: var(--color-accent);
     }
   }
 
