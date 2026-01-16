@@ -91,7 +91,7 @@
 
 				{{ content.body }}
 			</div>
-			{% if content.group_venue.localgov_directory_opening_times |render|trim or content.group_venue.localgov_directory_notes |render|trim or content.localgov_directory_files |render|trim or node.localgov_location.entity.postal_address |render|trim %}
+			{% if content.group_venue.localgov_directory_opening_times |render|trim or content.group_venue.localgov_directory_notes |render|trim or content.localgov_directory_files |render|trim or node.localgov_location.entity.postal_address %}
 				<div class="lgd-row__one-half">
 					<div class="venue__details">
 						<div class="venue__title">
