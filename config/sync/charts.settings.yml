@@ -77,7 +77,7 @@ charts_default_settings:
 advanced:
   debug: false
   requirements:
-    cdn: false
+    cdn: true
 dependencies:
   module:
     - charts_chartjs
