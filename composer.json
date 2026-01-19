@@ -94,6 +94,11 @@
                 "[web-root]/sites/development.services.yml": "assets/composer/development.services.yml"
             }
         },
+        "patches": {
+            "drupal/book": {
+                "Cannot save unpublished version non book admins, failed testing. View results": "https://www.drupal.org/files/issues/2918537-cannot-save-unpublished-version-non-book-admins-07.patch"
+            }
+        },
         "patches-ignore": {
             "localgovdrupal/localgov": {
                 "drupal/core": {
