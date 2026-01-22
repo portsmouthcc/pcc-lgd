@@ -10,10 +10,12 @@
 
 .banner--home-page .field--name-localgov-title {
   color: var(--color-white);
+  margin-bottom: 0;
 }
 
 .banner--home-page .field--name-localgov-subsites-banner-text {
   font-size: var(--font-size-h2);
+  margin-bottom: var(--spacing-mega);
 }
 
 /* Banner search form */

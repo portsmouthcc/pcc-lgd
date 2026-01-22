@@ -92,36 +92,63 @@
 				{{ content.body }}
 			</div>
 			{% if content.group_venue.localgov_directory_opening_times |render|trim or content.group_venue.localgov_directory_notes |render|trim or content.localgov_directory_files |render|trim or node.localgov_location.entity.postal_address %}
-				<div class="lgd-row__one-half">
+				<div class="lgd-row__two-thirds">
 					<div class="venue__details">
 						<div class="venue__title">
-							<h4>
-								<i class="fa-solid fa-location-dot"></i>
-								Venue Details</h4>
-							<hr>
-
-						</div>
-						{{ node.localgov_location.entity.postal_address | view }}
-						{{ content.group_venue.localgov_directory_opening_times }}
-						{{ content.group_venue.localgov_directory_notes }}
-						{{ content.localgov_directory_files }}
-
-					</div>
-				</div>
-			{% endif %}
-			{% if content.group_enquiries |render|trim %}
-				<div class="lgd-row__one-half">
-					<div class="venue__details">
-						<div class="venue__title">
-							<h4>
-								<i class="fa-solid fa-user"></i>
-								Contact details</h4>
+							<h2>
+								Venue details</h2>
 							<hr>
 						</div>
-						{{ content.group_enquiries }}
+						<div class="lgd-row">
+							<div class="lgd-row__one-half">
+								{% if node.localgov_location.entity.postal_address | view %}
+									<div class="postal-address">
+										{{ node.localgov_location.entity.postal_address | view }}
+									</div>
+								{% endif %}
+								{% if content.group_venue.localgov_directory_opening_times |render|trim %}
+									<div class="opening-times">
+										{{ content.group_venue.localgov_directory_opening_times }}
+									</div>
+								{% endif %}
+								{% if content.group_venue.localgov_directory_notes |render|trim %}
+									<div class="localgov_directory_notes">
+										{{ content.group_venue.localgov_directory_notes }}
+									</div>
+								{% endif %}
+								{% if content.localgov_directory_files |render|trim %}
+									<div class="localgov_directory_files">
+										{{ content.localgov_directory_files }}
+									</div>
+								{% endif %}
+							</div>
+							<div class="lgd-row__one-half">
+								<h3>Contact details</h3>
+								{% if content.group_enquiries |render|trim %}
+									<div class="contact-item">
+										<i class="fa-solid fa-user" aria-hidden="true"></i>
+										{{ content.group_enquiries.localgov_directory_name }}. [{{ content.group_enquiries.localgov_directory_job_title }}]
+									</div>
+
+									<div class="contact-item">
+										<i class="fa-solid fa-phone-alt" aria-hidden="true"></i>
+										{{ content.group_enquiries.localgov_directory_phone }}
+									</div>
+									<div class="contact-item">
+										<i class="fa-solid fa-envelope" aria-hidden="true"></i>
+										{{ content.group_enquiries.localgov_directory_email }}
+									</div>
+									<div class="contact-item">
+										<i class="fa-solid fa-globe" aria-hidden="true"></i>
+										{{ content.group_enquiries.localgov_directory_website }}
+									</div>
+								</div>
+							</div>
+						{% endif %}
 					</div>
 				</div>
-			{% endif %}
+			</div>
 		</div>
-	</article>
-</div>
+	{% endif %}
+
+</div></article></div>

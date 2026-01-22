@@ -33,6 +33,10 @@
   } */
 
   .venue__details {
+     background-color: var(--color-accent-2);
+  border-top: 8px var(--border-style) var(--color-accent);
+  border-inline-start: none;
+  padding: var(--spacing-large);
     /* border: 1px solid #ccc; */
     /* padding: var(--spacing-large); */
     height: 100%;
@@ -49,6 +53,14 @@
       }
     }
 
+    .field__label {
+      color: var(--heading-3-color);
+    font-family: var(--font-heading-3);
+    font-size: var(--font-size-h3);
+    font-weight: var(--heading-3-font-weight);
+    line-height: var(--heading-3-line-height);
+    }
+
     .field--name-postal-address .field__label {
       margin-bottom: var(--spacing-smallest);
     }
@@ -59,7 +71,22 @@
 
     hr {
       margin: var(--spacing-large) 0;
-      border-color: var(--color-accent);
+    }
+
+    h3 {
+      margin-bottom: var(--spacing-smaller);
+    }
+
+    .contact-item {
+      display: flex;
+
+      .fa-solid {
+        color: var(--color-blue);
+        font-size: 20px;
+        margin-right: 10px;
+        position: relative;
+        top: 2px;
+      }
     }
   }
 

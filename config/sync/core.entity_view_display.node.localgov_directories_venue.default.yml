@@ -80,7 +80,7 @@ content:
     region: content
   localgov_directory_email:
     type: email_mailto
-    label: inline
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     weight: 8
@@ -95,7 +95,7 @@ content:
     region: content
   localgov_directory_job_title:
     type: string
-    label: inline
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -103,7 +103,7 @@ content:
     region: content
   localgov_directory_name:
     type: string
-    label: inline
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -125,7 +125,7 @@ content:
     region: content
   localgov_directory_phone:
     type: telephone_link
-    label: inline
+    label: visually_hidden
     settings:
       title: ''
     third_party_settings: {  }
@@ -133,7 +133,7 @@ content:
     region: content
   localgov_directory_website:
     type: link
-    label: inline
+    label: visually_hidden
     settings:
       trim_length: 80
       url_only: false
