@@ -6,7 +6,12 @@ dependencies:
     - field.storage.node.body
     - node.type.localgov_services_page
   module:
+    - table_of_contents
     - text
+third_party_settings:
+  table_of_contents:
+    toc_block: true
+    toc_selector: h2
 _core:
   default_config_hash: lSYMn_FBR-lQLRRm7wSM6a0FnuuDYf_QxgTkccyL5GE
 id: node.localgov_services_page.body
@@ -21,6 +26,6 @@ default_value: {  }
 default_value_callback: ''
 settings:
   display_summary: true
-  required_summary: true
+  required_summary: false
   allowed_formats: {  }
 field_type: text_with_summary
