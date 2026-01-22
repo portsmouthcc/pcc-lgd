@@ -94,8 +94,8 @@ filters:
   localgov_publications_heading_ids:
     id: localgov_publications_heading_ids
     provider: localgov_publications
-    status: true
-    weight: -42
+    status: false
+    weight: -41
     settings:
       keep_existing_ids: true
   media_embed:

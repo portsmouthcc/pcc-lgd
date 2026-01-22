@@ -1,0 +1,25 @@
+uuid: 00e8355f-3180-4291-b833-6096a3d71a2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.localgov_services_page.body
+  module:
+    - table_of_contents
+  theme:
+    - pcc
+id: pcc_tocforcontentservicepagebody
+theme: pcc
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'text_long_field_toc_block:node:localgov_services_page:body'
+settings:
+  id: 'text_long_field_toc_block:node:localgov_services_page:body'
+  label: 'TOC for: Content > Service page > Body'
+  label_display: '0'
+  provider: table_of_contents
+  context_mapping:
+    entity: '@node.node_route_context:node'
+    language: '@language.current_language_context:language_interface'
+visibility: {  }
