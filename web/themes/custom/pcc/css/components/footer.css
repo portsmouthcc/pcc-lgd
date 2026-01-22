@@ -3,6 +3,7 @@
   margin-block-start: 0;
   border-top: var(--spacing-larger) var(--color-accent) solid;
   line-height: var(--spacing-larger);
+  margin-top: var(--spacing-mega);
 }
 
 /* Footer legal menu */

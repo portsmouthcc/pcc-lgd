@@ -13,7 +13,7 @@ id: node.localgov_directories_venue.localgov_directory_notes
 field_name: localgov_directory_notes
 entity_type: node
 bundle: localgov_directories_venue
-label: 'Venue notes'
+label: Notes
 description: ''
 required: false
 translatable: false
