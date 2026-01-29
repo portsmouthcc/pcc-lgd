@@ -12,6 +12,7 @@ dependencies:
     - linkit
     - localgov_publications
     - media
+    - toc_filter
     - token_filter
 _core:
   default_config_hash: THZepEcvv0NM9DINIxMuXabZWfdf_extR-Vb6w1grB0
@@ -115,6 +116,16 @@ filters:
         document: document
         image: image
         remote_video: remote_video
+  toc_filter:
+    id: toc_filter
+    provider: toc_filter
+    status: true
+    weight: 0
+    settings:
+      type: simple
+      auto: ''
+      block: false
+      exclude_above: true
   token_filter:
     id: token_filter
     provider: token_filter

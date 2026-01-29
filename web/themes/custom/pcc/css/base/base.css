@@ -53,3 +53,9 @@ h6,
     }
   }
 }
+
+/* Table of contents filter module */
+.toc-filter ol.none {
+  list-style-type: none;
+  padding-left: 0;
+}
