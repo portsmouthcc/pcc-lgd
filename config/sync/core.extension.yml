@@ -154,11 +154,12 @@ module:
   simple_sitemap: 0
   symfony_mailer: 0
   system: 0
-  table_of_contents: 0
   tablefield: 0
   taxonomy: 0
   telephone: 0
   text: 0
+  toc_api: 0
+  toc_filter: 0
   token: 0
   token_filter: 0
   toolbar: 0
