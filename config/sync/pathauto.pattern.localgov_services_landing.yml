@@ -9,16 +9,16 @@ _core:
 id: localgov_services_landing
 label: 'Services Landing Page'
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: 'services/[node:title]'
 selection_criteria:
-  42d90085-1126-4394-9349-88a26a0317f5:
+  210bc0ce-fcfb-438d-a889-c21b968f92a7:
     id: 'entity_bundle:node'
-    bundles:
-      localgov_services_landing: localgov_services_landing
     negate: false
+    uuid: 210bc0ce-fcfb-438d-a889-c21b968f92a7
     context_mapping:
       node: node
-    uuid: 42d90085-1126-4394-9349-88a26a0317f5
+    bundles:
+      localgov_services_landing: localgov_services_landing
 selection_logic: and
 weight: -5
 relationships: {  }
