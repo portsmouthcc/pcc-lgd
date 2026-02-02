@@ -53,3 +53,31 @@ h6,
     }
   }
 }
+
+/* Table of contents filter module */
+.toc-filter ol.none {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Guide prev-next component isn't loaded normally by the base theme. */
+.lgd-prev-next__list {
+  align-items: stretch;
+}
+
+.lgd-prev-next__list-item {
+  flex-grow: 1;
+  flex-basis: 250px;
+}
+
+.lgd-prev-next__list-item--next a {
+  height: 100%;
+  align-items: flex-start;
+  justify-content: end;
+  text-align: right;
+}
+
+.lgd-prev-next__title {
+  padding-inline-start: 0;
+  padding-inline-end: var(--spacing-large);
+}

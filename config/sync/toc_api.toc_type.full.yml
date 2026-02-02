@@ -1,0 +1,31 @@
+uuid: aa19e639-eff3-45ae-b8b5-9e1473866aa5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: MK3kufAWHxeEYpMqvGl2LFfSfssLacDqQMCgMqQc1VY
+id: full
+label: Full
+options:
+  template: responsive
+  title: 'Table of Contents'
+  block: false
+  header_count: 2
+  header_min: 2
+  header_max: 4
+  header_allowed_tags: '<em> <b> <del> <i> <mark> <s> <span> <strong> <sup> <sub> <em> <b> <del> <i> <mark> <s> <span> <strong> <sup> <sub>'
+  header_id: title
+  header_id_prefix: section
+  header_exclude_xpath: ''
+  wrapper: div
+  title_wrapper: h3
+  top_label: 'Back to top'
+  top_min: 2
+  top_max: 2
+  number_path: true
+  number_path_separator: .
+  number_path_truncate: true
+  default:
+    number_type: circle
+    number_prefix: ''
+    number_suffix: ''
