@@ -58,6 +58,11 @@ directories:
     layout:
       css/components/directories.css: {}
 
+events:
+  css:
+    layout:
+      css/components/events.css: {}
+
 featured-teasers:
   css:
     theme:
@@ -87,6 +92,11 @@ menu-main:
   css:
     theme:
       css/components/menu-main.css: {}
+
+news:
+  css:
+    theme:
+      css/components/news.css: {}
 
 newsroom:
   css:

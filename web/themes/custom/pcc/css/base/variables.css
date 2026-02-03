@@ -98,10 +98,7 @@ body {
   --color-post-footer-heading: var(--color-white);
   --color-post-footer-link: var(--color-white);
   --color-post-footer-text: var(--color-white);
-
-  /* Page Title */
-  --page-title-border: var(--border-accent);
-
+  
   /* Sidebar Items */
   /* Choose one or use all three? */
   /* --sidebar-exposed-form-bg-color: transparent; */

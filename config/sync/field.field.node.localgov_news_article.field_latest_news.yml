@@ -1,0 +1,30 @@
+uuid: 0075f2af-1402-4814-90b2-5cb425f4e355
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_latest_news
+    - node.type.localgov_news_article
+  module:
+    - viewsreference
+id: node.localgov_news_article.field_latest_news
+field_name: field_latest_news
+entity_type: node
+bundle: localgov_news_article
+label: 'Latest News'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+  plugin_types:
+    entity_reference: entity_reference
+  preselect_views:
+    latest_news: latest_news
+  enabled_settings: {  }
+field_type: viewsreference

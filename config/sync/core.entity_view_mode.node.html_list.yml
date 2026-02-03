@@ -1,0 +1,11 @@
+uuid: 44e44b55-4821-499d-afdb-30f5afbec867
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.html_list
+label: 'HTML List'
+description: ''
+targetEntityType: node
+cache: true

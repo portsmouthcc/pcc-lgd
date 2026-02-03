@@ -122,14 +122,13 @@
 									</div>
 								{% endif %}
 							</div>
-							<div class="lgd-row__one-half">
-								<h3>Contact details</h3>
-								{% if content.group_enquiries |render|trim %}
+							{% if content.group_enquiries |render|trim %}
+								<div class="lgd-row__one-half">
+									<h3>Contact details</h3>
 									<div class="contact-item">
 										<i class="fa-solid fa-user" aria-hidden="true"></i>
 										{{ content.group_enquiries.localgov_directory_name }}. [{{ content.group_enquiries.localgov_directory_job_title }}]
 									</div>
-
 									<div class="contact-item">
 										<i class="fa-solid fa-phone-alt" aria-hidden="true"></i>
 										{{ content.group_enquiries.localgov_directory_phone }}
