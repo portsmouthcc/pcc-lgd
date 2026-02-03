@@ -83,61 +83,34 @@
 {% endif %}
 
 <article{{attributes.addClass(classes)}}>
-	<div class="lgd-container padding-horizontal">
-		<div class="lgd-row">
-			<div class="lgd-row__full">
-				<h1{{title_attributes.addClass('news-article__title')}}>{{ label }}</h1>
-			</div>
-			{% if content.localgov_news_related %}
-				<div class="lgd-row__two-thirds">
-				{% else %}
-					<div class="lgd-row__full">
-					{% endif %}
-					<div class="news-article__image">
-						{% if content.field_media_image %}
-							{{ content.field_media_image }}
-						{% endif %}
-					</div>
-					<div class="news-article__metadata">
+	<div class="news-article__metadata">
+		<time datetime="{{ node.localgov_news_date.value }}" class="news-article__metadata-item news-article__metadata-item--date">
+			{{ content.localgov_news_date.0['#markup'] }}
+		</time>
+		{% if node.localgov_news_categories.value %}
+			<ul class="news-article__metadata-item news-article__metadata-item--categories" aria-label="{{ 'Article categories'|t }}">
+				{% for key,value in node.localgov_news_categories.value %}
+					<li class="news-article__category">
+						{{ content.localgov_news_categories[key] }}
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</div>
 
-						<time datetime="{{ node.localgov_news_date.value }}" class="news-article__metadata-item news-article__metadata-item--date">
-							{{ content.localgov_news_date.0['#markup'] }}
-						</time>
+	<h1{{title_attributes.addClass('news-article__title')}}>
+		{{ label }}
+	</h1>
 
-						{% if node.localgov_news_categories.value %}
-							<ul class="news-article__metadata-item news-article__metadata-item--categories" aria-label="{{ 'Article categories'|t }}">
-								<span>Categories:</span>
-								{% for key,value in node.localgov_news_categories.value %}
-									<li class="news-article__category">
-										{{ content.localgov_news_categories[key] }}
-									</li>
-								{% endfor %}
-							</ul>
-						{% endif %}
-					</div>
+	<div{{content_attributes.addClass('news-article__contentnode__content')}}>
 
-					<div{{content_attributes.addClass('news-article__contentnode__content')}}>
-						{{ content|without('localgov_news_date', 'localgov_news_categories', 'localgov_news_related', 'field_media_image') }}
-					</div>
-				</div>
-				<div class="lgd-row__one-third">
-					{% if content.localgov_news_related %}
-						<aside class="news-article__related-articles" aria-labelledby="related-articles-title">
-							{% if node.localgov_news_related.value %}
-								<h2 class="news-article__related-title">{{ 'Related news'|t }}</h2>
-								{{ content.localgov_news_related }}
-							{% endif %}
-						</aside>
-					{% endif %}
+		{{ content|without('localgov_news_date', 'localgov_news_categories', 'localgov_news_related') }}
 
-					{# Latest news view block #}
-					{# Couldnt add this to a sidebar region because the related news above is in it's own sidebar #}
-					{# added an article sidebar block to the latest news view in the admin to have it show here #}
-						{% if drupal_view('latest_news', 'block_2') %}
-							<aside class="news-article__latest-news" aria-labelledby="latest-news-title"> <h2 class="news-article__latest-news-title" id="latest-news-title">{{ 'Latest news'|t }}</h2>
-							{{ drupal_view('latest_news', 'block_2') }}
-						</aside>
-					{% endif %}
-				</div>
-			</div>
-		</article>
+		{% if node.localgov_news_related.value %}
+			<h2 class="news-article__related-title">{{ 'Related news'|t }}</h2>
+			{{ content.localgov_news_related }}
+		{% endif %}
+
+	</div>
+
+</article>

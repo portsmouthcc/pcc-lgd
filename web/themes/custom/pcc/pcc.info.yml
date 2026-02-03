@@ -20,6 +20,8 @@ libraries-extend:
     - pcc/card
   localgov_base/directories:
     - pcc/directories
+  localgov_base/events:
+    - pcc/events
   localgov_base/footer:
     - pcc/footer
   localgov_base/global:
@@ -49,6 +51,8 @@ libraries-extend:
   localgov_news/localgov-newsroom:
     - pcc/featured-teasers
     - pcc/newsroom
+  localgov_base/news:
+    - pcc/news
   views/views.responsive-grid:
     - pcc/views.responsive-grid
 

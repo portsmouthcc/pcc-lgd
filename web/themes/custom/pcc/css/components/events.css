@@ -1,0 +1,19 @@
+
+
+  .page-node-type-localgov-event {
+    .field--type-address {
+      background-color: var(--color-accent-2);
+      border-top: 8px var(--border-style) var(--color-accent);
+      border-inline-start: none;
+      padding: var(--spacing-large);
+      height: 100%;
+
+      .field__label {
+      color: var(--heading-3-color);
+      font-family: var(--font-heading-3);
+      font-size: var(--font-size-h3);
+      font-weight: var(--heading-3-font-weight);
+      line-height: var(--heading-3-line-height);
+      }
+    }
+  }

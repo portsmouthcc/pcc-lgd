@@ -1,4 +1,8 @@
 /* Make sure there's a gap when content is very short. */
 .sidebar {
   margin-bottom: var(--spacing-larger);
+
+  .lgd-region__inner > * {
+    background: none;
+  }
 }

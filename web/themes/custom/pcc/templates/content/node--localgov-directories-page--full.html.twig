@@ -81,10 +81,49 @@
   ]
 %}
 
+{{ attach_library('pcc/directories') }}
+
+
 <div class="lgd-container padding-horizontal">
 	<article{{attributes.addClass(classes)}}>
 		{{ content.body }}
-		{{ content.group_enquiries }}
-		{{ content.localgov_directory_files }}
-	</article>
-</div>
+
+		<div class="lgd-row__two-thirds">
+			<div class="venue__details">
+				<div class="venue__title">
+					<h2>
+						Contact details</h2>
+					<hr>
+				</div>
+
+				{% if content.group_enquiries |render|trim %}
+					<div class="lgd-row__one-half">
+						<div class="contact-item">
+							<i class="fa-solid fa-user" aria-hidden="true"></i>
+							{{ content.group_enquiries.localgov_directory_name }}
+
+						</div>
+						<div class="contact-item">
+							<i class="fa-solid fa-user" aria-hidden="true"></i>
+
+							{{ content.group_enquiries.localgov_directory_job_title }}
+						</div>
+						<div class="contact-item">
+							<i class="fa-solid fa-phone-alt" aria-hidden="true"></i>
+							{{ content.group_enquiries.localgov_directory_phone }}
+						</div>
+						<div class="contact-item">
+							<i class="fa-solid fa-envelope" aria-hidden="true"></i>
+							{{ content.group_enquiries.localgov_directory_email }}
+						</div>
+						<div class="contact-item">
+							<i class="fa-solid fa-globe" aria-hidden="true"></i>
+							{{ content.group_enquiries.localgov_directory_website }}
+						</div>
+					</div>
+				</div>
+			{% endif %}
+
+		</div>
+	</div>
+</div></article></div>

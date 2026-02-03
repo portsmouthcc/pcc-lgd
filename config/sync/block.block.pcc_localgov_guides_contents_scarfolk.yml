@@ -17,6 +17,6 @@ plugin: localgov_guides_contents
 settings:
   id: localgov_guides_contents
   label: 'Guide contents'
-  label_display: '0'
+  label_display: visible
   provider: localgov_guides
 visibility: {  }
