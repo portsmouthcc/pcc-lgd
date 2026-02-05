@@ -141,6 +141,7 @@ module:
   responsive_image: 0
   responsive_preview: 0
   role_delegation: 0
+  rules: 0
   scheduled_transitions: 0
   schema_article: 0
   schema_metatag: 0
@@ -165,6 +166,7 @@ module:
   toolbar: 0
   trash: 0
   twig_tweak: 0
+  typed_data: 0
   update: 0
   user: 0
   views_ui: 0

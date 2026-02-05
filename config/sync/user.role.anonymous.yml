@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.restricted_html
     - localgov_alert_banner.localgov_alert_banner_type.localgov_alert_banner
     - search_api_autocomplete.search.localgov_news_search
   module:
+    - filter
     - geo_entity
     - localgov_alert_banner
     - localgov_directories
@@ -21,6 +23,7 @@ is_admin: false
 permissions:
   - 'access content'
   - 'use search_api_autocomplete for localgov_news_search'
+  - 'use text format restricted_html'
   - 'view all localgov alert banner entities'
   - 'view directory facets'
   - 'view geo'

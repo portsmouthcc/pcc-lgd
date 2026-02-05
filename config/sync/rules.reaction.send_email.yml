@@ -1,0 +1,101 @@
+uuid: 0261e3e3-6399-44e4-afd9-52016969ea21
+langcode: en
+status: true
+dependencies: {  }
+id: send_email
+label: 'Send Email'
+events:
+  -
+    event_name: 'rules_entity_update:content_moderation_state--content_moderation_state'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: c970acd6-2b29-4ebe-b2c4-8573fedd7292
+  weight: 0
+  conditions:
+    id: rules_and
+    uuid: 6066cad1-4ff8-46f5-995b-ddd253987710
+    weight: 0
+    conditions:
+      -
+        id: rules_condition
+        uuid: 9b3e3fa4-d5fb-4fec-8097-3524908e1fee
+        weight: 0
+        condition_id: rules_data_comparison
+        negate: false
+        context_values:
+          operation: '=='
+          value: draft
+        context_mapping:
+          data: content_moderation_state_unchanged.moderation_state.value
+        context_processors:
+          operation:
+            rules_tokens: {  }
+          value:
+            rules_tokens: {  }
+        provides_mapping: {  }
+      -
+        id: rules_condition
+        uuid: bf60fe76-5030-48a6-860a-4854d6c42017
+        weight: 0
+        condition_id: rules_data_comparison
+        negate: false
+        context_values:
+          operation: '=='
+          value: review
+        context_mapping:
+          data: content_moderation_state.moderation_state.value
+        context_processors:
+          operation:
+            rules_tokens: {  }
+          value:
+            rules_tokens: {  }
+        provides_mapping: {  }
+  actions:
+    id: rules_action_set
+    uuid: 52030ec2-6cf4-489b-9b22-f86281336a59
+    weight: 0
+    actions:
+      -
+        id: rules_action
+        uuid: 77c6e8c8-0596-44b8-b3da-d3991d3b1d8b
+        weight: 0
+        action_id: rules_system_message
+        context_values:
+          message: 'rule fired'
+          type: status
+          repeat: false
+        context_mapping: {  }
+        context_processors:
+          message:
+            rules_tokens: {  }
+          type:
+            rules_tokens: {  }
+          repeat:
+            rules_tokens: {  }
+        provides_mapping: {  }
+      -
+        id: rules_action
+        uuid: 0a79f46a-ecbc-4f17-acc1-3221eab77637
+        weight: 0
+        action_id: rules_send_email
+        context_values:
+          to:
+            - daniel.braithwaite@gmail.com
+          subject: 'A page has been submitted for review'
+          message: 'rule fired'
+          reply: noreply@test.com
+        context_mapping:
+          language: '@language.current_language_context:language_interface'
+        context_processors:
+          to:
+            rules_tokens: {  }
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+        provides_mapping: {  }
