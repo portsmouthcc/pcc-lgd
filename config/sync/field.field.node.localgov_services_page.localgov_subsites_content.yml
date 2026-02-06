@@ -30,7 +30,6 @@ dependencies:
     - paragraphs.paragraphs_type.localgov_tabs
     - paragraphs.paragraphs_type.localgov_text
     - paragraphs.paragraphs_type.localgov_video
-    - paragraphs.paragraphs_type.page_section
   module:
     - entity_reference_revisions
 id: node.localgov_services_page.localgov_subsites_content
@@ -72,7 +71,6 @@ settings:
       localgov_subscribe_panel: localgov_subscribe_panel
       localgov_key_contacts: localgov_key_contacts
       localgov_page_section: localgov_page_section
-      page_section: page_section
     negate: 0
     target_bundles_drag_drop:
       banner_home_page:
