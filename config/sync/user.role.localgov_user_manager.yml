@@ -18,7 +18,10 @@ is_admin: null
 permissions:
   - 'access toolbar'
   - 'administer users'
+  - 'assign emergency_publisher role'
   - 'assign localgov_author role'
   - 'assign localgov_contributor role'
   - 'assign localgov_editor role'
+  - 'assign localgov_news_editor role'
+  - 'assign localgov_user_manager role'
   - 'view the administration theme'
