@@ -190,9 +190,6 @@ settings:
       localgov_video:
         weight: -60
         enabled: true
-      page_section:
-        weight: -43
-        enabled: true
       topic_list_builder:
         weight: -44
         enabled: false
