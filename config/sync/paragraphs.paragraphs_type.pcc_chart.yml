@@ -1,8 +1,8 @@
-uuid: 8517932f-4c05-4f68-bbda-a3646f4c4784
+uuid: cadf4c91-07e0-4223-8424-71cac54e81f1
 langcode: en
 status: true
 dependencies: {  }
-id: chart
+id: pcc_chart
 label: Chart
 icon_uuid: null
 icon_default: null

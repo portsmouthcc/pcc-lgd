@@ -1,20 +1,20 @@
-uuid: bd8e05fc-e1b4-4138-9f83-e1bc0ace0e06
+uuid: cafd0ac5-abd0-4111-a686-cf7f98826dd1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.chart.field_chart
-    - paragraphs.paragraphs_type.chart
+    - field.field.paragraph.pcc_chart.field_chart
+    - paragraphs.paragraphs_type.pcc_chart
   module:
     - charts
-id: paragraph.chart.default
+id: paragraph.pcc_chart.default
 targetEntityType: paragraph
-bundle: chart
+bundle: pcc_chart
 mode: default
 content:
   field_chart:
     type: chart_config_default
-    label: visually_hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 0

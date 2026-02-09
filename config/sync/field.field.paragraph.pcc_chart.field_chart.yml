@@ -1,19 +1,19 @@
-uuid: 12969777-353d-40eb-91f9-286a1deabc26
+uuid: 10697c0b-2f70-4c6f-8185-af78ca1ea8c9
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_chart
-    - paragraphs.paragraphs_type.chart
+    - paragraphs.paragraphs_type.pcc_chart
   module:
     - charts
-id: paragraph.chart.field_chart
+id: paragraph.pcc_chart.field_chart
 field_name: field_chart
 entity_type: paragraph
-bundle: chart
+bundle: pcc_chart
 label: Chart
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
