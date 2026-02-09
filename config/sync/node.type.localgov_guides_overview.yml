@@ -1,7 +1,14 @@
 uuid: eaf87f67-1c7f-446a-b37c-1fb0dc8774e0
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: Myh8p9HWQJ_N4D5pQpoUWpBgv1G0zfIjrKppbbbgIfI
 name: 'Guide overview'

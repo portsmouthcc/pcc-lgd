@@ -1,7 +1,14 @@
 uuid: af58d17a-45f9-4543-90a3-26ecee711100
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: FmwfwwF7lh0T_I5dZrBNHHx3k-DfEdGcsx3f8FGILvE
 name: 'Service sub-landing page'

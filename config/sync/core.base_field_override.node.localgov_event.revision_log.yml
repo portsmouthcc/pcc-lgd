@@ -1,13 +1,13 @@
-uuid: 93c68b30-cdd9-498d-929f-9609c7856971
+uuid: 1cf53acd-67c2-462a-9da3-9980347063d0
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.traffic_regulation_order
-id: node.traffic_regulation_order.revision_log
+    - node.type.localgov_event
+id: node.localgov_event.revision_log
 field_name: revision_log
 entity_type: node
-bundle: traffic_regulation_order
+bundle: localgov_event
 label: 'Revision log message'
 description: 'Briefly describe the changes you have made.'
 required: true

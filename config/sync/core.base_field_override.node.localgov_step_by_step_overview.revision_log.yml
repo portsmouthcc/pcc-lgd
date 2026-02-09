@@ -1,13 +1,13 @@
-uuid: 93c68b30-cdd9-498d-929f-9609c7856971
+uuid: 00e54de1-4d33-4e44-8a7d-931bd55a1aa3
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.traffic_regulation_order
-id: node.traffic_regulation_order.revision_log
+    - node.type.localgov_step_by_step_overview
+id: node.localgov_step_by_step_overview.revision_log
 field_name: revision_log
 entity_type: node
-bundle: traffic_regulation_order
+bundle: localgov_step_by_step_overview
 label: 'Revision log message'
 description: 'Briefly describe the changes you have made.'
 required: true

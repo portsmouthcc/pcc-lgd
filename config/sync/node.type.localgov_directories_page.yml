@@ -1,7 +1,14 @@
 uuid: f51b0cf6-d68a-4c63-8233-8be2767f8927
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: Ai5i4cKvppU43ERbC7FAphWSwdOqphVHkqm47josjCo
 name: 'Directory page'
