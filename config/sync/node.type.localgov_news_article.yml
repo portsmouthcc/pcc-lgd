@@ -2,9 +2,16 @@ uuid: d4a78432-bb4b-48b0-a229-0c5762913dc2
 langcode: en
 status: true
 dependencies:
+  module:
+    - menu_ui
   enforced:
     module:
       - localgov_news
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: kWcpcLIZMLaH49m3WCxb8pRwHg-vR7oThJDl-i7Gb8A
 name: 'News article'

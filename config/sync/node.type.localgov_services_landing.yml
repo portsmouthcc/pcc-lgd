@@ -1,7 +1,14 @@
 uuid: 6d4242d5-613b-4bed-ae7e-c3ccd3c26305
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: pz0FetUXygbM1FQplBcj-KBsRr-YjJXpF1ZV1PLCSUg
 name: 'Service landing page'

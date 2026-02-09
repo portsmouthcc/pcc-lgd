@@ -1,7 +1,14 @@
 uuid: 976df55e-cf82-4ce7-8f05-8dd9dda3c65e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: hFQR3J7HGHPIoNacxC5kuAW4V6-y8myEz9FT13f8pwQ
 name: Event

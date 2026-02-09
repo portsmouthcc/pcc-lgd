@@ -21,6 +21,7 @@ dependencies:
     - node.type.localgov_step_by_step_page
     - node.type.localgov_subsites_overview
     - node.type.localgov_subsites_page
+    - node.type.traffic_regulation_order
   module:
     - content_moderation
   enforced:
@@ -129,4 +130,5 @@ type_settings:
       - localgov_step_by_step_page
       - localgov_subsites_overview
       - localgov_subsites_page
+      - traffic_regulation_order
   default_moderation_state: published

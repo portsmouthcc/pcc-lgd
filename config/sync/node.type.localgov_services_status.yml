@@ -1,7 +1,14 @@
 uuid: f2209051-6fcc-4440-90ce-c5242468a6cd
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: NnAqKraCutcD733p9SJvyuhlcAQR0pCRM2sqtxuLd8E
 name: 'Service status'
