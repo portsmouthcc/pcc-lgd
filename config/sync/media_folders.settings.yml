@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: bPKzEyLEH7-nHxZKOEUgz9dBMHFORoPMV21aaWRfamI
+default_view: thumbs
+default_order: az
+disable_ckeditor: 0
+show_thumbnails: 1
+pager_limit: 500
+form_mode:
+  document: default
+  image: default
+  remote_video: default

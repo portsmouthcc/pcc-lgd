@@ -122,6 +122,7 @@ module:
   mailer_transport: 0
   masquerade: 0
   media: 0
+  media_folders: 0
   media_library: 0
   media_library_edit: 0
   menu_link_content: 0

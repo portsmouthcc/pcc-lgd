@@ -25,6 +25,7 @@
         "drupal/date_popup": "^2.0",
         "drupal/entity_clone": "^2.1@beta",
         "drupal/formdazzle": "^4.0",
+        "drupal/media_folders": "^1.0",
         "drupal/migrate_devel": "^3.0",
         "drupal/migrate_directory": "^2.0@dev",
         "drupal/migrate_plus": "^6.0",
