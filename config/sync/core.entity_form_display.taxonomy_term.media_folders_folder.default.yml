@@ -1,0 +1,39 @@
+uuid: 3e9195c6-d8b3-4064-8012-37eff3eb034e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.media_folders_folder
+  module:
+    - text
+_core:
+  default_config_hash: 7rpRApszTeNspKyIVIMUum56qrfgez6-XbwN_JkmOI8
+id: taxonomy_term.media_folders_folder.default
+targetEntityType: taxonomy_term
+bundle: media_folders_folder
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  path: true
+  status: true

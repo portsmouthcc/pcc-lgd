@@ -1,0 +1,24 @@
+uuid: 4c7084bd-6eb0-44da-b90c-1f6867aef96c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.media_folders_folder
+  module:
+    - text
+_core:
+  default_config_hash: FgYJROUUrnNbVmGTHxeeLkxYpDKLpkF6tIuUujz3kAs
+id: taxonomy_term.media_folders_folder.default
+targetEntityType: taxonomy_term
+bundle: media_folders_folder
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

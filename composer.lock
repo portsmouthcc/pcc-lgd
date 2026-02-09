@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b778bfc6d602c8c737f990920d4b2995",
+    "content-hash": "2f524a03f457e7b4e057dc4890e0b846",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5490,6 +5490,58 @@
                 "source": "https://git.drupal.org/project/masquerade.git",
                 "issues": "https://www.drupal.org/project/issues/masquerade",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/media_folders",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_folders.git",
+                "reference": "1.0.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_folders-1.0.6.zip",
+                "reference": "1.0.6",
+                "shasum": "24b8998dd04ec487b6cd446d3c653470bad45577"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.6",
+                    "datestamp": "1754909587",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "jmauricio",
+                    "homepage": "https://www.drupal.org/user/274084"
+                },
+                {
+                    "name": "kallado",
+                    "homepage": "https://www.drupal.org/user/3533061"
+                }
+            ],
+            "description": "Media Folders",
+            "homepage": "https://www.drupal.org/project/media_folders",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/media_folders",
+                "issues": "https://www.drupal.org/project/issues/media_folders"
             }
         },
         {
@@ -20739,5 +20791,5 @@
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }

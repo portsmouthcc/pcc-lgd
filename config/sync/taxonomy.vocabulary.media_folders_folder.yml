@@ -1,0 +1,11 @@
+uuid: 0dc3d297-c6c6-4af4-a24c-f4e908604fe7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8FYU_TWAsPm2x4xsKHLAPVGxtuP_866Hx4BTfJ0hRHc
+name: 'Media Folder'
+vid: media_folders_folder
+description: null
+weight: 0
+new_revision: false
