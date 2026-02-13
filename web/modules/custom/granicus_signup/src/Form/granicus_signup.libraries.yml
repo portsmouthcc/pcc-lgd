@@ -1,0 +1,10 @@
+granicus_signup:
+  version: 1.x
+  css:
+    theme:
+      css/granicus_signup.css: {}
+  js:
+    js/granicus_signup.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

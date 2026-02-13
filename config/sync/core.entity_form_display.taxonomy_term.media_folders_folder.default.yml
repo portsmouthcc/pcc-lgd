@@ -31,9 +31,9 @@ content:
     third_party_settings: {  }
   simple_sitemap:
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   path: true
   status: true

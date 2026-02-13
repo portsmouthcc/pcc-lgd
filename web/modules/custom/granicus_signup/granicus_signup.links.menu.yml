@@ -1,0 +1,5 @@
+granicus_signup.settings:
+  title: 'Granicus Signup'
+  description: 'Configure Granicus API settings'
+  parent: system.admin_config_services
+  route_name: granicus_signup.settings

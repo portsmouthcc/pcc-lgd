@@ -1,0 +1,20 @@
+uuid: ccca5764-59d3-45b4-8b68-76182ff343ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - granicus_signup
+  theme:
+    - pcc
+id: pcc_granicussignupform
+theme: pcc
+region: footer_first
+weight: 0
+provider: null
+plugin: granicus_signup_block
+settings:
+  id: granicus_signup_block
+  label: 'Granicus Signup Form'
+  label_display: visible
+  provider: granicus_signup
+visibility: {  }

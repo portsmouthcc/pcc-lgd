@@ -1,0 +1,7 @@
+name: 'Granicus Signup'
+type: module
+description: 'Provides a block for subscribing to Granicus topics'
+core_version_requirement: ^9 || ^10
+package: Custom
+dependencies:
+  - drupal:block

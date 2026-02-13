@@ -1,0 +1,7 @@
+granicus_signup.settings:
+  path: '/admin/config/services/granicus-signup'
+  defaults:
+    _form: '\Drupal\granicus_signup\Form\GranicusSettingsForm'
+    _title: 'Granicus Signup Settings'
+  requirements:
+    _permission: 'administer site configuration'

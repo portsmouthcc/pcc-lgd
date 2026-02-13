@@ -1,0 +1,25 @@
+.granicus-signup-form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.granicus-signup-form input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.granicus-signup-form input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.granicus-signup-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
