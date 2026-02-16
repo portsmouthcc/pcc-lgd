@@ -81,6 +81,15 @@
   ]
 %}
 
+{% set contact_name = content.group_enquiries.localgov_directory_name|render|striptags|trim %}
+{% set contact_job = content.group_enquiries.localgov_directory_job_title|render|striptags|trim %}
+{% set contact_phone = content.group_enquiries.localgov_directory_phone|render|striptags|trim %}
+{% set contact_email = content.group_enquiries.localgov_directory_email|render|striptags|trim %}
+{% set contact_web = content.group_enquiries.localgov_directory_website|render|striptags|trim %}
+{% set has_contact =
+  contact_name or contact_phone or contact_email or contact_web
+%}
+
 {{ attach_library('pcc/directories') }}
 
 
@@ -88,42 +97,55 @@
 	<article{{attributes.addClass(classes)}}>
 		{{ content.body }}
 
-		<div class="lgd-row__two-thirds">
-			<div class="venue__details">
-				<div class="venue__title">
-					<h2>
-						Contact details</h2>
-					<hr>
-				</div>
+		{% if has_contact %}
+			<div class="lgd-row">
+				<div class="lgd-row__two-thirds">
+					<div class="venue__details">
 
-				{% if content.group_enquiries |render|trim %}
-					<div class="lgd-row__one-half">
-						<div class="contact-item">
-							<i class="fa-solid fa-user" aria-hidden="true"></i>
-							{{ content.group_enquiries.localgov_directory_name }}
+						<div class="venue__title">
+							<h2>
+								Contact details</h2>
+							<hr>
+						</div>
 
-						</div>
-						<div class="contact-item">
-							<i class="fa-solid fa-user" aria-hidden="true"></i>
+						{% if contact_name %}
+							<div class="contact-item">
+								<i class="fa-solid fa-user"></i>
+								{{ content.group_enquiries.localgov_directory_name }}
+							</div>
+						{% endif %}
 
-							{{ content.group_enquiries.localgov_directory_job_title }}
-						</div>
-						<div class="contact-item">
-							<i class="fa-solid fa-phone-alt" aria-hidden="true"></i>
-							{{ content.group_enquiries.localgov_directory_phone }}
-						</div>
-						<div class="contact-item">
-							<i class="fa-solid fa-envelope" aria-hidden="true"></i>
-							{{ content.group_enquiries.localgov_directory_email }}
-						</div>
-						<div class="contact-item">
-							<i class="fa-solid fa-globe" aria-hidden="true"></i>
-							{{ content.group_enquiries.localgov_directory_website }}
-						</div>
+						{% if contact_job %}
+							<div class="contact-item">
+								<i class="fa-solid fa-user"></i>
+								{{ content.group_enquiries.localgov_directory_job_title }}
+							</div>
+						{% endif %}
+
+						{% if contact_phone %}
+							<div class="contact-item">
+								<i class="fa-solid fa-phone-alt"></i>
+								{{ content.group_enquiries.localgov_directory_phone }}
+							</div>
+						{% endif %}
+
+						{% if contact_email %}
+							<div class="contact-item">
+								<i class="fa-solid fa-envelope"></i>
+								{{ content.group_enquiries.localgov_directory_email }}
+							</div>
+						{% endif %}
+
+						{% if contact_web %}
+							<div class="contact-item">
+								<i class="fa-solid fa-globe"></i>
+								{{ content.group_enquiries.localgov_directory_website }}
+							</div>
+						{% endif %}
+
 					</div>
 				</div>
-			{% endif %}
-
-		</div>
-	</div>
-</div></article></div>
+			</div>
+		{% endif %}
+	</article>
+</div>
