@@ -71,6 +71,9 @@ settings:
       from_library:
         weight: -81
         enabled: false
+      granicus_subscribe:
+        weight: 44
+        enabled: true
       localgov_accordion:
         weight: -79
         enabled: true
