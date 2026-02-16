@@ -88,66 +88,132 @@
 		<div class="lgd-row">
 			<div class="lgd-row__full">
 				{{ node.localgov_location.entity.location | view }}
-
 				{{ content.body }}
 			</div>
-			{% if content.group_venue.localgov_directory_opening_times |render|trim or content.group_venue.localgov_directory_notes |render|trim or content.localgov_directory_files |render|trim or node.localgov_location.entity.postal_address %}
+			{# ---------------------------------------
+																																													   Pre-render fields safely
+																																													---------------------------------------- #}
+
+			{% set address = node.localgov_location.entity.postal_address | view %}
+			{% set opening = content.group_venue.localgov_directory_opening_times|render|striptags|trim %}
+			{% set notes = content.group_venue.localgov_directory_notes|render|striptags|trim %}
+			{% set files = content.localgov_directory_files|render|striptags|trim %}
+
+			{% set contact_name = content.group_enquiries.localgov_directory_name|render|striptags|trim %}
+			{% set contact_job = content.group_enquiries.localgov_directory_job_title|render|striptags|trim %}
+			{% set contact_phone = content.group_enquiries.localgov_directory_phone|render|striptags|trim %}
+			{% set contact_email = content.group_enquiries.localgov_directory_email|render|striptags|trim %}
+			{% set contact_web = content.group_enquiries.localgov_directory_website|render|striptags|trim %}
+
+			{# ---------------------------------------
+																																													   Check if ANY content exists
+																																													---------------------------------------- #}
+
+			{% set has_venue =
+  address or opening or notes or files
+%}
+
+			{% set has_contact =
+  contact_name or contact_phone or contact_email or contact_web
+%}
+
+			{# ---------------------------------------
+																																													   Output section only if needed
+																																													---------------------------------------- #}
+
+			{% if has_venue or has_contact %}
+
 				<div class="lgd-row__two-thirds">
 					<div class="venue__details">
+
 						<div class="venue__title">
-							<h2>
-								Venue details</h2>
+							<h2>Venue details</h2>
 							<hr>
 						</div>
-						<div class="lgd-row">
-							<div class="lgd-row__one-half">
-								{% if node.localgov_location.entity.postal_address | view %}
-									<div class="postal-address">
-										{{ node.localgov_location.entity.postal_address | view }}
-									</div>
-								{% endif %}
-								{% if content.group_venue.localgov_directory_opening_times |render|trim %}
-									<div class="opening-times">
-										{{ content.group_venue.localgov_directory_opening_times }}
-									</div>
-								{% endif %}
-								{% if content.group_venue.localgov_directory_notes |render|trim %}
-									<div class="localgov_directory_notes">
-										{{ content.group_venue.localgov_directory_notes }}
-									</div>
-								{% endif %}
-								{% if content.localgov_directory_files |render|trim %}
-									<div class="localgov_directory_files">
-										{{ content.localgov_directory_files }}
-									</div>
-								{% endif %}
-							</div>
-							{% if content.group_enquiries |render|trim %}
+
+						<div
+							class="lgd-row">
+
+							{# ================= LEFT COLUMN ================= #}
+							{% if has_venue %}
 								<div class="lgd-row__one-half">
-									<h3>Contact details</h3>
-									<div class="contact-item">
-										<i class="fa-solid fa-user" aria-hidden="true"></i>
-										{{ content.group_enquiries.localgov_directory_name }}. [{{ content.group_enquiries.localgov_directory_job_title }}]
-									</div>
-									<div class="contact-item">
-										<i class="fa-solid fa-phone-alt" aria-hidden="true"></i>
-										{{ content.group_enquiries.localgov_directory_phone }}
-									</div>
-									<div class="contact-item">
-										<i class="fa-solid fa-envelope" aria-hidden="true"></i>
-										{{ content.group_enquiries.localgov_directory_email }}
-									</div>
-									<div class="contact-item">
-										<i class="fa-solid fa-globe" aria-hidden="true"></i>
-										{{ content.group_enquiries.localgov_directory_website }}
-									</div>
+
+									{% if address %}
+										<div class="postal-address">
+											{{ node.localgov_location.entity.postal_address | view }}
+										</div>
+									{% endif %}
+
+									{% if opening %}
+										<div class="opening-times">
+											{{ content.group_venue.localgov_directory_opening_times }}
+										</div>
+									{% endif %}
+
+									{% if notes %}
+										<div class="localgov_directory_notes">
+											{{ content.group_venue.localgov_directory_notes }}
+										</div>
+									{% endif %}
+
+									{% if files %}
+										<div class="localgov_directory_files">
+											{{ content.localgov_directory_files }}
+										</div>
+									{% endif %}
+
 								</div>
-							</div>
-						{% endif %}
+							{% endif %}
+
+
+							{# ================= RIGHT COLUMN ================= #}
+							{% if has_contact %}
+								<div class="lgd-row__one-half">
+
+									<h3>Contact details</h3>
+
+									{% if contact_name %}
+										<div class="contact-item">
+											<i class="fa-solid fa-user"></i>
+											{{ content.group_enquiries.localgov_directory_name }}
+										</div>
+									{% endif %}
+
+									{% if contact_job %}
+										<div class="contact-item">
+											<i class="fa-solid fa-user"></i>
+											{{ content.group_enquiries.localgov_directory_job_title }}
+										</div>
+									{% endif %}
+
+									{% if contact_phone %}
+										<div class="contact-item">
+											<i class="fa-solid fa-phone-alt"></i>
+											{{ content.group_enquiries.localgov_directory_phone }}
+										</div>
+									{% endif %}
+
+									{% if contact_email %}
+										<div class="contact-item">
+											<i class="fa-solid fa-envelope"></i>
+											{{ content.group_enquiries.localgov_directory_email }}
+										</div>
+									{% endif %}
+
+									{% if contact_web %}
+										<div class="contact-item">
+											<i class="fa-solid fa-globe"></i>
+											{{ content.group_enquiries.localgov_directory_website }}
+										</div>
+									{% endif %}
+
+								</div>
+							{% endif %}
+
+						</div>
 					</div>
 				</div>
-			</div>
+			{% endif %}
 		</div>
-	{% endif %}
-
-</div></article></div>
+	</article>
+</div>

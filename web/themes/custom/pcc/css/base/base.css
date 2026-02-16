@@ -86,3 +86,7 @@ h6,
   padding-inline-end: var(--spacing-large);
 }
 
+.back-to-top {
+  margin-bottom: var(--spacing-large);
+  display: block;
+}

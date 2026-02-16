@@ -4,7 +4,7 @@
 }
 
 .node--type-localgov-directories-venue,
-.node--type-localgov-directories-page  {
+.node--type-localgov-directories-page {
   margin-bottom: var(--spacing-mega);
 
   fieldset {
@@ -25,7 +25,9 @@
     flex-direction: column;
   }
 
-  .field--type-string, .field--type-email, .field--type-telephone {
+  .field--type-string,
+  .field--type-email,
+  .field--type-telephone {
     margin-bottom: var(--spacing-small);
   }
 
@@ -34,24 +36,26 @@
   } */
 
   .venue__details {
-     background-color: var(--color-accent-2);
-  border-top: 8px var(--border-style) var(--color-accent);
-  border-inline-start: none;
-  padding: var(--spacing-large);
-  height: 100%;
+    background-color: var(--color-accent-2);
+    border-top: 8px var(--border-style) var(--color-accent);
+    border-inline-start: none;
+    padding: var(--spacing-large);
+    height: 100%;
 
-  @media(max-width: 382px) {
-    padding: 10px;
-    font-size: 14px;
-    i {
-      display: none;
+    @media(max-width: 382px) {
+      padding: 10px;
+      font-size: 14px;
+
+      i {
+        display: none;
+      }
     }
-  }
 
     .venue__title {
       h4 {
         margin: 0 0 var(--spacing-small) 0;
       }
+
       i {
         margin-right: 10px;
       }
@@ -59,10 +63,10 @@
 
     .field__label {
       color: var(--heading-3-color);
-    font-family: var(--font-heading-3);
-    font-size: var(--font-size-h3);
-    font-weight: var(--heading-3-font-weight);
-    line-height: var(--heading-3-line-height);
+      font-family: var(--font-heading-3);
+      font-size: var(--font-size-h3);
+      font-weight: var(--heading-3-font-weight);
+      line-height: var(--heading-3-line-height);
     }
 
     .field--name-postal-address .field__label {
@@ -104,7 +108,7 @@
 }
 
 .block-localgov-directories {
-  
+
   #edit-localgov-location-wrapper--4 {
     border: none;
     padding: 0;
