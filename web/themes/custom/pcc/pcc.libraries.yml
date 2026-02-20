@@ -43,6 +43,11 @@ breadcrumbs:
     theme:
       css/components/breadcrumbs.css: {}
 
+box-links:
+  css:
+    theme:
+      css/components/box-links.css: {}
+
 callout-box:
   css:
     theme:
