@@ -5,6 +5,7 @@ dependencies:
   config:
     - views.view.localgov_news_search
   module:
+    - node
     - system
     - views
   theme:
@@ -31,4 +32,11 @@ visibility:
     id: request_path
     negate: false
     context_mapping: {  }
-    pages: '/news/*'
+    pages: "/news/*\r\n/all-news-test/*"
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      localgov_news_article: localgov_news_article

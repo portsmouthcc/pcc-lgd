@@ -1,0 +1,32 @@
+uuid: 5cad35dd-baa3-435f-aae3-93e1620df026
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_news
+  module:
+    - node
+    - views
+  theme:
+    - pcc
+id: pcc_views_block__latest_news_block_2
+theme: pcc
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:latest_news-block_2'
+settings:
+  id: 'views_block:latest_news-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      localgov_news_article: localgov_news_article

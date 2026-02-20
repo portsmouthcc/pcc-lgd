@@ -22,10 +22,11 @@ settings:
   label: Category
   label_display: '0'
   provider: facets
-  block_id: localgov_news_category
+  context_mapping: {  }
+  block_id: pcc_localgov_news_category
 visibility:
   request_path:
     id: request_path
     negate: false
     context_mapping: {  }
-    pages: '/news/*'
+    pages: /news/

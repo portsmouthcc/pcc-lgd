@@ -7,6 +7,7 @@
 
   article.lgd-teaser {
     margin-bottom: var(--spacing-large);
+    border: 1px solid #bac2d0;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -17,15 +18,14 @@
     display: flex;
     flex-direction: row-reverse;
     height: unset;
+    background: var(--color-accent-2);
 
     .lgd-card__content {
       flex-basis: 60%;
-      background-color: var(--color-page-section-background-color-2);
 
       h3 {
         display: block;
         color: var(--heading-1-color);
-        font-size: calc(var(--font-size-h2));
 
         &::before {
           display: block;
