@@ -5,13 +5,12 @@ dependencies:
   config:
     - facets.facet.localgov_news_category
     - field.field.node.localgov_news_article.body
-    - field.field.node.localgov_news_article.field_latest_news
     - field.field.node.localgov_news_article.field_media_image
     - field.field.node.localgov_news_article.localgov_news_categories
     - field.field.node.localgov_news_article.localgov_news_date
     - field.field.node.localgov_news_article.localgov_news_related
     - field.field.node.localgov_news_article.localgov_newsroom
-    - image.style.wide
+    - image.style.large_3_2_768x512
     - node.type.localgov_news_article
   module:
     - datetime
@@ -20,7 +19,6 @@ dependencies:
     - media
     - text
     - user
-    - viewsreference
   enforced:
     module:
       - localgov_news
@@ -43,21 +41,12 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_latest_news:
-    type: viewsreference_formatter
-    label: above
-    settings:
-      plugin_types:
-        - block
-    third_party_settings: {  }
-    weight: 7
-    region: content
   field_media_image:
     type: media_thumbnail
     label: hidden
     settings:
       image_link: ''
-      image_style: wide
+      image_style: large_3_2_768x512
       image_loading:
         attribute: lazy
     third_party_settings:

@@ -1,11 +1,21 @@
+/* .page-node-type-localgov-newsroom {
+  background: #dff2ff5c;
+
+  .lgd-region--breadcrumb {
+    background: #dff2ff5c;
+  }
+} */
+
 #views-exposed-form-localgov-news-list-all-news {
   display: flex;
   flex-wrap: wrap;
   align-items: end;
   margin-bottom: var(--vertical-rhythm-spacing);
-  padding: 1rem 1.5rem;
-  background: var(--color-accent-2);
   gap: 1.5rem;
+
+  .filters-title {
+    margin-bottom: 1rem;
+  }
 
   .form-item {
     flex-grow: 1;
@@ -58,7 +68,8 @@
 
   .lgd-teaser {
     height: 100%;
-    background: var(--color-accent-2);
+    background: var(--color-white);
+    border: 1px solid var(--page-title-border);
 
     .lgd-teaser__image div {
       height: 100%;
@@ -109,6 +120,10 @@
   .feed-icons {
     display: none;
   }
+}
+
+.view-filters {
+  margin-bottom: var(--spacing-mega);
 }
 
 .filters-title {
