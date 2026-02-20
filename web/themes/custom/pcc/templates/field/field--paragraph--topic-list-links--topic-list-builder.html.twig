@@ -58,7 +58,7 @@
 	{% if multiple %}
 		<div{{attributes.addClass('lgd-row',classes,'field__items')}}>
 			{% for item in items %}
-				<div{{item.attributes.addClass('lgd-row__one-half','lgd-topic-list-builder__service','field__item')}}>
+				<div{{item.attributes.addClass('lgd-row__one-third','lgd-topic-list-builder__service','field__item')}}>
 					{{ item.content }}
 				</div>
 			{% endfor %}
