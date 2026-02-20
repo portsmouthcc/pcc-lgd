@@ -15,7 +15,13 @@ settings:
   allowed_values:
     -
       value: grid
-      label: Grid
+      label: 'Grid with 2 columns'
+    -
+      value: grid-3
+      label: 'Grid with 3 columns'
+    -
+      value: grid-4
+      label: 'Grid with 4 columns'
     -
       value: boxes
       label: Boxes

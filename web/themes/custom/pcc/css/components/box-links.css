@@ -1,0 +1,71 @@
+/* Cost of living section navigation links are just box links with no image. */
+
+/* The grid adds space so I don't think this is needed at all. */
+.box-links-listing__list .box-links-listing__list-item {
+  margin-block-end: 0;
+}
+
+.box-link.no-image {
+  border: none;
+}
+
+.box-link.no-image .box-link__title {
+  margin: 0;
+  padding: 0;
+}
+
+.box-link.no-image a {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  border: none;
+  border-radius: 6px;
+  padding: var(--box-link-content-spacing);
+  box-shadow:
+    0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+    0 0px 0 1px rgba(10, 10, 10, 0.02);
+  font-size: 1.2rem;
+  background-color: cadetblue;
+  color: #333;
+  transition: all 0.5s ease-in-out;
+  text-decoration: none;
+}
+
+.box-links-listing__list
+  .box-links-listing__list-item:nth-of-type(4n + 1)
+  .box-link.no-image
+  a {
+  background-color: #60b2cc;
+}
+
+.box-links-listing__list
+  .box-links-listing__list-item:nth-of-type(4n + 2)
+  .box-link.no-image
+  a {
+  background-color: #c1d82f;
+}
+
+.box-links-listing__list
+  .box-links-listing__list-item:nth-of-type(4n + 3)
+  .box-link.no-image
+  a {
+  background-color: #f05f87;
+}
+
+.box-links-listing__list
+  .box-links-listing__list-item:nth-of-type(4n + 4)
+  .box-link.no-image
+  a {
+  background-color: #fbad18;
+}
+
+.box-links-listing__list .box-links-listing__list-item .box-link.no-image a {
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    color: white;
+    background-color: var(--color-blue);
+  }
+}
