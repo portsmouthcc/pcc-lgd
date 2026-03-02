@@ -58,6 +58,11 @@ card:
     theme:
       css/components/card.css: {}
 
+contact:
+  css:
+    theme:
+      css/components/contact.css: {}
+
 directories:
   css:
     layout:

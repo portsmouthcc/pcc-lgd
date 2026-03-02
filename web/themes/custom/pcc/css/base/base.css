@@ -19,6 +19,10 @@ h6,
   --lgd-page-section-gap: var(--grid-column-spacing);
 }
 
+.paragraph {
+  margin-block-end: var(--spacing-largest) !important;
+}
+
 .paragraph--type--localgov-link:focus-within .link-wrapper {
   background: var(--color-focus);
 }
