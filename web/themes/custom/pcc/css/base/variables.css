@@ -98,7 +98,7 @@ body {
   --color-post-footer-heading: var(--color-white);
   --color-post-footer-link: var(--color-white);
   --color-post-footer-text: var(--color-white);
-  
+
   /* Sidebar Items */
   /* Choose one or use all three? */
   /* --sidebar-exposed-form-bg-color: transparent; */
@@ -127,4 +127,7 @@ body {
   /* Callout Box */
   --call-out-box-link-padding: 0.5rem 0.75rem;
   --call-out-box-bg-color: var(--color-blue);
+
+  /*paragraphs overrides*/
+  --featured-teaser-content-padding: var(--spacing-large);
 }

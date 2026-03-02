@@ -12,6 +12,13 @@
 .box-link.no-image .box-link__title {
   margin: 0;
   padding: 0;
+
+
+}
+
+.box-link__title {
+  padding: 0.5rem 1.5rem;
+  font-size: var(--font-size-h3);
 }
 
 .box-link.no-image a {
@@ -33,35 +40,24 @@
   text-decoration: none;
 }
 
-.box-links-listing__list
-  .box-links-listing__list-item:nth-of-type(4n + 1)
-  .box-link.no-image
-  a {
+.box-links-listing__list .box-links-listing__list-item:nth-of-type(4n + 1) .box-link.no-image a {
   background-color: #60b2cc;
 }
 
-.box-links-listing__list
-  .box-links-listing__list-item:nth-of-type(4n + 2)
-  .box-link.no-image
-  a {
+.box-links-listing__list .box-links-listing__list-item:nth-of-type(4n + 2) .box-link.no-image a {
   background-color: #c1d82f;
 }
 
-.box-links-listing__list
-  .box-links-listing__list-item:nth-of-type(4n + 3)
-  .box-link.no-image
-  a {
+.box-links-listing__list .box-links-listing__list-item:nth-of-type(4n + 3) .box-link.no-image a {
   background-color: #f05f87;
 }
 
-.box-links-listing__list
-  .box-links-listing__list-item:nth-of-type(4n + 4)
-  .box-link.no-image
-  a {
+.box-links-listing__list .box-links-listing__list-item:nth-of-type(4n + 4) .box-link.no-image a {
   background-color: #fbad18;
 }
 
 .box-links-listing__list .box-links-listing__list-item .box-link.no-image a {
+
   &:hover,
   &:focus {
     transform: scale(1.05);
