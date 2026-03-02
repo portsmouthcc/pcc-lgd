@@ -20,6 +20,8 @@ libraries-extend:
     - pcc/box-links
   localgov_base/card:
     - pcc/card
+  localgov_base/contact:
+    - pcc/contact
   localgov_base/directories:
     - pcc/directories
   localgov_base/events:
