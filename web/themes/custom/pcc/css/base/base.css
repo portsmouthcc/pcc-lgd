@@ -23,6 +23,32 @@ h6,
   margin-block-end: var(--spacing-largest) !important;
 }
 
+.paragraph--type--localgov-featured-teaser {
+  border: none !important;
+
+  .featured-teaser__content {
+    border: 1px solid grey;
+    border-top: none;
+  }
+}
+
+.paragraph--type--localgov-image {
+  border: none !important;
+
+  .field--name-localgov-caption {
+    padding: 1rem 0;
+    background: none;
+
+    p {
+      font-style: italic;
+    }
+  }
+}
+
+.paragraph--type--localgov-box-link {
+  border: 1px solid grey !important
+}
+
 .paragraph--type--localgov-link:focus-within .link-wrapper {
   background: var(--color-focus);
 }
