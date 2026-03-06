@@ -1,7 +1,7 @@
 /* Custom subsite banner for the home page. */
 
 .banner--home-page {
-  margin-bottom: var(--spacing-mega);
+  margin-bottom: 0 !important;
   padding-top: var(--spacing-mega);
   padding-bottom: var(--spacing-mega);
   color: var(--banner-content-text-color);
