@@ -42,6 +42,7 @@ field_settings:
           localgov_step_by_step_page: search_index
           localgov_subsites_overview: search_index
           localgov_subsites_page: search_index
+          pcc_tro: search_index
           traffic_regulation_order: search_index
 datasource_settings:
   'entity:node':

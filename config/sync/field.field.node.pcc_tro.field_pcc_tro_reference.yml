@@ -1,0 +1,19 @@
+uuid: cccdf31a-cfa5-4a63-a718-ab82c1a50fa7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pcc_tro_reference
+    - node.type.pcc_tro
+id: node.pcc_tro.field_pcc_tro_reference
+field_name: field_pcc_tro_reference
+entity_type: node
+bundle: pcc_tro
+label: Reference
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

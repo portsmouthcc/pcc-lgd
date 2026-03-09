@@ -1,0 +1,43 @@
+uuid: 554be79e-3e89-42cc-b6f9-edf3a633c2e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pcc_tro.body
+    - field.field.node.pcc_tro.field_pcc_tro_category
+    - field.field.node.pcc_tro.field_pcc_tro_date
+    - field.field.node.pcc_tro.field_pcc_tro_documents
+    - field.field.node.pcc_tro.field_pcc_tro_reference
+    - field.field.node.pcc_tro.field_pcc_tro_status
+    - field.field.node.pcc_tro.field_pcc_tro_type
+    - node.type.pcc_tro
+  module:
+    - text
+    - user
+id: node.pcc_tro.teaser
+targetEntityType: node
+bundle: pcc_tro
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_pcc_tro_category: true
+  field_pcc_tro_date: true
+  field_pcc_tro_documents: true
+  field_pcc_tro_reference: true
+  field_pcc_tro_status: true
+  field_pcc_tro_type: true
+  search_api_excerpt: true

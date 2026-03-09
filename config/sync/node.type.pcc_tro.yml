@@ -1,4 +1,4 @@
-uuid: d147e8ef-0aab-49b5-a9e9-0e41a8b33d16
+uuid: 82532f1b-230f-43e9-af72-9c12db3d1d1e
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,9 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: 'Traffic regulation order'
-type: traffic_regulation_order
-description: null
+name: TRO
+type: pcc_tro
+description: 'Traffic Regulation Order'
 help: null
 new_revision: true
 preview_mode: 1

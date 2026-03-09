@@ -1,0 +1,21 @@
+uuid: 85d7e4fb-1926-4b8e-a1dd-249185793197
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pcc_tro_category
+    - node.type.pcc_tro
+  module:
+    - options
+id: node.pcc_tro.field_pcc_tro_category
+field_name: field_pcc_tro_category
+entity_type: node
+bundle: pcc_tro
+label: Category
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
