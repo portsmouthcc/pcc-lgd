@@ -1,12 +1,12 @@
-uuid: 8f598da4-3314-4667-9075-1622291cec30
+uuid: 37f71537-9fbb-4c8d-ba0a-8ff9cfc7ec37
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-id: node.field_status
-field_name: field_status
+id: node.field_pcc_tro_status
+field_name: field_pcc_tro_status
 entity_type: node
 type: list_string
 settings:

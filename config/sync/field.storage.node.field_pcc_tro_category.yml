@@ -1,0 +1,42 @@
+uuid: 33cb69aa-1757-4c37-a628-c0773df0d151
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_pcc_tro_category
+field_name: field_pcc_tro_category
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: baffins_eastney_and_milton
+      label: 'Baffins, Eastney and Milton'
+    -
+      value: city_centre
+      label: 'City Centre'
+    -
+      value: copnor_and_north_end
+      label: 'Copnor and North End'
+    -
+      value: cosham_and_drayton
+      label: 'Cosham and Drayton'
+    -
+      value: various_areas
+      label: 'Various areas'
+    -
+      value: events
+      label: Events
+    -
+      value: disabled_bays
+      label: 'Disabled bays'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

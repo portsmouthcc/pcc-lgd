@@ -1,13 +1,13 @@
-uuid: 521d0fb1-cb77-464b-b302-fa324defc8d6
+uuid: 778262bb-106c-467a-80cf-9740cfb53343
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.traffic_regulation_order
-id: node.traffic_regulation_order.promote
+    - node.type.pcc_tro
+id: node.pcc_tro.promote
 field_name: promote
 entity_type: node
-bundle: traffic_regulation_order
+bundle: pcc_tro
 label: 'Promoted to front page'
 description: ''
 required: false

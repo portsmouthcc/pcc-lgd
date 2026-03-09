@@ -1,16 +1,16 @@
-uuid: 5f0a1efb-f22b-427a-b0fe-0de0a09f9848
+uuid: d5fc758c-7df4-4164-8e70-66977dece406
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.traffic_regulation_order
+    - node.type.pcc_tro
   module:
     - text
-id: node.traffic_regulation_order.body
+id: node.pcc_tro.body
 field_name: body
 entity_type: node
-bundle: traffic_regulation_order
+bundle: pcc_tro
 label: Body
 description: ''
 required: false

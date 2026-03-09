@@ -1,0 +1,21 @@
+uuid: 455f3375-99c7-402a-a7e9-c405908396da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pcc_tro_status
+    - node.type.pcc_tro
+  module:
+    - options
+id: node.pcc_tro.field_pcc_tro_status
+field_name: field_pcc_tro_status
+entity_type: node
+bundle: pcc_tro
+label: Status
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -9,14 +9,14 @@ label: 'Traffic regulation orders'
 type: 'canonical_entities:node'
 pattern: 'traffic-regulation-orders/[node:title]'
 selection_criteria:
-  d3ae966e-5f70-4fc8-a2ef-7781fc641de3:
+  973388e1-853f-4492-b6db-34046082e3a0:
     id: 'entity_bundle:node'
     negate: false
-    uuid: d3ae966e-5f70-4fc8-a2ef-7781fc641de3
+    uuid: 973388e1-853f-4492-b6db-34046082e3a0
     context_mapping:
       node: node
     bundles:
-      traffic_regulation_order: traffic_regulation_order
+      pcc_tro: pcc_tro
 selection_logic: and
 weight: -5
 relationships: {  }
