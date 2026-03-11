@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f524a03f457e7b4e057dc4890e0b846",
+    "content-hash": "773f00120f94b361e3d3f4cdb11326f5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -9564,6 +9564,33 @@
                 "source": "https://github.com/localgovdrupal/localgov_menu_link_group/tree/1.1.8"
             },
             "time": "2025-04-22T11:58:36+00:00"
+        },
+        {
+            "name": "localgovdrupal/localgov_moderngov",
+            "version": "1.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/localgovdrupal/localgov_moderngov.git",
+                "reference": "240b0b9cf4b537a6a465fd48b820db5decfac5a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/localgovdrupal/localgov_moderngov/zipball/240b0b9cf4b537a6a465fd48b820db5decfac5a5",
+                "reference": "240b0b9cf4b537a6a465fd48b820db5decfac5a5",
+                "shasum": ""
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Drupal module for ModernGov template page generation.",
+            "homepage": "https://github.com/localgovdrupal/localgov_moderngov",
+            "support": {
+                "issues": "https://github.com/localgovdrupal/localgov_moderngov/issues",
+                "source": "https://github.com/localgovdrupal/localgov_moderngov/tree/1.0.0-beta2"
+            },
+            "time": "2024-05-14T11:47:04+00:00"
         },
         {
             "name": "localgovdrupal/localgov_news",
@@ -20785,7 +20812,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/entity_clone": 10,
-        "drupal/migrate_directory": 20
+        "drupal/migrate_directory": 20,
+        "localgovdrupal/localgov_moderngov": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,
