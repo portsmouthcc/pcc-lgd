@@ -38,6 +38,7 @@
         "drupal/trash": "^3.0",
         "drupal/twig_tweak": "^3.4",
         "localgovdrupal/localgov": "^3.0",
+        "localgovdrupal/localgov_moderngov": "^1.0@beta",
         "localgovdrupal/localgov_search_solr": "^1.1",
         "oomphinc/composer-installers-extender": "^2.0",
         "wikimedia/composer-merge-plugin": "^2.1"
