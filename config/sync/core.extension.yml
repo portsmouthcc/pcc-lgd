@@ -98,6 +98,7 @@ module:
   localgov_login_redirect: 0
   localgov_media: 0
   localgov_menu_link_group: 0
+  localgov_moderngov: 0
   localgov_news: 0
   localgov_page_components: 0
   localgov_paragraphs: 0
