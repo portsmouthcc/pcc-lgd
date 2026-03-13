@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_result
     - field.field.node.localgov_guides_overview.body
+    - field.field.node.localgov_guides_overview.localgov_common_tasks
     - field.field.node.localgov_guides_overview.localgov_guides_list_format
     - field.field.node.localgov_guides_overview.localgov_guides_pages
     - field.field.node.localgov_guides_overview.localgov_guides_section_title
@@ -20,6 +21,11 @@ targetEntityType: node
 bundle: localgov_guides_overview
 mode: search_result
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   search_api_excerpt:
     settings: {  }
     third_party_settings: {  }
@@ -28,6 +34,7 @@ content:
 hidden:
   body: true
   links: true
+  localgov_common_tasks: true
   localgov_guides_list_format: true
   localgov_guides_pages: true
   localgov_guides_section_title: true
