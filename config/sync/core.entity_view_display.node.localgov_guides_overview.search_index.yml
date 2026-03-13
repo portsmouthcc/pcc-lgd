@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_index
     - field.field.node.localgov_guides_overview.body
+    - field.field.node.localgov_guides_overview.localgov_common_tasks
     - field.field.node.localgov_guides_overview.localgov_guides_list_format
     - field.field.node.localgov_guides_overview.localgov_guides_pages
     - field.field.node.localgov_guides_overview.localgov_guides_section_title
@@ -12,6 +13,7 @@ dependencies:
     - field.field.node.localgov_guides_overview.localgov_topic_classified
     - node.type.localgov_guides_overview
   module:
+    - link
     - text
     - user
 _core:
@@ -27,6 +29,23 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  localgov_common_tasks:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 12
     region: content
   localgov_guides_pages:
     type: entity_reference_label
