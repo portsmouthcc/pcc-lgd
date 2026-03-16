@@ -1,0 +1,48 @@
+uuid: 2e3cddda-dab8-4b1f-88b7-340db1fc5a42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_svg.field_max_width
+    - field.field.paragraph.image_svg.field_min_width
+    - field.field.paragraph.image_svg.field_svg_image
+    - field.field.paragraph.image_svg.field_width
+    - paragraphs.paragraphs_type.image_svg
+  module:
+    - media_library
+id: paragraph.image_svg.default
+targetEntityType: paragraph
+bundle: image_svg
+mode: default
+content:
+  field_max_width:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_min_width:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_svg_image:
+    type: media_library_widget
+    weight: -2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_width:
+    type: number
+    weight: -1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

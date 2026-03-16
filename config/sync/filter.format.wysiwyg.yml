@@ -8,6 +8,7 @@ dependencies:
     - core.entity_view_mode.media.responsive_3x2
     - core.entity_view_mode.media.scale_crop_7_3_large
     - core.entity_view_mode.media.square
+    - core.entity_view_mode.media.svg_large
   module:
     - editor
     - linkit
@@ -114,10 +115,12 @@ filters:
         responsive_3x2: responsive_3x2
         scale_crop_7_3_large: scale_crop_7_3_large
         square: square
+        svg_large: svg_large
       allowed_media_types:
         document: document
         image: image
         remote_video: remote_video
+        vector: vector
   toc_filter:
     id: toc_filter
     provider: toc_filter
