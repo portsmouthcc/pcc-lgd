@@ -1,0 +1,28 @@
+uuid: ec87490c-40d5-4165-a81c-de8cacffe1ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.vector.field_media_svg
+    - media.type.vector
+id: media.vector.media_library
+targetEntityType: media
+bundle: vector
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_folders_folder: true
+  field_media_svg: true
+  path: true
+  status: true
+  uid: true

@@ -1,0 +1,23 @@
+uuid: 225da53b-818c-4abb-a15e-567d1f2c75b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_max_width
+    - paragraphs.paragraphs_type.image_svg
+id: paragraph.image_svg.field_max_width
+field_name: field_max_width
+entity_type: paragraph
+bundle: image_svg
+label: 'Max Width'
+description: 'Set a max width in pixels for defined size.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

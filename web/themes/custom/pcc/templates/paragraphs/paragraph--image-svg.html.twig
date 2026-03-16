@@ -1,0 +1,49 @@
+{#
+/**
+ * Paragraph template for image_svg
+ */
+#}
+
+{%
+  set classes = [
+    'lgd-image_svg',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{% if not localgov_base_remove_css %}
+	{{ attach_library('localgov_base/image-with-caption') }}
+{% endif %}
+
+{# Get the media and file #}
+{% set media = paragraph.field_svg_image.entity ?? null %}
+{% set file = media ? media.field_media_svg.entity : null %}
+{% set alt = media.field_media_svg.alt %}
+
+
+{# Build style array #}
+{% set styles = [] %}
+
+{% if paragraph.field_width.value %}
+	{% set styles = styles|merge(['width:' ~ paragraph.field_width.value ~ '%']) %}
+{% endif %}
+
+{% if paragraph.field_max_width.value %}
+	{% set styles = styles|merge(['max-width:' ~ paragraph.field_max_width.value ~ 'px']) %}
+{% endif %}
+
+{% if paragraph.field_min_width.value %}
+	{% set styles = styles|merge(['min-width:' ~ paragraph.field_min_width.value ~ 'px']) %}
+{% endif %}
+
+{# Convert styles array to string #}
+{% set style_attr = styles ? 'style="' ~ styles|join('; ') ~ '"' : '' %}
+
+<div{{attributes.addClass(classes)}}>
+	{% if file %}
+		<img src="{{ file_url(file.uri.value) }}" alt="{{ alt }}" {{ style_attr|raw }}>
+	{% endif %}
+</div>
