@@ -1,0 +1,23 @@
+uuid: c462ec9c-fe18-4b14-ab41-f86b51bfbe60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_min_width
+    - paragraphs.paragraphs_type.image_svg
+id: paragraph.image_svg.field_min_width
+field_name: field_min_width
+entity_type: paragraph
+bundle: image_svg
+label: 'Min Width'
+description: 'Set a min width of the image (set to the same as max width for a set size'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
