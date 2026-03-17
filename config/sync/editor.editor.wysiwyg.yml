@@ -118,6 +118,9 @@ settings:
         -
           label: 'Green ticks'
           element: '<ul class="list-checked">'
+        -
+          label: 'Large text'
+          element: '<h2 class="big">'
     linkit_extension:
       linkit_enabled: true
       linkit_profile: default

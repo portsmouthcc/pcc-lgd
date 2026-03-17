@@ -1,0 +1,41 @@
+uuid: 0755cb6a-36ba-4cb5-b559-36645d37ecad
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.freestyle
+    - field.field.media.vector.field_media_svg
+    - media.type.vector
+  module:
+    - field_formatter_class
+    - svg_image_field
+id: media.vector.freestyle
+targetEntityType: media
+bundle: vector
+mode: freestyle
+content:
+  field_media_svg:
+    type: svg_image_field_formatter
+    label: visually_hidden
+    settings:
+      inline: true
+      apply_dimensions: true
+      width: null
+      height: 150
+      enable_alt: true
+      enable_title: true
+      link: ''
+      force_fill: false
+      sanitize: true
+      sanitize_remote: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
