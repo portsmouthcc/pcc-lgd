@@ -8,7 +8,8 @@ dependencies:
     - media.type.image
     - responsive_image.styles.freestyle_responsive
   module:
-    - responsive_image
+    - field_formatter_class
+    - svg_image_responsive
 _core:
   default_config_hash: 9I6vjcHp05G8xmjN5coMpy19dxLLf1BQdXVc4kfz2wA
 id: media.image.freestyle
@@ -24,7 +25,13 @@ content:
       image_link: ''
       image_loading:
         attribute: lazy
-    third_party_settings: {  }
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
     weight: 1
     region: content
 hidden:

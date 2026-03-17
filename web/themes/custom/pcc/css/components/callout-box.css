@@ -22,6 +22,11 @@
 
     h2 {
       flex-grow: 0;
+
+      &.big {
+        font-size: 4.2rem;
+        line-height: 4.7rem;
+      }
     }
 
     .field--name-localgov-body-text {
@@ -64,10 +69,39 @@
 /* Color schemes */
 .call-out-box--dark {
   background-color: var(--color-accent-dark);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-white);
+  }
 }
 
 .call-out-box--light {
   background-color: var(--color-accent);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-white);
+  }
+
+  .call-out-box__link {
+    color: var(--button-text-color) !important;
+    border-bottom: var(--border-width) var(--border-style) var(--color-white) !important;
+    background: var(--color-blue) !important;
+
+    &:hover {
+      color: var(--button-text-color-hover) !important;
+      background-color: var(--color-white) !important;
+    }
+  }
 }
 
 .call-out-box--orange {

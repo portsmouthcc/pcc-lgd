@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.localgov_card
     - field.storage.node.body
     - field.storage.node.field_media_image
     - field.storage.node.localgov_publication_content
@@ -225,13 +225,13 @@ display:
           uses_fields: false
           columns: 3
           cell_min_width: 100
-          grid_gutter: 10
+          grid_gutter: 32
           alignment: vertical
       row:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: teaser
+          view_mode: localgov_card
       defaults:
         style: false
         row: false
