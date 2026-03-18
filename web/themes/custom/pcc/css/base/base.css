@@ -69,13 +69,11 @@ h6,
 .paragraph--type--localgov-subscribe-panel {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
   .social-media-subscription-panel__links {
     display: flex;
 
     .services--feature-block {
-      margin-left: var(--spacing-small);
 
       a:focus {
         box-shadow:
@@ -125,4 +123,34 @@ h6,
 
 .main {
   margin-top: var(--spacing-largest);
+}
+
+.email-subscription-panel {
+  a {
+    background: var(--color-blue);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-accent);
+
+    &:hover {
+      background: var(--color-blue-hover);
+      color: var(--color-blue-hover-text);
+    }
+  }
+
+  .email-subscription-panel__title .field__item {
+    font-size: 1.25rem;
+  }
+}
+
+.social-media-subscription-panel {
+  .social-media-subscription-panel__title .field__item {
+    font-size: 1.25rem;
+  }
+
+  .services--feature-block {
+    margin-left: 0px !important;
+    margin-right: 1rem;
+  }
 }
