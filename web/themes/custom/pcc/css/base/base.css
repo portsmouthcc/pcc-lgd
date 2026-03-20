@@ -154,3 +154,31 @@ h6,
     margin-right: 1rem;
   }
 }
+
+.field--name-localgov-embed-block-view {
+  .view-latest-news {
+    .view-content {
+      --cols: 3;
+      --gap: 32px;
+      display: flex;
+      gap: var(--gap);
+      flex-wrap: wrap;
+
+      .views-row {
+        flex-basis: calc(100% / var(--cols) - var(--gap) / var(--cols) * (var(--cols) - 1));
+      }
+    }
+  }
+}
+
+@media (max-width: 48rem) {
+  .field--name-localgov-embed-block-view .view-latest-news .view-content {
+    --cols: 1;
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 60rem) {
+  .field--name-localgov-embed-block-view .view-latest-news .view-content {
+    --cols: 2;
+  }
+}
