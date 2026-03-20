@@ -1,0 +1,14 @@
+uuid: fc104ced-ffe5-4b1e-b176-0f8e55149a0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.tro_manager
+  module:
+    - user
+id: user_add_role_action.tro_manager
+label: 'Add the TRO Manager role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: tro_manager
