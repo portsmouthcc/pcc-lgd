@@ -1,0 +1,31 @@
+uuid: c111bf17-21ab-4979-a6ca-dbc7c09d556f
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+    - node.type.pcc_tro
+  module:
+    - media
+    - node
+    - system
+    - toolbar
+id: tro_manager
+label: 'TRO Manager'
+weight: 7
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'create image media'
+  - 'create pcc_tro content'
+  - 'delete own image media'
+  - 'delete own pcc_tro content'
+  - 'edit any image media'
+  - 'edit any pcc_tro content'
+  - 'edit own image media'
+  - 'edit own pcc_tro content'
+  - 'revert pcc_tro revisions'
+  - 'view pcc_tro revisions'
+  - 'view the administration theme'
