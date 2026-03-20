@@ -1,0 +1,46 @@
+pcc_osm_proxy.settings:
+  type: config_object
+  label: 'PCC OSM Proxy settings'
+  mapping:
+    tile_cache_max_age:
+      type: integer
+      label: 'Tile cache max age (seconds, minimum 604800 per OSM policy)'
+    allowed_styles:
+      type: sequence
+      label: 'Allowed OSM tile styles'
+      sequence:
+        type: mapping
+        label: 'Style definition'
+        mapping:
+          url:
+            type: string
+            label: 'Upstream tile URL template ({z}/{x}/{y})'
+    user_agent:
+      type: string
+      label: 'HTTP User-Agent sent to OpenStreetMap upstream'
+    bounding_box:
+      type: mapping
+      label: 'Geographic bounding box for allowed tiles (WGS84 decimal degrees)'
+      mapping:
+        min_lat:
+          type: float
+          label: 'Minimum latitude (southern edge)'
+          nullable: true
+        max_lat:
+          type: float
+          label: 'Maximum latitude (northern edge)'
+          nullable: true
+        min_lng:
+          type: float
+          label: 'Minimum longitude (western edge)'
+          nullable: true
+        max_lng:
+          type: float
+          label: 'Maximum longitude (eastern edge)'
+          nullable: true
+    prewarm_max_zoom:
+      type: integer
+      label: 'Maximum zoom level for cache pre-warming (recommended: 16)'
+    flood_threshold:
+      type: integer
+      label: 'Maximum upstream tile requests per IP per minute (cached tiles are exempt)'

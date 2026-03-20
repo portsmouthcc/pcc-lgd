@@ -1,0 +1,9 @@
+services:
+  pcc_osm_proxy.commands:
+    class: Drupal\pcc_osm_proxy\Commands\PccOsmProxyCommands
+    arguments:
+      - '@pcc_osm_proxy.tile_fetcher'
+      - '@pcc_osm_proxy.bounds_calculator'
+      - '@config.factory'
+    tags:
+      - { name: drush.command }

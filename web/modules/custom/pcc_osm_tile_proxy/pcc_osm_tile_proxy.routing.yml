@@ -1,0 +1,22 @@
+# Route definitions.
+
+# Each route needs a unique identifier. We recommend prefixing the route name
+# with the name of your module. Indented under the route name is the definition
+# of the route. A routing.yml file can contain any number of routes.
+pcc.osm_tile_proxy:
+  # The URL path where this page will be displayed.
+  path: "/osm-tile-proxy/"
+  #{z}/{x}/{y}"
+  defaults:
+    # Title of the page used for things like <title> tag.
+    _title: "OSM Tile Proxy"
+    # Defines which method, on which class, should be called to retrieve the
+    # content of the page.
+    _controller: '\Drupal\PccOsmTileProxy\Controller\TilesController::build'
+  requirements:
+    # What permissions a user needs to have in order to view this page.
+    _permission: "access content"
+    # Regexes to ensure the params are numbers.
+    # x: '\d+\'
+    # y: '\d+\'
+    # z: '\d+\'

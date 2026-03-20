@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * PCC OSM Proxy module hooks.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_leaflet_map_info().
+ *
+ * Registers "PCC OSM Proxy" as a map option in the Leaflet Map Tiles Layer
+ * dropdown. Tiles are served from our own proxy route so the end-user's IP
+ * address is never sent to OpenStreetMap.
+ */
+function pcc_osm_proxy_leaflet_map_info(): array {
+  // Build the tile URL relative to the site root so it works regardless of
+  // subdirectory installations.  base_path() includes a trailing slash.
+  $tile_url = base_path() . 'osm-tile/standard/{z}/{x}/{y}';
+
+  return [
+    'pcc_osm_proxy' => [
+      'label' => 'OSM Standard (PCC privacy proxy)',
+      'description' => t('OpenStreetMap Standard tiles served via a server-side proxy. The visitor\'s IP address is never sent to OpenStreetMap, satisfying GDPR data-minimisation requirements.'),
+      'settings' => [
+        'dragging'           => TRUE,
+        'touchZoom'          => TRUE,
+        'scrollWheelZoom'    => TRUE,
+        'doubleClickZoom'    => TRUE,
+        'zoomControl'        => TRUE,
+        'attributionControl' => TRUE,
+        'trackResize'        => TRUE,
+        'fadeAnimation'      => TRUE,
+        'zoomAnimation'      => TRUE,
+        'closePopupOnClick'  => TRUE,
+        'minZoom'            => 0,
+        'maxZoom'            => 19,
+      ],
+      'layers' => [
+        'osm_standard' => [
+          'urlTemplate' => $tile_url,
+          'options' => [
+            'attribution' => '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors',
+            'maxZoom'     => 19,
+            'tileSize'    => 256,
+          ],
+        ],
+      ],
+    ],
+  ];
+}

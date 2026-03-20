@@ -1,0 +1,29 @@
+services:
+  # Dedicated database cache bin for tile metadata. Using a named bin means
+  # tiles survive drush cr, which only clears cache_default and cache_render.
+  cache.pcc_osm_proxy_tiles:
+    class: Drupal\Core\Cache\CacheBackendInterface
+    tags:
+      - { name: cache.bin, default_backend: cache.backend.database }
+    factory: cache_factory:get
+    arguments: [pcc_osm_proxy_tiles]
+
+  # Converts lat/lng coordinates to OSM tile x/y indices.
+  pcc_osm_proxy.bounds_calculator:
+    class: Drupal\pcc_osm_proxy\TileBoundsCalculator
+
+  pcc_osm_proxy.tile_fetcher:
+    class: Drupal\pcc_osm_proxy\TileFetcher
+    arguments:
+      - '@http_client'
+      - '@cache.pcc_osm_proxy_tiles'
+      - '@file_system'
+      - '@flood'
+      - '@logger.factory'
+      - '@config.factory'
+
+  pcc_osm_proxy.controller:
+    class: Drupal\pcc_osm_proxy\Controller\PccOsmTileProxyController
+    arguments:
+      - '@pcc_osm_proxy.tile_fetcher'
+      - '@pcc_osm_proxy.bounds_calculator'
