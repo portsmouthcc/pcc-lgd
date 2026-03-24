@@ -1,0 +1,12 @@
+pcc_osm_proxy.tile:
+  path: '/osm-tile/{style}/{z}/{x}/{y}'
+  defaults:
+    _controller: '\Drupal\pcc_osm_proxy\Controller\PccOsmTileProxyController::tile'
+    _title: 'PCC OSM Proxy'
+  requirements:
+    _access: 'TRUE'
+    z: '\d+'
+    x: '\d+'
+    y: '\d+'
+  options:
+    no_cache: FALSE

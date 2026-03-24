@@ -1,0 +1,8 @@
+name: 'PCC OSM Proxy'
+type: module
+description: 'Proxies OpenStreetMap tile requests through the Drupal server to protect user IP addresses (GDPR compliance). Provides a Leaflet tile layer provider.'
+package: 'Mapping'
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:system
+  - leaflet:leaflet

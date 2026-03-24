@@ -98,6 +98,7 @@ module:
   localgov_login_redirect: 0
   localgov_media: 0
   localgov_menu_link_group: 0
+  localgov_moderngov: 0
   localgov_news: 0
   localgov_page_components: 0
   localgov_paragraphs: 0
@@ -140,6 +141,7 @@ module:
   path: 0
   path_alias: 0
   pcc_migrate: 0
+  pcc_osm_proxy: 0
   preview_link: 0
   redirect: 0
   redirect_404: 0
@@ -158,9 +160,6 @@ module:
   search_api_location_views: 0
   simple_media_bulk_upload: 0
   simple_sitemap: 0
-  svg_image: 0
-  svg_image_field: 0
-  svg_image_responsive: 0
   symfony_mailer: 0
   system: 0
   tablefield: 0

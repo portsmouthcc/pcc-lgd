@@ -1,0 +1,40 @@
+# Default configuration for PCC OSM Proxy.
+#
+# tile_cache_max_age: OSM policy requires a minimum of 7 days (604800 seconds).
+#
+# allowed_styles: Map of style machine-names to upstream URL templates.
+#   Only styles listed here can be proxied.
+#
+# user_agent: Must identify your organisation per OSM tile usage policy.
+#   Replace with your real site name and contact URL.
+#
+# bounding_box: Optional. If set, only tiles within this geographic area will
+#   be served. Requests for tiles outside it return 403. Coordinates in WGS84
+#   decimal degrees. Leave null to allow all tiles.
+#
+# prewarm_max_zoom: Maximum zoom level fetched by the cache pre-warm Drush
+#   command. Tile counts grow as 4^zoom — be conservative. Zoom 16 gives good
+#   street-level detail; zoom 18 can mean hundreds of thousands of tiles.
+#
+# flood_threshold: Maximum upstream (cache-miss) tile requests per IP per
+#   minute before a 429 is returned. Cached tiles are never rate-limited.
+#   Raise this if legitimate users are hitting the limit while panning/zooming.
+#   300 allows a burst of ~10 map views worth of uncached tiles per minute.
+
+tile_cache_max_age: 604800
+
+allowed_styles:
+  standard:
+    url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+
+user_agent: "PccOsmProxy/1.0 (https://www.portsmouth.gov.uk; contact: oliver.read@portsmouthcc.gov.uk)"
+
+bounding_box:
+  min_lat: 50.7400
+  max_lat: 50.9000
+  min_lng: -1.2000
+  max_lng: -0.9500
+
+prewarm_max_zoom: 15
+
+flood_threshold: 300
