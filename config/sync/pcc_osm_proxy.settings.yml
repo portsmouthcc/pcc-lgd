@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: nr5QcEvz4fejuCvT2nU1RtrifEpbqKE7EekAxldr9c4
+tile_cache_max_age: 604800
+allowed_styles:
+  standard:
+    url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+user_agent: 'PccOsmProxy/1.0 (https://www.portsmouth.gov.uk; contact: oliver.read@portsmouthcc.gov.uk)'
+bounding_box:
+  min_lat: 50.74
+  max_lat: 50.9
+  min_lng: -1.2
+  max_lng: -0.95
+prewarm_max_zoom: 15
+flood_threshold: 300
