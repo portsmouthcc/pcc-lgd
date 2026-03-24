@@ -27,7 +27,7 @@ allowed_styles:
   standard:
     url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
 
-user_agent: "PccOsmProxy/1.0 (https://www.portsmouth.gov.uk; contact: oliver.read@portsmouthcc.gov.uk)"
+user_agent: "PccOsmProxy/1.0 (https://www.example.com; contact: someone@example.com)"
 
 bounding_box:
   min_lat: 50.7400
