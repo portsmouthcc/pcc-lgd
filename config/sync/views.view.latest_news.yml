@@ -220,13 +220,11 @@ display:
     position: 1
     display_options:
       style:
-        type: grid_responsive
+        type: default
         options:
+          row_class: ''
+          default_row_class: true
           uses_fields: false
-          columns: 3
-          cell_min_width: 100
-          grid_gutter: 32
-          alignment: vertical
       row:
         type: 'entity:node'
         options:
