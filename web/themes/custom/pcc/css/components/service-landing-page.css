@@ -18,6 +18,10 @@
   background-color: var(--color-blue);
 }
 
+.service-landing-page__contact h3 {
+  margin-block-end: var(--spacing-smaller);
+}
+
 .service-landing-page__contact-containers {
   margin-block-end: unset;
   padding-block-end: unset;
