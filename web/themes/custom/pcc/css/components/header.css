@@ -24,8 +24,7 @@
 /* Search submit button */
 .lgd-region--search .form-submit {
   display: flex;
-  padding: calc(var(--button-padding-vertical) - 1.5px)
-    calc(var(--button-padding-horizontal) - 1.5px);
+  padding: calc(var(--button-padding-vertical) - 1.5px) calc(var(--button-padding-horizontal) - 1.5px);
   /*
     Trying and failing to make the square submit button with a border be
     the same height as the text input...
@@ -61,4 +60,16 @@
 .block-localgov-sitewide-search-block label {
   display: inline-block !important;
   margin-bottom: 0.5rem;
+}
+
+.lgd-region--search .form-item-s {
+  width: 100%;
+  margin-block-end: 0;
+  /* Override default form-item class */
+}
+
+@media screen and (min-width: 48rem) {
+  .lgd-region--search .form-item-s {
+    max-width: 50%;
+  }
 }
