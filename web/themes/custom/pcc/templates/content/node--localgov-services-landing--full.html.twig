@@ -2,19 +2,20 @@
 /**
  * @file
  * Default node template for localgov_services_landing pages.
+ *
+ * This template controls the layout and rendering of a service landing page,
+ * including services list, updates, contact info, and sidebar content.
  */
 #}
 
+{# Attach default LocalGov CSS unless explicitly disabled #}
 {% if not localgov_base_remove_css %}
-	{{ attach_library('localgov_base/service-landing-page') }}
+  {{ attach_library('localgov_base/service-landing-page') }}
 {% endif %}
 
 {#
-  Set icon names here, so we can override them in subthemes by calling
-  'include @localgov_base/content/-node--localgov-services-landing--full.twig with {
-    facebook_icon = 'facebook-f',
-    twitter_icon = 'twitter',
-  }
+  Icon variables (FontAwesome / theme icons)
+  These can be overridden in subthemes when including this template.
 #}
 {% set facebook_icon = 'facebook-square' %}
 {% set twitter_icon = 'twitter-square' %}
@@ -23,251 +24,279 @@
 {% set website_icon = 'globe' %}
 {% set map_icon = 'map-marker-alt' %}
 
-{%
-  set classes = [
-    'service-landing-page',
-    'node',
-    'node--type-' ~ node.bundle|clean_class,
-    node.isPromoted() ? 'node--promoted',
-    node.isSticky() ? 'node--sticky',
-    not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  ]
-%}
+{#
+  Build CSS classes dynamically based on node state
+  (published, promoted, sticky, view mode, etc.)
+#}
+{% set classes = [
+  'service-landing-page',
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+] %}
 
-<article{{attributes.addClass(classes).removeAttribute('role')}}>
-	<div class="lgd-container padding-horizontal">
-		<div
-			class="lgd-row">
+<article{{ attributes.addClass(classes).removeAttribute('role') }}>
+  <div class="lgd-container padding-horizontal">
+    <div class="lgd-row">
 
-			{# Begin Main Content #}
-			<div
-				class="lgd-row__full">
-				{# Begin Services List #}
-				{% if node.localgov_destinations.value %}
-					<h2 class="visually-hidden">{{ 'Services List'|t }}</h2>
-					<section class="service-landing-page__services lgd-teaser-list">
-						{{ content.localgov_destinations }}
-					</section>
-				{% endif %}
-				{# End Services List #}
+      {# ================= MAIN CONTENT ================= #}
+      <div class="lgd-row__full">
 
-				{# Begin Service Updates #}
-				{% if service_updates %}
-					<section class="service-landing-page__updates">
-						{{ service_updates }}
-					</section>
-				{% endif %}
-				{# End Service Updates #}
-			</div>
+        {# Services list (hidden heading for accessibility) #}
+        {% if node.localgov_destinations.value %}
+          <h2 class="visually-hidden">{{ 'Services List'|t }}</h2>
+          <section class="service-landing-page__services lgd-teaser-list">
+            {{ content.localgov_destinations }}
+          </section>
+        {% endif %}
 
-			{# Begin Grid Main Column #}
+        {# Optional service updates block #}
+        {% if service_updates %}
+          <section class="service-landing-page__updates">
+            {{ service_updates }}
+          </section>
+        {% endif %}
 
+      </div>
 
-			{% if
-          node.localgov_email_address.value
-          or node.localgov_address.value
-          or node.localgov_opening_hours.value
-          or node.localgov_phone.value
-          or node.localgov_facebook.value
-          or node.localgov_twitter.value
-          or node.localgov_hearing_difficulties_phone.value
-        %}
-				<div
-					class="lgd-row__two-thirds">
-					{# Begin Contact Section #}
-					<div class="service-landing-page__contact">
-						{% if node.localgov_email_address.value
-              or node.localgov_address.value
-              or node.localgov_opening_hours.value
+      {# ================= CONTACT SECTION WRAPPER ================= #}
+      {#
+        Only render contact section if ANY contact-related field exists.
+        Prevents empty UI blocks.
+      #}
+      {% if
+        node.localgov_email_address.value
+        or node.localgov_address.value
+        or node.localgov_opening_hours.value
+        or node.localgov_phone.value
+        or node.localgov_facebook.value
+        or node.localgov_twitter.value
+        or node.localgov_hearing_difficulties_phone.value
+      %}
+        <div class="lgd-row__two-thirds-desktop lgd-row__full-tablet">
+
+          <div class="service-landing-page__contact">
+
+            {#
+              Determine whether each column has content.
+              This controls:
+              - whether the column renders
+              - whether layout is 50/50 or full width
+            #}
+            {% set has_first_column =
+              node.localgov_email_address.value
               or node.localgov_phone.value
+              or node.localgov_contact_us_online.value
+              or node.localgov_other_team_contacts.value
+              or node.localgov_opening_hours.value
             %}
-							<h2>{{ 'Contact this service'|t }}</h2>
-							<hr>
-							{# Begin Contact Containers #}
-							<div
-								class="lgd-row service-landing-page__contact-containers">
-								{# Begin Contact First #}
-								<div class="lgd-row__one-half service-landing-page__contact-container service-landing-page__contact-container--first">
-									<ul class="service-landing-page__contact-list">
-										{% if node.localgov_email_address.value %}
-											<li
-												class="service-landing-page__contact-list-item">
-												{# {% include "@localgov_base/includes/icons/icon.html.twig" with {
-																																																																																																																																				                            icon_name: email_icon,
-																																																																																																																																				                            icon_wrapper_element: 'span',
-																																																																																																																																				                            icon_classes: 'service-landing-page__contact-icon'
-																																																																																																																																				                          }
-																																																																																																																																				                        %} #}
-												<i class="fa-solid fa-fw fa-envelope"></i>
 
-												<a href="mailto:{{ node.localgov_email_address.value }}">{{ 'Send us a message'|t }}</a>
-											</li>
-										{% endif %}
+            {% set has_second_column =
+              node.localgov_address_first_line.value
+              or node.localgov_address.value
+              or node.localgov_link_to_map.value
+              or node.localgov_facebook.value
+              or node.localgov_twitter.value
+              or node.localgov_hearing_difficulties_phone.value
+            %}
 
-										{% if node.localgov_phone.value %}
-											<li
-												class="service-landing-page__contact-list-item">
-												{# {% include "@localgov_base/includes/icons/icon.html.twig" with {
-																																																																																																                            icon_name: phone_icon,
-																																																																																																                            icon_wrapper_element: 'span',
-																																																																																																                            icon_classes: 'service-landing-page__contact-icon'
-																																																																																																                          }
-																																																																																																                        %} #}
-												<i class="fa-solid fa-fw fa-phone-alt"></i>
+            {% if has_first_column or has_second_column %}
 
-												<span class="visually-hidden">{{ 'Our phone number'|t }}</span>
-												{{ content.localgov_phone|render|striptags }}
-											</li>
-										{% endif %}
+              <h2>{{ 'Contact this service'|t }}</h2>
+              <hr>
 
-										{% if node.localgov_contact_us_online.value %}
-											<li
-												class="service-landing-page__contact-list-item">
-												{# {% include "@localgov_base/includes/icons/icon.html.twig" with {
-																																																																																				                            icon_name: website_icon,
-																																																																																				                            icon_wrapper_element: 'span',
-																																																																																				                            icon_classes: 'service-landing-page__contact-icon'
-																																																																																				                          }
-																																																																																				                        %} #}
-												<i class="fa-solid fa-fw fa-globe"></i>
+              <div class="lgd-row service-landing-page__contact-containers">
 
-												<span class="visually-hidden">{{ 'Our website'|t }}</span>
-												<a href="{{ node.localgov_contact_us_online.value }}">{{ node.localgov_contact_us_online.value }}</a>
-											</li>
-										{% endif %}
+                {# ================= FIRST COLUMN ================= #}
+                {% if has_first_column %}
+                  <div class="
+                    {{ has_second_column ? 'lgd-row__one-half' : 'lgd-row__full' }}
+                    service-landing-page__contact-container
+                    service-landing-page__contact-container--first
+                  ">
 
-										{% if node.localgov_other_team_contacts.value %}
-											<li
-												class="service-landing-page__contact-list-item">
-												{# {% include "@localgov_base/includes/icons/icon.html.twig" with {
-																																																																								                            icon_name: website_icon,
-																																																																								                            icon_wrapper_element: 'span',
-																																																																								                            icon_classes: 'service-landing-page__contact-icon'
-																																																																								                          }
-																																																																								                        %} #}
-												<i class="fa-solid fa-fw fa-globe"></i>
-												<span class="visually-hidden">{{ 'Other team contacts website'|t }}</span>
-												<a href="{{ node.localgov_other_team_contacts.value }}">{{ node.localgov_other_team_contacts.value }}</a>
-											</li>
-										{% endif %}
-									</ul>
+                    {# Contact methods list #}
+                    <ul class="service-landing-page__contact-list">
 
-									{% if node.localgov_opening_hours.value %}
-										<div class="service-landing-page__opening-times">
-											<h3>{{ 'Opening times'|t }}</h3>
-											{{ content.localgov_opening_hours }}
-										</div>
-									{% endif %}
-								</div>
-								{# End Contact First #}
-								{# Begin Contact Second #}
-								<div class="lgd-row__one-half service-landing-page__contact-container service-landing-page__contact-container--second">
-									{% if node.localgov_address_first_line.value or node.localgov_address.value %}
-										<h3 class="service-landing-page__contact-title">{{ 'Address'|t }}</h3>
-										{% if node.localgov_address_first_line.value %}
-											{{ content.localgov_address_first_line }}
-										{% endif %}
-										{% if node.localgov_address.value %}
-											{{ content.localgov_address }}
-										{% endif %}
-										{% if node.localgov_link_to_map.value %}
-											<div
-												class="service-landing-page__contact-map">
-												{# {% include "@localgov_base/includes/icons/icon.html.twig" with {
-																																																												                            icon_name: map_icon,
-																																																												                            icon_wrapper_element: 'div',
-																																																												                            icon_classes: 'service-landing-page__contact-icon'
-																																																												                          }
-																																																												                        %} #}
-												<i class="fa-solid fa-fw fa-location-dot"></i>
+                      {# Email link #}
+                      {% if node.localgov_email_address.value %}
+                        <li class="service-landing-page__contact-list-item">
+                          <i class="fa-solid fa-fw fa-envelope"></i>
+                          <a href="mailto:{{ node.localgov_email_address.value }}">
+                            {{ 'Send us a message'|t }}
+                          </a>
+                        </li>
+                      {% endif %}
 
-												<div>
-													<a href="{{ content.localgov_link_to_map|render|striptags }}" class="external-link" target="_blank">
-														{{ 'View map'|t }}
-														<span class="visually-hidden">{{ 'External site, opens in a new tab'|t }}</span>
-													</a>
-												</div>
-											</div>
-										{% endif %}
-									{% endif %}
-								</div>
-								{# Begin Contact Second #}
-							{% endif %}
+                      {# Phone number (cleaned for tel: link) #}
+                      {% if node.localgov_phone.value %}
+                        <li class="service-landing-page__contact-list-item">
+                          <i class="fa-solid fa-fw fa-phone-alt"></i>
+                          <span class="visually-hidden">{{ 'Our phone number'|t }}</span>
 
-						</div>
-						{# End Contact Containers #}
+                          {#
+                            Render field → strip HTML → trim whitespace
+                            Then remove spaces/symbols for valid tel: link
+                          #}
+                          {% set phone_raw = content.localgov_phone|render|striptags|trim %}
+                          {% set phone_link = phone_raw|replace({
+                            ' ': '',
+                            '-': '',
+                            '(': '',
+                            ')': ''
+                          }) %}
 
+                          <a href="tel:{{ phone_link }}">
+                            {{ phone_raw }}
+                          </a>
+                        </li>
+                      {% endif %}
 
-						{# Begin Contact Socials and a11y number #}
-						{% if node.localgov_facebook.value or node.localgov_twitter.value or node.localgov_hearing_difficulties_phone.value %}
+                      {# Website link #}
+                      {% if node.localgov_contact_us_online.value %}
+                        <li class="service-landing-page__contact-list-item">
+                          <i class="fa-solid fa-fw fa-globe"></i>
+                          <span class="visually-hidden">{{ 'Our website'|t }}</span>
+                          <a href="{{ node.localgov_contact_us_online.value }}">
+                            {{ node.localgov_contact_us_online.value }}
+                          </a>
+                        </li>
+                      {% endif %}
 
-							{% if node.localgov_facebook.value or node.localgov_twitter.value %}
-								<h3>{{ 'Find us on'|t }}</h3>
-								<ul class="service-landing-page__contact-list">
+                      {# Additional contacts link #}
+                      {% if node.localgov_other_team_contacts.value %}
+                        <li class="service-landing-page__contact-list-item">
+                          <i class="fa-solid fa-fw fa-globe"></i>
+                          <span class="visually-hidden">{{ 'Other team contacts website'|t }}</span>
+                          <a href="{{ node.localgov_other_team_contacts.value }}">
+                            {{ node.localgov_other_team_contacts.value }}
+                          </a>
+                        </li>
+                      {% endif %}
 
-									{% if node.localgov_facebook.value %}
-										<li class="service-landing-page__contact-list-item">
-											{% include "@localgov_base/includes/icons/icon.html.twig" with {
-                            icon_name: facebook_icon,
-                            icon_wrapper_element: 'span',
-                            icon_classes: 'service-landing-page__contact-icon'
-                          }
-                        %}
-											<a href="{{ content.localgov_facebook|render|striptags }}">{{ 'Facebook'|t }}</a>
-										</li>
-									{% endif %}
+                    </ul>
 
-									{% if node.localgov_twitter.value %}
-										<li class="service-landing-page__contact-list-item">
-											{% include "@localgov_base/includes/icons/icon.html.twig" with {
-                            icon_name: twitter_icon,
-                            icon_wrapper_element: 'span',
-                            icon_classes: 'service-landing-page__contact-icon'
-                          }
-                        %}
-											<a href="{{ content.localgov_twitter|render|striptags }}">{{ 'Twitter'|t }}</a>
-										</li>
-									{% endif %}
+                    {# Opening hours block #}
+                    {% if node.localgov_opening_hours.value %}
+                      <div class="service-landing-page__opening-times">
+                        <h3>{{ 'Opening times'|t }}</h3>
+                        {{ content.localgov_opening_hours }}
+                      </div>
+                    {% endif %}
 
-								</ul>
-							{% endif %}
+                  </div>
+                {% endif %}
 
-							{% if node.localgov_hearing_difficulties_ph.value %}
-								<p>
-									{% trans %}
-									If you have hearing or speech difficulties, please call
-									{{ node.localgov_hearing_difficulties_ph.value }}.
-									{% endtrans %}
-								</p>
-							{% endif %}
-						{% endif %}
-						{# End Contact Socials and a11y number #}
+                {# ================= SECOND COLUMN ================= #}
+                {% if has_second_column %}
+                  <div class="
+                    {{ has_first_column ? 'lgd-row__one-half' : 'lgd-row__full' }}
+                    service-landing-page__contact-container
+                    service-landing-page__contact-container--second
+                  ">
 
-					</div>
-				{% endif %}
-				{# End Contact Section #}
+                    {# Address block #}
+                    {% if node.localgov_address_first_line.value or node.localgov_address.value %}
+                      <h3 class="service-landing-page__contact-title">{{ 'Address'|t }}</h3>
 
-			</div>
-			{# End Grid Main Column #}
+                      {% if node.localgov_address_first_line.value %}
+                        {{ content.localgov_address_first_line }}
+                      {% endif %}
 
-			{# Begin Sidebar #}
-			{% if node.localgov_popular_topics.value %}
-				<aside class="lgd-row__one-third service-landing-page__sidebar">
-					{{ content.localgov_popular_topics }}
-				</aside>
-			{% endif %}
-			{# End Sidebar #}
+                      {% if node.localgov_address.value %}
+                        {{ content.localgov_address }}
+                      {% endif %}
+                    {% endif %}
 
-		</div>
-	</div>
+                    {# Map link #}
+                    {% if node.localgov_link_to_map.value %}
+                      <div class="service-landing-page__contact-map">
+                        <i class="fa-solid fa-fw fa-location-dot"></i>
+                        <div>
+                          <a href="{{ content.localgov_link_to_map|render|striptags }}"
+                             class="external-link"
+                             target="_blank">
+                            {{ 'View map'|t }}
+                            <span class="visually-hidden">
+                              {{ 'External site, opens in a new tab'|t }}
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    {% endif %}
+
+                    {# Social media links #}
+                    {% if node.localgov_facebook.value or node.localgov_twitter.value %}
+                      <h3>{{ 'Find us on'|t }}</h3>
+                      <ul class="service-landing-page__contact-list">
+
+                        {% if node.localgov_facebook.value %}
+                          <li class="service-landing-page__contact-list-item">
+                            {% include "@localgov_base/includes/icons/icon.html.twig" with {
+                              icon_name: facebook_icon,
+                              icon_wrapper_element: 'span',
+                              icon_classes: 'service-landing-page__contact-icon'
+                            } %}
+                            <a href="{{ content.localgov_facebook|render|striptags }}">
+                              {{ 'Facebook'|t }}
+                            </a>
+                          </li>
+                        {% endif %}
+
+                        {% if node.localgov_twitter.value %}
+                          <li class="service-landing-page__contact-list-item">
+                            {% include "@localgov_base/includes/icons/icon.html.twig" with {
+                              icon_name: twitter_icon,
+                              icon_wrapper_element: 'span',
+                              icon_classes: 'service-landing-page__contact-icon'
+                            } %}
+                            <a href="{{ content.localgov_twitter|render|striptags }}">
+                              {{ 'Twitter'|t }}
+                            </a>
+                          </li>
+                        {% endif %}
+
+                      </ul>
+                    {% endif %}
+
+                    {# Accessibility phone message #}
+                    {% if node.localgov_hearing_difficulties_phone.value %}
+                      <p>
+                        {% trans %}
+                        If you have hearing or speech difficulties, please call
+                        {{ node.localgov_hearing_difficulties_phone.value }}.
+                        {% endtrans %}
+                      </p>
+                    {% endif %}
+
+                  </div>
+                {% endif %}
+
+              </div>
+            {% endif %}
+
+          </div>
+        </div>
+      {% endif %}
+
+      {# ================= SIDEBAR ================= #}
+      {% if node.localgov_popular_topics.value %}
+        <aside class="lgd-row__one-third service-landing-page__sidebar">
+          {{ content.localgov_popular_topics }}
+        </aside>
+      {% endif %}
+
+    </div>
+  </div>
 </article>
 
+{# 
+  Render content to ensure cache metadata bubbles up properly.
+  This avoids having to manually list excluded fields.
+#}
 {% block content_variable %}
-	{#
-													    This allows the cache_context to bubble up for us, without having to
-													    individually list every field in
-													    {{ content|without('localgov_name', 'localgov_other_field', 'localgov_etc') }}
-													  #}
-	{% set catch_cache = content|render %}
+  {% set catch_cache = content|render %}
 {% endblock %}
