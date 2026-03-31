@@ -261,3 +261,17 @@ a {
     gap: 0 !important;
   }
 }
+
+.field--name-field-media-oembed-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.field--name-field-media-oembed-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}
