@@ -1,0 +1,11 @@
+uuid: 1420215f-f588-4ce3-aa60-79b3d508e18f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.responsive_video_16by9
+label: 'Responsive Video 16by9'
+description: 'Add this to Youtube, Vimeo videos etc to make them responsive. '
+targetEntityType: media
+cache: true
