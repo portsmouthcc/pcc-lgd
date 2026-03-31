@@ -262,13 +262,13 @@ a {
   }
 }
 
-.field--name-field-media-oembed-video {
+.embed-responsive {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
 }
 
-.field--name-field-media-oembed-video iframe {
+.embed-responsive iframe {
   position: absolute;
   inset: 0;
   width: 100% !important;

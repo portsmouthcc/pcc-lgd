@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.media.freestyle
     - core.entity_view_mode.media.medium_8_7
     - core.entity_view_mode.media.responsive_3x2
+    - core.entity_view_mode.media.responsive_video_16by9
     - core.entity_view_mode.media.scale_crop_7_3_large
     - core.entity_view_mode.media.square
     - core.entity_view_mode.media.svg_large
@@ -113,6 +114,7 @@ filters:
         freestyle: freestyle
         medium_8_7: medium_8_7
         responsive_3x2: responsive_3x2
+        responsive_video_16by9: responsive_video_16by9
         scale_crop_7_3_large: scale_crop_7_3_large
         square: square
         svg_large: svg_large
