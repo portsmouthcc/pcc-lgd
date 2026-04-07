@@ -6,6 +6,7 @@ dependencies:
     - workflows.workflow.localgov_alert_banners
   module:
     - content_moderation
+    - klaro
     - localgov_alert_banner
     - node
     - scheduled_transitions
@@ -27,6 +28,7 @@ permissions:
   - 'add scheduled transitions localgov_alert_banner localgov_alert_banner'
   - 'manage all localgov alert banner entities'
   - 'reschedule scheduled transitions localgov_alert_banner localgov_alert_banner'
+  - 'use klaro'
   - 'use localgov_alert_banners transition publish'
   - 'use localgov_alert_banners transition unpublish'
   - 'view all localgov alert banner entities'
