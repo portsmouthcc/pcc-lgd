@@ -275,3 +275,10 @@ a {
   height: 100% !important;
   border: 0;
 }
+
+.field--name-field-media-svg {
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
