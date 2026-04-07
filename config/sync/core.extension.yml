@@ -72,6 +72,7 @@ module:
   jquery_ui: 0
   jquery_ui_autocomplete: 0
   jquery_ui_menu: 0
+  klaro: 0
   layout_discovery: 0
   layout_paragraphs: 0
   leaflet: 0

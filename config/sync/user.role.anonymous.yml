@@ -9,6 +9,7 @@ dependencies:
   module:
     - filter
     - geo_entity
+    - klaro
     - localgov_alert_banner
     - localgov_directories
     - media
@@ -22,6 +23,7 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
+  - 'use klaro'
   - 'use search_api_autocomplete for localgov_news_search'
   - 'use text format restricted_html'
   - 'view all localgov alert banner entities'
