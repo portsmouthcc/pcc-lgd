@@ -1,0 +1,20 @@
+uuid: 454321d7-2763-4af8-8d8d-d25320b3c306
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_search
+  theme:
+    - pcc
+id: pcc_sitewidesearchblock
+theme: pcc
+region: header
+weight: 0
+provider: null
+plugin: localgov_sitewide_search_block
+settings:
+  id: localgov_sitewide_search_block
+  label: 'Sitewide search block'
+  label_display: '0'
+  provider: localgov_search
+visibility: {  }
