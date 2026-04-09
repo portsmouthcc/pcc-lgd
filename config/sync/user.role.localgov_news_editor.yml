@@ -6,6 +6,7 @@ dependencies:
     - media.type.image
     - node.type.localgov_news_article
   module:
+    - eu_cookie_compliance
     - media
     - node
     - system
@@ -28,6 +29,7 @@ permissions:
   - 'delete any localgov_news_article content'
   - 'delete own image media'
   - 'delete own localgov_news_article content'
+  - 'display eu cookie compliance popup'
   - 'edit any image media'
   - 'edit any localgov_news_article content'
   - 'edit own image media'

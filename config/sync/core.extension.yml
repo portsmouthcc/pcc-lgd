@@ -90,6 +90,7 @@ module:
   localgov_directories_location: 0
   localgov_directories_page: 0
   localgov_directories_venue: 0
+  localgov_eu_cookie_compliance: 0
   localgov_events: 0
   localgov_geo: 0
   localgov_geo_address: 0
@@ -186,6 +187,7 @@ module:
   pathauto: 1
   formdazzle: 10
   views: 10
+  eu_cookie_compliance: 11
   paragraphs: 11
   localgov: 1000
 theme:
