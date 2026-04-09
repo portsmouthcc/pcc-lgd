@@ -1,0 +1,25 @@
+uuid: fb36d734-e6e3-41c2-8ee4-3fb814c2ee83
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_eu_cookie_compliance
+    - system
+  theme:
+    - pcc
+id: pcc_eucookiesettingsblock
+theme: pcc
+region: content
+weight: 0
+provider: null
+plugin: cookie_settings_block
+settings:
+  id: cookie_settings_block
+  label: 'EU Cookie settings block'
+  label_display: visible
+  provider: localgov_eu_cookie_compliance
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /cookies

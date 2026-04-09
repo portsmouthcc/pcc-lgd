@@ -6,6 +6,7 @@ dependencies:
     - workflows.workflow.localgov_alert_banners
   module:
     - content_moderation
+    - eu_cookie_compliance
     - klaro
     - localgov_alert_banner
     - node
@@ -26,6 +27,7 @@ permissions:
   - 'access localgov alert banner listing page'
   - 'access toolbar'
   - 'add scheduled transitions localgov_alert_banner localgov_alert_banner'
+  - 'display eu cookie compliance popup'
   - 'manage all localgov alert banner entities'
   - 'reschedule scheduled transitions localgov_alert_banner localgov_alert_banner'
   - 'use klaro'

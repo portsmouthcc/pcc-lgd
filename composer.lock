@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a7ff081809157e02d2c49a8fd299835",
+    "content-hash": "1ba63269e2fe37b38056e80e826d1de7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3770,6 +3770,75 @@
             }
         },
         {
+            "name": "drupal/eu_cookie_compliance",
+            "version": "1.29.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/eu-cookie-compliance.git",
+                "reference": "8.x-1.29"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/eu_cookie_compliance-8.x-1.29.zip",
+                "reference": "8.x-1.29",
+                "shasum": "c10aca3e4b4107e0ca804804f0deb98d20a78251"
+            },
+            "require": {
+                "drupal/core": "^8.9 || ^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.29",
+                    "datestamp": "1760671053",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Marcin Pajdzik",
+                    "homepage": "https://www.drupal.org/u/marcin-pajdzik",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Sven Berg Ryen",
+                    "homepage": "https://www.drupal.org/u/svenryen",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/1538032/committers"
+                }
+            ],
+            "description": "This module aims at making the website compliant with the new EU cookie regulation.",
+            "homepage": "https://drupal.org/project/eu_cookie_compliance",
+            "keywords": [
+                "Cookie",
+                "CookieCompliance",
+                "Drupal",
+                "GDPR"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/eu-cookie-compliance",
+                "docs": "https://www.drupal.org/docs/contributed-modules/eu-cookie-compliance",
+                "forum": "https://drupal.stackexchange.com/search?q=eu+cookie+compliance",
+                "issues": "https://www.drupal.org/project/issues/eu_cookie_compliance?version=8.x",
+                "slack": "https://app.slack.com/client/T06GX3JTS/C012XBTH81E"
+            }
+        },
+        {
             "name": "drupal/facets",
             "version": "3.0.2",
             "source": {
@@ -5408,6 +5477,79 @@
             "homepage": "https://www.drupal.org/project/localgov_editoria11y",
             "support": {
                 "source": "https://git.drupalcode.org/project/localgov_editoria11y"
+            }
+        },
+        {
+            "name": "drupal/localgov_eu_cookie_compliance",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/localgov_eu_cookie_compliance.git",
+                "reference": "1.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/localgov_eu_cookie_compliance-1.1.0.zip",
+                "reference": "1.1.0",
+                "shasum": "52e31c6e52afbfbd81395ea45888667de6911782"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10",
+                "drupal/eu_cookie_compliance": "^1.24.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.1.0",
+                    "datestamp": "1764603374",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "andybroomfield",
+                    "homepage": "https://www.drupal.org/user/636756"
+                },
+                {
+                    "name": "ekes",
+                    "homepage": "https://www.drupal.org/user/10083"
+                },
+                {
+                    "name": "finn lewis",
+                    "homepage": "https://www.drupal.org/user/119432"
+                },
+                {
+                    "name": "localgov",
+                    "homepage": "https://www.drupal.org/user/3841829"
+                },
+                {
+                    "name": "maria.y",
+                    "homepage": "https://www.drupal.org/user/2439852"
+                },
+                {
+                    "name": "markconroy",
+                    "homepage": "https://www.drupal.org/user/336910"
+                },
+                {
+                    "name": "stephen-cox",
+                    "homepage": "https://www.drupal.org/user/2862323"
+                },
+                {
+                    "name": "tonypaulbarker",
+                    "homepage": "https://www.drupal.org/user/807484"
+                }
+            ],
+            "description": "Extends the functionality of the eu_cookie_compliance contrib module.",
+            "homepage": "https://www.drupal.org/project/localgov_eu_cookie_compliance",
+            "support": {
+                "source": "https://git.drupalcode.org/project/localgov_eu_cookie_compliance"
             }
         },
         {
