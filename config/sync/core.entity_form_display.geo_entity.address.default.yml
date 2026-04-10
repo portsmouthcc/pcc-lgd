@@ -38,6 +38,7 @@ content:
     weight: 1
     region: content
     settings:
+      geometry_validation: false
       map:
         leaflet_map: 'OSM Mapnik'
         height: 400
@@ -71,17 +72,20 @@ content:
       reset_map:
         control: false
         options: '{"position":"topleft","title":"Reset View"}'
-      locate:
-        control: false
-        options: '{"position":"topright","setView":"untilPanOrZoom","returnToPrevBounds":true,"keepCurrentZoomLevel":true,"strings":{"title":"Locate my position"}}'
-        automatic: false
       fullscreen:
         control: false
         options: '{"position":"topleft","pseudoFullscreen":false}'
       path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
+      feature_properties:
+        values: ''
+      locate:
+        control: false
+        options: '{"position":"topright","setView":"untilPanOrZoom","returnToPrevBounds":true,"keepCurrentZoomLevel":true,"strings":{"title":"Locate my position"}}'
+        automatic: false
       geocoder:
         control: false
         settings:
+          popup: false
           position: topright
           input_size: 20
           providers:
@@ -103,9 +107,7 @@ content:
           min_terms: 4
           delay: 800
           zoom: 16
-          popup: false
           options: ''
-      geometry_validation: 0
       multiple_map: false
       leaflet_map: 'OSM Mapnik'
       height: 400
@@ -161,8 +163,6 @@ content:
         control: false
         options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds": false}'
         include_path: false
-      feature_properties:
-        values: ''
     third_party_settings: {  }
   postal_address:
     type: geo_entity_address
