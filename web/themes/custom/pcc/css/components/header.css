@@ -105,6 +105,14 @@
 .block-localgov-sitewide-search-block label {
   display: inline-block !important;
   margin-bottom: 0.5rem;
+
+  /* Hide the search label */
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
 }
 
 .lgd-region--search .form-item-s {
