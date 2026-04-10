@@ -4,12 +4,12 @@ Apparently fonts will load quicker if defined in html.html.twig
 
 @font-face {
   font-family: Inter;
-  src: url("../../assets/fonts/Inter-VariableFont_opsz\,wght.ttf");
+  src: url("../../assets/fonts/Inter-VariableFont_opsz,wght.ttf");
   font-style: normal;
 }
 
 @font-face {
   font-family: Inter;
-  src: url("../../assets/fonts/Inter-Italic-VariableFont_opsz\,wght.ttf");
+  src: url("../../assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf");
   font-style: italic;
 }
