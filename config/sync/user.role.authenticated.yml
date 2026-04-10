@@ -6,7 +6,6 @@ dependencies:
     - filter.format.wysiwyg
     - localgov_alert_banner.localgov_alert_banner_type.localgov_alert_banner
   module:
-    - eu_cookie_compliance
     - filter
     - fontawesome
     - geo_entity
@@ -24,7 +23,6 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access fontawesome additional settings'
-  - 'display eu cookie compliance popup'
   - 'use klaro'
   - 'use text format wysiwyg'
   - 'view all localgov alert banner entities'
