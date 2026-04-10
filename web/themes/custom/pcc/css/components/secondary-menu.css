@@ -28,3 +28,18 @@
   padding-left: 0;
   list-style-type: none;
 }
+
+@media screen and (min-width: 48rem) {
+  .region-secondary-menu .menu {
+    column-count: 1;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: var(--spacing-smaller);
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  .region-secondary-menu .menu {
+    grid-template-columns: auto auto auto;
+  }
+}
