@@ -1,9 +1,9 @@
 /* The grey contact box needs more contrast. */
 .service-landing-page__contact {
-  background-color: var(--color-accent-2);
+  padding: var(--spacing-large);
   border-top: 8px var(--border-style) var(--color-accent);
   border-inline-start: none;
-  padding: var(--spacing-large);
+  background-color: var(--color-accent-2);
 
   hr {
     margin-bottom: var(--spacing-largest);
@@ -29,11 +29,11 @@
   border-block-end-color: unset;
 
   .fa-solid {
-    color: var(--color-blue);
-    font-size: 20px;
-    margin-right: 10px;
     position: relative;
     top: 2px;
+    margin-right: 10px;
+    color: var(--color-blue);
+    font-size: 20px;
   }
 
   .field--name-localgov-opening-hours p:last-of-type {
@@ -41,8 +41,8 @@
   }
 
   .service-landing-page__contact-map {
-    margin-block-end: var(--spacing-large);
     margin-left: -0.5rem;
+    margin-block-end: var(--spacing-large);
   }
 
   .service-landing-page__opening-times {

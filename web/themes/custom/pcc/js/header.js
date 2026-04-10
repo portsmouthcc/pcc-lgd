@@ -5,7 +5,7 @@
 (function headerScript(Drupal, drupalSettings, once) {
   Drupal.behaviors.header = {
     attach(context) {
-      const { mobileBreakpointJS } = drupalSettings.localgov_base;
+      // const { mobileBreakpointJS } = drupalSettings.localgov_base;
 
       // Set up initial variables.
       //
@@ -19,7 +19,7 @@
       const navInfo = {};
       // This is used as a check on resize to see if the window size *actually*
       // changed.
-      let windowWidth = window.innerWidth;
+      // let windowWidth = window.innerWidth;
       // All the interactivity here revolves around the toggles, so query them
       // and we can build an object full of references to them and to their
       // regions. We use .once() to avoid re-running this.
@@ -93,13 +93,13 @@
       }
 
       // When the primary menu toggle is clicked
-      function handlePrimaryMenuToggleClick() {
-        handleToggleClick(navInfo.primary.toggle);
-        handleEscKeyClick(navInfo.primary.toggle);
+      // function handlePrimaryMenuToggleClick() {
+      //   handleToggleClick(navInfo.primary.toggle);
+      //   handleEscKeyClick(navInfo.primary.toggle);
 
-        navInfo.primary.region.classList.toggle(regionActiveClass);
-        navInfo.secondary.region.classList.toggle(regionActiveClass);
-      }
+      //   navInfo.primary.region.classList.toggle(regionActiveClass);
+      //   navInfo.secondary.region.classList.toggle(regionActiveClass);
+      // }
 
       // When the secondary menu toggle is clicked
       function handleSecondaryMenuToggleClick() {
@@ -152,71 +152,71 @@
       // menu regions when clicked.
       // On a large screen, the secondary button is shown which will show only
       // the secondary menu region when clicked (the primary menu will always be visible).
-      function handleWindowResized() {
-        handleReset();
+      // function handleWindowResized() {
+      //   handleReset();
 
-        if (window.innerWidth < mobileBreakpointJS) {
-          if (
-            Object.keys(navInfo).includes("secondary") &&
-            navInfo.secondary.toggle
-          ) {
-            navInfo.secondary.toggle.removeEventListener(
-              "click",
-              handleSecondaryMenuToggleClick,
-              true,
-            );
-            navInfo.secondary.toggle.removeEventListener(
-              "click",
-              handleSecondaryMenuShiftTabClick,
-              true,
-            );
-            navInfo.secondary.toggle.removeEventListener(
-              "click",
-              handleSecondaryMenuTabClick,
-              true,
-            );
-          }
-        } else {
-          if (
-            Object.keys(navInfo).includes("primary") &&
-            navInfo.primary.toggle
-          ) {
-            navInfo.primary.toggle.removeEventListener(
-              "click",
-              handlePrimaryMenuToggleClick,
-              true,
-            );
-          }
-          if (
-            Object.keys(navInfo).includes("secondary") &&
-            navInfo.secondary.toggle
-          ) {
-            navInfo.secondary.toggle.addEventListener(
-              "click",
-              handleSecondaryMenuToggleClick,
-            );
-            navInfo.secondary.toggle.addEventListener(
-              "click",
-              handleSecondaryMenuShiftTabClick,
-            );
-            navInfo.secondary.toggle.addEventListener(
-              "keyup",
-              handleSecondaryMenuTabClick,
-            );
-          }
-        }
-      }
+      //   if (window.innerWidth < mobileBreakpointJS) {
+      //     if (
+      //       Object.keys(navInfo).includes("secondary") &&
+      //       navInfo.secondary.toggle
+      //     ) {
+      //       navInfo.secondary.toggle.removeEventListener(
+      //         "click",
+      //         handleSecondaryMenuToggleClick,
+      //         true,
+      //       );
+      //       navInfo.secondary.toggle.removeEventListener(
+      //         "click",
+      //         handleSecondaryMenuShiftTabClick,
+      //         true,
+      //       );
+      //       navInfo.secondary.toggle.removeEventListener(
+      //         "click",
+      //         handleSecondaryMenuTabClick,
+      //         true,
+      //       );
+      //     }
+      //   } else {
+      //     if (
+      //       Object.keys(navInfo).includes("primary") &&
+      //       navInfo.primary.toggle
+      //     ) {
+      //       navInfo.primary.toggle.removeEventListener(
+      //         "click",
+      //         handlePrimaryMenuToggleClick,
+      //         true,
+      //       );
+      //     }
+      //     if (
+      //       Object.keys(navInfo).includes("secondary") &&
+      //       navInfo.secondary.toggle
+      //     ) {
+      //       navInfo.secondary.toggle.addEventListener(
+      //         "click",
+      //         handleSecondaryMenuToggleClick,
+      //       );
+      //       navInfo.secondary.toggle.addEventListener(
+      //         "click",
+      //         handleSecondaryMenuShiftTabClick,
+      //       );
+      //       navInfo.secondary.toggle.addEventListener(
+      //         "keyup",
+      //         handleSecondaryMenuTabClick,
+      //       );
+      //     }
+      //   }
+      // }
 
       // We need this small function here to check if the window size has changed.
       // On phones, if the menu is expanded and then the user scrolls to see things
       // near the bottom of the menu, a scrollbar comes into play which technically
       // means the window size has changed.
-      function handleCheckIfWindowActuallyResized() {
-        if (window.innerWidth !== windowWidth) {
-          windowWidth = window.innerWidth;
-          handleWindowResized();
-        }
-      }
+      // function handleCheckIfWindowActuallyResized() {
+      //   if (window.innerWidth !== windowWidth) {
+      //     windowWidth = window.innerWidth;
+      //     handleWindowResized();
+      //   }
+      // }
 
       // Call our functions, initially and also when the window is resized.
       // handleWindowResized();

@@ -52,7 +52,7 @@ body {
   --color-info: var(--color-accent);
 
   /* Fonts */
-  --font-primary: Inter, sans-serif;
+  --font-primary: inter, sans-serif;
   --font-secondary: var(--font-primary);
 
   /* Headings */
@@ -129,6 +129,6 @@ body {
   --call-out-box-link-padding: 0.5rem 0.75rem;
   --call-out-box-bg-color: var(--color-blue);
 
-  /*paragraphs overrides*/
+  /* paragraphs overrides */
   --featured-teaser-content-padding: var(--spacing-large);
 }

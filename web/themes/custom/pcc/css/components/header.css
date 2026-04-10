@@ -36,10 +36,10 @@
 
 .lgd-region--header,
 .lgd-region__inner--header {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 
   form {
     display: flex;
@@ -103,15 +103,14 @@
 }
 
 .block-localgov-sitewide-search-block label {
-  display: inline-block !important;
-  margin-bottom: 0.5rem;
-
   /* Hide the search label */
   position: absolute !important;
+  display: inline-block !important;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
   width: 1px;
   height: 1px;
+  margin-bottom: 0.5rem;
   word-wrap: normal;
 }
 
