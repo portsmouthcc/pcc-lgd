@@ -52,7 +52,7 @@ a:not(.button) {
 }
 
 .paragraph--type--localgov-box-link {
-  border: 1px solid grey !important
+  border: 1px solid grey !important;
 }
 
 .paragraph--type--localgov-link:focus-within .link-wrapper {
@@ -78,7 +78,6 @@ a:not(.button) {
     display: flex;
 
     .services--feature-block {
-
       a:focus {
         box-shadow:
           0 -2px var(--color-focus),
@@ -90,8 +89,8 @@ a:not(.button) {
 
 /* Table of contents filter module */
 .toc-filter ol.none {
-  list-style-type: none;
   padding-left: 0;
+  list-style-type: none;
 }
 
 /* Guide prev-next component isn't loaded normally by the base theme. */
@@ -109,9 +108,9 @@ a:not(.button) {
 }
 
 .lgd-prev-next__list-item--next a {
-  height: 100%;
   align-items: flex-start;
   justify-content: end;
+  height: 100%;
   text-align: right;
 }
 
@@ -121,8 +120,8 @@ a:not(.button) {
 }
 
 .back-to-top {
-  margin-bottom: var(--spacing-large);
   display: block;
+  margin-bottom: var(--spacing-large);
 }
 
 .main {
@@ -131,15 +130,15 @@ a:not(.button) {
 
 .email-subscription-panel {
   a {
-    background: var(--color-blue);
-    color: var(--color-white);
     padding: 0.5rem 1rem;
     text-decoration: none;
+    color: var(--color-white);
     border-bottom: 2px solid var(--color-accent);
+    background: var(--color-blue);
 
     &:hover {
-      background: var(--color-blue-hover);
       color: var(--color-blue-hover-text);
+      background: var(--color-blue-hover);
     }
   }
 
@@ -154,8 +153,8 @@ a:not(.button) {
   }
 
   .services--feature-block {
-    margin-left: 0px !important;
     margin-right: 1rem;
+    margin-left: 0 !important;
   }
 }
 
@@ -164,12 +163,15 @@ a:not(.button) {
     .view-content {
       --cols: 3;
       --gap: 32px;
+
       display: flex;
       gap: var(--gap);
       flex-wrap: wrap;
 
       .views-row {
-        flex-basis: calc(100% / var(--cols) - var(--gap) / var(--cols) * (var(--cols) - 1));
+        flex-basis: calc(
+          100% / var(--cols) - var(--gap) / var(--cols) * (var(--cols) - 1)
+        );
       }
     }
   }
@@ -187,11 +189,9 @@ a:not(.button) {
   }
 }
 
-
 /* custom breakpoints for row widths (tablet) */
 
 @media (min-width: 48rem) {
-
   .lgd-row__full-tablet {
     grid-column: span 12;
   }
@@ -207,13 +207,11 @@ a:not(.button) {
   .lgd-row__two-thirds-tablet {
     grid-column: span 8;
   }
-
 }
 
 /* custom breakpoints for row widths (desktop) */
 
 @media (min-width: 60rem) {
-
   .lgd-row__full-desktop {
     grid-column: span 12;
   }
@@ -240,14 +238,12 @@ a:not(.button) {
 }
 
 @media (max-width: 48rem) {
-
   .lgd-row--grid [class^="lgd-row__full-"],
   .lgd-row--grid [class^="lgd-row__one-half-"],
   .lgd-row--grid [class^="lgd-row__one-third-"],
   .lgd-row--grid [class^="lgd-row__two-thirds-"] {
     grid-column: span 12;
   }
-
 }
 
 @media (max-width: 60rem) {
@@ -278,11 +274,11 @@ a:not(.button) {
 
 .embed-responsive div[data-type="placeholder"] {
   position: absolute;
-  inset: 0;
   width: 100% !important;
+  max-width: 100% !important;
   height: 100% !important;
   border: 0;
-  max-width: 100% !important;
+  inset: 0;
 }
 
 .field--name-field-media-svg {

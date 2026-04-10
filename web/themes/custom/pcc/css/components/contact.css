@@ -1,9 +1,8 @@
 .paragraph--type--localgov-contact {
-
   .lgd-contact__content {
-    background: var(--color-accent-2);
-    border: none;
     padding: var(--spacing-large);
+    border: none;
+    background: var(--color-accent-2);
 
     h3 {
       margin-block-end: var(--spacing-smallest);
@@ -15,15 +14,14 @@
   }
 
   .lgd-contact__headings {
-    background: var(--color-accent-2);
-    border-top: 8px var(--border-style) var(--color-accent);
-    border-left: none;
-    border-right: none;
     padding: var(--spacing-large) var(--spacing-large) 0 var(--spacing-large);
+    border-top: 8px var(--border-style) var(--color-accent);
+    border-right: none;
+    border-left: none;
+    background: var(--color-accent-2);
 
     .field--name-localgov-contact-heading {
       color: var(--color-blue);
-      margin-bottom: var(--);
     }
 
     hr {

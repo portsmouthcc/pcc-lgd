@@ -1,6 +1,6 @@
 .block-localgov-directories-channel-search-block {
-  background-color: transparent !important;
   padding: 0 20px 0 0 !important;
+  background-color: transparent !important;
 }
 
 .node--type-localgov-directories-venue,
@@ -8,8 +8,8 @@
   margin-bottom: var(--spacing-mega);
 
   fieldset {
-    border: none;
     padding: 0;
+    border: none;
   }
 
   .field--name-label {
@@ -36,20 +36,11 @@
   } */
 
   .venue__details {
-    background-color: var(--color-accent-2);
+    height: 100%;
+    padding: var(--spacing-large);
     border-top: 8px var(--border-style) var(--color-accent);
     border-inline-start: none;
-    padding: var(--spacing-large);
-    height: 100%;
-
-    @media(max-width: 382px) {
-      padding: 10px;
-      font-size: 14px;
-
-      i {
-        display: none;
-      }
-    }
+    background-color: var(--color-accent-2);
 
     .venue__title {
       h4 {
@@ -89,11 +80,20 @@
       display: flex;
 
       .fa-solid {
-        color: var(--color-blue);
-        font-size: 20px;
-        margin-right: 10px;
         position: relative;
         top: 4px;
+        margin-right: 10px;
+        color: var(--color-blue);
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 382px) {
+      padding: 10px;
+      font-size: 14px;
+
+      i {
+        display: none;
       }
     }
   }
@@ -108,10 +108,9 @@
 }
 
 .block-localgov-directories {
-
   #edit-localgov-location-wrapper--4 {
-    border: none;
     padding: 0;
+    border: none;
 
     legend {
       padding-left: 0;

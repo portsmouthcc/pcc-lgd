@@ -31,9 +31,9 @@
 
 @media screen and (min-width: 48rem) {
   .region-secondary-menu .menu {
-    column-count: 1;
     display: grid;
     grid-template-columns: auto auto;
+    column-count: 1;
     gap: var(--spacing-smaller);
   }
 }
