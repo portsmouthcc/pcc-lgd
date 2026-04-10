@@ -1,8 +1,3 @@
-{# Attach libraries #}
-{% if not localgov_base_remove_js %}
-	{{ attach_library('localgov_base/header-js') }}
-{% endif %}
-
 {# Primary menu moved to new header-top bar. #}
 {% if has_primary_menu %}
 	<header class="header-top">
@@ -26,45 +21,40 @@
 
 					{{ page.header }}
 
+					{% if has_search %}
+						{{ page.search }}
+					{% endif %}
+
 					{% if has_search or has_secondary_menu %}
 						<div class="lgd-header__toggles">
 							{% if has_secondary_menu %}
 								<button class="lgd-header__toggle lgd-header__toggle--secondary" data-target="lgd-header__nav--secondary" aria-controls="lgd-header__nav--secondary" aria-expanded="false" aria-label="{{ 'Services: jump to services'|t }}">
 									<i class="icon fa-regular fa-chevron-down"></i>
-									<span class="lgd-header__toggle-text lgd-header__toggle-text--secondary">{{ 'Services'|t }}</span>
-									{# <span class="lgd-header__toggle-icon lgd-header__toggle-icon--secondary"></span> #}
-								</button>
-							{% endif %}
-
-							{% if has_search %}
-								<button class="lgd-header__toggle lgd-header__toggle--primary" data-target="lgd-header__nav--primary" aria-controls="lgd-header__nav--primary" aria-expanded="false">
-									<i class="icon fa-regular fa-chevron-down"></i>
-									<span class="lgd-header__toggle-text lgd-header__toggle-text--primary">{{ 'Menu'|t }}</span>
-									{# <span class="lgd-header__toggle-icon lgd-header__toggle-icon--primary"></span> #}
+									<span class="lgd-header__toggle-text lgd-header__toggle-text--secondary">{{ 'Menu'|t }}</span>
 								</button>
 							{% endif %}
 						</div>
-
-						{% if has_search %}
-							<div id="lgd-header__nav--primary" class="lgd-header__nav lgd-header__nav--primary"></div>
-						{% endif %}
-
 					{% endif %}
+
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<div id="lgd-header__nav--secondary" class="lgd-header__nav lgd-header__nav--secondary">
+		<div class="lgd-container padding-horizontal">
+			{% if has_search %}
+				{{ page.search }}
+			{% endif %}
+			{% if has_secondary_menu %}
+				{{ page.secondary_menu }}
+			{% endif %}
+		</div>
+	</div>
+
 	{% if has_subsites_menu %}
 		<div id="lgd-header__nav--subsites-menu" class="lgd-header__nav lgd-header__nav--subsites-menu">
 			{{ page.subsites_menu }}
 		</div>
 	{% endif %}
 </header>
-
-{% if has_secondary_menu %}
-	<div id="lgd-header__nav--secondary" class="lgd-header__nav lgd-header__nav--secondary">
-		<div class="lgd-container padding-horizontal">
-			{{ page.secondary_menu }}
-		</div>
-	</div>
-{% endif %}

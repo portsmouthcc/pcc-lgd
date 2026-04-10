@@ -92,6 +92,8 @@ header:
   css:
     theme:
       css/components/header.css: {}
+  js:
+    js/header.js: {}
 
 link:
   css:
