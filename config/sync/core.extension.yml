@@ -144,6 +144,8 @@ module:
   pcc_migrate: 0
   pcc_osm_proxy: 0
   preview_link: 0
+  quick_exit: 0
+  quick_exit_button: 0
   redirect: 0
   redirect_404: 0
   responsive_image: 0

@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implements hook_help().
+ */
+function quick_exit_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.quick_exit':
+      return '<p>' . t('This module provides a block with a quick exit button that redirects to a user-defined external URL.') . '</p>';
+  }
+}
