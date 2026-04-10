@@ -26,7 +26,6 @@ dependencies:
   module:
     - content_moderation
     - entity_browser
-    - eu_cookie_compliance
     - geo_entity
     - localgov_workflows_notifications
     - media
@@ -103,7 +102,6 @@ permissions:
   - 'delete own localgov_subsites_overview content'
   - 'delete own localgov_subsites_page content'
   - 'delete own remote_video media'
-  - 'display eu cookie compliance popup'
   - 'edit any document media'
   - 'edit any image media'
   - 'edit any remote_video media'

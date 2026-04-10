@@ -6,7 +6,6 @@ dependencies:
     - media.type.image
     - node.type.pcc_tro
   module:
-    - eu_cookie_compliance
     - media
     - node
     - system
@@ -23,7 +22,6 @@ permissions:
   - 'create pcc_tro content'
   - 'delete own image media'
   - 'delete own pcc_tro content'
-  - 'display eu cookie compliance popup'
   - 'edit any image media'
   - 'edit any pcc_tro content'
   - 'edit own image media'

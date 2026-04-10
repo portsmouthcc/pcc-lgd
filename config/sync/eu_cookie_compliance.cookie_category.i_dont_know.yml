@@ -1,9 +1,0 @@
-uuid: 2a7c9284-404b-493d-9367-783e8de37b5e
-langcode: en
-status: true
-dependencies: {  }
-id: i_dont_know
-label: 'I dont know'
-description: 'something or other goes here.'
-checkbox_default_state: unchecked
-weight: -9

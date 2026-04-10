@@ -34,7 +34,6 @@ dependencies:
     - book
     - content_moderation
     - entity_browser
-    - eu_cookie_compliance
     - geo_entity
     - localgov_directories
     - localgov_publications
@@ -175,7 +174,6 @@ permissions:
   - 'delete terms in localgov_event_locality'
   - 'delete terms in localgov_event_price'
   - 'delete terms in localgov_topic'
-  - 'display eu cookie compliance popup'
   - 'edit any document media'
   - 'edit any geo'
   - 'edit any image media'

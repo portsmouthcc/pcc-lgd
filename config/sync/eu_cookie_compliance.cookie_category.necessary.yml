@@ -1,9 +1,0 @@
-uuid: ca3c9043-9806-4291-81d2-fc2c016da677
-langcode: en
-status: true
-dependencies: {  }
-id: necessary
-label: Necessary
-description: 'Cookies that are need for the function of the website.'
-checkbox_default_state: required
-weight: -8
