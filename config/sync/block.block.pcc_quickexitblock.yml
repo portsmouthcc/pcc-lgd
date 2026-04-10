@@ -1,0 +1,23 @@
+uuid: 0a29a575-be92-40d5-a8bb-c14be7974aee
+langcode: en
+status: true
+dependencies:
+  module:
+    - quick_exit_button
+  theme:
+    - pcc
+id: pcc_quickexitblock
+theme: pcc
+region: header
+weight: 0
+provider: null
+plugin: quick_exit_button_block
+settings:
+  id: quick_exit_button_block
+  label: 'Quick Exit Block'
+  label_display: visible
+  provider: quick_exit_button
+  quick_exit_button_title: Exit
+  quick_exit_url: 'https://www.google.com'
+  quick_exit_button_classes: ''
+visibility: {  }
