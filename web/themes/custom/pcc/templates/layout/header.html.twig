@@ -21,7 +21,7 @@
 
 					{{ page.header }}
 
-					{% if has_search %}
+					{% if not is_front and has_search %}
 						{{ page.search }}
 					{% endif %}
 

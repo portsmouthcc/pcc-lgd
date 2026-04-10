@@ -7,27 +7,6 @@
     attach(context) {
       const { mobileBreakpointJS } = drupalSettings.localgov_base;
 
-      // REMOVED AND HIDDEN WITH CSS.
-      // Hide the search form label. We use .once() to avoid re-running.
-      //
-      // @todo: make it possible to override this without having to maintain a
-      //   *copy* of this file.
-      // const headerSearchFormLabels = once(
-      //   "header-search-label",
-      //   ".lgd-region--search form label",
-      //   context,
-      // );
-
-      // console.log(headerSearchFormLabels);
-
-      // if (headerSearchFormLabel.length) {
-      //   headerSearchFormLabel[0].classList.add("visually-hidden");
-      // }
-
-      // for (headerSearchFormLabel of headerSearchFormLabels) {
-      //   headerSearchFormLabel.classList.add("visually-hidden");
-      // }
-
       // Set up initial variables.
       //
       // We need a bunch of classes and selectors.
@@ -197,14 +176,6 @@
               true,
             );
           }
-
-          // We've removed the primary menu toggle.
-          // if (navInfo.primary.toggle) {
-          //   navInfo.primary.toggle.addEventListener(
-          //     'click',
-          //     handlePrimaryMenuToggleClick,
-          //   );
-          // }
         } else {
           if (
             Object.keys(navInfo).includes("primary") &&
