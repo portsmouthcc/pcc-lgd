@@ -169,9 +169,7 @@ a:not(.button) {
       flex-wrap: wrap;
 
       .views-row {
-        flex-basis: calc(
-          100% / var(--cols) - var(--gap) / var(--cols) * (var(--cols) - 1)
-        );
+        flex-basis: calc(100% / var(--cols) - var(--gap) / var(--cols) * (var(--cols) - 1));
       }
     }
   }
@@ -238,6 +236,7 @@ a:not(.button) {
 }
 
 @media (max-width: 48rem) {
+
   .lgd-row--grid [class^="lgd-row__full-"],
   .lgd-row--grid [class^="lgd-row__one-half-"],
   .lgd-row--grid [class^="lgd-row__one-third-"],
@@ -286,4 +285,8 @@ a:not(.button) {
     max-width: 100%;
     height: auto;
   }
+}
+
+.charts-chartjs .chart {
+  max-width: 100%;
 }
