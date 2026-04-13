@@ -5,6 +5,9 @@ dependencies:
   config:
     - filter.format.wysiwyg
     - localgov_alert_banner.localgov_alert_banner_type.localgov_alert_banner
+    - search_api_autocomplete.search.localgov_directory_channel
+    - search_api_autocomplete.search.localgov_news_search
+    - search_api_autocomplete.search.localgov_sitewide_search
   module:
     - filter
     - fontawesome
@@ -13,6 +16,7 @@ dependencies:
     - localgov_alert_banner
     - localgov_directories
     - media
+    - search_api_autocomplete
     - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
@@ -24,6 +28,9 @@ permissions:
   - 'access content'
   - 'access fontawesome additional settings'
   - 'use klaro'
+  - 'use search_api_autocomplete for localgov_directory_channel'
+  - 'use search_api_autocomplete for localgov_news_search'
+  - 'use search_api_autocomplete for localgov_sitewide_search'
   - 'use text format wysiwyg'
   - 'view all localgov alert banner entities'
   - 'view directory facets'

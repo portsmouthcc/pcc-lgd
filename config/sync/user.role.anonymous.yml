@@ -5,7 +5,9 @@ dependencies:
   config:
     - filter.format.restricted_html
     - localgov_alert_banner.localgov_alert_banner_type.localgov_alert_banner
+    - search_api_autocomplete.search.localgov_directory_channel
     - search_api_autocomplete.search.localgov_news_search
+    - search_api_autocomplete.search.localgov_sitewide_search
   module:
     - filter
     - geo_entity
@@ -24,7 +26,9 @@ is_admin: false
 permissions:
   - 'access content'
   - 'use klaro'
+  - 'use search_api_autocomplete for localgov_directory_channel'
   - 'use search_api_autocomplete for localgov_news_search'
+  - 'use search_api_autocomplete for localgov_sitewide_search'
   - 'use text format restricted_html'
   - 'view all localgov alert banner entities'
   - 'view directory facets'
