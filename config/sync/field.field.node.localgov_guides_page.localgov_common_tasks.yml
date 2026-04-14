@@ -7,6 +7,11 @@ dependencies:
     - node.type.localgov_guides_page
   module:
     - link
+    - linkchecker
+third_party_settings:
+  linkchecker:
+    scan: true
+    extractor: link_link_extractor
 id: node.localgov_guides_page.localgov_common_tasks
 field_name: localgov_common_tasks
 entity_type: node

@@ -26,6 +26,7 @@
         "drupal/entity_clone": "^2.1@beta",
         "drupal/formdazzle": "^4.0",
         "drupal/klaro": "^3.0",
+        "drupal/linkchecker": "^2.1",
         "drupal/localgov_eu_cookie_compliance": "^1.1",
         "drupal/media_folders": "^1.0",
         "drupal/migrate_devel": "^3.0",
