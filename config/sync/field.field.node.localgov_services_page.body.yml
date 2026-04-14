@@ -6,7 +6,12 @@ dependencies:
     - field.storage.node.body
     - node.type.localgov_services_page
   module:
+    - linkchecker
     - text
+third_party_settings:
+  linkchecker:
+    scan: true
+    extractor: html_link_extractor
 _core:
   default_config_hash: lSYMn_FBR-lQLRRm7wSM6a0FnuuDYf_QxgTkccyL5GE
 id: node.localgov_services_page.body
