@@ -294,7 +294,7 @@ a:not(.button) {
 .page-node-type-localgov-subsites-page {
   .lgd-container {
     .container-fluid {
-      h2 {
+      .node--type-localgov-subsites-page>h2 {
         max-width: unset;
         padding-inline: unset;
         margin-left: unset;
@@ -304,7 +304,7 @@ a:not(.button) {
   }
 
   .container-fluid {
-    h2 {
+    .node--type-localgov-subsites-page>h2 {
       max-width: var(--width-container);
       padding-inline: var(--spacing-padding-horizontal);
       margin-left: auto;
