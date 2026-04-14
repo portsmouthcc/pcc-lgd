@@ -95,8 +95,8 @@
 }
 
 .block-localgov-sitewide-search-block input {
-  height: 48px;
   min-width: 15rem;
+  height: 48px;
 }
 
 .block-localgov-sitewide-search-block .form-submit {
