@@ -290,3 +290,25 @@ a:not(.button) {
 .charts-chartjs .chart {
   max-width: 100%;
 }
+
+.page-node-type-localgov-subsites-page {
+  .lgd-container {
+    .container-fluid {
+      h2 {
+        max-width: unset;
+        padding-inline: unset;
+        margin-left: unset;
+        margin-right: unset;
+      }
+    }
+  }
+
+  .container-fluid {
+    h2 {
+      max-width: var(--width-container);
+      padding-inline: var(--spacing-padding-horizontal);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
