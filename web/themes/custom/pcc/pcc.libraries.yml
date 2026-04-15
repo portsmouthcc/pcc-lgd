@@ -150,6 +150,13 @@ step-by-step:
     theme:
       css/components/step-by-step.css: {}
 
+subsite-navigation:
+  css:
+    theme:
+      css/components/subsite-navigation.css: {}
+  js:    
+    js/subsite-navigation.js: {}   
+
 teaser:
   css:
     theme:
