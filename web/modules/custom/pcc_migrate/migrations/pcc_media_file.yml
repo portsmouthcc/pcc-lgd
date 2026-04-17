@@ -8,7 +8,7 @@ source:
   plugin: url
   data_fetcher_plugin: file
   data_parser_plugin: xml
-  urls: public://migrate/portsmouthcitycouncil.WordPress.2025-05-23.xml
+  urls: public://migrate/wp-media.xml
   item_selector: /rss/channel/item
   fields:
     - name: id
@@ -24,7 +24,7 @@ source:
     id:
       type: integer
   constants:
-    DRUPAL_FILE_DIRECTORY: public://migrated-media/
+    DRUPAL_FILE_DIRECTORY: public://migrated/
 
 process:
   psuedo_destination_filename:

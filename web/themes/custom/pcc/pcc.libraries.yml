@@ -154,8 +154,8 @@ subsite-navigation:
   css:
     theme:
       css/components/subsite-navigation.css: {}
-  js:    
-    js/subsite-navigation.js: {}   
+  js:
+    js/subsite-navigation.js: {}
 
 teaser:
   css:
