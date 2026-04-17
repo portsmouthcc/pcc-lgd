@@ -34,7 +34,7 @@
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_source_directory": "^2.2",
         "drupal/migrate_tools": "^6.1",
-        "drupal/migration_tools": "^2.9",
+        "drupal/migration_tools": "^2.10",
         "drupal/rules": "^4.0",
         "drupal/svg_image": "^3.2",
         "drupal/svg_image_field": "^2.3",
