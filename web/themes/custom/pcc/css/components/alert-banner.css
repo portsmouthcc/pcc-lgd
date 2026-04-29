@@ -2,6 +2,41 @@
   p {
     margin-bottom: 0;
   }
+
+  .alert-button {
+    padding: var(--alert-banner-close-padding-vertical) var(--alert-banner-close-padding-horizontal);
+    background: var(--alert-banner-close-border-color);
+    border: var(--alert-banner-close-border);
+    border-color: var(--alert-banner-close-border-color);
+    margin-top: var(--spacing-large);
+    display: inline-block;
+  }
+}
+
+.localgov-alert-banner--major {
+  .alert-button {
+    color: var(--alert-banner-bg-color-major);
+  }
+}
+
+.localgov-alert-banner--minor {
+  .alert-button {
+    background: var(--alert-banner-minor-border-color);
+    border: var(--alert-banner-minor-border-color);
+    color: var(--alert-banner-bg-color-minor);
+  }
+}
+
+.localgov-alert-banner--announcement {
+  .alert-button {
+    color: var(--alert-banner-bg-color);
+  }
+}
+
+.localgov-alert-banner--notable-person {
+  .alert-button {
+    color: var(--alert-banner-bg-color-notable-person);
+  }
 }
 
 .localgov-alert-banner__actions {
