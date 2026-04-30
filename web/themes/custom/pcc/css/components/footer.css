@@ -1,6 +1,6 @@
 /* Light blue bar above footer */
 .lgd-footer {
-  margin-top: var(--spacing-mega);
+  margin-top: 5rem !important;
   margin-block-start: 0;
   border-top: var(--spacing-larger) var(--color-accent) solid;
   line-height: var(--spacing-larger);
