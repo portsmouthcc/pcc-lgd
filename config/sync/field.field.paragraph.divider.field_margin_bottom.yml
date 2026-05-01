@@ -1,0 +1,23 @@
+uuid: fa42abb7-1bb1-4ebe-8a07-6deb7f1a1900
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_margin_bottom
+    - paragraphs.paragraphs_type.divider
+  module:
+    - options
+id: paragraph.divider.field_margin_bottom
+field_name: field_margin_bottom
+entity_type: paragraph
+bundle: divider
+label: 'Margin Bottom'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: larger
+default_value_callback: ''
+settings: {  }
+field_type: list_string

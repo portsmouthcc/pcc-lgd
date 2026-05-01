@@ -1,0 +1,33 @@
+uuid: b0ee7b6b-5fcc-45b2-890b-232f808006d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_margin_top
+field_name: field_margin_top
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: large
+      label: Large
+    -
+      value: larger
+      label: Larger
+    -
+      value: largest
+      label: Largest
+    -
+      value: mega
+      label: Mega
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

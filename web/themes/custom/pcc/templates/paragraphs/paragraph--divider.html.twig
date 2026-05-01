@@ -1,0 +1,36 @@
+{#
+/**
+ * Paragraph template for divider
+ */
+#}
+
+{%
+  set classes = [
+    'lgd-divider',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{# Get field values #}
+{% set margin_top = paragraph.field_margin_top.value|clean_class %}
+{% set margin_bottom = paragraph.field_margin_bottom.value|clean_class %}
+{% set colour = paragraph.field_colour.value|clean_class %}
+
+
+{% if not localgov_base_remove_css %}
+	{{ attach_library('pcc/divider') }}
+{% endif %}
+
+{# Build modifier classes #}
+{% set hr_classes = [
+    'lgd-divider__hr',
+    margin_top ? 'lgd-divider--mt-' ~ margin_top,
+    margin_bottom ? 'lgd-divider--mb-' ~ margin_bottom,
+    colour ? 'lgd-divider--colour-' ~ colour
+  ] %}
+
+<div{{attributes.addClass(classes)}}>
+	<hr{{create_attribute().addClass(hr_classes)}}></div>

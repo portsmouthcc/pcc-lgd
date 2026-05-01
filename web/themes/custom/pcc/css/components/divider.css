@@ -1,0 +1,43 @@
+.lgd-divider--mt-large {
+  margin-top: 2rem;
+}
+
+.lgd-divider--mt-larger {
+  margin-top: 3rem;
+}
+
+.lgd-divider--mt-largest {
+  margin-top: 4rem;
+}
+
+.lgd-divider--mb-large {
+  margin-bottom: 2rem;
+}
+
+.lgd-divider--mb-larger {
+  margin-bottom: 3rem;
+}
+
+.lgd-divider--mb-largest {
+  margin-bottom: 4rem;
+}
+
+.lgd-divider--colour-black {
+  border-color: #000;
+}
+
+.lgd-divider--colour-grey {
+  border-color: #ccc;
+}
+
+.lgd-divider--colour-dark-blue {
+  border-color: #003366;
+}
+
+.lgd-divider--colour-accent-blue {
+  border-color: #007BFF;
+}
+
+.lgd-divider--colour-white {
+  border-color: #fff;
+}

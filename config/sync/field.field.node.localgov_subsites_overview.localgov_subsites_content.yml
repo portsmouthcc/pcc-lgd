@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.localgov_subsites_content
     - node.type.localgov_subsites_overview
+    - paragraphs.paragraphs_type.divider
     - paragraphs.paragraphs_type.localgov_accordion
     - paragraphs.paragraphs_type.localgov_block_view
     - paragraphs.paragraphs_type.localgov_box_link
@@ -73,13 +74,20 @@ settings:
       localgov_subscribe_panel: localgov_subscribe_panel
       localgov_key_contacts: localgov_key_contacts
       localgov_page_section: localgov_page_section
+      divider: divider
     negate: 0
     target_bundles_drag_drop:
       banner_home_page:
         weight: -50
         enabled: false
+      divider:
+        weight: -73
+        enabled: true
       from_library:
         weight: -69
+        enabled: false
+      image_svg:
+        weight: -67
         enabled: false
       localgov_accordion:
         weight: -80
