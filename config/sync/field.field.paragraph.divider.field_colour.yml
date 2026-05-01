@@ -1,0 +1,23 @@
+uuid: 3f2fd22b-40da-4105-b001-76c5da3b8206
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_colour
+    - paragraphs.paragraphs_type.divider
+  module:
+    - options
+id: paragraph.divider.field_colour
+field_name: field_colour
+entity_type: paragraph
+bundle: divider
+label: Colour
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: grey
+default_value_callback: ''
+settings: {  }
+field_type: list_string

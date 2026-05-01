@@ -1,0 +1,39 @@
+uuid: add5717f-621f-406e-be64-0487366e4780
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.divider.field_colour
+    - field.field.paragraph.divider.field_margin_bottom
+    - field.field.paragraph.divider.field_margin_top
+    - paragraphs.paragraphs_type.divider
+  module:
+    - options
+id: paragraph.divider.default
+targetEntityType: paragraph
+bundle: divider
+mode: default
+content:
+  field_colour:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_margin_bottom:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_margin_top:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

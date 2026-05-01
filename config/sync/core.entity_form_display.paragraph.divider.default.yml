@@ -1,0 +1,35 @@
+uuid: fa63a8af-6206-498a-b425-6991da270653
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.divider.field_colour
+    - field.field.paragraph.divider.field_margin_bottom
+    - field.field.paragraph.divider.field_margin_top
+    - paragraphs.paragraphs_type.divider
+id: paragraph.divider.default
+targetEntityType: paragraph
+bundle: divider
+mode: default
+content:
+  field_colour:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_margin_bottom:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_margin_top:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

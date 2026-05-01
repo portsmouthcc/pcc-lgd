@@ -49,6 +49,7 @@ settings:
       localgov_call_out_box: localgov_call_out_box
       localgov_documents: localgov_documents
       localgov_fact_box: localgov_fact_box
+      image_svg: image_svg
       localgov_featured_teasers: localgov_featured_teasers
       localgov_image: localgov_image
       localgov_key_facts: localgov_key_facts
@@ -64,17 +65,19 @@ settings:
       localgov_text: localgov_text
       localgov_video: localgov_video
       localgov_page_section: localgov_page_section
-      image_svg: image_svg
     negate: 0
     target_bundles_drag_drop:
       banner_home_page:
         weight: -53
         enabled: false
+      divider:
+        weight: -76
+        enabled: false
       from_library:
         weight: -81
         enabled: false
       image_svg:
-        weight: -74
+        weight: -73
         enabled: true
       localgov_accordion:
         weight: -79

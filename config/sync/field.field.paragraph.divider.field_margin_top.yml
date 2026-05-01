@@ -1,0 +1,23 @@
+uuid: 332502de-2a96-48f2-9e1e-c70a510f5c88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_margin_top
+    - paragraphs.paragraphs_type.divider
+  module:
+    - options
+id: paragraph.divider.field_margin_top
+field_name: field_margin_top
+entity_type: paragraph
+bundle: divider
+label: 'Margin Top'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: larger
+default_value_callback: ''
+settings: {  }
+field_type: list_string

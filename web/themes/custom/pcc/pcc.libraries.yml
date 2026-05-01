@@ -68,6 +68,11 @@ directories:
     layout:
       css/components/directories.css: {}
 
+divider:
+  css:
+    layout:
+      css/components/divider.css: {}
+
 events:
   css:
     layout:
