@@ -21,16 +21,18 @@
 
 					{{ page.header }}
 
-					{% if not is_front and has_search %}
-						{{ page.search }}
-					{% endif %}
-
 					{% if has_search or has_secondary_menu %}
 						<div class="lgd-header__toggles">
 							{% if has_secondary_menu %}
 								<button class="lgd-header__toggle lgd-header__toggle--secondary" data-target="lgd-header__nav--secondary" aria-controls="lgd-header__nav--secondary" aria-expanded="false" aria-label="{{ 'Services: jump to services'|t }}">
 									<i class="icon fa-regular fa-chevron-down"></i>
-									<span class="lgd-header__toggle-text lgd-header__toggle-text--secondary">{{ 'Menu'|t }}</span>
+									<span class="lgd-header__toggle-text lgd-header__toggle-text--secondary">{{ 'Services'|t }}</span>
+								</button>
+							{% endif %}
+							{% if has_search %}
+								<button class="lgd-header__toggle lgd-header__toggle--search" data-target="lgd-header__nav--search" aria-controls="lgd-header__nav--search" aria-expanded="false" aria-label="{{ 'Search: jump to search'|t }}">
+									<i class="icon fa-regular fa-chevron-down"></i>
+									<i class="icon fa-regular fa-magnifying-glass"></i>
 								</button>
 							{% endif %}
 						</div>
@@ -41,16 +43,21 @@
 		</div>
 	</div>
 
-	<div id="lgd-header__nav--secondary" class="lgd-header__nav lgd-header__nav--secondary">
-		<div class="lgd-container padding-horizontal">
-			{% if has_search %}
-				{{ page.search }}
-			{% endif %}
-			{% if has_secondary_menu %}
+	{% if has_secondary_menu %}
+		<div id="lgd-header__nav--secondary" class="lgd-header__nav lgd-header__nav--secondary">
+			<div class="lgd-container padding-horizontal">
 				{{ page.secondary_menu }}
-			{% endif %}
+			</div>
 		</div>
-	</div>
+	{% endif %}
+
+	{% if has_search %}
+		<div id="lgd-header__nav--search" class="lgd-header__nav lgd-header__nav--secondary">
+			<div class="lgd-container padding-horizontal">
+				{{ page.search }}
+			</div>
+		</div>
+	{% endif %}
 
 	{% if has_subsites_menu %}
 		<div id="lgd-header__nav--subsites-menu" class="lgd-header__nav lgd-header__nav--subsites-menu">

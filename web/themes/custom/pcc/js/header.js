@@ -11,8 +11,10 @@
       //
       // We need a bunch of classes and selectors.
       let secondaryMenuRegionIsOpen = false;
+      let searchMenuRegionIsOpen = false;
       const headerToggleSelector = ".lgd-header__toggle";
-      const primaryToggleClass = "lgd-header__toggle--primary";
+      // const primaryToggleClass = "lgd-header__toggle--primary";
+      const secondaryToggleClass = "lgd-header__toggle--secondary";
       const toggleActiveClass = "lgd-header__toggle--active";
       const regionActiveClass = "lgd-header__nav--active";
       // This contains all toggles and their corresponding regions.
@@ -67,9 +69,9 @@
         const region = context.getElementById(
           toggle.getAttribute("aria-controls"),
         );
-        const nav = toggle.classList.contains(primaryToggleClass)
-          ? "primary"
-          : "secondary";
+        const nav = toggle.classList.contains(secondaryToggleClass)
+          ? "secondary"
+          : "search";
         // The resulting region.primary.firstLink isn't used, but it's less
         // difficult to add it than to add only region.secondary.firstLink.
         if (region) {
@@ -77,7 +79,10 @@
           const firstLink = links[0];
           const lastLink = links[links.length - 1];
 
-          navInfo[nav] = { toggle, region, firstLink, lastLink };
+          const inputs = region.querySelectorAll("input");
+          const input = inputs[0];
+
+          navInfo[nav] = { toggle, region, firstLink, lastLink, input };
         }
       });
 
@@ -103,6 +108,10 @@
 
       // When the secondary menu toggle is clicked
       function handleSecondaryMenuToggleClick() {
+        if (searchMenuRegionIsOpen) {
+          handleSearchMenuToggleClick();
+        }
+
         handleToggleClick(navInfo.secondary.toggle);
         handleEscKeyClick(navInfo.secondary.toggle);
 
@@ -134,6 +143,43 @@
         });
       }
 
+      // When the search menu toggle is clicked
+      function handleSearchMenuToggleClick() {
+        if (secondaryMenuRegionIsOpen) {
+          handleSecondaryMenuToggleClick();
+        }
+
+        handleToggleClick(navInfo.search.toggle);
+        handleEscKeyClick(navInfo.search.toggle);
+
+        navInfo.search.region.classList.toggle(regionActiveClass);
+        if (navInfo.search.region.classList.contains(regionActiveClass)) {
+          navInfo.search.input.focus();
+        }
+        searchMenuRegionIsOpen = !searchMenuRegionIsOpen;
+      }
+      // When on the first link in the search menu, if you shift+tab
+      // set focus back to the services button
+      function handleSearchMenuShiftTabClick() {
+        // navInfo.search.firstLink.addEventListener("keydown", (e) => {
+        //   if (e.shiftKey && e.key === "Tab") {
+        //     e.preventDefault();
+        //     navInfo.search.toggle.focus();
+        //   }
+        // });
+      }
+
+      // When on the last link in the search menu, if you hit tab
+      // set focus back to the services button
+      function handleSearchMenuTabClick() {
+        // navInfo.search.lastLink.addEventListener("keydown", (e) => {
+        //   if (e.key === "Tab") {
+        //     e.preventDefault();
+        //     navInfo.search.toggle.focus();
+        //   }
+        // });
+      }
+
       // If you click on the page, anywhere outside the secondary menu region
       // or the secondary menu toggle button, close the secondary menu region
       document.addEventListener("click", (e) => {
@@ -143,6 +189,14 @@
           secondaryMenuRegionIsOpen
         ) {
           handleSecondaryMenuToggleClick();
+        }
+
+        if (
+          !e.target.closest("#lgd-header__nav--search") &&
+          !e.target.closest(".lgd-header__toggle--search") &&
+          searchMenuRegionIsOpen
+        ) {
+          handleSearchMenuToggleClick();
         }
       });
 
@@ -240,6 +294,21 @@
         navInfo.secondary.toggle.addEventListener(
           "keyup",
           handleSecondaryMenuTabClick,
+        );
+      }
+
+      if (Object.keys(navInfo).includes("search") && navInfo.search.toggle) {
+        navInfo.search.toggle.addEventListener(
+          "click",
+          handleSearchMenuToggleClick,
+        );
+        navInfo.search.toggle.addEventListener(
+          "click",
+          handleSearchMenuShiftTabClick,
+        );
+        navInfo.search.toggle.addEventListener(
+          "keyup",
+          handleSearchMenuTabClick,
         );
       }
     },

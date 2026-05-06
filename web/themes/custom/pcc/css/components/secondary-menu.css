@@ -3,10 +3,6 @@
 .lgd-header__nav--secondary {
   margin-inline: 0;
   background-color: var(--color-accent-2);
-
-  .region-search {
-    margin-block-end: var(--vertical-rhythm-spacing);
-  }
 }
 
 .lgd-region__inner--secondary-menu {

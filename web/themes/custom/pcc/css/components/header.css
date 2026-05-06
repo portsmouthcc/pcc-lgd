@@ -121,10 +121,6 @@
   /* Override default form-item class */
 }
 
-.lgd-header__inner .region-search {
-  display: none;
-}
-
 .region-search {
   margin-block: 0;
 }
@@ -137,13 +133,5 @@
   /* Search in home page banner - limit width. */
   .banner--home-page .lgd-region--search .form-item-s {
     max-width: 50%;
-  }
-
-  .lgd-header__inner .region-search {
-    display: block;
-  }
-
-  .lgd-header__nav--secondary .region-search {
-    display: none;
   }
 }
