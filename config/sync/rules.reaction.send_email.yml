@@ -64,7 +64,7 @@ expression:
         weight: 0
         action_id: rules_system_message
         context_values:
-          message: 'rule fired'
+          message: 'Page submitted for review'
           type: status
           repeat: false
         context_mapping: {  }
@@ -85,7 +85,7 @@ expression:
           to:
             - daniel.braithwaite@gmail.com
           subject: 'A page has been submitted for review'
-          message: 'rule fired'
+          message: 'The page [node:title] is under review and needs your approval. [node:url]'
           reply: noreply@test.com
         context_mapping:
           language: '@language.current_language_context:language_interface'
