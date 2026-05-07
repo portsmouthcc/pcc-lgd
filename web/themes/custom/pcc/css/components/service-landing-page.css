@@ -49,3 +49,9 @@
     margin-block-end: var(--spacing-large);
   }
 }
+
+.service-landing-page__contact-list-item svg {
+  fill: var(--color-blue);
+  width: 20px;
+  margin-right: 5px;
+}
