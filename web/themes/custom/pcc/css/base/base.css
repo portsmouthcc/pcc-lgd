@@ -320,3 +320,9 @@ a:not(.button) {
     border: unset;
   }
 }
+
+.node__content {
+  ul li {
+    margin-bottom: var(--spacing-smallest);
+  }
+}
