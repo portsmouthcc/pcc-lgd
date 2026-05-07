@@ -10,8 +10,8 @@ _core:
   default_config_hash: ZD_xDoG_G8z8mKXXpdWdnLh-z_jd_961NtJ0-fXs_c0
 id: pcc_localgov_guides_prev_next_block_scarfolk
 theme: pcc
-region: content_bottom
-weight: -6
+region: content
+weight: -19
 provider: null
 plugin: localgov_guides_prev_next_block
 settings:
