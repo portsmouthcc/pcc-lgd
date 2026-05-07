@@ -169,9 +169,7 @@ a:not(.button) {
       flex-wrap: wrap;
 
       .views-row {
-        flex-basis: calc(
-          100% / var(--cols) - var(--gap) / var(--cols) * (var(--cols) - 1)
-        );
+        flex-basis: calc(100% / var(--cols) - var(--gap) / var(--cols) * (var(--cols) - 1));
       }
     }
   }
@@ -238,6 +236,7 @@ a:not(.button) {
 }
 
 @media (max-width: 48rem) {
+
   .lgd-row--grid [class^="lgd-row__full-"],
   .lgd-row--grid [class^="lgd-row__one-half-"],
   .lgd-row--grid [class^="lgd-row__one-third-"],
@@ -295,7 +294,7 @@ a:not(.button) {
 .page-node-type-localgov-subsites-page {
   .lgd-container {
     .container-fluid {
-      .node--type-localgov-subsites-page > h2 {
+      .node--type-localgov-subsites-page>h2 {
         max-width: unset;
         margin-right: unset;
         margin-left: unset;
@@ -305,11 +304,19 @@ a:not(.button) {
   }
 
   .container-fluid {
-    .node--type-localgov-subsites-page > h2 {
+    .node--type-localgov-subsites-page>h2 {
       max-width: var(--width-container);
       margin-right: auto;
       margin-left: auto;
       padding-inline: var(--spacing-padding-horizontal);
     }
+  }
+}
+
+#localgov-common-tasks-values {
+
+  td,
+  th {
+    border: unset;
   }
 }

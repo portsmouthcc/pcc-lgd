@@ -1,0 +1,165 @@
+<?php
+
+/**
+ * @file
+ * Forces Drupal to use the front-end theme's paragraph templates and CSS
+ * in the admin area, regardless of which admin theme is active.
+ */
+
+/**
+ * CSS files to exclude from all libraries when on admin routes.
+ * Add partial file paths here to prevent them loading in the admin.
+ */
+function _admin_paragraphs_excluded_files() {
+  return [
+    'css/components/form-items.css',
+  ];
+}
+
+/**
+ * Library names to exclude entirely when on admin routes.
+ */
+function _admin_paragraphs_excluded_libraries() {
+  return [
+    'header',
+    'subsite-navigation',
+  ];
+}
+
+/**
+ * Implements hook_library_info_alter().
+ *
+ * Removes excluded CSS files from libraries when on admin content edit routes,
+ * so they don't affect the admin UI.
+ */
+function admin_paragraphs_library_info_alter(&$libraries, $extension) {
+  // Only act on admin content edit routes.
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  $is_content_edit_route = in_array($route_name, ['node.add', 'entity.node.edit_form']) ||
+    str_contains($route_name ?? '', 'layout_paragraphs');
+
+  if (!$is_content_edit_route) {
+    return;
+  }
+
+  $excluded_files = _admin_paragraphs_excluded_files();
+
+  foreach ($libraries as $library_name => &$library) {
+    if (empty($library['css'])) {
+      continue;
+    }
+    foreach ($library['css'] as $group => &$files) {
+      foreach (array_keys($files) as $file_path) {
+        foreach ($excluded_files as $excluded) {
+          if (str_ends_with($file_path, $excluded)) {
+            unset($files[$file_path]);
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ *
+ * Forces Drupal to use the default front-end theme's paragraph templates
+ * even when an admin theme is active.
+ */
+function admin_paragraphs_theme_registry_alter(&$theme_registry) {
+  $default_theme = \Drupal::config('system.theme')->get('default');
+  $theme_path = 'themes/custom/' . $default_theme;
+  $template_path = $theme_path . '/templates/paragraphs';
+
+  if (!is_dir(DRUPAL_ROOT . '/' . $template_path)) {
+    return;
+  }
+
+  $paragraph_suggestions = drupal_find_theme_templates(
+    $theme_registry,
+    '.html.twig',
+    $template_path
+  );
+
+  foreach ($paragraph_suggestions as $key => $suggestion) {
+    $is_paragraph = $key === 'paragraph' ||
+      (!empty($suggestion['base hook']) && $suggestion['base hook'] === 'paragraph');
+
+    if ($is_paragraph) {
+      if (isset($theme_registry[$key])) {
+        $suggestion = array_merge($theme_registry[$key], $suggestion);
+      }
+      elseif (isset($theme_registry['paragraph'])) {
+        $suggestion = array_merge($theme_registry['paragraph'], $suggestion);
+      }
+      $theme_registry[$key] = $suggestion;
+    }
+  }
+
+  if (isset($theme_registry['paragraph'])) {
+    $theme_registry['paragraph']['theme path'] = $theme_path;
+    $theme_registry['paragraph']['path'] = $template_path;
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ *
+ * Attaches CSS libraries from the default front-end theme and its base
+ * themes when on an admin node edit/add route, so paragraph previews are
+ * styled correctly.
+ */
+function admin_paragraphs_page_attachments(array &$attachments) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  $is_content_edit_route = in_array($route_name, ['node.add', 'entity.node.edit_form']) ||
+    str_contains($route_name ?? '', 'layout_paragraphs');
+
+  if (!$is_content_edit_route || !\Drupal::service('router.admin_context')->isAdminRoute()) {
+    return;
+  }
+
+  $excluded_libraries = _admin_paragraphs_excluded_libraries();
+  $library_discovery = \Drupal::service('library.discovery');
+  $default_theme = \Drupal::config('system.theme')->get('default');
+  $theme_handler = \Drupal::service('theme_handler');
+
+  // --- Step 1: Attach all base theme libraries first ---
+  $base_themes = [];
+  $theme_info = $theme_handler->getTheme($default_theme);
+  while (!empty($theme_info->base_theme)) {
+    $base_themes[] = $theme_info->base_theme;
+    if ($theme_handler->themeExists($theme_info->base_theme)) {
+      $theme_info = $theme_handler->getTheme($theme_info->base_theme);
+    }
+    else {
+      break;
+    }
+  }
+
+  foreach (array_reverse($base_themes) as $base_theme) {
+    $base_libraries = $library_discovery->getLibrariesByExtension($base_theme);
+    if (!empty($base_libraries)) {
+      foreach (array_keys($base_libraries) as $library_name) {
+        if (!in_array($library_name, $excluded_libraries)) {
+          $attachments['#attached']['library'][] = $base_theme . '/' . $library_name;
+        }
+      }
+    }
+  }
+
+  // --- Step 2: Attach the front-end theme's global library first ---
+  $attachments['#attached']['library'][] = $default_theme . '/global';
+
+  // --- Step 3: Attach all remaining front-end theme libraries ---
+  $excluded_libraries[] = 'global';
+  $theme_libraries = $library_discovery->getLibrariesByExtension($default_theme);
+
+  if (!empty($theme_libraries)) {
+    foreach (array_keys($theme_libraries) as $library_name) {
+      if (!in_array($library_name, $excluded_libraries)) {
+        $attachments['#attached']['library'][] = $default_theme . '/' . $library_name;
+      }
+    }
+  }
+}
