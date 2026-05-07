@@ -72,7 +72,10 @@
 			{% if not remove_hide_link %}
 				<div class="localgov-alert-banner__actions">
 					<div class="localgov-alert-banner__dismiss">
-						<button class="localgov-alert-banner__close js-localgov-alert-banner__close" aria-label="{{ 'Hide alert'|t }}">{{ 'Hide'|t }}</button>
+						<button class="localgov-alert-banner__close js-localgov-alert-banner__close" aria-label="{{ 'Close alert'|t }}" type="button" title="{{ 'Close alert'|t }}">
+							<i class="fa fa-times" aria-hidden="true"></i>
+							<span class="visually-hidden">{{ 'Close alert'|t }}</span>
+						</button>
 					</div>
 				</div>
 			{% endif %}
