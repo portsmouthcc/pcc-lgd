@@ -1,0 +1,130 @@
+uuid: c3f495b2-6a03-485b-ae6d-15ac0a331f59
+langcode: en
+status: true
+dependencies: {  }
+id: a_page_update
+label: 'A page update'
+events:
+  -
+    event_name: 'rules_entity_update:node'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 3bceb5c8-6f78-4491-b3ce-79e216500aa2
+  weight: 0
+  conditions:
+    id: rules_and
+    uuid: f582d5df-b415-4a6d-a170-30745fc66ad9
+    weight: 0
+    conditions:
+      -
+        id: rules_condition
+        uuid: 9a0a5e04-9a88-4141-88c0-271c39115c78
+        weight: 0
+        condition_id: rules_data_comparison
+        negate: false
+        context_values:
+          operation: '=='
+          value: review
+        context_mapping:
+          data: node.moderation_state.value
+        context_processors:
+          operation:
+            rules_tokens: {  }
+          value:
+            rules_tokens: {  }
+        provides_mapping: {  }
+      -
+        id: rules_condition
+        uuid: e72cf93f-728f-4d21-a64c-743120791366
+        weight: 0
+        condition_id: rules_user_has_role
+        negate: false
+        context_values:
+          roles:
+            - localgov_contributor
+          operation: AND
+        context_mapping:
+          user: '@user.current_user_context:current_user'
+        context_processors:
+          roles:
+            rules_tokens: {  }
+          operation:
+            rules_tokens: {  }
+        provides_mapping: {  }
+  actions:
+    id: rules_action_set
+    uuid: 680a4e14-2775-4e02-bd96-2b0654d2764d
+    weight: 0
+    actions:
+      -
+        id: rules_action
+        uuid: c20c4ba7-e376-427f-ba5e-9c69f484dc87
+        weight: -1
+        action_id: rules_variable_add
+        context_values:
+          type: string
+        context_mapping:
+          value: node.path.alias
+        context_processors:
+          type:
+            rules_tokens: {  }
+        provides_mapping:
+          variable_added: path
+      -
+        id: rules_action
+        uuid: f62716d3-6fb8-4dc4-93c4-b185f3adde90
+        weight: -1
+        action_id: rules_variable_add
+        context_values:
+          type: string
+        context_mapping:
+          value: node.title.value
+        context_processors:
+          type:
+            rules_tokens: {  }
+        provides_mapping:
+          variable_added: title
+      -
+        id: rules_action
+        uuid: 00812e6f-96a8-462b-845b-b1c0756a8563
+        weight: 0
+        action_id: rules_system_message
+        context_values:
+          message: 'Your updates were submitted for review'
+          type: status
+          repeat: false
+        context_mapping: {  }
+        context_processors:
+          message:
+            rules_tokens: {  }
+          type:
+            rules_tokens: {  }
+          repeat:
+            rules_tokens: {  }
+        provides_mapping: {  }
+      -
+        id: rules_action
+        uuid: 8522a283-3102-4c74-b421-6c4a07b69dfb
+        weight: 0
+        action_id: rules_send_email
+        context_values:
+          to:
+            - daniel.braithwaite.pcc@gmail.com
+          subject: 'A page has been updated.'
+          message: 'The page {{title}} has been updated. It is in need of review. https://lgd.portcreative.co.uk{{path}}'
+          reply: noreply@portcreative.co.uk
+        context_mapping:
+          language: '@language.current_language_context:language_content'
+        context_processors:
+          to:
+            rules_tokens: {  }
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+        provides_mapping: {  }
