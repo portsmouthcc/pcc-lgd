@@ -2,7 +2,13 @@
 .sidebar {
   margin-bottom: var(--spacing-larger);
 
-  .lgd-region__inner > * {
+  .lgd-region__inner>* {
     background: none;
+    padding: 0 var(--sidebar-exposed-form-padding-vertical);
   }
+}
+
+.region-sidebar-second {
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+  padding-left: var(--spacing-smallest);
 }

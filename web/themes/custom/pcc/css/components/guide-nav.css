@@ -12,3 +12,7 @@
 .lgd-guide-nav__list-item {
   font-size: var(--font-size);
 }
+
+.block-localgov-guides-contents {
+  margin: 0;
+}

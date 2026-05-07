@@ -63,6 +63,8 @@ body {
   --heading-5-color: var(--color-blue);
   --heading-6-color: var(--color-blue);
 
+  --heading-1-line-height: 1.2;
+
   /* Border properties */
   --border-width: 2px;
 
