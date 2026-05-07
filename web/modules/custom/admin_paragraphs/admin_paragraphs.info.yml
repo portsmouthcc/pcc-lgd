@@ -1,0 +1,5 @@
+name: Admin Paragraphs
+type: module
+description: Forces Drupal to use the active front-end theme paragraph templates and CSS in the admin, regardless of which admin theme is active.
+core_version_requirement: ^10 || ^11
+package: Custom
