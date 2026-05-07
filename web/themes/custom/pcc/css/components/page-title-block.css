@@ -1,5 +1,9 @@
 .lgd-page-title-block {
   margin-block-end: var(--spacing-mega);
+
+  .lgd-page-title-block__title {
+    margin-block-end: var(--spacing-small);
+  }
 }
 
 .page-node-type-localgov-guides-page {
