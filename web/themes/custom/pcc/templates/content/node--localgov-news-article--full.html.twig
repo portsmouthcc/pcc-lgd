@@ -85,9 +85,6 @@
 <article{{attributes.addClass(classes)}}>
 	<div class="lgd-container padding-horizontal">
 		<div class="lgd-row">
-			<div class="lgd-row__full">
-				<h1{{title_attributes.addClass('news-article__title')}}>{{ label }}</h1>
-			</div>
 
 			<div class="lgd-row__full">
 				<div class="news-article__image">
@@ -126,19 +123,19 @@
 				{% endif %}
 			</div>
 			{# <div class="lgd-row__one-third">
-											<aside class="news-article__search">
-												{{ drupal_block('localgov_sitewide_search_block') }}
-											</aside>
-											
-						
-											{# Latest news view block #}
+																																			<aside class="news-article__search">
+																																				{{ drupal_block('localgov_sitewide_search_block') }}
+																																			</aside>
+			
+			
+																																			{# Latest news view block #}
 		{# Couldnt add this to a sidebar region because the related news above is in it's own sidebar #}
 			{# added an article sidebar block to the latest news view in the admin to have it show here #}
 			{# {% if drupal_view('latest_news', 'block_2') %}
-													<aside class="news-article__latest-news" aria-labelledby="latest-news-title"> <h2 class="news-article__latest-news-title" id="latest-news-title">{{ 'Latest news'|t }}</h2>
-													{{ drupal_view('latest_news', 'block_2') }}
-												</aside>
-											{% endif %} #}
+																																					<aside class="news-article__latest-news" aria-labelledby="latest-news-title"> <h2 class="news-article__latest-news-title" id="latest-news-title">{{ 'Latest news'|t }}</h2>
+																																					{{ drupal_view('latest_news', 'block_2') }}
+																																				</aside>
+																																			{% endif %} #}
 		</div>
 	</div>
 </article>
