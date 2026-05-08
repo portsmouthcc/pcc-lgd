@@ -47,9 +47,11 @@ body {
   --color-yellow: #ffd600;
   --color-blue: #053876;
   --color-accent-dark: #002750;
+  --color-light-grey: #efefef;
 
   /* Colours applied */
   --color-info: var(--color-accent);
+  --color-blockquote: var(--color-light-grey);
 
   /* Fonts */
   --font-primary: inter, sans-serif;
