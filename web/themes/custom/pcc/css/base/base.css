@@ -326,3 +326,13 @@ a:not(.button) {
     margin-bottom: var(--spacing-smallest);
   }
 }
+
+.four04-content {
+  max-width: var(--width-restricted-width-section);
+  margin-bottom: var(--spacing-mega);
+
+  .four04-search {
+    margin: var(--spacing-large) 0;
+    border: 1px solid var(--border-color);
+  }
+}
