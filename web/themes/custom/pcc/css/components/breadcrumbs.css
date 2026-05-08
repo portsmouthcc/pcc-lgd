@@ -1,9 +1,14 @@
-/* This will apply to the current item which isn't a link. */
-.breadcrumbs__item {
-  color: var(--color-blue);
+.lgd-region--breadcrumb {
+  margin-block-end: 0;
 }
 
 /* > separators are grey. */
 .breadcrumbs__item + .breadcrumbs__item::before {
   color: var(--color-grey-dark);
+}
+
+@media (max-width: 48rem) {
+  .lgd-region--breadcrumb {
+    display: none;
+  }
 }
