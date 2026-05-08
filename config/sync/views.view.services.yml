@@ -112,6 +112,13 @@ display:
             label: ''
           exposed: false
           granularity: second
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          entity_type: node
+          entity_field: title
+          plugin_id: standard
       arguments: {  }
       filters:
         status:
@@ -208,6 +215,24 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      sorts:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+      defaults:
+        sorts: false
       display_extenders:
         localgov_page_header_display_extender:
           lede: ''
