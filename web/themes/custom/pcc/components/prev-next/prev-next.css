@@ -1,0 +1,73 @@
+ul.lgd-prev-next__list {
+  display: flex;
+  padding-inline-start: 0;
+  list-style-type: none;
+}
+
+.lgd-prev-next__list {
+  align-items: stretch;
+}
+
+.lgd-prev-next__list-item {
+  flex-grow: 1;
+  max-width: 50%;
+
+  a {
+    height: 100%;
+  }
+}
+
+.lgd-prev-next__list-item--next {
+  margin-left: auto;
+
+  .prev-next-content {
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
+/*
+  This needs to be very specific to override the specificity of the
+  step-by-step module CSS. I'd prefer to use just .lgd-prev-next__list-item
+*/
+ul.lgd-prev-next__list li.lgd-prev-next__list-item {
+  margin-inline-end: 0.5rem;
+}
+
+.lgd-prev-next__link {
+  display: flex;
+  padding: var(--button-padding-vertical) var(--button-padding-horizontal) var(--button-padding-vertical) var(--button-padding-horizontal);
+  text-decoration: none;
+  color: var(--button-text-color);
+  border: var(--border);
+  border-color: var(--button-border-color);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-bg-color);
+}
+
+.lgd-prev-next__link:focus,
+.lgd-prev-next__link:hover {
+  color: var(--button-text-color-hover);
+  background-color: var(--button-bg--color-hover);
+}
+
+.lgd-prev-next__label {
+  font-weight: bold;
+}
+
+.lgd-prev-next__icon path {
+  fill: var(--button-icon-color);
+}
+
+.lgd-prev-next__icon--prev {
+  margin-inline-end: 1rem;
+}
+
+.lgd-prev-next__icon--next {
+  margin-inline-start: 1rem;
+}
+
+.lgd-prev-next__link:focus .lgd-prev-next__icon path,
+.lgd-prev-next__link:hover .lgd-prev-next__icon path {
+  fill: var(--button-icon-color-hover);
+}

@@ -93,7 +93,7 @@ a:not(.button) {
   list-style-type: none;
 }
 
-/* Guide prev-next component isn't loaded normally by the base theme. */
+/* Guide prev-next component isn't loaded normally by the base theme.
 .lgd-prev-next__list {
   align-items: stretch;
 }
@@ -112,12 +112,7 @@ a:not(.button) {
   justify-content: end;
   height: 100%;
   text-align: right;
-}
-
-.lgd-prev-next__title {
-  padding-inline-start: 0;
-  padding-inline-end: var(--spacing-large);
-}
+} */
 
 .back-to-top {
   display: block;
