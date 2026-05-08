@@ -1,0 +1,8 @@
+name: PCC News Header
+type: module
+description: Forces the page header block to render on news article pages.
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - localgov_core:localgov_core
+  - localgov_news:localgov_news

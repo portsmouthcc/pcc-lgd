@@ -17,18 +17,3 @@ function pcc_theme($existing, $type, $theme, $path): array {
     ],
   ];
 }
-
-/**
- * Add current page title to breadcrumb.
- */
-function pcc_preprocess_breadcrumb(&$variables): void {
-  if (($node = \Drupal::routeMatch()->getParameter('node')) && $variables['breadcrumb']) {
-    $type = $node->getType();
-    // For some reason localgov_subsites_pages already have this title!
-    if ($type != 'localgov_subsites_page') {
-      $variables['breadcrumb'][] = [
-        'text' => $node->getTitle(),
-      ];
-    }
-  }
-}
