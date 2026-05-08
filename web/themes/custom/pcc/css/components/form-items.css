@@ -4,3 +4,8 @@ input[type="submit"]:focus,
 input[type="submit"]:hover {
   text-decoration: none;
 }
+
+/* Remove throbber from search autocomplete. */
+.js input.form-autocomplete {
+  background-image: none !important;
+}
