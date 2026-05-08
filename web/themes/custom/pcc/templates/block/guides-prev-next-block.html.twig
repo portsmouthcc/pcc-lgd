@@ -1,0 +1,18 @@
+{% set nav_id = 'guides-prev-next-' ~ random() %}
+{% set prevNextAttributes = create_attribute({ id: nav_id }) %}
+{% set prev_next_type = 'guides' %}
+{#
+  Probably the parent module should take responsibility for this.
+
+  Note that the url fragment's added to the render array in localgov_base.theme.
+  Adding it there eliminates the need to render the array here.
+#}
+{% set next_url = next_url|default('') %}
+{% set prev_url = previous_url|default('') %}
+{% set prev_title = previous_title %}
+
+{% embed 'pcc:prev-next' %}
+	{% block prev_next_pre_content %}
+		<h2 class="visually-hidden" aria-labelledby="{{ nav_id }}">{{ 'Guides navigation'|t }}</h2>
+	{% endblock %}
+{% endembed %}
