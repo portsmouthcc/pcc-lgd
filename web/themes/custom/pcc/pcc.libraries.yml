@@ -150,6 +150,12 @@ sidebar:
     theme:
       css/components/sidebar.css: {}
 
+sitewide-search:
+  css:
+    theme:
+      css/components/sitewide-search.css: {}
+
+
 step-by-step:
   css:
     theme:

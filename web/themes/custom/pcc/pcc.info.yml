@@ -48,6 +48,8 @@ libraries-extend:
     - pcc/service-landing-page
   localgov_base/sidebar:
     - pcc/sidebar
+  localgov_base/sitewide-search:
+    - pcc/sitewide-search
   localgov_base/step-by-step:
     - pcc/step-by-step
   localgov_base/teaser:
