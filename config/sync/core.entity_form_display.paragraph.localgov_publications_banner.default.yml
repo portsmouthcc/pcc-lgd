@@ -26,7 +26,7 @@ content:
       media_types: {  }
     third_party_settings:
       media_library_edit:
-        show_edit: '1'
+        show_edit: true
   localgov_publications_text:
     type: string_textarea
     weight: 2

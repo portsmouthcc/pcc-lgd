@@ -139,6 +139,7 @@ module:
   path: 0
   path_alias: 0
   pcc_migrate: 0
+  pcc_news_header: 0
   pcc_osm_proxy: 0
   preview_link: 0
   redirect: 0
