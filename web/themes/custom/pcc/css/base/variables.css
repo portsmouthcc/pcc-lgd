@@ -75,7 +75,7 @@ body {
 
   /* Breadcrumbs */
   --breadcrumbs-border: none;
-  --breadcrumbs-divider: ">";
+  --breadcrumbs-divider: "/";
 
   /* Header Items */
   --color-section-header-bg: var(--color-blue);
