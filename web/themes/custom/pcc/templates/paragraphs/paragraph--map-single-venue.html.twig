@@ -1,0 +1,12 @@
+{% if not localgov_base_remove_css %}
+	{{ attach_library('pcc/map') }}
+{% endif %}
+
+{% if content.field_venue %}
+	<div class="paragraph-map-single-venue">
+		{% set venue = paragraph.field_venue.entity %}
+		{% if venue %}
+			{{ drupal_entity('node', venue.id(), 'embed') }}
+		{% endif %}
+	</div>
+{% endif %}
