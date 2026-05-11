@@ -29,12 +29,17 @@ bundle: localgov_directories_venue
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 0
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 0
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
     region: content
 hidden:
   links: true

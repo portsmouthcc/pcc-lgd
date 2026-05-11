@@ -1,0 +1,10 @@
+{% if not localgov_base_remove_css %}
+	{{ attach_library('pcc/map') }}
+{% endif %}
+
+<div class="paragraph-map-channel">
+	{% set channel = paragraph.field_map_channel.entity %}
+	{% if channel %}
+		{{ drupal_view('localgov_directory_channel', 'embed_map', channel.id()) }}
+	{% endif %}
+</div>

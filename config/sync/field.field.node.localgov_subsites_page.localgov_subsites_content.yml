@@ -25,6 +25,8 @@ dependencies:
     - paragraphs.paragraphs_type.localgov_tabs
     - paragraphs.paragraphs_type.localgov_text
     - paragraphs.paragraphs_type.localgov_video
+    - paragraphs.paragraphs_type.map_channel
+    - paragraphs.paragraphs_type.map_single_venue
     - paragraphs.paragraphs_type.pcc_chart
   module:
     - entity_reference_revisions
@@ -49,8 +51,8 @@ settings:
       localgov_call_out_box: localgov_call_out_box
       localgov_documents: localgov_documents
       localgov_fact_box: localgov_fact_box
-      image_svg: image_svg
       localgov_featured_teasers: localgov_featured_teasers
+      image_svg: image_svg
       localgov_image: localgov_image
       localgov_key_facts: localgov_key_facts
       localgov_block_view: localgov_block_view
@@ -65,6 +67,8 @@ settings:
       localgov_text: localgov_text
       localgov_video: localgov_video
       localgov_page_section: localgov_page_section
+      map_channel: map_channel
+      map_single_venue: map_single_venue
     negate: 0
     target_bundles_drag_drop:
       banner_home_page:
@@ -186,6 +190,12 @@ settings:
         enabled: true
       localgov_video:
         weight: -56
+        enabled: true
+      map_channel:
+        weight: 85
+        enabled: true
+      map_single_venue:
+        weight: 86
         enabled: true
       pcc_chart:
         weight: -67

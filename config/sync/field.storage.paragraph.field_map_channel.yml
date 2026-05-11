@@ -1,0 +1,20 @@
+uuid: 0b490a94-43c8-4a13-aa01-d49a1a710c5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_map_channel
+field_name: field_map_channel
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

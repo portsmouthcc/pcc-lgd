@@ -30,6 +30,7 @@ dependencies:
     - paragraphs.paragraphs_type.localgov_tabs
     - paragraphs.paragraphs_type.localgov_text
     - paragraphs.paragraphs_type.localgov_video
+    - paragraphs.paragraphs_type.map_channel
     - paragraphs.paragraphs_type.map_single_venue
     - paragraphs.paragraphs_type.pcc_chart
   module:
