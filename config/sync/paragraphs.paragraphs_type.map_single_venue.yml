@@ -1,0 +1,10 @@
+uuid: e261e921-a6d7-4082-957e-25aebda9211d
+langcode: en
+status: true
+dependencies: {  }
+id: map_single_venue
+label: 'Map Single Venue'
+icon_uuid: null
+icon_default: null
+description: 'Create a map from a single venue'
+behavior_plugins: {  }
