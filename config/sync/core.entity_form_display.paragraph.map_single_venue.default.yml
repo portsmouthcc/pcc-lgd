@@ -1,0 +1,25 @@
+uuid: 9ed98d29-de88-4b21-a716-07b73c2d2201
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.map_single_venue.field_venue
+    - paragraphs.paragraphs_type.map_single_venue
+id: paragraph.map_single_venue.default
+targetEntityType: paragraph
+bundle: map_single_venue
+mode: default
+content:
+  field_venue:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
