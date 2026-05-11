@@ -78,7 +78,6 @@ settings:
       localgov_key_contacts: localgov_key_contacts
       localgov_page_section: localgov_page_section
       map_single_venue: map_single_venue
-      map_channel: map_channel
     negate: 0
     target_bundles_drag_drop:
       banner_home_page:
@@ -200,9 +199,6 @@ settings:
         enabled: true
       localgov_video:
         weight: -58
-        enabled: true
-      map_channel:
-        weight: 85
         enabled: true
       map_single_venue:
         weight: 84
