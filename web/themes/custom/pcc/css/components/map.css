@@ -5,3 +5,9 @@
     display: none;
   }
 }
+
+.paragraph-map-channel {
+  .views-exposed-form {
+    display: none;
+  }
+}

@@ -1,0 +1,10 @@
+uuid: ba79d5a1-1329-4111-9059-f600981dc49d
+langcode: en
+status: true
+dependencies: {  }
+id: map_channel
+label: 'Map (channel)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

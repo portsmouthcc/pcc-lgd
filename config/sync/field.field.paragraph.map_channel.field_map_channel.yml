@@ -1,0 +1,29 @@
+uuid: f4261a64-a2cc-4654-b946-8b1c72703492
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_map_channel
+    - node.type.localgov_directory
+    - paragraphs.paragraphs_type.map_channel
+id: paragraph.map_channel.field_map_channel
+field_name: field_map_channel
+entity_type: paragraph
+bundle: map_channel
+label: 'Map channel'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      localgov_directory: localgov_directory
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

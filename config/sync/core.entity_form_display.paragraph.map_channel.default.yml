@@ -1,0 +1,25 @@
+uuid: c0799591-159d-4699-8cf6-cdcc71f5324e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.map_channel.field_map_channel
+    - paragraphs.paragraphs_type.map_channel
+id: paragraph.map_channel.default
+targetEntityType: paragraph
+bundle: map_channel
+mode: default
+content:
+  field_map_channel:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
