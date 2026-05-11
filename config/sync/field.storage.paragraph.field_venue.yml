@@ -1,0 +1,20 @@
+uuid: 56cbd6d6-e4fa-4f7b-8484-8836e1fc7cd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_venue
+field_name: field_venue
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,29 @@
+uuid: e9dc3324-9576-4a17-84ba-21c4fcc80013
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_venue
+    - node.type.localgov_directories_venue
+    - paragraphs.paragraphs_type.map_single_venue
+id: paragraph.map_single_venue.field_venue
+field_name: field_venue
+entity_type: paragraph
+bundle: map_single_venue
+label: Venue
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      localgov_directories_venue: localgov_directories_venue
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
