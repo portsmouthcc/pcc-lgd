@@ -160,7 +160,6 @@ sitewide-search:
     theme:
       css/components/sitewide-search.css: {}
 
-
 step-by-step:
   css:
     theme:

@@ -109,6 +109,7 @@
       // When the secondary menu toggle is clicked
       function handleSecondaryMenuToggleClick() {
         if (searchMenuRegionIsOpen) {
+          // eslint-disable-next-line no-use-before-define
           handleSearchMenuToggleClick();
         }
 

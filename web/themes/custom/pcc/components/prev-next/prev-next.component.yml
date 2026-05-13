@@ -94,5 +94,4 @@ slots:
       aria-label isn't used.
   prev_next_post_content:
     title: Prev-Next post-content
-    description:
-      Use this slot to add arbitrary content after nav list in the component.
+    description: Use this slot to add arbitrary content after nav list in the component.
