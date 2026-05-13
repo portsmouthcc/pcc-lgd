@@ -36,7 +36,8 @@ ul.lgd-prev-next__list li.lgd-prev-next__list-item {
 
 .lgd-prev-next__link {
   display: flex;
-  padding: var(--button-padding-vertical) var(--button-padding-horizontal) var(--button-padding-vertical) var(--button-padding-horizontal);
+  padding: var(--button-padding-vertical) var(--button-padding-horizontal)
+    var(--button-padding-vertical) var(--button-padding-horizontal);
   text-decoration: none;
   color: var(--button-text-color);
   border: var(--border);

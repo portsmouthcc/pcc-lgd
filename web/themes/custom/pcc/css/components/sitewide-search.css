@@ -1,15 +1,15 @@
 .path-search {
   .lgd-search-results-list__header-container {
-    border: none;
     padding: 0;
+    border: none;
   }
 
   .search-results {
     padding-left: var(--spacing-larger);
 
     li::marker {
-      font-weight: 800;
       font-size: 1.25rem;
+      font-weight: 800;
     }
   }
 
@@ -18,15 +18,15 @@
 
     .pager__item--next a,
     .pager__item--last a {
-      border: 1px solid var(--color-accent);
       padding: 5px 10px;
       text-decoration: none;
+      border: 1px solid var(--color-accent);
     }
 
     .pager__item--next a:hover,
     .pager__item--last a:hover {
-      background-color: var(--color-accent);
       color: var(--color-white);
+      background-color: var(--color-accent);
     }
   }
 }

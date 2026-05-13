@@ -23,8 +23,8 @@
 
 /* Menu toggle buttons */
 .lgd-header__toggles {
-  margin-inline-end: 0;
   flex-shrink: 0;
+  margin-inline-end: 0;
 }
 
 .lgd-header__toggle .icon.fa-chevron-down {

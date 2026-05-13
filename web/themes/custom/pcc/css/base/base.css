@@ -333,9 +333,9 @@ a:not(.button) {
 }
 
 blockquote {
-  background-color: var(--color-blockquote);
-  color: var(--color-body);
   padding: var(--spacing-large);
+  color: var(--color-body);
+  background-color: var(--color-blockquote);
   font-size: 0.9rem;
 
   p:last-of-type {

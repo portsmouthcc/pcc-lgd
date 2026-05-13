@@ -4,12 +4,13 @@
   }
 
   .alert-button {
-    padding: var(--alert-banner-close-padding-vertical) var(--alert-banner-close-padding-horizontal);
-    background: var(--alert-banner-close-border-color);
+    display: inline-block;
+    margin-top: var(--spacing-large);
+    padding: var(--alert-banner-close-padding-vertical)
+      var(--alert-banner-close-padding-horizontal);
     border: var(--alert-banner-close-border);
     border-color: var(--alert-banner-close-border-color);
-    margin-top: var(--spacing-large);
-    display: inline-block;
+    background: var(--alert-banner-close-border-color);
   }
 }
 
@@ -21,9 +22,9 @@
 
 .localgov-alert-banner--minor {
   .alert-button {
-    background: var(--alert-banner-minor-border-color);
-    border: var(--alert-banner-minor-border-color);
     color: var(--alert-banner-bg-color-minor);
+    border: var(--alert-banner-minor-border-color);
+    background: var(--alert-banner-minor-border-color);
   }
 }
 
