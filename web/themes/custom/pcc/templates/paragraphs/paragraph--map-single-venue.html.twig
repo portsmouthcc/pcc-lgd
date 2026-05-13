@@ -2,8 +2,18 @@
 	{{ attach_library('pcc/map') }}
 {% endif %}
 
+{%
+  set classes = [
+    'paragraph-map-single-venue',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
 {% if content.field_venue %}
-	<div class="paragraph-map-single-venue">
+	<div{{attributes.addClass(classes)}}>
 		{% set venue = paragraph.field_venue.entity %}
 		{% if venue %}
 			{{ drupal_entity('node', venue.id(), 'embed') }}

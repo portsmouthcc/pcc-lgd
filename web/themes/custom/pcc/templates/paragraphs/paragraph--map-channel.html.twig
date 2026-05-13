@@ -2,7 +2,17 @@
 	{{ attach_library('pcc/map') }}
 {% endif %}
 
-<div class="paragraph-map-channel">
+{%
+  set classes = [
+    'paragraph-map-channel',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+<div{{attributes.addClass(classes)}}>
 	{% set channel = paragraph.field_map_channel.entity %}
 	{% if channel %}
 		{{ drupal_view('localgov_directory_channel', 'embed_map', channel.id()) }}
