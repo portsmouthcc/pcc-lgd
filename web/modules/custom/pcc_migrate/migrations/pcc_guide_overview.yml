@@ -114,6 +114,15 @@ process:
 
   localgov_guides_section_title: title
 
+  # Top task links
+  localgov_common_tasks:
+    plugin: sub_process
+    source: top_tasks
+    process:
+      uri: url
+      title: title
+      type: type
+
   # Services parent
   localgov_services_parent: parent
 

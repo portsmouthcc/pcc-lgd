@@ -112,6 +112,15 @@ process:
   # Guide parent
   localgov_guides_parent: parent
 
+  # Top task links
+  localgov_common_tasks:
+    plugin: sub_process
+    source: top_tasks
+    process:
+      uri: url
+      title: title
+      type: type
+
 destination:
   plugin: entity:node
 
