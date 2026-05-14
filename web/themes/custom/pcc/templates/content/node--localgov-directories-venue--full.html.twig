@@ -91,8 +91,8 @@
 				{{ content.body }}
 			</div>
 			{# ---------------------------------------
-																																													   Pre-render fields safely
-																																													---------------------------------------- #}
+																																																   Pre-render fields safely
+																																																---------------------------------------- #}
 
 			{% set address = node.localgov_location.entity.postal_address | view %}
 			{% set opening = content.group_venue.localgov_directory_opening_times|render|striptags|trim %}
@@ -106,8 +106,8 @@
 			{% set contact_web = content.group_enquiries.localgov_directory_website|render|striptags|trim %}
 
 			{# ---------------------------------------
-																																													   Check if ANY content exists
-																																													---------------------------------------- #}
+																																																   Check if ANY content exists
+																																																---------------------------------------- #}
 
 			{% set has_venue =
   address or opening or notes or files
@@ -118,8 +118,8 @@
 %}
 
 			{# ---------------------------------------
-																																													   Output section only if needed
-																																													---------------------------------------- #}
+																																																   Output section only if needed
+																																																---------------------------------------- #}
 
 			{% if has_venue or has_contact %}
 
@@ -128,7 +128,6 @@
 
 						<div class="venue__title">
 							<h2>Venue details</h2>
-							<hr>
 						</div>
 
 						<div
