@@ -6,23 +6,21 @@ dependencies:
     - field.storage.node.localgov_subsites_content
     - node.type.localgov_subsites_overview
     - paragraphs.paragraphs_type.divider
+    - paragraphs.paragraphs_type.image_svg
     - paragraphs.paragraphs_type.localgov_accordion
     - paragraphs.paragraphs_type.localgov_block_view
     - paragraphs.paragraphs_type.localgov_box_link
     - paragraphs.paragraphs_type.localgov_box_links_listing
     - paragraphs.paragraphs_type.localgov_call_out_box
+    - paragraphs.paragraphs_type.localgov_contact
     - paragraphs.paragraphs_type.localgov_documents
-    - paragraphs.paragraphs_type.localgov_featured_subsite
     - paragraphs.paragraphs_type.localgov_featured_teasers
-    - paragraphs.paragraphs_type.localgov_ia_block
     - paragraphs.paragraphs_type.localgov_image
     - paragraphs.paragraphs_type.localgov_key_contacts
     - paragraphs.paragraphs_type.localgov_key_facts
-    - paragraphs.paragraphs_type.localgov_labelled_icon
     - paragraphs.paragraphs_type.localgov_link
     - paragraphs.paragraphs_type.localgov_link_and_summary
     - paragraphs.paragraphs_type.localgov_media_with_text
-    - paragraphs.paragraphs_type.localgov_newsroom_teaser
     - paragraphs.paragraphs_type.localgov_page_section
     - paragraphs.paragraphs_type.localgov_quote
     - paragraphs.paragraphs_type.localgov_subscribe_panel
@@ -60,6 +58,8 @@ settings:
       divider: divider
       localgov_documents: localgov_documents
       localgov_featured_teasers: localgov_featured_teasers
+      localgov_contact: localgov_contact
+      image_svg: image_svg
       localgov_image: localgov_image
       localgov_key_facts: localgov_key_facts
       localgov_link: localgov_link
@@ -70,14 +70,11 @@ settings:
       localgov_tabs: localgov_tabs
       localgov_text: localgov_text
       localgov_video: localgov_video
-      localgov_ia_block: localgov_ia_block
-      localgov_featured_subsite: localgov_featured_subsite
-      localgov_labelled_icon: localgov_labelled_icon
-      localgov_newsroom_teaser: localgov_newsroom_teaser
       localgov_subscribe_panel: localgov_subscribe_panel
       localgov_key_contacts: localgov_key_contacts
       localgov_page_section: localgov_page_section
       map_single_venue: map_single_venue
+      map_channel: map_channel
     negate: 0
     target_bundles_drag_drop:
       banner_home_page:
@@ -91,7 +88,7 @@ settings:
         enabled: false
       image_svg:
         weight: -67
-        enabled: false
+        enabled: true
       localgov_accordion:
         weight: -80
         enabled: true
@@ -117,8 +114,8 @@ settings:
         weight: -75
         enabled: true
       localgov_contact:
-        weight: -68
-        enabled: false
+        weight: -74
+        enabled: true
       localgov_documents:
         weight: -73
         enabled: true
@@ -130,7 +127,7 @@ settings:
         enabled: false
       localgov_featured_subsite:
         weight: -56
-        enabled: true
+        enabled: false
       localgov_featured_teaser:
         weight: -77
         enabled: false
@@ -139,7 +136,7 @@ settings:
         enabled: true
       localgov_ia_block:
         weight: -57
-        enabled: true
+        enabled: false
       localgov_image:
         weight: -67
         enabled: true
@@ -147,7 +144,7 @@ settings:
         weight: -51
         enabled: false
       localgov_key_contacts:
-        weight: -52
+        weight: -66
         enabled: true
       localgov_key_fact:
         weight: -81
@@ -157,7 +154,7 @@ settings:
         enabled: true
       localgov_labelled_icon:
         weight: -55
-        enabled: true
+        enabled: false
       localgov_link:
         weight: -65
         enabled: true
@@ -169,7 +166,7 @@ settings:
         enabled: true
       localgov_newsroom_teaser:
         weight: -54
-        enabled: true
+        enabled: false
       localgov_numbered_text:
         weight: -45
         enabled: false
@@ -183,7 +180,7 @@ settings:
         weight: -62
         enabled: true
       localgov_subscribe_panel:
-        weight: -53
+        weight: -61
         enabled: true
       localgov_tab_panel:
         weight: -70
@@ -200,8 +197,11 @@ settings:
       localgov_video:
         weight: -58
         enabled: true
+      map_channel:
+        weight: -63
+        enabled: true
       map_single_venue:
-        weight: 84
+        weight: -63
         enabled: true
       pcc_chart:
         weight: -74
