@@ -23,21 +23,26 @@
 }
 
 .lgd-divider--colour-black {
-  border-color: #000;
+  background: #000;
 }
 
 .lgd-divider--colour-grey {
-  border-color: #ccc;
+  background: #ccc;
 }
 
 .lgd-divider--colour-dark-blue {
-  border-color: #036;
+  background: #036;
 }
 
 .lgd-divider--colour-accent-blue {
-  border-color: #007bff;
+  background: #007bff;
 }
 
 .lgd-divider--colour-white {
-  border-color: #fff;
+  background: #fff;
+}
+
+.paragraph--type--divider {
+  border: none;
+  height: 1px;
 }
