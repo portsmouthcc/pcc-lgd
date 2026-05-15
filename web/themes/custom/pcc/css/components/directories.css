@@ -38,7 +38,6 @@
   .venue__details {
     height: 100%;
     padding: var(--spacing-large);
-    border-top: 8px var(--border-style) var(--color-accent);
     border-inline-start: none;
     background-color: var(--color-accent-2);
 

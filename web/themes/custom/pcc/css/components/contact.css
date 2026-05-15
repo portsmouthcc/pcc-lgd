@@ -15,7 +15,6 @@
 
   .lgd-contact__headings {
     padding: var(--spacing-large) var(--spacing-large) 0 var(--spacing-large);
-    border-top: 8px var(--border-style) var(--color-accent);
     border-right: none;
     border-left: none;
     background: var(--color-accent-2);

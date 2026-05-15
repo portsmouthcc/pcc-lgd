@@ -21,7 +21,7 @@
 }
 
 /* Active trail */
-.menu-item--active-trail > .menu-item__inner > .menu-link {
+.menu-item--active-trail>.menu-item__inner>.menu-link {
   margin-bottom: var(--spacing-small);
   padding: 0;
   color: var(--heading-3-color);
@@ -31,7 +31,7 @@
   line-height: var(--heading-3-line-height);
 }
 
-.menu-item--active-trail > .menu-item__inner .menu-toggle {
+.menu-item--active-trail>.menu-item__inner .menu-toggle {
   display: none;
 }
 
