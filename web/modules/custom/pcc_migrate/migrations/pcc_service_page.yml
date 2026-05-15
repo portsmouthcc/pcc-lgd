@@ -109,12 +109,6 @@ process:
   # Services parent
   localgov_services_parent: parent
 
-  # Service landing page child pages
-  localgov_destinations:
-    plugin: explode
-    source: child_ids
-    delimiter: ";"
-
   # Top task links
   localgov_common_tasks:
     plugin: sub_process
