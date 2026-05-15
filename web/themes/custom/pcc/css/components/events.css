@@ -2,7 +2,6 @@
   .field--type-address {
     height: 100%;
     padding: var(--spacing-large);
-    border-top: 8px var(--border-style) var(--color-accent);
     border-inline-start: none;
     background-color: var(--color-accent-2);
 
@@ -13,5 +12,13 @@
       font-weight: var(--heading-3-font-weight);
       line-height: var(--heading-3-line-height);
     }
+  }
+
+  hr {
+    margin-block-start: var(--spacing-mega);
+    margin-block-end: var(--spacing-mega);
+    background: #cecfd0;
+    border: none;
+    height: 1px;
   }
 }

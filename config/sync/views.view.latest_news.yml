@@ -233,6 +233,21 @@ display:
       defaults:
         style: false
         row: false
+        header: false
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: "<h2>News </h2>\r\n<a href=\"/news\">See all news stories</a>"
+            format: wysiwyg
+          tokenize: false
       display_extenders:
         localgov_page_header_display_extender:
           lede: ''
