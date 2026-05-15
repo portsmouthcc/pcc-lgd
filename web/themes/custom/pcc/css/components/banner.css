@@ -1,7 +1,7 @@
 /* Custom subsite banner for the home page. */
 
 .banner--home-page {
-  margin-bottom: 0 !important;
+  margin-bottom: var(--spacing-mega);
   padding-top: var(--spacing-mega);
   padding-bottom: var(--spacing-mega);
   color: var(--banner-content-text-color);
@@ -14,15 +14,18 @@
 }
 
 .banner--home-page .field--name-localgov-subsites-banner-text {
-  margin-bottom: var(--spacing-mega);
   font-size: var(--font-size-h2);
 }
 
 /* Banner search form */
-.banner--home-page .lgd-region--search label {
-  display: inline;
-  margin-right: var(--spacing);
-  font-size: var(--font-size-h2);
+.banner--home-page .lgd-region--search {
+  margin-top: var(--spacing-large);
+
+  label {
+    display: inline;
+    margin-right: var(--spacing);
+    font-size: var(--font-size-h2);
+  }
 }
 
 /* @media screen and (min-width: 48rem) {

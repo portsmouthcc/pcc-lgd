@@ -3,6 +3,14 @@
     color: var(--color-blue);
     font-size: var(--font-size-h2);
   }
+
+  .lgd-page-title-block {
+    max-width: 100%;
+  }
+
+  .lgd-page-title-block__title {
+    margin-block-end: var(--spacing-larger) !important;
+  }
 }
 
 .news-article {
@@ -41,7 +49,7 @@
   .field--name-localgov-news-related {
     margin-bottom: var(--spacing-large);
 
-    > .field__item {
+    >.field__item {
       /* background: var(--color-accent-2); */
       margin-bottom: var(--spacing);
 
