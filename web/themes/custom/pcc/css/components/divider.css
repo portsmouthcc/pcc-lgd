@@ -27,22 +27,22 @@
 }
 
 .lgd-divider--colour-grey {
-  background: #ccc;
+  background: var(--color-light-grey)#ccc;
 }
 
 .lgd-divider--colour-dark-blue {
-  background: #036;
+  background: var(--color-blue);
 }
 
 .lgd-divider--colour-accent-blue {
-  background: #007bff;
+  background: var(--color-accent);
 }
 
 .lgd-divider--colour-white {
   background: #fff;
 }
 
-.paragraph--type--divider {
+.paragraph--type--divider hr {
   border: none;
   height: 1px;
 }
