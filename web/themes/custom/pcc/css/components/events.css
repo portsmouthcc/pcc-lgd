@@ -15,10 +15,10 @@
   }
 
   hr {
+    height: 1px;
     margin-block-start: var(--spacing-mega);
     margin-block-end: var(--spacing-mega);
-    background: #cecfd0;
     border: none;
-    height: 1px;
+    background: #cecfd0;
   }
 }
