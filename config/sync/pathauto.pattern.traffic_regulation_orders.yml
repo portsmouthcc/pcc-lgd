@@ -2,17 +2,18 @@ uuid: 0c134bbc-471f-4e0b-8805-1af7405ab61a
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.pcc_tro
   module:
     - node
 id: traffic_regulation_orders
 label: 'Traffic regulation orders'
 type: 'canonical_entities:node'
-pattern: 'traffic-regulation-orders/[node:title]'
+pattern: '/traffic-regulation-orders/[node:title]'
 selection_criteria:
   973388e1-853f-4492-b6db-34046082e3a0:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 973388e1-853f-4492-b6db-34046082e3a0
     context_mapping:
       node: node
     bundles:

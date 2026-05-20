@@ -523,14 +523,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              emergency_publisher: '0'
-              anonymous: '0'
-              localgov_editor: '0'
-              localgov_author: '0'
-              localgov_contributor: '0'
-              localgov_news_editor: '0'
-              localgov_user_manager: '0'
-              localgov_admin: '0'
             placeholder: ''
           is_grouped: false
           group_info:
@@ -573,14 +565,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              emergency_publisher: '0'
-              anonymous: '0'
-              localgov_editor: '0'
-              localgov_author: '0'
-              localgov_contributor: '0'
-              localgov_news_editor: '0'
-              localgov_user_manager: '0'
-              localgov_admin: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -621,14 +605,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              emergency_publisher: '0'
-              anonymous: '0'
-              localgov_editor: '0'
-              localgov_author: '0'
-              localgov_contributor: '0'
-              localgov_news_editor: '0'
-              localgov_user_manager: '0'
-              localgov_admin: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -669,14 +645,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              emergency_publisher: '0'
-              anonymous: '0'
-              localgov_editor: '0'
-              localgov_author: '0'
-              localgov_contributor: '0'
-              localgov_news_editor: '0'
-              localgov_user_manager: '0'
-              localgov_admin: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -843,6 +811,7 @@ display:
           empty_table: false
           caption: ''
           description: ''
+          class: ''
       row:
         type: fields
       query:

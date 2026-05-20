@@ -12,23 +12,23 @@ database:
 use_dns_when_possible: true
 composer_version: ""
 web_environment:
-    - BROWSERTEST_OUTPUT_BASE_URL=${DDEV_PRIMARY_URL}
-    - SIMPLETEST_BASE_URL=http://web
     - SIMPLETEST_DB=mysql://db:db@db/db
-    - MINK_DRIVER_ARGS_WEBDRIVER=[\"chrome\", {\"browserName\":\"chrome\",\"w3c\":false,\"goog:chromeOptions\":{\"args\":[\"--disable-gpu\",\"--headless\", \"--no-sandbox\", \"--disable-dev-shm-usage\"]}}, \"http://selenium-chrome:4444/wd/hub\"]
-    - DRUPAL_TEST_WEBDRIVER_CHROME_ARGS=--disable-gpu --headless --no-sandbox --disable-dev-shm-usage
-    - DRUPAL_TEST_BASE_URL=http://web
-    - DRUPAL_TEST_WEBDRIVER_PORT=4444
-    - DRUPAL_NIGHTWATCH_SEARCH_DIRECTORY=../
-    - DRUPAL_NIGHTWATCH_OUTPUT=reports/nightwatch
+    - BROWSERTEST_OUTPUT_DIRECTORY=/tmp
     - DTT_BASE_URL=http://web
     - DTT_MINK_DRIVER_ARGS=[\"chrome\", {\"browserName\":\"chrome\",\"w3c\":false,\"goog:chromeOptions\":{\"args\":[\"--disable-gpu\",\"--headless\", \"--no-sandbox\", \"--disable-dev-shm-usage\"]}}, \"http://selenium-chrome:4444/wd/hub\"]
     - DRUPAL_TEST_WEBDRIVER_HOSTNAME=selenium-chrome
-    - BROWSERTEST_OUTPUT_DIRECTORY=/tmp
-    - DRUPAL_TEST_DB_URL=mysql://db:db@db/db
+    - DRUPAL_NIGHTWATCH_OUTPUT=reports/nightwatch
+    - DRUPAL_TEST_BASE_URL=http://web
+    - BROWSERTEST_OUTPUT_BASE_URL=${DDEV_PRIMARY_URL}
+    - SIMPLETEST_BASE_URL=http://web
+    - DRUPAL_TEST_WEBDRIVER_PORT=4444
     - DRUPAL_TEST_WEBDRIVER_PATH_PREFIX=/wd/hub
-    - DRUPAL_TEST_CHROMEDRIVER_AUTOSTART=false
+    - MINK_DRIVER_ARGS_WEBDRIVER=[\"chrome\", {\"browserName\":\"chrome\",\"w3c\":false,\"goog:chromeOptions\":{\"args\":[\"--disable-gpu\",\"--headless\", \"--no-sandbox\", \"--disable-dev-shm-usage\"]}}, \"http://selenium-chrome:4444/wd/hub\"]
     - DRUPAL_NIGHTWATCH_IGNORE_DIRECTORIES=node_modules,vendor,.*,sites/*/files,sites/*/private,sites/simpletest
+    - DRUPAL_TEST_DB_URL=mysql://db:db@db/db
+    - DRUPAL_TEST_CHROMEDRIVER_AUTOSTART=false
+    - DRUPAL_TEST_WEBDRIVER_CHROME_ARGS=--disable-gpu --headless --no-sandbox --disable-dev-shm-usage
+    - DRUPAL_NIGHTWATCH_SEARCH_DIRECTORY=../
 nodejs_version: "20"
 corepack_enable: false
 

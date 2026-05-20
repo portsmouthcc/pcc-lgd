@@ -2,6 +2,8 @@ uuid: ece9b23e-7637-4809-a451-e266f5b46fbd
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.localgov_services_landing
   module:
     - node
 _core:
@@ -9,12 +11,11 @@ _core:
 id: localgov_services_landing
 label: 'Services Landing Page'
 type: 'canonical_entities:node'
-pattern: 'services/[node:title]'
+pattern: '/services/[node:title]'
 selection_criteria:
   210bc0ce-fcfb-438d-a889-c21b968f92a7:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 210bc0ce-fcfb-438d-a889-c21b968f92a7
     context_mapping:
       node: node
     bundles:

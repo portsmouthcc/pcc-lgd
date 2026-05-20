@@ -174,14 +174,6 @@ display:
             multiple: false
             remember_roles:
               anonymous: anonymous
-              emergency_publisher: '0'
-              authenticated: '0'
-              localgov_editor: '0'
-              localgov_author: '0'
-              localgov_contributor: '0'
-              localgov_news_editor: '0'
-              localgov_user_manager: '0'
-              localgov_admin: '0'
             expose_fields: false
             placeholder: ''
             searched_fields_id: search_api_fulltext_searched_fields

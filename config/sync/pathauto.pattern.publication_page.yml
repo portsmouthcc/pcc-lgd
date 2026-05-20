@@ -2,6 +2,8 @@ uuid: 6eb082ba-4c31-4457-a358-5757d8e31f4e
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.localgov_publication_page
   module:
     - node
   enforced:
@@ -12,12 +14,11 @@ _core:
 id: publication_page
 label: 'Publication page'
 type: 'canonical_entities:node'
-pattern: '[node:localgov-publication-path]/[node:title]'
+pattern: '/[node:localgov-publication-path]/[node:title]'
 selection_criteria:
   0c7a2cf6-df20-4fe3-9020-75fbbf4e559b:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 0c7a2cf6-df20-4fe3-9020-75fbbf4e559b
     context_mapping:
       node: node
     bundles:

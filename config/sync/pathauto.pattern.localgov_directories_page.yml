@@ -2,6 +2,8 @@ uuid: 5a345cea-846f-46cb-9493-6d723792e9ad
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.localgov_directories_page
   module:
     - node
 _core:
@@ -9,7 +11,7 @@ _core:
 id: localgov_directories_page
 label: 'Directory Entry Page'
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: '/[node:title]'
 selection_criteria:
   cf0a2bbc-3869-4912-a0e7-0f25ba4fcd1e:
     id: 'entity_bundle:node'
@@ -18,7 +20,6 @@ selection_criteria:
     negate: false
     context_mapping:
       node: node
-    uuid: cf0a2bbc-3869-4912-a0e7-0f25ba4fcd1e
 selection_logic: and
 weight: -5
 relationships: {  }

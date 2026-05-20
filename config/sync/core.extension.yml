@@ -140,7 +140,6 @@ module:
   path_alias: 0
   pcc_migrate: 0
   pcc_news_header: 0
-  pcc_osm_proxy: 0
   preview_link: 0
   redirect: 0
   redirect_404: 0
@@ -183,6 +182,7 @@ module:
   viewsreference: 0
   workflows: 0
   workspaces: 0
+  workspaces_ui: 0
   pathauto: 1
   formdazzle: 10
   views: 10
