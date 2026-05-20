@@ -2,6 +2,8 @@ uuid: 81300fab-6425-4f84-9ce6-46f71f61dfbd
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.localgov_publication_cover_page
   module:
     - node
   enforced:
@@ -12,12 +14,11 @@ _core:
 id: localgov_publication_cover_page
 label: 'Publication cover page'
 type: 'canonical_entities:node'
-pattern: 'publications/[node:title]'
+pattern: '/publications/[node:title]'
 selection_criteria:
   0962c418-3256-4ca2-9ca0-85919a1f9715:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 0962c418-3256-4ca2-9ca0-85919a1f9715
     context_mapping:
       node: node
     bundles:

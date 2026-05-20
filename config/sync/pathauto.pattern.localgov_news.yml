@@ -2,6 +2,8 @@ uuid: d2768ba6-ee80-4073-b338-880568b43d17
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.localgov_news_article
   module:
     - node
   enforced:
@@ -12,12 +14,11 @@ _core:
 id: localgov_news
 label: News
 type: 'canonical_entities:node'
-pattern: '[node:localgov_newsroom:entity:url:path]/[node:localgov_news_date:date:html_year]/[node:title]'
+pattern: '/[node:localgov_newsroom:entity:url:path]/[node:localgov_news_date:date:html_year]/[node:title]'
 selection_criteria:
   fa93e7c4-4c6f-4ed1-988b-ce660e1d6292:
     id: 'entity_bundle:node'
     negate: false
-    uuid: fa93e7c4-4c6f-4ed1-988b-ce660e1d6292
     context_mapping:
       node: node
     bundles:

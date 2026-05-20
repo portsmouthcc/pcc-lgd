@@ -27,7 +27,7 @@
 }
 
 .lgd-divider--colour-grey {
-  background: var(--color-light-grey)#ccc;
+  background: var(--color-light-grey) #ccc;
 }
 
 .lgd-divider--colour-dark-blue {
@@ -43,6 +43,6 @@
 }
 
 .paragraph--type--divider hr {
-  border: none;
   height: 1px;
+  border: none;
 }

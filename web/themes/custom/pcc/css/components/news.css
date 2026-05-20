@@ -49,7 +49,7 @@
   .field--name-localgov-news-related {
     margin-bottom: var(--spacing-large);
 
-    >.field__item {
+    > .field__item {
       /* background: var(--color-accent-2); */
       margin-bottom: var(--spacing);
 
