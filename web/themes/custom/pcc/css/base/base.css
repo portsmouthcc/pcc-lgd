@@ -12,7 +12,8 @@ h6,
 }
 
 a:not(.button) {
-  word-break: break-word;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 /* Fix localgov_paragraphs_layout column gap */
