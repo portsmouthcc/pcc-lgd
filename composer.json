@@ -82,6 +82,9 @@
             "phpstan/extension-installer": true,
             "tbachert/spi": false,
             "wikimedia/composer-merge-plugin": true
+        },
+        "audit": {
+            "block-insecure": false
         }
     },
     "extra": {
