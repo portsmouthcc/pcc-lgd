@@ -1,0 +1,26 @@
+uuid: 0de52cbf-f6c9-4f65-bdb8-3843d7231307
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.feedback
+  module:
+    - webform
+  theme:
+    - pcc
+id: pcc_webform
+theme: pcc
+region: content_bottom
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  label_display: '0'
+  provider: webform
+  webform_id: feedback
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility: {  }
