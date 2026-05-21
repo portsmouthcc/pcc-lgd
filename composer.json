@@ -43,6 +43,7 @@
         "drupal/trash": "^3.0",
         "drupal/twig_tweak": "^3.4",
         "drupal/upgrade_status": "^4.0",
+        "drupal/webform": "^6.2",
         "localgovdrupal/localgov": "^3.0",
         "localgovdrupal/localgov_moderngov": "^1.0@beta",
         "localgovdrupal/localgov_search_solr": "^1.1",
