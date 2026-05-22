@@ -1,19 +1,19 @@
-uuid: 85d7e4fb-1926-4b8e-a1dd-249185793197
+uuid: 878324fe-3b6d-4f90-bbea-ff521e350107
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_pcc_tro_category
+    - field.storage.node.field_ward
     - node.type.pcc_tro
   module:
     - options
-id: node.pcc_tro.field_pcc_tro_category
-field_name: field_pcc_tro_category
+id: node.pcc_tro.field_ward
+field_name: field_ward
 entity_type: node
 bundle: pcc_tro
-label: Category
+label: Ward
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

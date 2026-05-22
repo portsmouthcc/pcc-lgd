@@ -13,7 +13,10 @@ settings:
   allowed_values:
     -
       value: permanent
-      label: Permanent
+      label: Open
+    -
+      value: closed
+      label: Closed
     -
       value: temporary
       label: Temporary
