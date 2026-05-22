@@ -1,0 +1,25 @@
+uuid: 9a0ec7d9-4bd3-4cd3-8995-23b41ce918c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.localgov-services-menu
+  module:
+    - system
+  theme:
+    - pcc
+id: pcc_servicesmenu
+theme: pcc
+region: secondary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:localgov-services-menu'
+settings:
+  id: 'system_menu_block:localgov-services-menu'
+  label: 'Services menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

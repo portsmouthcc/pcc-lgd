@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a441bff08674543993f71d10e44e40ed",
+    "content-hash": "452622609cfde4e9cca070689b7b0ebe",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -12184,61 +12184,6 @@
             "homepage": "http://drupal.org/project/upgrade_status",
             "support": {
                 "source": "https://git.drupalcode.org/project/upgrade_status"
-            }
-        },
-        {
-            "name": "drupal/vefl",
-            "version": "3.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/vefl.git",
-                "reference": "8.x-3.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/vefl-8.x-3.2.zip",
-                "reference": "8.x-3.2",
-                "shasum": "0518744ff3959323773dd8b11bfb4e2cbc959000"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9 || ^10 || ^11"
-            },
-            "require-dev": {
-                "drupal/better_exposed_filters": "^4"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-3.2",
-                    "datestamp": "1736496597",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "dima.iluschenko",
-                    "homepage": "https://www.drupal.org/user/3181949"
-                },
-                {
-                    "name": "driverok",
-                    "homepage": "https://www.drupal.org/user/3551610"
-                },
-                {
-                    "name": "skorzh",
-                    "homepage": "https://www.drupal.org/user/813560"
-                }
-            ],
-            "description": "Provides functionality to output Views exposed filters in layout.",
-            "homepage": "https://www.drupal.org/project/vefl",
-            "support": {
-                "source": "https://git.drupalcode.org/project/vefl"
             }
         },
         {
