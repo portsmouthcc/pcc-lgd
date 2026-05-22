@@ -5,12 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.pcc_tro.body
-    - field.field.node.pcc_tro.field_pcc_tro_category
     - field.field.node.pcc_tro.field_pcc_tro_date
     - field.field.node.pcc_tro.field_pcc_tro_documents
     - field.field.node.pcc_tro.field_pcc_tro_reference
-    - field.field.node.pcc_tro.field_pcc_tro_status
     - field.field.node.pcc_tro.field_pcc_tro_type
+    - field.field.node.pcc_tro.field_ward
     - node.type.pcc_tro
   module:
     - text
@@ -34,10 +33,9 @@ content:
     weight: 100
     region: content
 hidden:
-  field_pcc_tro_category: true
   field_pcc_tro_date: true
   field_pcc_tro_documents: true
   field_pcc_tro_reference: true
-  field_pcc_tro_status: true
   field_pcc_tro_type: true
+  field_ward: true
   search_api_excerpt: true

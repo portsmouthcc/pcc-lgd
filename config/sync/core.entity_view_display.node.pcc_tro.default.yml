@@ -4,12 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.pcc_tro.body
-    - field.field.node.pcc_tro.field_pcc_tro_category
     - field.field.node.pcc_tro.field_pcc_tro_date
     - field.field.node.pcc_tro.field_pcc_tro_documents
     - field.field.node.pcc_tro.field_pcc_tro_reference
-    - field.field.node.pcc_tro.field_pcc_tro_status
     - field.field.node.pcc_tro.field_pcc_tro_type
+    - field.field.node.pcc_tro.field_ward
     - node.type.pcc_tro
   module:
     - datetime
@@ -28,13 +27,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
-    region: content
-  field_pcc_tro_category:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 102
     region: content
   field_pcc_tro_date:
     type: datetime_default
@@ -64,19 +56,19 @@ content:
     third_party_settings: {  }
     weight: 105
     region: content
-  field_pcc_tro_status:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 106
-    region: content
   field_pcc_tro_type:
     type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 107
+    region: content
+  field_ward:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
     region: content
   links:
     settings: {  }

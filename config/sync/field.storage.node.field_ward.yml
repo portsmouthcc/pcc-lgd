@@ -1,0 +1,63 @@
+uuid: 1075f39d-c0ee-4068-b22c-06e4d01e6291
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_ward
+field_name: field_ward
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: baffins
+      label: Baffins
+    -
+      value: central_southsea
+      label: 'Central Southsea'
+    -
+      value: charles_dickens
+      label: 'Charles Dickens'
+    -
+      value: copnor
+      label: Copnor
+    -
+      value: cosham
+      label: Cosham
+    -
+      value: drayton_farlington
+      label: 'Drayton & Farlington'
+    -
+      value: eastney_craneswater
+      label: 'Eastney & Craneswater'
+    -
+      value: fratton
+      label: Fratton
+    -
+      value: hilsea
+      label: Hilsea
+    -
+      value: milton
+      label: Milton
+    -
+      value: nelson
+      label: Nelson
+    -
+      value: paulsgrove
+      label: Paulsgrove
+    -
+      value: st_jude
+      label: 'St Jude'
+    -
+      value: st_thomas
+      label: 'St Thomas'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
