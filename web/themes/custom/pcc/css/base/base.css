@@ -353,3 +353,8 @@ strong {
     margin-top: var(--spacing-mega);
   }
 }
+
+div[id^="edit-content-panel"],
+div[id^="edit-service-panel"] {
+  flex-direction: column;
+}

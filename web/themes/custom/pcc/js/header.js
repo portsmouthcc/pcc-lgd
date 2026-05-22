@@ -315,3 +315,20 @@
     },
   };
 })(Drupal, drupalSettings, once);
+
+(function ($, Drupal) {
+  Drupal.behaviors.feedbackChoice = {
+    attach: function (context) {
+
+      $('.feedback-content-button', context).on('click', function (e) {
+        e.preventDefault();
+
+        const value = $(this).data('value');
+
+        $('select[data-drupal-selector="edit-content-select"]').val(value).trigger('change');
+
+      });
+
+    }
+  };
+})(jQuery, Drupal);
