@@ -35,6 +35,7 @@ module:
   dynamic_entity_reference: 0
   dynamic_page_cache: 0
   editor: 0
+  encrypt: 0
   entity_browser: 0
   entity_browser_entity_form: 0
   entity_hierarchy: 0
@@ -70,6 +71,7 @@ module:
   jquery_ui: 0
   jquery_ui_autocomplete: 0
   jquery_ui_menu: 0
+  key: 0
   klaro: 0
   layout_discovery: 0
   layout_paragraphs: 0
@@ -143,6 +145,7 @@ module:
   pcc_news_header: 0
   pcc_osm_proxy: 0
   preview_link: 0
+  real_aes: 0
   redirect: 0
   redirect_404: 0
   responsive_image: 0
@@ -169,6 +172,7 @@ module:
   taxonomy: 0
   telephone: 0
   text: 0
+  tfa: 0
   toc_api: 0
   toc_filter: 0
   token: 0

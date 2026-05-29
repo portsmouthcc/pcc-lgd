@@ -5,6 +5,7 @@ dependencies:
   module:
     - role_delegation
     - system
+    - tfa
     - toolbar
   enforced:
     module:
@@ -24,4 +25,5 @@ permissions:
   - 'assign localgov_editor role'
   - 'assign localgov_news_editor role'
   - 'assign localgov_user_manager role'
+  - 'setup own tfa'
   - 'view the administration theme'

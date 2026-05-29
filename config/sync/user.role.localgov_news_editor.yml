@@ -9,6 +9,7 @@ dependencies:
     - media
     - node
     - system
+    - tfa
     - toolbar
   enforced:
     module:
@@ -33,5 +34,6 @@ permissions:
   - 'edit own image media'
   - 'edit own localgov_news_article content'
   - 'revert localgov_news_article revisions'
+  - 'setup own tfa'
   - 'view localgov_news_article revisions'
   - 'view the administration theme'
