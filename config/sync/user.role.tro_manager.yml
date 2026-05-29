@@ -9,6 +9,7 @@ dependencies:
     - media
     - node
     - system
+    - tfa
     - toolbar
 id: tro_manager
 label: 'TRO Manager'
@@ -27,5 +28,6 @@ permissions:
   - 'edit own image media'
   - 'edit own pcc_tro content'
   - 'revert pcc_tro revisions'
+  - 'setup own tfa'
   - 'view pcc_tro revisions'
   - 'view the administration theme'
