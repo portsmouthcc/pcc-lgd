@@ -2,8 +2,12 @@
 	{% include '@pcc/layout/header.html.twig' with {'page': page} %}
 {% endblock %}
 
-<div class="lgd-container padding-horizontal">
-	{breadcrumb}
+<div class="lgd-region lgd-region--breadcrumb region region-breadcrumb">
+	<div class="lgd-container padding-horizontal">
+		<div style="padding: 0.75rem 0;">
+			{breadcrumb}
+		</div>
+	</div>
 </div>
 
 <main
