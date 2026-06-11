@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1939fd63ab320ba1cc2661acf85f4a28",
+    "content-hash": "2388df1da2c4320d9fdfd6a140a14208",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7943,6 +7943,82 @@
             "homepage": "https://www.drupal.org/project/localgov_menu_link_group",
             "support": {
                 "source": "https://git.drupalcode.org/project/localgov_menu_link_group"
+            }
+        },
+        {
+            "name": "drupal/localgov_moderngov",
+            "version": "1.1.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/localgov_moderngov.git",
+                "reference": "1.1.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/localgov_moderngov-1.1.0-beta3.zip",
+                "reference": "1.1.0-beta3",
+                "shasum": "ada6be4d00c5d9cf1a46e7eba3fdb3f32c2b9a7b"
+            },
+            "require": {
+                "drupal/core": "^10.5 || ^11.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.1.0-beta3",
+                    "datestamp": "1773335729",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "andybroomfield",
+                    "homepage": "https://www.drupal.org/user/636756"
+                },
+                {
+                    "name": "ekes",
+                    "homepage": "https://www.drupal.org/user/10083"
+                },
+                {
+                    "name": "finn lewis",
+                    "homepage": "https://www.drupal.org/user/119432"
+                },
+                {
+                    "name": "joeswarbsbwd",
+                    "homepage": "https://www.drupal.org/user/3718555"
+                },
+                {
+                    "name": "localgov",
+                    "homepage": "https://www.drupal.org/user/3841829"
+                },
+                {
+                    "name": "maria.y",
+                    "homepage": "https://www.drupal.org/user/2439852"
+                },
+                {
+                    "name": "markconroy",
+                    "homepage": "https://www.drupal.org/user/336910"
+                },
+                {
+                    "name": "stephen-cox",
+                    "homepage": "https://www.drupal.org/user/2862323"
+                },
+                {
+                    "name": "tonypaulbarker",
+                    "homepage": "https://www.drupal.org/user/807484"
+                }
+            ],
+            "description": "Drupal module for ModernGov template page generation.",
+            "homepage": "https://drupal.org/project/localgov_moderngov",
+            "support": {
+                "source": "https://git.drupalcode.org/project/localgov_moderngov"
             }
         },
         {
@@ -25726,6 +25802,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/entity_clone": 10,
+        "drupal/localgov_moderngov": 10,
         "localgovdrupal/localgov_moderngov": 10
     },
     "prefer-stable": true,
