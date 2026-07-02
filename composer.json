@@ -27,6 +27,7 @@
         "drupal/date_popup": "^2.0",
         "drupal/entity_clone": "^2.1@beta",
         "drupal/formdazzle": "^4.0",
+        "drupal/honeypot": "^2.2",
         "drupal/klaro": "^3.0",
         "drupal/linkchecker": "^2.1",
         "drupal/localgov": "^4.0.0",
